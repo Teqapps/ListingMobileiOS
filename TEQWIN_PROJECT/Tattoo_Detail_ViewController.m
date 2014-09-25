@@ -476,9 +476,9 @@
 {
     
     PFQuery *innerQuery = [PFQuery queryWithClassName:@ "Tattoo_Master" ];
-    [innerQuery whereKeyExists:[PFUser currentUser].objectId];
+   
     PFQuery *query = [PFQuery queryWithClassName:@ "Tattoo_Master" ];
-    [query whereKey:@ "favorites"  matchesQuery:innerQuery];
+   
     NSLog(@"%@",innerQuery);
     
     return YES;

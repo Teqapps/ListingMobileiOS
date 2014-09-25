@@ -171,7 +171,7 @@
    
     UILabel *count_like = (UILabel*) [cell viewWithTag:105];
     count_like.text = [NSString stringWithFormat:@"%@%d",like_status,count.count];
-    [self refreshTable:nil];
+    
     return cell;
 }
 
@@ -188,16 +188,39 @@
 
 
 - (IBAction)Fav:(id)sender {
- NSIndexPath *indexPath = [self.table_view indexPathForSelectedRow];
-     PFObject *object = [self.objects objectAtIndex:indexPath.row];
-    NSLog(@"%@",[object objectForKey:@"Master_id"]);
+    UIButton *button = sender;
+    CGPoint correctedPoint =
+    [button convertPoint:button.bounds.origin toView:self.tableView];
+    NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
+    
+    
+    
+    lastClickedRow = indexPath.row;
+    selectobject = [self.objects objectAtIndex:indexPath.row];
+  
+
+    NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+    
 
     
+    
+    if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+  
+         [self dislike];
+        NSLog(@"disliked");
+    [self refreshTable:nil];}
+    
+    else{
+       [self likeImage];
+        NSLog(@"liked");
+     [self refreshTable:nil];
+}
+
 }
 - (void) likeImage {
-    [object_id addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
+    [selectobject addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
     
-    [object_id saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
             [self likedSuccess];
@@ -209,9 +232,9 @@
     }];
 }
 - (void) dislike {
-    [object_id removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
+    [selectobject removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
    
-    [object_id saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
             [self dislikedSuccess];
