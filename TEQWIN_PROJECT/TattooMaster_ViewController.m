@@ -138,10 +138,15 @@
     
     // Configure the cell
     // Configure the cell
+  
     
-    
+    UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
+    loadingSpinner.hidden= NO;
+    [loadingSpinner startAnimating];
+   
     PFFile *thumbnail = [object objectForKey:@"image"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+   
     CGSize itemSize = CGSizeMake(70, 70);
     UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
     CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
@@ -154,11 +159,13 @@
     thumbnailImageView.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-    
+    //
+     thumbnailImageView.image = [UIImage imageNamed:@"loading_image.gif"];
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
-    
+    [loadingSpinner stopAnimating];
+    loadingSpinner.hidden = YES;
+
     
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [object objectForKey:@"Name"];
@@ -170,19 +177,23 @@
     UILabel *count_like = (UILabel*) [cell viewWithTag:105];
     count_like.text = [NSString stringWithFormat:@"%d",count.count];
     
-     count=[object objectForKey:@"favorites"];
-        UILabel *like_statuas = (UILabel*) [cell viewWithTag:108];
+    PFImageView *heart_statues = (PFImageView*)[cell viewWithTag:107];
     if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-    NSString * test =@"liked :";
-
-        like_statuas.text = test;
+        
+       
+        
+        heart_statues.image = [UIImage imageNamed:@"button_heart_red.png"];
     }
     else
     {
-          NSString * test =@"like :";
-       like_statuas.text =test;
+        
+         heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
     }
-        return cell;
+
+    
+    
+           return cell;
+    
 }
 
 

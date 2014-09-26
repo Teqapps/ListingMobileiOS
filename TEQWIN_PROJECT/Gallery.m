@@ -72,7 +72,9 @@ CFShareCircleView *shareCircleView;
             NSLog(@"%d",imageFilesArray.count);
            
         }
+        
     }];
+    
 }
 #pragma mark - Table view data source
 
@@ -99,7 +101,7 @@ CFShareCircleView *shareCircleView;
   
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
-
+      cell.image.image = [UIImage imageNamed:@"loading_image.gif"];
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         cell.image.layer.borderWidth=2.0;
          cell.image.layer.masksToBounds = YES;
