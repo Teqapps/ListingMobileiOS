@@ -205,7 +205,6 @@
 		4285361819C6CFFF00ECA482 /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4285361619C6CFFF00ECA482 /* ImageExampleCell.m */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
 		42A4844619A47AA20079EAA0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4844519A47AA20079EAA0 /* Social.framework */; };
-		42A4910719D4FDC600E4D65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910419D4FDC600E4D65E /* Default-568h@2x.png */; };
 		42A4910819D4FDC600E4D65E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910519D4FDC600E4D65E /* Default.png */; };
 		42A4910919D4FDC600E4D65E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910619D4FDC600E4D65E /* Default@2x.png */; };
 		42A4910E19D4FDD400E4D65E /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910A19D4FDD400E4D65E /* Exit.png */; };
@@ -220,6 +219,9 @@
 		42A4911F19D4FEDE00E4D65E /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911A19D4FEDE00E4D65E /* SignUpFieldBG.png */; };
 		42A4912019D4FEDE00E4D65E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911B19D4FEDE00E4D65E /* Twitter.png */; };
 		42A4912119D4FEDE00E4D65E /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911C19D4FEDE00E4D65E /* TwitterDown.png */; };
+		42A4912319D5015300E4D65E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912219D5015300E4D65E /* Twitter.png */; };
+		42A4912719D501B900E4D65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912619D501B900E4D65E /* Default-568h@2x.png */; };
+		42A4912919D501E100E4D65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912819D501E100E4D65E /* Default-568h@2x.png */; };
 		42AD1EB019B0718C00277278 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAD19B0718B00277278 /* Bolts.framework */; };
 		42AD1EB219B0718C00277278 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */; };
 		42AD1EB419B071AC00277278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EB319B071AC00277278 /* AudioToolbox.framework */; };
@@ -495,7 +497,6 @@
 		4285361619C6CFFF00ECA482 /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		42A4844519A47AA20079EAA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		42A4910419D4FDC600E4D65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		42A4910519D4FDC600E4D65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		42A4910619D4FDC600E4D65E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		42A4910A19D4FDD400E4D65E /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Exit.png; sourceTree = "<group>"; };
@@ -510,6 +511,9 @@
 		42A4911A19D4FEDE00E4D65E /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
 		42A4911B19D4FEDE00E4D65E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
 		42A4911C19D4FEDE00E4D65E /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+		42A4912219D5015300E4D65E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
+		42A4912619D501B900E4D65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		42A4912819D501E100E4D65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		42AD1EAD19B0718B00277278 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		42AD1EB319B071AC00277278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -810,6 +814,9 @@
 		42223EE219B569ED00F0D058 /* asset */ = {
 			isa = PBXGroup;
 			children = (
+				42A4912819D501E100E4D65E /* Default-568h@2x.png */,
+				42A4912619D501B900E4D65E /* Default-568h@2x.png */,
+				42A4912219D5015300E4D65E /* Twitter.png */,
 				42A4911819D4FEDE00E4D65E /* SignUp.png */,
 				42A4911919D4FEDE00E4D65E /* SignUpDown.png */,
 				42A4911A19D4FEDE00E4D65E /* SignUpFieldBG.png */,
@@ -822,7 +829,6 @@
 				42A4910B19D4FDD400E4D65E /* ExitDown.png */,
 				42A4910C19D4FDD400E4D65E /* Facebook.png */,
 				42A4910D19D4FDD400E4D65E /* FacebookDown.png */,
-				42A4910419D4FDC600E4D65E /* Default-568h@2x.png */,
 				42A4910519D4FDC600E4D65E /* Default.png */,
 				42A4910619D4FDC600E4D65E /* Default@2x.png */,
 				42317A6819B709FC00C54F54 /* teqwin_logo.png */,
@@ -1186,7 +1192,6 @@
 				42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */,
 				4263004B198F8DFD007B8C8F /* Gallery_icon.png in Resources */,
 				421940541986354B007E3C52 /* Hip_Sushi.jpg in Resources */,
-				42A4910719D4FDC600E4D65E /* Default-568h@2x.png in Resources */,
 				4219403E1986354B007E3C52 /* rest_image_5.jpg in Resources */,
 				421940691986354B007E3C52 /* Pearl_Delights.jpg in Resources */,
 				42193FA91985FE08007E3C52 /* Images.xcassets in Resources */,
@@ -1199,6 +1204,7 @@
 				42630051198F8EA6007B8C8F /* NEW.png in Resources */,
 				4219404C1986354B007E3C52 /* Dun_Ho_Seafood_Restaurant.JPG in Resources */,
 				4266572419A6F3BF001D94B5 /* share_icon.png in Resources */,
+				42A4912319D5015300E4D65E /* Twitter.png in Resources */,
 				4219403D1986354B007E3C52 /* rest_image_4.jpg in Resources */,
 				42A4911519D4FE3000E4D65E /* Logo.png in Resources */,
 				426ED3D219C02C740024E817 /* Main.storyboard in Resources */,
@@ -1259,6 +1265,7 @@
 				427D34A4199E076400814463 /* facebook@2x.png in Resources */,
 				424FAC941988E3870062D13D /* gabe_05.jpg in Resources */,
 				421940471986354B007E3C52 /* Classis_in_Shun_Tak.jpg in Resources */,
+				42A4912919D501E100E4D65E /* Default-568h@2x.png in Resources */,
 				421940651986354B007E3C52 /* Nha_Trang_Vietnamese_Cuisine.jpg in Resources */,
 				4263005519906A40007B8C8F /* setting-icon.png in Resources */,
 				421940401986354B007E3C52 /* Bangkok_Thai_Restaurant.jpg in Resources */,
@@ -1267,6 +1274,7 @@
 				424FAC921988E3870062D13D /* gabe_03.jpg in Resources */,
 				421940621986354B007E3C52 /* Ming_General_Japanese_Sushi_Restaurant.jpg in Resources */,
 				426ED3F019C04AC50024E817 /* add-photo-placeholder.png in Resources */,
+				42A4912719D501B900E4D65E /* Default-568h@2x.png in Resources */,
 				4219404A1986354B007E3C52 /* DIN_TAI_FUNG .jpg in Resources */,
 				4219404E1986354B007E3C52 /* Fairwood(NTP).jpg in Resources */,
 				421940501986354B007E3C52 /* Fu_Wing_Cafe_Stall.jpg in Resources */,
