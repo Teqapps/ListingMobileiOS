@@ -97,13 +97,16 @@ CFShareCircleView *shareCircleView;
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     PFFile *imageFile = [imageObject objectForKey:@"image"];
   
-    
+    cell.loadingSpinner.hidden = NO;
+    [cell.loadingSpinner startAnimating];
+
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         cell.image.layer.borderWidth=2.0;
          cell.image.layer.masksToBounds = YES;
          cell.image.layer.borderColor=[[UIColor whiteColor] CGColor];
             cell.image.image = [UIImage imageWithData:data];
- 
+        [cell.loadingSpinner stopAnimating];
+        cell.loadingSpinner.hidden = YES;
     }];
      cell.image.tag=9999;
     cell.image.userInteractionEnabled=YES;

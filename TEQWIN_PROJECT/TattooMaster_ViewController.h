@@ -17,8 +17,10 @@
     PFObject *selectobject;
     NSArray * count;
     NSString * like_status;
+     NSString * heart_status;
     NSArray * hehe;
     PFObject * object_id;
+    
 }
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 

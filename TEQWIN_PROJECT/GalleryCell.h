@@ -11,5 +11,6 @@
 @interface GalleryCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 - (void)cellOnTableView:(UITableView *)tableView didScrollOnView:(UIView *)view;
 @end

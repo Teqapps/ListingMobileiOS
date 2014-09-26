@@ -48,7 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    like_status =@"like";
+ 
        self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -168,11 +168,21 @@
     
     count=[object objectForKey:@"favorites"];
     UILabel *count_like = (UILabel*) [cell viewWithTag:105];
-    count_like.text = [NSString stringWithFormat:@"%@%d",like_status,count.count];
+    count_like.text = [NSString stringWithFormat:@"%d",count.count];
     
-    
-    
-    return cell;
+     count=[object objectForKey:@"favorites"];
+        UILabel *like_statuas = (UILabel*) [cell viewWithTag:108];
+    if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+    NSString * test =@"liked :";
+
+        like_statuas.text = test;
+    }
+    else
+    {
+          NSString * test =@"like :";
+       like_statuas.text =test;
+    }
+        return cell;
 }
 
 
@@ -188,22 +198,15 @@
 
 
 - (IBAction)Fav:(id)sender {
+     if ([PFUser currentUser]) {
     UIButton *button = sender;
     CGPoint correctedPoint =
     [button convertPoint:button.bounds.origin toView:self.tableView];
     NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
-    
-    
-    
     lastClickedRow = indexPath.row;
     selectobject = [self.objects objectAtIndex:indexPath.row];
-  
-
-    NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
-    
-
-    
-    
+         
+         
     if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
   
          [self dislike];
@@ -215,15 +218,21 @@
         NSLog(@"liked");
      
 }
-
+     }
+     else{
+         NSLog(@"請登入")
+    ; }
 }
 - (void) likeImage {
     [selectobject addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
     
     [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+       
         if (!error) {
-            
-            [self likedSuccess];
+           
+            if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+
+               }
             [self refreshTable:nil];
         }
         else {
@@ -233,11 +242,18 @@
 }
 - (void) dislike {
     [selectobject removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
-   
+    
     [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
+        
             
-            [self dislikedSuccess];
+            if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+               
+            }
+            else
+            {
+               
+            }
             [self refreshTable:nil];
         }
         else {

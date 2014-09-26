@@ -52,7 +52,7 @@
     
  [self.logout setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
     
-    self.title=@"我的檔案hehe";
+    self.title=@"我的檔案";
     // Set the gesture
        if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
