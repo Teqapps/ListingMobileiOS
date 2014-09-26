@@ -149,7 +149,6 @@
 		4266572119A6F2DC001D94B5 /* like_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4266571E19A6F2DC001D94B5 /* like_icon.png */; };
 		4266572419A6F3BF001D94B5 /* share_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4266572319A6F3BF001D94B5 /* share_icon.png */; };
 		426ED39319B9AF560024E817 /* TattooMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39219B9AF560024E817 /* TattooMasterCell.m */; };
-		426ED39519B9BA780024E817 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426ED39419B9BA780024E817 /* placeholder.jpg */; };
 		426ED39B19BD88990024E817 /* Tattoo_Detail_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39A19BD88990024E817 /* Tattoo_Detail_ViewController.m */; };
 		426ED3D219C02C740024E817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3D119C02C740024E817 /* Main.storyboard */; };
 		426ED3E219C049760024E817 /* RecipeBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3DB19C049760024E817 /* RecipeBookViewController.m */; };
@@ -157,11 +156,6 @@
 		426ED3E419C049760024E817 /* NewRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3DF19C049760024E817 /* NewRecipeViewController.m */; };
 		426ED3E519C049760024E817 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3E119C049760024E817 /* Recipe.m */; };
 		426ED3E919C04A030024E817 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3E819C04A030024E817 /* MBProgressHUD.m */; };
-		426ED3F019C04AC50024E817 /* add-photo-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3EB19C04AC50024E817 /* add-photo-placeholder.png */; };
-		426ED3F119C04AC50024E817 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3EC19C04AC50024E817 /* Default-568h@2x.png */; };
-		426ED3F219C04AC50024E817 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3ED19C04AC50024E817 /* placeholder.jpg */; };
-		426ED3F319C04AC50024E817 /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3EE19C04AC50024E817 /* photo-frame.png */; };
-		426ED3F419C04AC50024E817 /* photo-frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3EF19C04AC50024E817 /* photo-frame@2x.png */; };
 		426ED3F819C2C3D00024E817 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3F719C2C3D00024E817 /* VPImageCropperViewController.m */; };
 		427D3429199DA73400814463 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D3417199DA73400814463 /* AFHTTPClient.m */; };
 		427D342A199DA73400814463 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D3419199DA73400814463 /* AFHTTPRequestOperation.m */; };
@@ -205,23 +199,28 @@
 		4285361819C6CFFF00ECA482 /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4285361619C6CFFF00ECA482 /* ImageExampleCell.m */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
 		42A4844619A47AA20079EAA0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4844519A47AA20079EAA0 /* Social.framework */; };
-		42A4910819D4FDC600E4D65E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910519D4FDC600E4D65E /* Default.png */; };
-		42A4910919D4FDC600E4D65E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910619D4FDC600E4D65E /* Default@2x.png */; };
-		42A4910E19D4FDD400E4D65E /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910A19D4FDD400E4D65E /* Exit.png */; };
-		42A4910F19D4FDD400E4D65E /* ExitDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910B19D4FDD400E4D65E /* ExitDown.png */; };
-		42A4911019D4FDD400E4D65E /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910C19D4FDD400E4D65E /* Facebook.png */; };
-		42A4911119D4FDD400E4D65E /* FacebookDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4910D19D4FDD400E4D65E /* FacebookDown.png */; };
-		42A4911419D4FE3000E4D65E /* LoginFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911219D4FE3000E4D65E /* LoginFieldBG.png */; };
-		42A4911519D4FE3000E4D65E /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911319D4FE3000E4D65E /* Logo.png */; };
-		42A4911719D4FE5700E4D65E /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911619D4FE5700E4D65E /* MainBG.png */; };
-		42A4911D19D4FEDE00E4D65E /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911819D4FEDE00E4D65E /* SignUp.png */; };
-		42A4911E19D4FEDE00E4D65E /* SignUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911919D4FEDE00E4D65E /* SignUpDown.png */; };
-		42A4911F19D4FEDE00E4D65E /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911A19D4FEDE00E4D65E /* SignUpFieldBG.png */; };
-		42A4912019D4FEDE00E4D65E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911B19D4FEDE00E4D65E /* Twitter.png */; };
-		42A4912119D4FEDE00E4D65E /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4911C19D4FEDE00E4D65E /* TwitterDown.png */; };
-		42A4912319D5015300E4D65E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912219D5015300E4D65E /* Twitter.png */; };
-		42A4912719D501B900E4D65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912619D501B900E4D65E /* Default-568h@2x.png */; };
-		42A4912919D501E100E4D65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912819D501E100E4D65E /* Default-568h@2x.png */; };
+		42A4913A19D506A700E4D65E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912B19D506A700E4D65E /* Default.png */; };
+		42A4913B19D506A700E4D65E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912C19D506A700E4D65E /* Default@2x.png */; };
+		42A4913C19D506A700E4D65E /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912D19D506A700E4D65E /* Exit.png */; };
+		42A4913D19D506A700E4D65E /* ExitDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912E19D506A700E4D65E /* ExitDown.png */; };
+		42A4913E19D506A700E4D65E /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912F19D506A700E4D65E /* Facebook.png */; };
+		42A4913F19D506A700E4D65E /* FacebookDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913019D506A700E4D65E /* FacebookDown.png */; };
+		42A4914019D506A700E4D65E /* LoginFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913119D506A700E4D65E /* LoginFieldBG.png */; };
+		42A4914119D506A700E4D65E /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913219D506A700E4D65E /* Logo.png */; };
+		42A4914219D506A700E4D65E /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913319D506A700E4D65E /* MainBG.png */; };
+		42A4914319D506A700E4D65E /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913419D506A700E4D65E /* SignUp.png */; };
+		42A4914419D506A700E4D65E /* SignUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913519D506A700E4D65E /* SignUpDown.png */; };
+		42A4914519D506A700E4D65E /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913619D506A700E4D65E /* SignUpFieldBG.png */; };
+		42A4914619D506A700E4D65E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913719D506A700E4D65E /* Twitter.png */; };
+		42A4914719D506A700E4D65E /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4913819D506A700E4D65E /* TwitterDown.png */; };
+		42A4914919D5082800E4D65E /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4914819D5082800E4D65E /* facebook@2x.png */; };
+		42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 42A4914C19D5087C00E4D65E /* FACEBOOK.JPG */; };
+		42A4914F19D508E900E4D65E /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4914E19D508E900E4D65E /* twitter@2x.png */; };
+		42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4915019D5090000E4D65E /* Facebook-icon.png */; };
+		42A4916719D51D8E00E4D65E /* add-photo-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916319D51D8E00E4D65E /* add-photo-placeholder.png */; };
+		42A4916919D51D8E00E4D65E /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916519D51D8E00E4D65E /* photo-frame.png */; };
+		42A4916A19D51D8E00E4D65E /* photo-frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916619D51D8E00E4D65E /* photo-frame@2x.png */; };
+		42A4916C19D51FAC00E4D65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916B19D51FAC00E4D65E /* Default-568h@2x.png */; };
 		42AD1EB019B0718C00277278 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAD19B0718B00277278 /* Bolts.framework */; };
 		42AD1EB219B0718C00277278 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */; };
 		42AD1EB419B071AC00277278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EB319B071AC00277278 /* AudioToolbox.framework */; };
@@ -417,7 +416,6 @@
 		4266572319A6F3BF001D94B5 /* share_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_icon.png; sourceTree = "<group>"; };
 		426ED39119B9AF560024E817 /* TattooMasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattooMasterCell.h; sourceTree = "<group>"; };
 		426ED39219B9AF560024E817 /* TattooMasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattooMasterCell.m; sourceTree = "<group>"; };
-		426ED39419B9BA780024E817 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		426ED39A19BD88990024E817 /* Tattoo_Detail_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tattoo_Detail_ViewController.m; sourceTree = "<group>"; };
 		426ED3D119C02C740024E817 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		426ED3DA19C049760024E817 /* RecipeBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeBookViewController.h; sourceTree = "<group>"; };
@@ -430,11 +428,6 @@
 		426ED3E119C049760024E817 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		426ED3E719C04A030024E817 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		426ED3E819C04A030024E817 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		426ED3EB19C04AC50024E817 /* add-photo-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add-photo-placeholder.png"; path = "../../../Downloads/RecipeBookParseUpdate 4/RecipeBook/add-photo-placeholder.png"; sourceTree = "<group>"; };
-		426ED3EC19C04AC50024E817 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../Downloads/RecipeBookParseUpdate 4/Default-568h@2x.png"; sourceTree = "<group>"; };
-		426ED3ED19C04AC50024E817 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = "../../../Downloads/RecipeBookParseUpdate 4/RecipeBook/placeholder.jpg"; sourceTree = "<group>"; };
-		426ED3EE19C04AC50024E817 /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "photo-frame.png"; path = "../../../Downloads/RecipeBookParseUpdate 4/RecipeBook/photo-frame.png"; sourceTree = "<group>"; };
-		426ED3EF19C04AC50024E817 /* photo-frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "photo-frame@2x.png"; path = "../../../Downloads/RecipeBookParseUpdate 4/RecipeBook/photo-frame@2x.png"; sourceTree = "<group>"; };
 		426ED3F619C2C3D00024E817 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
 		426ED3F719C2C3D00024E817 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		427D3416199DA73400814463 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -497,23 +490,28 @@
 		4285361619C6CFFF00ECA482 /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		42A4844519A47AA20079EAA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		42A4910519D4FDC600E4D65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		42A4910619D4FDC600E4D65E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		42A4910A19D4FDD400E4D65E /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Exit.png; sourceTree = "<group>"; };
-		42A4910B19D4FDD400E4D65E /* ExitDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExitDown.png; sourceTree = "<group>"; };
-		42A4910C19D4FDD400E4D65E /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
-		42A4910D19D4FDD400E4D65E /* FacebookDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookDown.png; sourceTree = "<group>"; };
-		42A4911219D4FE3000E4D65E /* LoginFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginFieldBG.png; sourceTree = "<group>"; };
-		42A4911319D4FE3000E4D65E /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		42A4911619D4FE5700E4D65E /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBG.png; sourceTree = "<group>"; };
-		42A4911819D4FEDE00E4D65E /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
-		42A4911919D4FEDE00E4D65E /* SignUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpDown.png; sourceTree = "<group>"; };
-		42A4911A19D4FEDE00E4D65E /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
-		42A4911B19D4FEDE00E4D65E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
-		42A4911C19D4FEDE00E4D65E /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
-		42A4912219D5015300E4D65E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
-		42A4912619D501B900E4D65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		42A4912819D501E100E4D65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		42A4912B19D506A700E4D65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		42A4912C19D506A700E4D65E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		42A4912D19D506A700E4D65E /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Exit.png; sourceTree = "<group>"; };
+		42A4912E19D506A700E4D65E /* ExitDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExitDown.png; sourceTree = "<group>"; };
+		42A4912F19D506A700E4D65E /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
+		42A4913019D506A700E4D65E /* FacebookDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookDown.png; sourceTree = "<group>"; };
+		42A4913119D506A700E4D65E /* LoginFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginFieldBG.png; sourceTree = "<group>"; };
+		42A4913219D506A700E4D65E /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		42A4913319D506A700E4D65E /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainBG.png; sourceTree = "<group>"; };
+		42A4913419D506A700E4D65E /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
+		42A4913519D506A700E4D65E /* SignUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpDown.png; sourceTree = "<group>"; };
+		42A4913619D506A700E4D65E /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
+		42A4913719D506A700E4D65E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
+		42A4913819D506A700E4D65E /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+		42A4914819D5082800E4D65E /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
+		42A4914C19D5087C00E4D65E /* FACEBOOK.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FACEBOOK.JPG; sourceTree = "<group>"; };
+		42A4914E19D508E900E4D65E /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		42A4915019D5090000E4D65E /* Facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-icon.png"; sourceTree = "<group>"; };
+		42A4916319D51D8E00E4D65E /* add-photo-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-photo-placeholder.png"; sourceTree = "<group>"; };
+		42A4916519D51D8E00E4D65E /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
+		42A4916619D51D8E00E4D65E /* photo-frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame@2x.png"; sourceTree = "<group>"; };
+		42A4916B19D51FAC00E4D65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		42AD1EAD19B0718B00277278 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		42AD1EB319B071AC00277278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -814,23 +812,24 @@
 		42223EE219B569ED00F0D058 /* asset */ = {
 			isa = PBXGroup;
 			children = (
-				42A4912819D501E100E4D65E /* Default-568h@2x.png */,
-				42A4912619D501B900E4D65E /* Default-568h@2x.png */,
-				42A4912219D5015300E4D65E /* Twitter.png */,
-				42A4911819D4FEDE00E4D65E /* SignUp.png */,
-				42A4911919D4FEDE00E4D65E /* SignUpDown.png */,
-				42A4911A19D4FEDE00E4D65E /* SignUpFieldBG.png */,
-				42A4911B19D4FEDE00E4D65E /* Twitter.png */,
-				42A4911C19D4FEDE00E4D65E /* TwitterDown.png */,
-				42A4911619D4FE5700E4D65E /* MainBG.png */,
-				42A4911219D4FE3000E4D65E /* LoginFieldBG.png */,
-				42A4911319D4FE3000E4D65E /* Logo.png */,
-				42A4910A19D4FDD400E4D65E /* Exit.png */,
-				42A4910B19D4FDD400E4D65E /* ExitDown.png */,
-				42A4910C19D4FDD400E4D65E /* Facebook.png */,
-				42A4910D19D4FDD400E4D65E /* FacebookDown.png */,
-				42A4910519D4FDC600E4D65E /* Default.png */,
-				42A4910619D4FDC600E4D65E /* Default@2x.png */,
+				42A4915019D5090000E4D65E /* Facebook-icon.png */,
+				42A4914E19D508E900E4D65E /* twitter@2x.png */,
+				42A4914C19D5087C00E4D65E /* FACEBOOK.JPG */,
+				42A4914819D5082800E4D65E /* facebook@2x.png */,
+				42A4912B19D506A700E4D65E /* Default.png */,
+				42A4912C19D506A700E4D65E /* Default@2x.png */,
+				42A4912D19D506A700E4D65E /* Exit.png */,
+				42A4912E19D506A700E4D65E /* ExitDown.png */,
+				42A4912F19D506A700E4D65E /* Facebook.png */,
+				42A4913019D506A700E4D65E /* FacebookDown.png */,
+				42A4913119D506A700E4D65E /* LoginFieldBG.png */,
+				42A4913219D506A700E4D65E /* Logo.png */,
+				42A4913319D506A700E4D65E /* MainBG.png */,
+				42A4913419D506A700E4D65E /* SignUp.png */,
+				42A4913519D506A700E4D65E /* SignUpDown.png */,
+				42A4913619D506A700E4D65E /* SignUpFieldBG.png */,
+				42A4913719D506A700E4D65E /* Twitter.png */,
+				42A4913819D506A700E4D65E /* TwitterDown.png */,
 				42317A6819B709FC00C54F54 /* teqwin_logo.png */,
 			);
 			name = asset;
@@ -889,7 +888,6 @@
 		42630028198B3A72007B8C8F /* photo */ = {
 			isa = PBXGroup;
 			children = (
-				426ED39419B9BA780024E817 /* placeholder.jpg */,
 				4266572319A6F3BF001D94B5 /* share_icon.png */,
 				4266571D19A6F2DC001D94B5 /* comment_icon.png */,
 				4266571E19A6F2DC001D94B5 /* like_icon.png */,
@@ -956,15 +954,14 @@
 		426ED3EA19C04AAE0024E817 /* IMAGE */ = {
 			isa = PBXGroup;
 			children = (
+				42A4916B19D51FAC00E4D65E /* Default-568h@2x.png */,
+				42A4916319D51D8E00E4D65E /* add-photo-placeholder.png */,
+				42A4916519D51D8E00E4D65E /* photo-frame.png */,
+				42A4916619D51D8E00E4D65E /* photo-frame@2x.png */,
 				42E4D05319CC0037006D3429 /* logout-1.png */,
 				42EA4ECF19CAE4770051057C /* FACEBOOK.JPG */,
 				42EA4ED119CAE5EC0051057C /* logout.png */,
 				42EA4ECD19CAE1B20051057C /* Facebook-icon.png */,
-				426ED3EB19C04AC50024E817 /* add-photo-placeholder.png */,
-				426ED3EC19C04AC50024E817 /* Default-568h@2x.png */,
-				426ED3ED19C04AC50024E817 /* placeholder.jpg */,
-				426ED3EE19C04AC50024E817 /* photo-frame.png */,
-				426ED3EF19C04AC50024E817 /* photo-frame@2x.png */,
 			);
 			name = IMAGE;
 			sourceTree = "<group>";
@@ -1160,32 +1157,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42A4911F19D4FEDE00E4D65E /* SignUpFieldBG.png in Resources */,
 				42193FD119860221007E3C52 /* menu.png in Resources */,
 				4263006C19908FDA007B8C8F /* background1.jpg in Resources */,
 				421940531986354B007E3C52 /* Hang_Yuen_Café.JPG in Resources */,
 				421940431986354B007E3C52 /* Café_de_Coral.jpg in Resources */,
 				4219408C198731EC007E3C52 /* master1.jpg in Resources */,
-				42A4911419D4FE3000E4D65E /* LoginFieldBG.png in Resources */,
 				424FAC901988E3870062D13D /* gabe_01.jpg in Resources */,
 				421940741986354B007E3C52 /* Tak_Hing_Eating_Center.jpg in Resources */,
 				421940771986354B007E3C52 /* The_Spaghetti_House.jpg in Resources */,
 				4219406C1986354B007E3C52 /* Pizza_Hut.jpg in Resources */,
 				4219409E198789DB007E3C52 /* ICON.png in Resources */,
 				4219407B1986354B007E3C52 /* Wing Lok Cafe.JPG in Resources */,
-				42A4910F19D4FDD400E4D65E /* ExitDown.png in Resources */,
 				4219407A1986354B007E3C52 /* Wat_Yat_Noodles.jpg in Resources */,
 				421940601986354B007E3C52 /* McDonalds(h).jpg in Resources */,
+				42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */,
 				421940521986354B007E3C52 /* Hainan_Shaoye.jpg in Resources */,
 				421940491986354B007E3C52 /* Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg in Resources */,
 				427D349E199E076400814463 /* close@2x.png in Resources */,
 				427D34A0199E076400814463 /* dropbox@2x.png in Resources */,
+				42A4913E19D506A700E4D65E /* Facebook.png in Resources */,
 				427D349F199E076400814463 /* dropbox.png in Resources */,
 				427D34A2199E076400814463 /* evernote@2x.png in Resources */,
 				4263005D199083C3007B8C8F /* app-map-icon.png in Resources */,
 				4219409A19878191007E3C52 /* Tattoo_Logo.jpg in Resources */,
-				426ED3F119C04AC50024E817 /* Default-568h@2x.png in Resources */,
 				4219406B1986354B007E3C52 /* PHD.JPG in Resources */,
+				42A4916919D51D8E00E4D65E /* photo-frame.png in Resources */,
 				427D34A9199E076400814463 /* more.png in Resources */,
 				42818908199AFB0F004D09EF /* navbackground.jpg in Resources */,
 				42630043198F5F3C007B8C8F /* heart.png in Resources */,
@@ -1195,18 +1191,16 @@
 				4219403E1986354B007E3C52 /* rest_image_5.jpg in Resources */,
 				421940691986354B007E3C52 /* Pearl_Delights.jpg in Resources */,
 				42193FA91985FE08007E3C52 /* Images.xcassets in Resources */,
-				426ED3F419C04AC50024E817 /* photo-frame@2x.png in Resources */,
+				42A4913A19D506A700E4D65E /* Default.png in Resources */,
+				42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */,
 				427D34AB199E076400814463 /* photo_library.png in Resources */,
 				421940481986354B007E3C52 /* Comes_Seafood_Restaurant.jpg in Resources */,
-				42A4912019D4FEDE00E4D65E /* Twitter.png in Resources */,
 				421940761986354B007E3C52 /* Tak_Hing_Yunnan _Noodle.jpg in Resources */,
 				4263005B19908265007B8C8F /* map.png in Resources */,
 				42630051198F8EA6007B8C8F /* NEW.png in Resources */,
 				4219404C1986354B007E3C52 /* Dun_Ho_Seafood_Restaurant.JPG in Resources */,
 				4266572419A6F3BF001D94B5 /* share_icon.png in Resources */,
-				42A4912319D5015300E4D65E /* Twitter.png in Resources */,
 				4219403D1986354B007E3C52 /* rest_image_4.jpg in Resources */,
-				42A4911519D4FE3000E4D65E /* Logo.png in Resources */,
 				426ED3D219C02C740024E817 /* Main.storyboard in Resources */,
 				421940551986354B007E3C52 /* HOKKAIDO_RAMEN_SANTOUKA.jpg in Resources */,
 				427D34A1199E076400814463 /* evernote.png in Resources */,
@@ -1216,6 +1210,7 @@
 				421940561986354B007E3C52 /* Hung_Wan_restaurant.jpg in Resources */,
 				421940751986354B007E3C52 /* Tak_Hing_Restaurant.jpg in Resources */,
 				42193FD219860221007E3C52 /* menu@2x.png in Resources */,
+				42A4914219D506A700E4D65E /* MainBG.png in Resources */,
 				4266572119A6F2DC001D94B5 /* like_icon.png in Resources */,
 				4219407C1986354B007E3C52 /* WONG_CHI_KEI.jpg in Resources */,
 				421940661986354B007E3C52 /* Ocean_Empire_Food_Shop.jpg in Resources */,
@@ -1223,23 +1218,25 @@
 				421940571986354B007E3C52 /* IKI_teppanyaki_bento.jpg in Resources */,
 				427D34A3199E076400814463 /* facebook.png in Resources */,
 				427D34A8199E076400814463 /* mail@2x.png in Resources */,
+				42A4914119D506A700E4D65E /* Logo.png in Resources */,
 				427D34AF199E076400814463 /* twitter.png in Resources */,
 				4266571B19A6F1AE001D94B5 /* comment.png in Resources */,
+				42A4914719D506A700E4D65E /* TwitterDown.png in Resources */,
 				421940581986354B007E3C52 /* Jade_Garden.jpg in Resources */,
 				4219404D1986354B007E3C52 /* Eat_East.jpg in Resources */,
 				427D34A7199E076400814463 /* mail.png in Resources */,
-				426ED39519B9BA780024E817 /* placeholder.jpg in Resources */,
 				4219404B1986354B007E3C52 /* Dining_Fine.jpg in Resources */,
 				42193F9B1985FE08007E3C52 /* InfoPlist.strings in Resources */,
+				42A4914319D506A700E4D65E /* SignUp.png in Resources */,
 				42EA4ED219CAE5EC0051057C /* logout.png in Resources */,
 				4219407E1986354B007E3C52 /* Yoshinoya(L).jpg in Resources */,
 				421940411986354B007E3C52 /* Bene_Italian.jpg in Resources */,
 				4219405D1986354B007E3C52 /* Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg in Resources */,
+				42A4914419D506A700E4D65E /* SignUpDown.png in Resources */,
 				4263005F19908433007B8C8F /* mapicon.png in Resources */,
 				4219403C1986354B007E3C52 /* rest_image_3.jpg in Resources */,
 				421940461986354B007E3C52 /* Chiuchow_Garden_Restaurant.jpg in Resources */,
 				424FAC911988E3870062D13D /* gabe_02.jpg in Resources */,
-				42A4911019D4FDD400E4D65E /* Facebook.png in Resources */,
 				421940731986354B007E3C52 /* Tai_Hing.jpg in Resources */,
 				4219408719863C9F007E3C52 /* ive.png in Resources */,
 				4266571819A6F1A6001D94B5 /* share.png in Resources */,
@@ -1247,34 +1244,35 @@
 				4219405F1986354B007E3C52 /* Maccha_House.jpg in Resources */,
 				421940791986354B007E3C52 /* UCC_COFFEE_SHOP_B.jpg in Resources */,
 				4219406F1986354B007E3C52 /* Shabu_Sai.jpg in Resources */,
+				42A4913F19D506A700E4D65E /* FacebookDown.png in Resources */,
 				421940721986354B007E3C52 /* Spaghetti_360°.jpg in Resources */,
-				42A4910919D4FDC600E4D65E /* Default@2x.png in Resources */,
 				4266571C19A6F1AE001D94B5 /* like.png in Resources */,
 				42630049198F8DA2007B8C8F /* Favorites-icon.png in Resources */,
 				4219409C19878375007E3C52 /* news.jpg in Resources */,
 				427D34AC199E076400814463 /* photo_library@2x.png in Resources */,
 				4219403F1986354B007E3C52 /* Yummy_Delight.jpg in Resources */,
-				426ED3F219C04AC50024E817 /* placeholder.jpg in Resources */,
-				426ED3F319C04AC50024E817 /* photo-frame.png in Resources */,
 				4219405E1986354B007E3C52 /* Lei_Garden_Restaurant.jpg in Resources */,
-				42A4911719D4FE5700E4D65E /* MainBG.png in Resources */,
 				427D34AE199E076400814463 /* pinterest@2x.png in Resources */,
 				421940451986354B007E3C52 /* Chan_Kun_Kee.jpg in Resources */,
+				42A4913C19D506A700E4D65E /* Exit.png in Resources */,
 				421940631986354B007E3C52 /* Mitsuhashi_Japanese_Restaurant.JPG in Resources */,
+				42A4914F19D508E900E4D65E /* twitter@2x.png in Resources */,
 				4263004D198F8E5C007B8C8F /* master_icon.png in Resources */,
 				427D34A4199E076400814463 /* facebook@2x.png in Resources */,
 				424FAC941988E3870062D13D /* gabe_05.jpg in Resources */,
 				421940471986354B007E3C52 /* Classis_in_Shun_Tak.jpg in Resources */,
-				42A4912919D501E100E4D65E /* Default-568h@2x.png in Resources */,
 				421940651986354B007E3C52 /* Nha_Trang_Vietnamese_Cuisine.jpg in Resources */,
 				4263005519906A40007B8C8F /* setting-icon.png in Resources */,
+				42A4916719D51D8E00E4D65E /* add-photo-placeholder.png in Resources */,
 				421940401986354B007E3C52 /* Bangkok_Thai_Restaurant.jpg in Resources */,
 				4219403B1986354B007E3C52 /* rest_image_2.jpg in Resources */,
+				42A4916A19D51D8E00E4D65E /* photo-frame@2x.png in Resources */,
 				4219407D1986354B007E3C52 /* Worldwide_kitchen.jpg in Resources */,
+				42A4914519D506A700E4D65E /* SignUpFieldBG.png in Resources */,
+				42A4913B19D506A700E4D65E /* Default@2x.png in Resources */,
+				42A4916C19D51FAC00E4D65E /* Default-568h@2x.png in Resources */,
 				424FAC921988E3870062D13D /* gabe_03.jpg in Resources */,
 				421940621986354B007E3C52 /* Ming_General_Japanese_Sushi_Restaurant.jpg in Resources */,
-				426ED3F019C04AC50024E817 /* add-photo-placeholder.png in Resources */,
-				42A4912719D501B900E4D65E /* Default-568h@2x.png in Resources */,
 				4219404A1986354B007E3C52 /* DIN_TAI_FUNG .jpg in Resources */,
 				4219404E1986354B007E3C52 /* Fairwood(NTP).jpg in Resources */,
 				421940501986354B007E3C52 /* Fu_Wing_Cafe_Stall.jpg in Resources */,
@@ -1286,37 +1284,35 @@
 				42630053199069F8007B8C8F /* settings.png in Resources */,
 				427D34B0199E076400814463 /* twitter@2x.png in Resources */,
 				427D34A5199E076400814463 /* google_drive.png in Resources */,
-				42A4910E19D4FDD400E4D65E /* Exit.png in Resources */,
 				4219408019863639007E3C52 /* beckham.jpg in Resources */,
 				421940681986354B007E3C52 /* PARKVIEW.jpg in Resources */,
 				4266572019A6F2DC001D94B5 /* comment_icon.png in Resources */,
+				42A4913D19D506A700E4D65E /* ExitDown.png in Resources */,
 				421940441986354B007E3C52 /* Café_de_Itamomo.jpg in Resources */,
 				421940611986354B007E3C52 /* Mei_Sik_Hin_Fastfood_Shop.jpg in Resources */,
-				42A4910819D4FDC600E4D65E /* Default.png in Resources */,
-				42A4911119D4FDD400E4D65E /* FacebookDown.png in Resources */,
 				421940591986354B007E3C52 /* JAPANESE_RESTAURANT_IMASUKE.jpg in Resources */,
 				42E4D05419CC0037006D3429 /* logout-1.png in Resources */,
 				4219406D1986354B007E3C52 /* PIZZAEXPRESS.jpg in Resources */,
+				42A4914619D506A700E4D65E /* Twitter.png in Resources */,
 				421940511986354B007E3C52 /* GINZA_BAIRIN.jpg in Resources */,
 				421940671986354B007E3C52 /* Orchid_Garden_Restaurant.JPG in Resources */,
 				4219405A1986354B007E3C52 /* Jully_jake_restaurant.jpg in Resources */,
 				4219406E1986354B007E3C52 /* Ruby_Tuesday.jpg in Resources */,
 				424FAC931988E3870062D13D /* gabe_04.jpg in Resources */,
+				42A4914919D5082800E4D65E /* facebook@2x.png in Resources */,
+				42A4914019D506A700E4D65E /* LoginFieldBG.png in Resources */,
 				421940641986354B007E3C52 /* MR._STEAK.jpg in Resources */,
 				426300A71990DAE4007B8C8F /* background3.jpg in Resources */,
 				421940781986354B007E3C52 /* Tsui_Wah_Restaurant.jpg in Resources */,
 				427D34A6199E076400814463 /* google_drive@2x.png in Resources */,
 				428188B21994BA48004D09EF /* gallery_01_1.jpg in Resources */,
-				42A4912119D4FEDE00E4D65E /* TwitterDown.png in Resources */,
 				427D349D199E076400814463 /* close.png in Resources */,
 				4219404F1986354B007E3C52 /* Fairwood.JPG in Resources */,
 				42630044198F5F3C007B8C8F /* heart_empty.png in Resources */,
-				42A4911D19D4FEDE00E4D65E /* SignUp.png in Resources */,
 				421940421986354B007E3C52 /* Café_de_Coral(NTP).jpg in Resources */,
 				4219406A1986354B007E3C52 /* Pepper_Lunch.jpg in Resources */,
 				42EA4ECE19CAE1B20051057C /* Facebook-icon.png in Resources */,
 				421940711986354B007E3C52 /* Sichuan_Garden_Restaurant.jpg in Resources */,
-				42A4911E19D4FEDE00E4D65E /* SignUpDown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
