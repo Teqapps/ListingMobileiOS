@@ -28,7 +28,8 @@ CFShareCircleView *shareCircleView;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+   
+
     [self queryParseMethod];
     
     
@@ -62,7 +63,7 @@ CFShareCircleView *shareCircleView;
 }
 - (void)queryParseMethod {
     NSLog(@"start query");
-    NSLog(@"%@",self.tattoomasterCell.master_id);
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -70,14 +71,28 @@ CFShareCircleView *shareCircleView;
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
                         [tableView reloadData];
             NSLog(@"%d",imageFilesArray.count);
-           
+            
+            if (imageFilesArray.count==0) {
+                [self noimage];}
         }
         
     }];
     
 }
 #pragma mark - Table view data source
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
+    if([button isEqualToString:@"OK"])
+        
+    {
+        Tattoo_Detail_ViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+        [self.navigationController pushViewController:galleryVC animated:YES];
+        galleryVC.tattoomasterCell=_tattoomasterCell;
+        ;
 
+        
+    }}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -86,19 +101,28 @@ CFShareCircleView *shareCircleView;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [imageFilesArray count];
+    
+    
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%@", imageFilesArray);
 }
+- (void) noimage {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"對不起" message:@"沒有照片" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+ 
     static NSString *CellIdentifier = @"parallaxCell";
     GalleryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
-    PFFile *imageFile = [imageObject objectForKey:@"image"];
   
+    PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+    
+    PFFile *imageFile = [imageObject objectForKey:@"image"];
+
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
       cell.image.image = [UIImage imageNamed:@"loading_image.gif"];

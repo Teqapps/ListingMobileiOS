@@ -12,6 +12,7 @@
 #import "Tattoo_Detail_ViewController.h"
 #import "SWRevealViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MBProgressHUD.h"
 @interface TattooMaster_ViewController ()<UISearchDisplayDelegate, UISearchBarDelegate>
 {
     int lastClickedRow;
@@ -50,7 +51,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+    self.title =@"師父";
        self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -132,6 +133,7 @@
 
 
 - (PFQuery *)queryForTable{
+   
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     if (self.objects.count == 0) {
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
@@ -145,6 +147,7 @@
     //    [query orderByAscending:@"name"];
     
     return query;
+   
 }
 
 
@@ -179,7 +182,7 @@
     
     // Configure the cell
     // Configure the cell
-  
+   
     if (tableView == self.tableView) {
     UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
     loadingSpinner.hidden= NO;
@@ -218,7 +221,7 @@
     UILabel *count_like = (UILabel*) [cell viewWithTag:105];
     count_like.text = [NSString stringWithFormat:@"%d",count.count];
     
-    PFImageView *heart_statues = (PFImageView*)[cell viewWithTag:107];
+    heart_statues = (PFImageView*)[cell viewWithTag:107];
     if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
         
        
@@ -261,19 +264,24 @@
     UIButton *button = sender;
     CGPoint correctedPoint =
     [button convertPoint:button.bounds.origin toView:self.tableView];
-    NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
+    indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
     lastClickedRow = indexPath.row;
     selectobject = [self.objects objectAtIndex:indexPath.row];
          
          
     if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-  
+        
          [self dislike];
+       
         NSLog(@"disliked");
+       
    }
     
     else{
+   
+        
        [self likeImage];
+ 
         NSLog(@"liked");
      
 }
@@ -284,7 +292,10 @@
 }
 - (void) likeImage {
     [selectobject addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Uploading";
+    [hud show:YES];
     [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
        
         if (!error) {
@@ -293,6 +304,7 @@
 
                }
             [self refreshTable:nil];
+             [hud hide:YES];
         }
         else {
             [self likedFail];
@@ -301,10 +313,13 @@
 }
 - (void) dislike {
     [selectobject removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
     [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-        
+       
             
             if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
                
@@ -314,6 +329,7 @@
                
             }
             [self refreshTable:nil];
+              [hud hide:YES];
         }
         else {
             [self dislikedFail];

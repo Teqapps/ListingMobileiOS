@@ -19,8 +19,10 @@
      NSString * heart_status;
     NSArray * hehe;
     PFObject * object_id;
-    
+    PFImageView *heart_statues;
+    NSIndexPath *indexPath;
 }
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UISearchBar *SearchBar;

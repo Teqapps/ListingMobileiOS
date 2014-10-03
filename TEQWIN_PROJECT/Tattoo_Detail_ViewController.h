@@ -20,7 +20,12 @@
     NSArray * count;
     PFObject *object;
     NSMutableArray *list;
+  
 }
+- (IBAction)favButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *favButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *likeordislike;
+- (IBAction)likeordislike:(id)sender;
 
 - (IBAction)segmentSelected:(id)sender;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentcontroller;
@@ -35,7 +40,7 @@
 @property (nonatomic, assign) BOOL isFav;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSString *venueId;
-@property (weak, nonatomic) IBOutlet UIButton *favButton;
+
 - (IBAction)valueChanged:(id)sender;
 @property (weak, nonatomic) IBOutlet PFImageView *profileimage;
 

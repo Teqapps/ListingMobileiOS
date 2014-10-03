@@ -44,11 +44,18 @@
 {
     [super viewDidLoad];
     [self queryParseMethod];
-    count=self.tattoomasterCell.favorites;
-    _count_like.text=[NSString stringWithFormat:@"%d",count.count];
+    
+    self.title =self.tattoomasterCell.name;
+ 
     
     //set segmented control
-    
+   
+    if ([self.tattoomasterCell.favorites containsObject:[PFUser currentUser].objectId]) {
+        [self.favButton setImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];}
+        else {
+             [self.favButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
+        }
+
     
     self.profileimage.file=self.tattoomasterCell.imageFile;
     self.profileimage.layer.cornerRadius =self.profileimage.frame.size.width / 2;
@@ -85,8 +92,7 @@
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.personage]];
     
     
-    
-}
+    }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -126,9 +132,20 @@
             
         case 0:
             
-        {
-            cell.textLabel.text=@"%@";
             
+        {
+           
+            
+            if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+                
+                cell.textLabel.text=@"yes";
+            }
+            else
+            {
+                
+               cell.textLabel.text=@"no";
+            }
+
             
         }
             
@@ -249,21 +266,42 @@
     NSLog(@"start query");
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    
+    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-      
+           
         }
     }];
 }
 
+- (IBAction)likeordislike:(id)sender {
+    
+      [self likeImage];
+    NSLog(@"done");
+}
+- (void) likeImage {
+    [object addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
+    [object saveInBackground];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            [self likedSuccess];
+             self.isFav = YES;
+        }
+        else {
+            [self likedFail];
+        }
+    }];
+}
 - (void) dislike {
     [object removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
+    [object saveInBackground];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
             [self dislikedSuccess];
+             self.isFav = NO;
             
         }
         else {
@@ -280,20 +318,6 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oooops!" message:@"失敗" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
 }
-- (void) likeImage {
-    [object addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
-    [object saveInBackground];
-    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            
-            [self likedSuccess];
-            
-        }
-        else {
-            [self likedFail];
-        }
-    }];
-}
 
 - (void) likedSuccess {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"You have succesfully liked the image" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -305,6 +329,7 @@
     [alert show];
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -313,24 +338,39 @@
     switch (indexPath.row) {
         case 0:{
             {
-                
+                 if ([PFUser currentUser]) {
                 
                 object = [imageFilesArray objectAtIndex:indexPath.row];
                 imageObject = [imageFilesArray objectAtIndex:indexPath.row];
                 
                 count=[imageObject objectForKey:@"favorites"];
                 
-                NSLog(@"%d",count.count);
+                
                 NSLog(@"%@",object);
                 
-                if (self.isFav) {
-                    [self likeImage];
-                }
+              //  if (self.isFav) {
+                     if ([[imageObject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+                         
+                [self dislike];
+                          [self.favButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
+                     }
+                     else
+                     {
+                        
+                            [self likeImage];
+                           [self.favButton setImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
+                     }
+              //  }}
+                 }
                 else
                 {
-                    [self dislike];
-                    
+                    NSLog(@"請登入");
                 }
+              //  else
+              //  {
+                //    [self dislike];
+                    
+             //   }
             }}
             break;
         case 3:{
@@ -464,7 +504,42 @@
 }
 
 
+- (IBAction)favButton:(id)sender {
+      if ([PFUser currentUser]) {
+          
+  UIButton* button = sender;
+    CGPoint correctedPoint =
+    [button convertPoint:button.bounds.origin toView:self.tableView];
+   NSIndexPath* indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
+          object = [imageFilesArray objectAtIndex:indexPath.row];
+          imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+    lastClickedRow = indexPath.row;
+    object = [imageFilesArray objectAtIndex:indexPath.row];
+          NSLog(@"%@",imageFilesArray);
+          
+          
+          if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+              
+              [self dislike];
+              
+              NSLog(@"disliked");
+              [self.favButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
 
+          }
+          
+          else{
+              
+              
+              [self likeImage];
+              
+              NSLog(@"liked");
+              [self.favButton setImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
 
+                        }
+      }
+      else{
+          NSLog(@"請登入")
+          ; }
+}
 
 @end
