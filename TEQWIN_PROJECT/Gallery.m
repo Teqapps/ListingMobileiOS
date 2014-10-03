@@ -41,7 +41,7 @@ CFShareCircleView *shareCircleView;
     shareCircleView = [[CFShareCircleView alloc] initWithFrame:self.view.frame];
     shareCircleView.delegate = self;
     [self.navigationController.view addSubview:shareCircleView];
-}
+    }
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -192,6 +192,12 @@ CFShareCircleView *shareCircleView;
     NSLog(@"%ld",(long)button.tag);
     lastClickedRow = indexPath.row;
     [shareCircleView show];
+    
+}
+
+- (IBAction)like:(id)sender {
+    FBLikeControl * like =[[FBLikeControl alloc]init];
+    like.objectID = @"http://shareitexampleapp.parseapp.com/photo1/";
     
 }
 

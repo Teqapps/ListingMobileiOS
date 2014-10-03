@@ -18,6 +18,7 @@
 
 
 - (IBAction)btn_share:(id)sender;
+- (IBAction)like:(id)sender;
 
 @property(nonatomic,retain) UIDocumentInteractionController *documentationInteractionController;
 @property (strong, nonatomic) TattooMasterCell * tattoomasterCell;

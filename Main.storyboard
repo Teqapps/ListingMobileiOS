@@ -201,32 +201,6 @@
                                 <rect key="frame" x="0.0" y="188" width="320" height="316"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ilj-Et-a78" detailTextLabel="I6s-6v-wgH" style="IBUITableViewCellStyleValue2" id="uWJ-fh-lQl">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uWJ-fh-lQl" id="ELQ-Dg-rMA">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ilj-Et-a78">
-                                                    <rect key="frame" x="15" y="14" width="91" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I6s-6v-wgH">
-                                                    <rect key="frame" x="112" y="14" width="37" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="zCD-pb-qjH" id="M0h-Rh-Dx3"/>
@@ -253,37 +227,27 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qgl-JU-yeD">
-                                <rect key="frame" x="128" y="159" width="96" height="21"/>
+                                <rect key="frame" x="183" y="155" width="41" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_yes.png" id="YcL-qQ-XnU">
+                                <rect key="frame" x="139" y="156" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Nao-cD-eUg">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Urx-Kg-sm9">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="80a-T3-TrF">
-                                <rect key="frame" x="274" y="14" width="30" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="favButton:" destination="zCD-pb-qjH" eventType="touchUpInside" id="d1J-Cg-USb"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="count_like" destination="Qgl-JU-yeD" id="ZLi-eh-rmh"/>
-                        <outlet property="favButton" destination="80a-T3-TrF" id="mNF-ry-t8i"/>
                         <outlet property="profileimage" destination="xO9-7B-uIw" id="nNY-e0-C5Z"/>
                         <outlet property="tableView" destination="RFZ-3m-zSA" id="F97-HM-8ak"/>
                     </connections>
@@ -702,11 +666,36 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="KBc-O3-GG6" id="h6j-GE-1xj"/>
                         <outlet property="sidebarButton" destination="Xr6-9H-N8V" id="4S4-rJ-tPC"/>
                         <outlet property="table_view" destination="YXb-hL-ggL" id="WGS-w7-EG3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRJ-sT-dD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="pXD-Oh-nt9">
+                    <connections>
+                        <outlet property="delegate" destination="488-73-Amk" id="0cE-hH-NTG"/>
+                        <outlet property="searchContentsController" destination="488-73-Amk" id="dUC-WQ-5vf"/>
+                        <outlet property="searchResultsDataSource" destination="488-73-Amk" id="2Ny-oK-MaY"/>
+                        <outlet property="searchResultsDelegate" destination="488-73-Amk" id="Mia-1C-ylq"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="kOl-Fg-W8I">
+                    <connections>
+                        <outlet property="delegate" destination="488-73-Amk" id="GXO-Du-1V3"/>
+                        <outlet property="searchContentsController" destination="488-73-Amk" id="T5w-a8-gUf"/>
+                        <outlet property="searchResultsDataSource" destination="488-73-Amk" id="0Lc-RG-uaV"/>
+                        <outlet property="searchResultsDelegate" destination="488-73-Amk" id="jwJ-JU-41L"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="KBc-O3-GG6">
+                    <connections>
+                        <outlet property="delegate" destination="488-73-Amk" id="heu-LW-yh2"/>
+                        <outlet property="searchContentsController" destination="488-73-Amk" id="yNK-qW-pb9"/>
+                        <outlet property="searchResultsDataSource" destination="488-73-Amk" id="OGU-SU-VI6"/>
+                        <outlet property="searchResultsDelegate" destination="488-73-Amk" id="CeS-RL-BlY"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1479" y="-108"/>
         </scene>
@@ -815,6 +804,16 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="btn_share:" destination="wiJ-JE-w9h" eventType="touchUpInside" id="1hq-Vu-zb9"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SFu-pW-9qK">
+                                                    <rect key="frame" x="254" y="242" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="like:" destination="wiJ-JE-w9h" eventType="touchUpInside" id="EcZ-nf-nWV"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -960,6 +959,7 @@
     <resources>
         <image name="Tattoo_Logo.jpg" width="456" height="843"/>
         <image name="background.jpg" width="1920" height="1080"/>
+        <image name="heart_yes.png" width="30" height="30"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="navigationicon.png" width="512" height="512"/>
         <image name="teqwin_logo.png" width="263" height="135"/>

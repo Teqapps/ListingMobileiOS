@@ -45,7 +45,7 @@
     [super viewDidLoad];
     [self queryParseMethod];
     count=self.tattoomasterCell.favorites;
-    _count_like.text=[NSString stringWithFormat:@"Liked:%d",count.count];
+    _count_like.text=[NSString stringWithFormat:@"%d",count.count];
     
     //set segmented control
     
@@ -253,12 +253,11 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            
-            
-            
+      
         }
     }];
 }
+
 - (void) dislike {
     [object removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -450,40 +449,7 @@
     }}
 
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    
-    self.isFav = [self isFavorited];
-    if (self.isFav){
-        NSLog(@"like");
-        //[self.favButton setImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
-        
-        //[self.favButton setTitle:@"Unfav" forState:UIControlStateNormal];
-    } else {
-        
-        NSLog(@"unlike");
-        
-        //[self.favButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
-        
-        //[self.favButton setTitle:@"Fav" forState:UIControlStateNormal];
-    }
-    
-    
-}
-- (BOOL)isFavorited
-{
-    
-    PFQuery *innerQuery = [PFQuery queryWithClassName:@ "Tattoo_Master" ];
-   
-    PFQuery *query = [PFQuery queryWithClassName:@ "Tattoo_Master" ];
-   
-    NSLog(@"%@",innerQuery);
-    
-    return YES;
-    
-}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"GOGALLERY"]) {
         
@@ -496,6 +462,7 @@
         }
     }
 }
+
 
 
 

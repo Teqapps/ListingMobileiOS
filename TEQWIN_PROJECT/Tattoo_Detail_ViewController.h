@@ -22,6 +22,9 @@
     NSMutableArray *list;
 }
 
+- (IBAction)segmentSelected:(id)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentcontroller;
+
 @property (strong, nonatomic) Tattoo_Master_Info *selectedTattoo_Master;
 
 @property (weak, nonatomic) IBOutlet UILabel *count_like;

@@ -12,11 +12,13 @@
 #import "Tattoo_Detail_ViewController.h"
 #import "SWRevealViewController.h"
 #import <QuartzCore/QuartzCore.h>
-@interface TattooMaster_ViewController ()
+@interface TattooMaster_ViewController ()<UISearchDisplayDelegate, UISearchBarDelegate>
 {
     int lastClickedRow;
 }
-
+@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) UISearchDisplayController *searchController;
+@property (nonatomic, strong) NSMutableArray *searchResults;
 
 @end
 
@@ -67,11 +69,47 @@
                                                object:nil];
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    
+    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    self.tableView.tableHeaderView = self.searchBar;
+    self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    self.searchController.searchResultsDataSource = self;
+    self.searchController.searchResultsDelegate = self;
+    self.searchController.delegate = self;
+    CGPoint offset = CGPointMake(0, self.searchBar.frame.size.height);
+    self.tableView.contentOffset = offset;
+    self.searchResults = [NSMutableArray array];
 }
-
-
-
+-(void)filterResults:(NSString *)searchTerm {
+    
+    [self.searchResults removeAllObjects];
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName]; // tábla amiben keres
+    [query whereKeyExists:@"Name"]; // oszlop amiben keres
+    [query whereKey:@"Name" containsString:searchTerm];
+    NSArray *results = [query findObjects];
+    [self.searchResults addObjectsFromArray:results];
+}
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self filterResults:searchString];
+    return YES;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (tableView == self.tableView) {
+        return self.objects.count;
+         NSLog(@"%d",self.objects.count);
+    } else {
+        return self.searchResults.count;
+        NSLog(@"%d",self.searchResults.count);
+    }
+}
+-(void)callbackLoadObjectsFromParse:(NSArray *)result error:(NSError *)error {
+    if (!error) {
+        [self.searchResults removeAllObjects];
+        [self.searchResults addObjectsFromArray:result];
+        [self.searchDisplayController.searchResultsTableView reloadData];
+    } else {
+        NSLog(@"Error: %@ %@", error, [error userInfo]);
+    }
+}
 - (void)refreshTable:(NSNotification *) notification
 {
     // Reload the recipes
@@ -95,7 +133,9 @@
 
 - (PFQuery *)queryForTable{
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    
+    if (self.objects.count == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
     /*    if ([self.objects count] == 0) {
@@ -129,6 +169,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
+    
     static NSString *simpleTableIdentifier = @"RecipeCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -139,7 +180,7 @@
     // Configure the cell
     // Configure the cell
   
-    
+    if (tableView == self.tableView) {
     UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
     loadingSpinner.hidden= NO;
     [loadingSpinner startAnimating];
@@ -189,7 +230,14 @@
         
          heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
     }
+    }
+    else
+    {
+        if(tableView == self.searchDisplayController.searchResultsTableView) {
+            PFObject *searchedUser = [self.searchResults objectAtIndex:indexPath.row];
+            cell.textLabel.text = [searchedUser objectForKey:@"Name"];
 
+        }}
     
     
            return cell;
@@ -322,7 +370,11 @@
     
         destViewController.tattoomasterCell = tattoomasterCell;
         
+    
+   
+    
     }
+    
 }
 
 
