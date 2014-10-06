@@ -227,6 +227,13 @@
 		42A4917419D5633A00E4D65E /* button_heart_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4917319D5633A00E4D65E /* button_heart_blue.png */; };
 		42A4917619D56D7200E4D65E /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 42A4917519D56D7200E4D65E /* loading.gif */; };
 		42A4917819D56DE600E4D65E /* loading_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = 42A4917719D56DE600E4D65E /* loading_image.gif */; };
+		42A4917D19E2370300E4D65E /* historyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A4917C19E2370300E4D65E /* historyViewController.m */; };
+		42A4918019E2370C00E4D65E /* noticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A4917F19E2370C00E4D65E /* noticeViewController.m */; };
+		42A4918219E2374F00E4D65E /* tattoo_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918119E2374F00E4D65E /* tattoo_1.jpg */; };
+		42A4918419E2375200E4D65E /* tattoo_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918319E2375200E4D65E /* tattoo_2.jpg */; };
+		42A4918619E2375500E4D65E /* tattoo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918519E2375500E4D65E /* tattoo_3.jpg */; };
+		42A4918819E239C600E4D65E /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918719E239C600E4D65E /* history.png */; };
+		42A4918A19E23CB800E4D65E /* notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918919E23CB800E4D65E /* notice.png */; };
 		42AD1EB019B0718C00277278 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAD19B0718B00277278 /* Bolts.framework */; };
 		42AD1EB219B0718C00277278 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */; };
 		42AD1EB419B071AC00277278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EB319B071AC00277278 /* AudioToolbox.framework */; };
@@ -524,6 +531,15 @@
 		42A4917319D5633A00E4D65E /* button_heart_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_heart_blue.png; sourceTree = "<group>"; };
 		42A4917519D56D7200E4D65E /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		42A4917719D56DE600E4D65E /* loading_image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading_image.gif; sourceTree = "<group>"; };
+		42A4917B19E2370300E4D65E /* historyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historyViewController.h; sourceTree = "<group>"; };
+		42A4917C19E2370300E4D65E /* historyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = historyViewController.m; sourceTree = "<group>"; };
+		42A4917E19E2370C00E4D65E /* noticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeViewController.h; sourceTree = "<group>"; };
+		42A4917F19E2370C00E4D65E /* noticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeViewController.m; sourceTree = "<group>"; };
+		42A4918119E2374F00E4D65E /* tattoo_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tattoo_1.jpg; sourceTree = "<group>"; };
+		42A4918319E2375200E4D65E /* tattoo_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tattoo_2.jpg; sourceTree = "<group>"; };
+		42A4918519E2375500E4D65E /* tattoo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tattoo_3.jpg; sourceTree = "<group>"; };
+		42A4918719E239C600E4D65E /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		42A4918919E23CB800E4D65E /* notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notice.png; sourceTree = "<group>"; };
 		42AD1EAD19B0718B00277278 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		42AD1EB319B071AC00277278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -592,6 +608,8 @@
 		42193F841985FE08007E3C52 = {
 			isa = PBXGroup;
 			children = (
+				42A4917A19E236EE00E4D65E /* notice */,
+				42A4917919E236E700E4D65E /* history */,
 				42EA403119C934F90051057C /* ShareKit */,
 				426ED3D919C048320024E817 /* AddShare */,
 				426ED3D119C02C740024E817 /* Main.storyboard */,
@@ -1075,6 +1093,29 @@
 			name = "Login System";
 			sourceTree = "<group>";
 		};
+		42A4917919E236E700E4D65E /* history */ = {
+			isa = PBXGroup;
+			children = (
+				42A4918719E239C600E4D65E /* history.png */,
+				42A4918519E2375500E4D65E /* tattoo_3.jpg */,
+				42A4918319E2375200E4D65E /* tattoo_2.jpg */,
+				42A4918119E2374F00E4D65E /* tattoo_1.jpg */,
+				42A4917B19E2370300E4D65E /* historyViewController.h */,
+				42A4917C19E2370300E4D65E /* historyViewController.m */,
+			);
+			name = history;
+			sourceTree = "<group>";
+		};
+		42A4917A19E236EE00E4D65E /* notice */ = {
+			isa = PBXGroup;
+			children = (
+				42A4918919E23CB800E4D65E /* notice.png */,
+				42A4917E19E2370C00E4D65E /* noticeViewController.h */,
+				42A4917F19E2370C00E4D65E /* noticeViewController.m */,
+			);
+			name = notice;
+			sourceTree = "<group>";
+		};
 		42EA403119C934F90051057C /* ShareKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1228,10 +1269,12 @@
 				4263004F198F8E7D007B8C8F /* new-icon.png in Resources */,
 				4219405C1986354B007E3C52 /* Ka_Heung_Shan_Tau_Noodles_Shop.JPG in Resources */,
 				424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */,
+				42A4918619E2375500E4D65E /* tattoo_3.jpg in Resources */,
 				421940561986354B007E3C52 /* Hung_Wan_restaurant.jpg in Resources */,
 				421940751986354B007E3C52 /* Tak_Hing_Restaurant.jpg in Resources */,
 				42193FD219860221007E3C52 /* menu@2x.png in Resources */,
 				42A4914219D506A700E4D65E /* MainBG.png in Resources */,
+				42A4918819E239C600E4D65E /* history.png in Resources */,
 				4266572119A6F2DC001D94B5 /* like_icon.png in Resources */,
 				4219407C1986354B007E3C52 /* WONG_CHI_KEI.jpg in Resources */,
 				421940661986354B007E3C52 /* Ocean_Empire_Food_Shop.jpg in Resources */,
@@ -1246,6 +1289,7 @@
 				42A4914719D506A700E4D65E /* TwitterDown.png in Resources */,
 				42A4917019D54C4300E4D65E /* heart_yes.png in Resources */,
 				421940581986354B007E3C52 /* Jade_Garden.jpg in Resources */,
+				42A4918219E2374F00E4D65E /* tattoo_1.jpg in Resources */,
 				4219404D1986354B007E3C52 /* Eat_East.jpg in Resources */,
 				427D34A7199E076400814463 /* mail.png in Resources */,
 				4219404B1986354B007E3C52 /* Dining_Fine.jpg in Resources */,
@@ -1263,6 +1307,7 @@
 				421940731986354B007E3C52 /* Tai_Hing.jpg in Resources */,
 				4219408719863C9F007E3C52 /* ive.png in Resources */,
 				4266571819A6F1A6001D94B5 /* share.png in Resources */,
+				42A4918A19E23CB800E4D65E /* notice.png in Resources */,
 				428189041999F55D004D09EF /* gallery.png in Resources */,
 				4219405F1986354B007E3C52 /* Maccha_House.jpg in Resources */,
 				421940791986354B007E3C52 /* UCC_COFFEE_SHOP_B.jpg in Resources */,
@@ -1273,6 +1318,7 @@
 				42A4917819D56DE600E4D65E /* loading_image.gif in Resources */,
 				42630049198F8DA2007B8C8F /* Favorites-icon.png in Resources */,
 				4219409C19878375007E3C52 /* news.jpg in Resources */,
+				42A4918419E2375200E4D65E /* tattoo_2.jpg in Resources */,
 				427D34AC199E076400814463 /* photo_library@2x.png in Resources */,
 				4219403F1986354B007E3C52 /* Yummy_Delight.jpg in Resources */,
 				4219405E1986354B007E3C52 /* Lei_Garden_Restaurant.jpg in Resources */,
@@ -1368,12 +1414,14 @@
 				4219408A198654A7007E3C52 /* Tattoo_Master_Info.m in Sources */,
 				427D34B9199E079E00814463 /* ShareViewController.m in Sources */,
 				4263006819908766007B8C8F /* Fav_mappoint_ViewController.m in Sources */,
+				42A4918019E2370C00E4D65E /* noticeViewController.m in Sources */,
 				426ED3E419C049760024E817 /* NewRecipeViewController.m in Sources */,
 				426ED3F819C2C3D00024E817 /* VPImageCropperViewController.m in Sources */,
 				426ED39319B9AF560024E817 /* TattooMasterCell.m in Sources */,
 				42193FCE1985FECF007E3C52 /* MainViewController.m in Sources */,
 				427D3B2F19A32B9E00814463 /* LoginUIViewController.m in Sources */,
 				42193FA11985FE08007E3C52 /* AppDelegate.m in Sources */,
+				42A4917D19E2370300E4D65E /* historyViewController.m in Sources */,
 				42193FD619860291007E3C52 /* TattooMaster_ViewController.m in Sources */,
 				427D342D199DA73400814463 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				426ED3E319C049760024E817 /* RecipeDetailViewController.m in Sources */,

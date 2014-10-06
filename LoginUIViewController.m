@@ -15,6 +15,7 @@
  about handling errors in our Error Handling guide:
  https://developers.facebook.com/docs/ios/errors
 */
+#import "MBProgressHUD.h"
 #import "Tattoo_Detail_ViewController.h"
 #import "Tattoo_Master_Info.h"
 #import "TattooMaster_ViewController.h"
@@ -151,7 +152,11 @@
 
 - (void)queryParseMethod {
     NSLog(@"start query");
-   
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     [query whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
  
@@ -159,6 +164,7 @@
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
             [TABLEVIEW reloadData];
+            [hud hide:YES];
                   }
     }];
 }
@@ -186,7 +192,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"RecipeCell";
+    static NSString *simpleTableIdentifier = @"favcell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
@@ -222,6 +228,14 @@
     UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
     prepTimeLabel.text = [imageObject objectForKey:@"Gender"];
     
+     PFImageView *fav = (PFImageView*)[cell viewWithTag:120];
+      if ([[imageObject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+    fav.image = [UIImage imageNamed:favstring];
+      }
+    else
+    {
+        fav.image = [UIImage imageNamed:favstring];
+    }
     return cell;
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -384,25 +398,46 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Remove the row from data model
-     selectobject = [imageFilesArray objectAtIndex:indexPath.row];
-    [selectobject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-    }];
+     [self unlikeImage];
 }
+
 - (IBAction)Fav:(id)sender {
     UIButton *button = sender;
     CGPoint correctedPoint =
     [button convertPoint:button.bounds.origin toView:self.TABLEVIEW];
     NSIndexPath *indexPath =  [self.TABLEVIEW indexPathForRowAtPoint:correctedPoint];
-    
-    
+
     NSLog(@"%ld",(long)button.tag);
     lastClickedRow = indexPath.row;
      selectobject = [imageFilesArray objectAtIndex:indexPath.row];
     NSLog(@"%@",selectobject);
-    [self unlikeImage];
-    
+    if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+
+  //  [self unlikeImage];
+     
+      }
+    else
+    {
+    //     [self likeImage];
+
+    }
     
 }
+- (void) likeImage {
+    [selectobject addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
+    [selectobject saveInBackground];
+    [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            [self likedSuccess];
+            self.isFav = YES;
+        }
+        else {
+            [self likedFail];
+        }
+    }];
+}
+
 - (void) unlikeImage {
     [selectobject removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
     [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -417,7 +452,15 @@
         }
     }];
 }
+- (void) likedSuccess {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"You have succesfully liked the image" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
 
+- (void) likedFail {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oooops!" message:@"There was an error when liking the image" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
 - (void) unlikedSuccess {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"成功!" message:@"你已經取消了我的最愛" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];

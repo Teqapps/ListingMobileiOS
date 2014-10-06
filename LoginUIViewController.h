@@ -17,6 +17,8 @@
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
     PFObject *selectobject;
+    NSString * favstring;
+    
 }
 @property (nonatomic, assign) BOOL isFav;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
