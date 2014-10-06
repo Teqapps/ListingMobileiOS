@@ -52,6 +52,7 @@
 {
     [super viewDidLoad];
     self.title =@"師父";
+    
        self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -129,10 +130,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //lastClickedRow = indexPath.row;
+    lastClickedRow = indexPath.row;
     
-    //selectobject = [self.objects  objectAtIndex:indexPath.row];
-    //NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+    selectobject = [self.objects  objectAtIndex:indexPath.row];
+    NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
    
 }
 
