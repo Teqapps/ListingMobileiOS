@@ -28,7 +28,9 @@
 
 
 
-
+-(void)change:(UISegmentedControl *)segmentControl{
+    NSLog(@"segmentControl %d",segmentControl.selectedSegmentIndex);
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,6 +39,7 @@
     }
     return self;
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,10 +51,9 @@
     //set segmented control
    
     if ([self.tattoomasterCell.favorites containsObject:[PFUser currentUser].objectId]) {
-        self.fav_image.image =[UIImage imageNamed:@"button_heart_red.png"];
-    }
+        [self.favButton setImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];}
         else {
-            self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+             [self.favButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
         }
 
     
@@ -68,7 +70,7 @@
     
     
     // Set the gesture
-   // [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     
     
@@ -76,7 +78,7 @@
     
     
     list =[[NSMutableArray alloc]init];
-   
+    [list addObject:[NSString stringWithFormat:@"加入到我的最愛!!"]];
     
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.name]];
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.gender]];
@@ -128,8 +130,28 @@
     }
     switch (indexPath.row) {
             
-            
         case 0:
+            
+            
+        {
+           
+            
+            if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+                
+                cell.textLabel.text=@"yes";
+            }
+            else
+            {
+                
+               cell.textLabel.text=@"no";
+            }
+
+            
+        }
+            
+            break;
+            
+        case 1:
             
         {
             
@@ -141,7 +163,7 @@
             
             break;
             
-        case 1:
+        case 2:
             
         {
             cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
@@ -151,7 +173,7 @@
             
             break;
             
-        case 2:
+        case 3:
             
         {
             cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
@@ -162,7 +184,7 @@
         }
             
             break;
-        case 3:
+        case 4:
             
         {
             cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
@@ -174,7 +196,7 @@
             
             break;
             
-        case 4:
+        case 5:
             
         {
             cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
@@ -186,7 +208,7 @@
             
             break;
             
-        case 5:
+        case 6:
             
         {
             
@@ -199,7 +221,7 @@
             
             break;
             
-        case 6:
+        case 7:
             
         {
             
@@ -253,7 +275,11 @@
     }];
 }
 
-
+- (IBAction)likeordislike:(id)sender {
+    
+      [self likeImage];
+    NSLog(@"done");
+}
 - (void) likeImage {
     [object addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
     [object saveInBackground];
@@ -310,20 +336,57 @@
     
     
     switch (indexPath.row) {
-               case 2:{
+        case 0:{
+            {
+                 if ([PFUser currentUser]) {
+                
+                object = [imageFilesArray objectAtIndex:indexPath.row];
+                imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+                
+                count=[imageObject objectForKey:@"favorites"];
+                
+                
+                NSLog(@"%@",object);
+                
+              //  if (self.isFav) {
+                     if ([[imageObject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+                         
+                [self dislike];
+                          [self.favButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
+                     }
+                     else
+                     {
+                        
+                            [self likeImage];
+                           [self.favButton setImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
+                     }
+              //  }}
+                 }
+                else
+                {
+                    NSLog(@"請登入");
+                }
+              //  else
+              //  {
+                //    [self dislike];
+                    
+             //   }
+            }}
+            break;
+        case 3:{
             Map_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Map_ViewController"];
             [self.navigationController pushViewController:mapVC animated:YES];
             mapVC.tattoomasterCell=_tattoomasterCell;
             NSLog(@"%@%@",self.tattoomasterCell.latitude,self.tattoomasterCell.longitude);
         }
             break;
-        case 3:{
+        case 4:{
             
             NSURL *url = [NSURL URLWithString:self.tattoomasterCell.website ];
             [[UIApplication sharedApplication] openURL:url];
         }
             break;
-        case 4:
+        case 5:
             //Create the MailComposeViewController
             
         {
@@ -356,7 +419,7 @@
             break;}
             
             //make alert box and phonecall function
-        case 5:
+        case 6:
         {
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"撥號"
@@ -460,7 +523,7 @@
               [self dislike];
               
               NSLog(@"disliked");
-                self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+              [self.favButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
 
           }
           
@@ -470,7 +533,7 @@
               [self likeImage];
               
               NSLog(@"liked");
-  self.fav_image.image =[UIImage imageNamed:@"button_heart_red.png"];
+              [self.favButton setImage:[UIImage imageNamed:@"heart.png"] forState:UIControlStateNormal];
 
                         }
       }

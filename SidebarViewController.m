@@ -141,13 +141,11 @@
     
          self.tableview.backgroundColor = [UIColor clearColor];
 self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background1.jpg"]];
-    menuItems = @[@"title", @"新消息",@"紋身歷史" ,@"紋身注意事項",@"找紋身師傅",@"我的最愛"];
+    menuItems = @[@"title", @"新消息",  @"找紋身師傅",@"我的最愛"];
     list =[[NSMutableArray alloc]init];
     [list addObject:[NSString stringWithFormat:@"title"]];
-    
     [list addObject:[NSString stringWithFormat:@"新消息"]];
-    [list addObject:[NSString stringWithFormat:@"紋身歷史"]];
-    [list addObject:[NSString stringWithFormat:@"紋身注意事項"]];
+    
     [list addObject:[NSString stringWithFormat:@"找紋身師傅"]];
 [list addObject:[NSString stringWithFormat:@"我的最愛"]];
    ;
@@ -197,24 +195,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
-        case 2:
-        {
-            cell.imageView.image =[UIImage imageNamed:@"history.png"];
-            cell.textLabel.text=@"紋身歷史";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setTextColor:[UIColor whiteColor]];
-        }
-            break;
-        case 3:
-        {
-            cell.imageView.image =[UIImage imageNamed:@"notice.png"];
-            cell.textLabel.text=@"紋身注意事項";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setTextColor:[UIColor whiteColor]];
-        }
-            break;
-
-               case 4 :
+               case 2:
         {
             cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
             cell.textLabel.text=@"找紋身師傅";
@@ -222,7 +203,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
-        case 5:
+        case 3:
         {
             cell.imageView.image =[UIImage imageNamed:@"Favorites-icon.png"];
             cell.textLabel.text=@"我的最愛";

@@ -33,6 +33,12 @@
                                 </imageView>
                                 <cells/>
                             </collectionView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nZW-J7-AsK">
+                                <rect key="frame" x="82" y="327" width="159" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -42,11 +48,12 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="sidebarButton" destination="Vc6-88-Sbc" id="eT5-cb-F3X"/>
+                        <outlet property="test" destination="nZW-J7-AsK" id="Y8Y-D8-pZu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evX-nr-qca" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437" y="723"/>
+            <point key="canvasLocation" x="884" y="31"/>
         </scene>
         <!--Sidebar View Controller-->
         <scene sceneID="PIX-3s-mzZ">
@@ -57,7 +64,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wbj-g4-Y4R">
-                                <rect key="frame" x="0.0" y="196" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="196" width="320" height="263"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -82,32 +89,8 @@
                                             <segue destination="CZH-Rz-gDi" kind="custom" customClass="SWRevealViewControllerSegue" id="jzI-7Q-TeA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="紋身歷史" id="uTV-ZJ-XIq">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uTV-ZJ-XIq" id="bnU-Kb-ahR">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="v9q-E4-sEi" kind="custom" customClass="SWRevealViewControllerSegue" id="njj-2d-hlP"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="紋身注意事項" id="Ul9-7F-qOi">
-                                        <rect key="frame" x="0.0" y="154" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ul9-7F-qOi" id="h5z-Ec-2Gt">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="03e-be-abg" kind="custom" customClass="SWRevealViewControllerSegue" id="MsR-o8-LCf"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="找紋身師傅" id="OeR-dQ-LXE">
-                                        <rect key="frame" x="0.0" y="198" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OeR-dQ-LXE" id="YRe-aH-fTU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -119,7 +102,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="我的最愛" id="FNl-Ri-x6K">
-                                        <rect key="frame" x="0.0" y="242" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="154" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FNl-Ri-x6K" id="T8T-uK-snf">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -168,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFu-rl-uXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="3"/>
+            <point key="canvasLocation" x="601" y="-376"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wPd-JZ-RwP">
@@ -186,7 +169,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CE5-X5-zOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="723"/>
+            <point key="canvasLocation" x="533" y="371"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="ilu-Je-fq0">
@@ -204,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uD-aD-kgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397" y="3"/>
+            <point key="canvasLocation" x="71" y="-5"/>
         </scene>
         <!--Tattoo Detail View Controller-->
         <scene sceneID="ONM-03-lkX">
@@ -269,18 +252,15 @@
                                     <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY" id="MxO-aF-3Wd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="62o-N6-bG8">
-                                <rect key="frame" x="154" y="152" width="30" height="30"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qgl-JU-yeD">
+                                <rect key="frame" x="114" y="20" width="186" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="favButton:" destination="zCD-pb-qjH" eventType="touchUpInside" id="TwZ-FR-MX2"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Vix-Os-tAF">
-                                <rect key="frame" x="155" y="151" width="29" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_yes.png" id="YcL-qQ-XnU">
+                                <rect key="frame" x="139" y="156" width="29" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -289,6 +269,12 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Nao-cD-eUg">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt; 師父資料" style="plain" id="W2C-jE-Pw0">
+                            <color key="tintColor" red="0.9960784912109375" green="0.98823535442352295" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <segue destination="488-73-Amk" kind="push" id="wiH-Yb-arx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="XAk-TS-cWP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WWt-Wg-Yyd">
                                 <rect key="frame" x="233" y="5" width="71" height="33"/>
@@ -297,21 +283,24 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="favButton:" destination="zCD-pb-qjH" eventType="touchUpInside" id="X0H-d5-yTm"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
-                        <outlet property="favButton" destination="62o-N6-bG8" id="trU-ZK-hAd"/>
-                        <outlet property="fav_image" destination="Vix-Os-tAF" id="xRJ-Ka-bcX"/>
+                        <outlet property="count_like" destination="Qgl-JU-yeD" id="ZLi-eh-rmh"/>
+                        <outlet property="favButton" destination="WWt-Wg-Yyd" id="Q59-gq-sRC"/>
                         <outlet property="profileimage" destination="xO9-7B-uIw" id="nNY-e0-C5Z"/>
                         <outlet property="tableView" destination="RFZ-3m-zSA" id="F97-HM-8ak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wP7-EA-Ela" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="61"/>
+            <point key="canvasLocation" x="99" y="-837"/>
         </scene>
         <!--Master Map View Controller-->
         <scene sceneID="KqT-rk-QDT">
@@ -382,7 +371,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0t-6y-0tO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473" y="-1367"/>
+            <point key="canvasLocation" x="762" y="-991"/>
         </scene>
         <!--Detail Fav View Controller-->
         <scene sceneID="tQF-zS-06q">
@@ -461,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epf-Pg-Dgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="-1367"/>
+            <point key="canvasLocation" x="1231" y="-1521"/>
         </scene>
         <!--Fav Map View Controller-->
         <scene sceneID="IXX-Qh-cJz">
@@ -644,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plx-5c-gFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="-1367"/>
+            <point key="canvasLocation" x="1664" y="-1252"/>
         </scene>
         <!--Tattoo Master View Controller - Title-->
         <scene sceneID="uPb-CU-JX0">
@@ -709,7 +698,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zCD-pb-qjH" kind="push" identifier="showDetail" id="Oz0-Qe-dUn"/>
+                                    <segue destination="zCD-pb-qjH" kind="push" identifier="showDetail" id="7da-Eu-t8M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -754,7 +743,73 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="473" y="3"/>
+            <point key="canvasLocation" x="437" y="-778"/>
+        </scene>
+        <!--Parse Image View Controller - collection view-->
+        <scene sceneID="oJs-yJ-VzB">
+            <objects>
+                <viewController id="qhR-wZ-KQO" customClass="ParseImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zQt-aR-DE7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="37x-Rg-aIx">
+                                <rect key="frame" x="0.0" y="37" width="320" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qvs-Pp-uhP">
+                                    <size key="itemSize" width="145" height="145"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <label key="backgroundView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fYw-Eo-3g9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="483"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="LJ1-sg-eZ9" customClass="ImageExampleCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="N1y-aj-7AF">
+                                                    <rect key="frame" x="70" y="66" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="teqwin_logo.png" id="h58-Oq-V6y">
+                                                    <rect key="frame" x="5" y="0.0" width="134" height="145"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="145" height="145"/>
+                                        <connections>
+                                            <outlet property="loadingSpinner" destination="N1y-aj-7AF" id="tIH-0m-fm2"/>
+                                            <outlet property="parseImage" destination="h58-Oq-V6y" id="eYR-Lu-7ia"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qhR-wZ-KQO" id="slW-7j-nOf"/>
+                                    <outlet property="delegate" destination="qhR-wZ-KQO" id="Z7H-7X-mXi"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="collection view" id="Xsp-Ez-1A1"/>
+                    <navigationItem key="navigationItem" id="x09-MX-yCP"/>
+                    <connections>
+                        <outlet property="imagesCollection" destination="37x-Rg-aIx" id="J1s-CA-P8C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1B-KJ-IHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2485" y="-61"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="Gdt-n3-lqK">
@@ -832,79 +887,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bi0-AO-PGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="61"/>
-        </scene>
-        <!--Notice View Controller - Title-->
-        <scene sceneID="iXt-wp-hrl">
-            <objects>
-                <viewController id="03e-be-abg" customClass="noticeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qh5-Ud-sCW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MkC-kP-z1m">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">第一、刺青之後的三到五個小時之內，用溫水來清洗身體，把表面多餘的顏料或者是滲出的血液擦去，請記住，這一個步驟十分重要，如果時間過早，則會容易讓皮膚下層的顏料淡化，如果時間過長，滲出的血液不容易擦掉，而且以後每天要注意清洗，保持皮膚的乾淨和清潔，這樣會讓刺青的顏色起到很好的保護。
-　　第二、不要使用任何的藥品或者藥膏來塗抹，有一些人往往擔心自己的皮膚出現感染或者其他的證狀，所以就會自主的使用一些藥膏來塗抹，因爲有化學成分的一些藥膏會對於刺青的顏色形成一定的傷害，最後破壞掉整體的美觀性。
-　　第三、不能在刺青之後的一個星期之內進行長時間浸水的接觸，比如泡澡、桑拿等等，這個時候，皮膚下面的的色素還沒有完全固定，容易隨著水的滲入而產生變化，另外也不可以曬太陽。
-　　第四、不可對皮膚任何的抓撓行爲，有些人的皮膚往往會在刺青之後的三到四天之內，出現癢的現象，請不要擔心，這是皮膚的正常反應，一般兩天之後就會消失，一定不能抓，也不能撓。</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="SWl-L7-ssn">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="zah-RQ-9qs"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="sidebarButton" destination="zah-RQ-9qs" id="zL4-WB-131"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1E7-6J-lZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="473" y="-2709"/>
-        </scene>
-        <!--History View Controller-->
-        <scene sceneID="6YF-EL-tk6">
-            <objects>
-                <viewController id="v9q-E4-sEi" customClass="historyViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KxI-lV-Gw9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="刺青，又稱文身或紋身，指用有墨的針刺入皮膚底層而在皮膚上書畫出圖案或詞彙。商務印書館《現代漢語詞典》中对「紋身」的解釋為：“在人體上繪成或刺成帶顏色的花紋或圖形”。" id="qNV-Ln-XxK">
-                                <rect key="frame" x="0.0" y="225" width="320" height="343"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tattoo_1.jpg" id="qMm-Z7-j31">
-                                <rect key="frame" x="20" y="87" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tattoo_3.jpg" id="9IM-nM-X4Q">
-                                <rect key="frame" x="164" y="87" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wkr-jM-bWN">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="h7O-EJ-lxh"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="sidebarButton" destination="h7O-EJ-lxh" id="X9l-0f-YOl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rGr-eO-GOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="473" y="-2049"/>
+            <point key="canvasLocation" x="1936" y="-44"/>
         </scene>
         <!--LoginUI View Controller - Title-->
         <scene sceneID="4wR-XP-GeQ">
@@ -919,7 +902,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favcell" rowHeight="63" id="VB5-K6-tVo">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipeCell" rowHeight="63" id="VB5-K6-tVo">
                                         <rect key="frame" x="0.0" y="22" width="320" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VB5-K6-tVo" id="Jj5-wB-9BN">
@@ -946,19 +929,15 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JD2-yw-afT">
-                                                    <rect key="frame" x="238.5" y="11.5" width="39" height="39"/>
+                                                    <rect key="frame" x="245" y="16" width="38" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
+                                                    <state key="normal" title="unfav">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="Fav:" destination="oJ1-Dk-Y59" eventType="touchUpInside" id="eIw-oi-mzf"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" tag="120" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="b4N-oO-XmT" customClass="PFImageView">
-                                                    <rect key="frame" x="238.5" y="11.5" width="39" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1020,16 +999,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNg-eE-dtF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473" y="-693"/>
+            <point key="canvasLocation" x="-218" y="-785"/>
         </scene>
     </scenes>
     <resources>
         <image name="Tattoo_Logo.jpg" width="456" height="843"/>
         <image name="background.jpg" width="1920" height="1080"/>
+        <image name="heart_yes.png" width="30" height="30"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="navigationicon.png" width="512" height="512"/>
-        <image name="tattoo_1.jpg" width="800" height="1057"/>
-        <image name="tattoo_3.jpg" width="398" height="398"/>
+        <image name="teqwin_logo.png" width="263" height="135"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -1038,6 +1017,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="Oz0-Qe-dUn"/>
+        <segue reference="wiH-Yb-arx"/>
+        <segue reference="7da-Eu-t8M"/>
     </inferredMetricsTieBreakers>
 </document>

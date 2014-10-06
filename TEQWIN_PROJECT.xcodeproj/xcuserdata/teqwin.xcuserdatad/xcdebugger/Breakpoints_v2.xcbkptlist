@@ -379,11 +379,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginUIViewController.h"
-            timestampString = "434022952.87368"
+            timestampString = "433135184.249933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "profile_image"
             landmarkType = "19">
             <Locations>
@@ -393,12 +393,12 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[LoginUIViewController profile_image]"
                   moduleName = "TEQWIN_PROJECT"
-                  urlString = "file:///Users/teqwin/ListingMobileiOS/LoginUIViewController.h"
-                  timestampString = "434253338.174204"
+                  urlString = "file:///Users/teqwin/Desktop/TEQWIN_NEW/TEQWIN_PROJECT_19-9-2014%20%20parse%20%E6%8B%B7%E8%B2%9D/LoginUIViewController.h"
+                  timestampString = "432809445.643364"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
                   offsetFromSymbolStart = "24">
                </Location>
                <Location
@@ -407,12 +407,12 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[LoginUIViewController setProfile_image:]"
                   moduleName = "TEQWIN_PROJECT"
-                  urlString = "file:///Users/teqwin/ListingMobileiOS/LoginUIViewController.h"
-                  timestampString = "434253338.174421"
+                  urlString = "file:///Users/teqwin/Desktop/TEQWIN_NEW/TEQWIN_PROJECT_19-9-2014%20%20parse%20%E6%8B%B7%E8%B2%9D/LoginUIViewController.h"
+                  timestampString = "432809445.643893"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
                   offsetFromSymbolStart = "31">
                </Location>
             </Locations>
@@ -425,11 +425,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/TattooMaster_ViewController.m"
-            timestampString = "434264477.192576"
+            timestampString = "434018252.09669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
             landmarkName = "@implementation TattooMaster_ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -486,12 +486,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LoginUIViewController.m"
-            timestampString = "434254966.05651"
+            filePath = "TEQWIN_PROJECT/Tattoo_Detail_ViewController.m"
+            timestampString = "434019313.95518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
