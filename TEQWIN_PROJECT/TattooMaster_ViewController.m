@@ -52,7 +52,7 @@
 {
     [super viewDidLoad];
     self.title =@"師父";
-    
+    [self refreshTable:nil];
        self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -73,7 +73,11 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
   
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -195,9 +199,7 @@
     
     heart_statues = (PFImageView*)[cell viewWithTag:107];
     if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-        
-       
-        
+
         heart_statues.image = [UIImage imageNamed:@"button_heart_red.png"];
     }
     else
@@ -206,10 +208,16 @@
          heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
     }
     }
-   
+    else
+    {
+        if(tableView == self.searchDisplayController.searchResultsTableView) {
+            PFObject *searchedUser = [self.searchResults objectAtIndex:indexPath.row];
+            cell.textLabel.text = [searchedUser objectForKey:@"Name"];
+            
+        }}
     
     
-           return cell;
+    return cell;
     
 }
 

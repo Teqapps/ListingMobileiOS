@@ -133,6 +133,7 @@
                     NSString *displayName = result[@"name"];
                     if (displayName) {
                         self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"%@", nil), name];
+                        
                         [self queryParseMethod];
                     }
                 }
@@ -152,18 +153,29 @@
 
 - (void)queryParseMethod {
     NSLog(@"start query");
+
+  
+  
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"Loading";
-    [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    
     [query whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
- 
+    
+   
+    query.cachePolicy = kPFCachePolicyNetworkOnly;
+    
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeIndeterminate;
+        hud.labelText = @"Loading";
+        [hud show:YES];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            [TABLEVIEW reloadData];
+      
+            
+                [TABLEVIEW reloadData];
+          
             [hud hide:YES];
                   }
     }];

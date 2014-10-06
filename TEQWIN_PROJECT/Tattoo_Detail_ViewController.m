@@ -68,7 +68,7 @@
     
     
     // Set the gesture
-   // [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     
     
@@ -244,6 +244,7 @@
     NSLog(@"start query");
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -251,11 +252,15 @@
            
         }
     }];
+   
+
 }
 
 
 - (void) likeImage {
+   
     [object addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
+    [object addUniqueObject:@1 forKey:@"oneorzero"];
     [object saveInBackground];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
@@ -269,7 +274,7 @@
     }];
 }
 - (void) dislike {
-    [object removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
+        [object removeObject:[PFUser currentUser].objectId forKey:@"favorites"];
     [object saveInBackground];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
