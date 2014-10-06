@@ -70,47 +70,18 @@
                                                object:nil];
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
-    self.tableView.tableHeaderView = self.searchBar;
-    self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
-    self.searchController.searchResultsDataSource = self;
-    self.searchController.searchResultsDelegate = self;
-    self.searchController.delegate = self;
-    CGPoint offset = CGPointMake(0, self.searchBar.frame.size.height);
-    self.tableView.contentOffset = offset;
-    self.searchResults = [NSMutableArray array];
+  
 }
--(void)filterResults:(NSString *)searchTerm {
-    
-    [self.searchResults removeAllObjects];
-    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName]; // tábla amiben keres
-    [query whereKeyExists:@"Name"]; // oszlop amiben keres
-    [query whereKey:@"Name" containsString:searchTerm];
-    NSArray *results = [query findObjects];
-    [self.searchResults addObjectsFromArray:results];
-}
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    [self filterResults:searchString];
-    return YES;
-}
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView == self.tableView) {
+    
         return self.objects.count;
          NSLog(@"%d",self.objects.count);
-    } else {
-        return self.searchResults.count;
-        NSLog(@"%d",self.searchResults.count);
-    }
+
+    
 }
--(void)callbackLoadObjectsFromParse:(NSArray *)result error:(NSError *)error {
-    if (!error) {
-        [self.searchResults removeAllObjects];
-        [self.searchResults addObjectsFromArray:result];
-        [self.searchDisplayController.searchResultsTableView reloadData];
-    } else {
-        NSLog(@"Error: %@ %@", error, [error userInfo]);
-    }
-}
+
 - (void)refreshTable:(NSNotification *) notification
 {
     // Reload the recipes
@@ -158,10 +129,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    lastClickedRow = indexPath.row;
+    //lastClickedRow = indexPath.row;
     
-    selectobject = [self.objects  objectAtIndex:indexPath.row];
-    NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+    //selectobject = [self.objects  objectAtIndex:indexPath.row];
+    //NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
    
 }
 
@@ -234,13 +205,7 @@
          heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
     }
     }
-    else
-    {
-        if(tableView == self.searchDisplayController.searchResultsTableView) {
-            PFObject *searchedUser = [self.searchResults objectAtIndex:indexPath.row];
-            cell.textLabel.text = [searchedUser objectForKey:@"Name"];
-
-        }}
+   
     
     
            return cell;
