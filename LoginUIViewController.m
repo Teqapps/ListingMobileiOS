@@ -152,23 +152,18 @@
 }
 
 - (void)queryParseMethod {
-    NSLog(@"start query");
-
-  
-  
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
+ 
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     
     [query whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
     
    
     query.cachePolicy = kPFCachePolicyNetworkOnly;
-    
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.mode = MBProgressHUDModeIndeterminate;
-        hud.labelText = @"Loading";
-        [hud show:YES];
-    
+   
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
