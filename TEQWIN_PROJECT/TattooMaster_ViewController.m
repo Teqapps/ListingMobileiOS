@@ -75,7 +75,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+     [self refreshTable:nil];
     
 }
 
@@ -96,6 +96,7 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+   
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"refreshTable" object:nil];
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -120,7 +121,7 @@
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
      }*/
     
-    //    [query orderByAscending:@"name"];
+        [query orderByAscending:@"createdAt"];
     
     return query;
    

@@ -265,7 +265,7 @@
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
-            [self likedSuccess];
+            //[self likedSuccess];
              self.isFav = YES;
         }
         else {
@@ -279,7 +279,7 @@
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
-            [self dislikedSuccess];
+           // [self dislikedSuccess];
              self.isFav = NO;
             
         }
