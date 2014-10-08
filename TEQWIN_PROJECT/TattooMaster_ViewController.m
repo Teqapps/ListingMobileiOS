@@ -53,7 +53,7 @@
     [super viewDidLoad];
     self.title =@"師父";
     [self refreshTable:nil];
-       self.navigationController.navigationBar.translucent=NO;
+    self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
@@ -64,29 +64,67 @@
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
     
-  
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshTable:)
                                                  name:@"refreshTable"
                                                object:nil];
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-  
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-     [self refreshTable:nil];
+    [self refreshTable:nil];
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    if (tableView == self.tableView) {
+        
         return self.objects.count;
-         NSLog(@"%d",self.objects.count);
-
-    
+        
+    } else {
+        //NSLog(@"how many in search results");
+        //NSLog(@"%@", self.searchResults.count);
+        return self.searchResults.count;
+        
+    }
 }
 
+-(void)filterResults:(NSString *)searchTerm {
+    
+    [self.searchResults removeAllObjects];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    //[query whereKey:@"Name" containsString:searchTerm];
+    
+    NSArray *results  = [query findObjects];
+    
+    NSLog(@"%@", results);
+    NSLog(@"%u", results.count);
+    NSLog(@"results^");
+    
+    [self.searchResults addObjectsFromArray:results];
+    
+    NSPredicate *searchPredicate =
+    [NSPredicate predicateWithFormat:@"Name CONTAINS[cd]%@", searchTerm];
+    _searchResults = [NSMutableArray arrayWithArray:[results filteredArrayUsingPredicate:searchPredicate]];
+    
+    NSLog(@"%@", _searchResults);
+    NSLog(@"%u", _searchResults.count);
+    NSLog(@"search results^");
+    
+    
+    
+    
+    
+}
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self filterResults:searchString];
+    return YES;
+}
 - (void)refreshTable:(NSNotification *) notification
 {
     // Reload the recipes
@@ -96,7 +134,7 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-   
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"refreshTable" object:nil];
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -110,7 +148,7 @@
 
 
 - (PFQuery *)queryForTable{
-   
+    
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     if (self.objects.count == 0) {
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
@@ -121,10 +159,10 @@
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
      }*/
     
-        [query orderByAscending:@"createdAt"];
+    [query orderByAscending:@"createdAt"];
     
     return query;
-   
+    
 }
 
 
@@ -134,12 +172,41 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (tableView == self.tableView) {
+        
+        selectobject = [self.objects  objectAtIndex:indexPath.row];
+        NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+    } else {
+        //NSLog(@"how many in search results");
+        //NSLog(@"%@", self.searchResults.count);
+        
+                selectobject = [_searchResults  objectAtIndex:indexPath.row];
+        NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+        Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+         [self.navigationController pushViewController:mapVC animated:YES];
+        TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
+        tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
+        tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
+        tattoomasterCell.name = [selectobject objectForKey:@"Name"];
+        tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+        tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
+        tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
+        tattoomasterCell.email = [selectobject objectForKey:@"Email"];
+        tattoomasterCell.address = [selectobject objectForKey:@"Address"];
+        tattoomasterCell.latitude = [selectobject objectForKey:@"Latitude"];
+        tattoomasterCell.longitude = [selectobject objectForKey:@"Longitude"];
+        tattoomasterCell.website = [selectobject objectForKey:@"Website"];
+        tattoomasterCell.personage = [selectobject objectForKey:@"Personage"];
+        tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
+        tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+        tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
+        tattoomasterCell.object_id = selectobject.objectId;
+
+         mapVC.tattoomasterCell = tattoomasterCell;
+        NSLog(@"%@",tattoomasterCell.master_id);
+    }
     
-    lastClickedRow = indexPath.row;
     
-    selectobject = [self.objects  objectAtIndex:indexPath.row];
-    NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
-   
 }
 
 
@@ -154,69 +221,81 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:simpleTableIdentifier];
     }
     
     // Configure the cell
     // Configure the cell
-   
+    
     if (tableView == self.tableView) {
-    UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
-    loadingSpinner.hidden= NO;
-    [loadingSpinner startAnimating];
-   
-    PFFile *thumbnail = [object objectForKey:@"image"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-   
-    CGSize itemSize = CGSizeMake(70, 70);
-    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
-    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-    thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
-    thumbnailImageView.layer.cornerRadius=8.0f;
-    thumbnailImageView.layer.borderWidth=2.0;
-    thumbnailImageView.layer.masksToBounds = YES;
-    thumbnailImageView.layer.borderColor=[[UIColor whiteColor] CGColor];
-    [thumbnailImageView.image drawInRect:imageRect];
-    thumbnailImageView.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    //
-     thumbnailImageView.image = [UIImage imageNamed:@"loading_image.gif"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    [loadingSpinner stopAnimating];
-    loadingSpinner.hidden = YES;
-
-    
-    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
-    nameLabel.text = [object objectForKey:@"Name"];
-    
-    UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
-    prepTimeLabel.text = [object objectForKey:@"Gender"];
-    
-    count=[object objectForKey:@"favorites"];
-    UILabel *count_like = (UILabel*) [cell viewWithTag:105];
-    count_like.text = [NSString stringWithFormat:@"%d",count.count];
-    
-    heart_statues = (PFImageView*)[cell viewWithTag:107];
-    if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-
-        heart_statues.image = [UIImage imageNamed:@"button_heart_red.png"];
-    }
-    else
-    {
         
-         heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
-    }
-    }
-    else
-    {
-        if(tableView == self.searchDisplayController.searchResultsTableView) {
-            PFObject *searchedUser = [self.searchResults objectAtIndex:indexPath.row];
-            cell.textLabel.text = [searchedUser objectForKey:@"Name"];
+        UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
+        loadingSpinner.hidden= NO;
+        [loadingSpinner startAnimating];
+        
+        PFFile *thumbnail = [object objectForKey:@"image"];
+        PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+        
+        CGSize itemSize = CGSizeMake(70, 70);
+        UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+        CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+        thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
+        thumbnailImageView.layer.cornerRadius=8.0f;
+        thumbnailImageView.layer.borderWidth=2.0;
+        thumbnailImageView.layer.masksToBounds = YES;
+        thumbnailImageView.layer.borderColor=[[UIColor whiteColor] CGColor];
+        [thumbnailImageView.image drawInRect:imageRect];
+        thumbnailImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        //
+        thumbnailImageView.image = [UIImage imageNamed:@"loading_image.gif"];
+        thumbnailImageView.file = thumbnail;
+        [thumbnailImageView loadInBackground];
+        [loadingSpinner stopAnimating];
+        loadingSpinner.hidden = YES;
+        
+        
+        UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+        nameLabel.text = [object objectForKey:@"Name"];
+        
+        UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
+        prepTimeLabel.text = [object objectForKey:@"Gender"];
+        
+        count=[object objectForKey:@"favorites"];
+        UILabel *count_like = (UILabel*) [cell viewWithTag:105];
+        count_like.text = [NSString stringWithFormat:@"%d",count.count];
+        
+        heart_statues = (PFImageView*)[cell viewWithTag:107];
+        if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-        }}
+            heart_statues.image = [UIImage imageNamed:@"button_heart_red.png"];
+        }
+        else
+        {
+            
+            heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
+        }
+    }
     
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        PFObject* object = self.searchResults[indexPath.row];
+        
+        
+        if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+            
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
+        }
+        else
+        {
+            
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
+        }
+
+        cell.textLabel.text = [object objectForKey:@"Name"];
+        cell.detailTextLabel.text =[object objectForKey:@"Gender"];
+        
+    }
     
     return cell;
     
@@ -235,35 +314,35 @@
 
 
 - (IBAction)Fav:(id)sender {
-     if ([PFUser currentUser]) {
-    UIButton *button = sender;
-    CGPoint correctedPoint =
-    [button convertPoint:button.bounds.origin toView:self.tableView];
-    indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
-    lastClickedRow = indexPath.row;
-    selectobject = [self.objects objectAtIndex:indexPath.row];
-         
-         
-    if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+    if ([PFUser currentUser]) {
+        UIButton *button = sender;
+        CGPoint correctedPoint =
+        [button convertPoint:button.bounds.origin toView:self.tableView];
+        indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
+        lastClickedRow = indexPath.row;
+        selectobject = [self.objects objectAtIndex:indexPath.row];
         
-         [self dislike];
-       
-        NSLog(@"disliked");
-       
-   }
-    
+        
+        if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+            
+            [self dislike];
+            
+            NSLog(@"disliked");
+            
+        }
+        
+        else{
+            
+            
+            [self likeImage];
+            
+            NSLog(@"liked");
+            
+        }
+    }
     else{
-   
-        
-       [self likeImage];
- 
-        NSLog(@"liked");
-     
-}
-     }
-     else{
-         NSLog(@"請登入")
-    ; }
+        NSLog(@"請登入")
+        ; }
 }
 - (void) likeImage {
     [selectobject addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
@@ -272,14 +351,14 @@
     hud.labelText = @"Uploading";
     [hud show:YES];
     [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-       
+        
         if (!error) {
-           
+            
             if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-
-               }
+                
+            }
             [self refreshTable:nil];
-             [hud hide:YES];
+            [hud hide:YES];
         }
         else {
             [self likedFail];
@@ -294,17 +373,17 @@
     [hud show:YES];
     [selectobject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-       
+            
             
             if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-               
+                
             }
             else
             {
-               
+                
             }
             [self refreshTable:nil];
-              [hud hide:YES];
+            [hud hide:YES];
         }
         else {
             [self dislikedFail];
@@ -336,6 +415,7 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     if ([segue.identifier isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.table_view indexPathForSelectedRow];
         Tattoo_Detail_ViewController *destViewController = segue.destinationViewController;
@@ -343,7 +423,7 @@
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
         TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
         tattoomasterCell.object_id = [object objectForKey:@"object"];
-         tattoomasterCell.favorites = [object objectForKey:@"favorites"];
+        tattoomasterCell.favorites = [object objectForKey:@"favorites"];
         tattoomasterCell.name = [object objectForKey:@"Name"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gender = [object objectForKey:@"Gender"];
@@ -354,16 +434,16 @@
         tattoomasterCell.longitude = [object objectForKey:@"Longitude"];
         tattoomasterCell.website = [object objectForKey:@"Website"];
         tattoomasterCell.personage = [object objectForKey:@"Personage"];
-         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
+        tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
-    
+        
         destViewController.tattoomasterCell = tattoomasterCell;
         
-    
-   
-    
+        
+        
+        
     }
     
 }
