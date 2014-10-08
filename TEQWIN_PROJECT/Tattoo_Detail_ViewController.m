@@ -484,4 +484,19 @@
           ; }
 }
 
+- (IBAction)writing:(id)sender {
+    
+    
+     list =[[NSMutableArray alloc]init];
+    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.name]];
+    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.gender]];
+    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.address]];
+    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.website]];
+    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.email]];
+    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.tel]];
+    
+    
+    
+    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.personage]];
+}
 @end

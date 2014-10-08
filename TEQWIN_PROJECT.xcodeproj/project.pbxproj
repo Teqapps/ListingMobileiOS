@@ -245,6 +245,7 @@
 		42AD1EC019B071ED00277278 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EBF19B071ED00277278 /* SystemConfiguration.framework */; };
 		42AD1ED819B42C4800277278 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1ED719B42C4800277278 /* libsqlite3.0.dylib */; };
 		42AD1EDC19B42E1200277278 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EDB19B42E1200277278 /* Parse.framework */; };
+		42AF1FBD19E382A900FC3BEC /* writing.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF1FBC19E382A900FC3BEC /* writing.png */; };
 		42E4D05419CC0037006D3429 /* logout-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E4D05319CC0037006D3429 /* logout-1.png */; };
 		42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6219C8273F0051057C /* GalleryCell.m */; };
 		42EA3D6619C827600051057C /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6519C827600051057C /* Gallery.m */; };
@@ -551,6 +552,7 @@
 		42AD1EBF19B071ED00277278 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		42AD1ED719B42C4800277278 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.0.dylib; sourceTree = "<group>"; };
 		42AD1EDB19B42E1200277278 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		42AF1FBC19E382A900FC3BEC /* writing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing.png; sourceTree = "<group>"; };
 		42E4D05319CC0037006D3429 /* logout-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout-1.png"; sourceTree = "<group>"; };
 		42EA3D6119C8273F0051057C /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
 		42EA3D6219C8273F0051057C /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 		42193F841985FE08007E3C52 = {
 			isa = PBXGroup;
 			children = (
+				42AF1FBE19E388EF00FC3BEC /* comment */,
 				42A4917A19E236EE00E4D65E /* notice */,
 				42A4917919E236E700E4D65E /* history */,
 				42EA403119C934F90051057C /* ShareKit */,
@@ -766,6 +769,7 @@
 		42193FF61986352F007E3C52 /* rest_image */ = {
 			isa = PBXGroup;
 			children = (
+				42AF1FBC19E382A900FC3BEC /* writing.png */,
 				42A4917719D56DE600E4D65E /* loading_image.gif */,
 				42A4917519D56D7200E4D65E /* loading.gif */,
 				42A4917319D5633A00E4D65E /* button_heart_blue.png */,
@@ -1116,6 +1120,13 @@
 			name = notice;
 			sourceTree = "<group>";
 		};
+		42AF1FBE19E388EF00FC3BEC /* comment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = comment;
+			sourceTree = "<group>";
+		};
 		42EA403119C934F90051057C /* ShareKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1298,6 +1309,7 @@
 				42EA4ED219CAE5EC0051057C /* logout.png in Resources */,
 				4219407E1986354B007E3C52 /* Yoshinoya(L).jpg in Resources */,
 				421940411986354B007E3C52 /* Bene_Italian.jpg in Resources */,
+				42AF1FBD19E382A900FC3BEC /* writing.png in Resources */,
 				4219405D1986354B007E3C52 /* Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg in Resources */,
 				42A4914419D506A700E4D65E /* SignUpDown.png in Resources */,
 				4263005F19908433007B8C8F /* mapicon.png in Resources */,

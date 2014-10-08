@@ -414,10 +414,10 @@
     [button convertPoint:button.bounds.origin toView:self.TABLEVIEW];
     NSIndexPath *indexPath =  [self.TABLEVIEW indexPathForRowAtPoint:correctedPoint];
 
-    NSLog(@"%ld",(long)button.tag);
+   // NSLog(@"%ld",(long)button.tag);
     lastClickedRow = indexPath.row;
      selectobject = [imageFilesArray objectAtIndex:indexPath.row];
-    NSLog(@"%@",selectobject);
+   // NSLog(@"%@",selectobject);
     if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
 
   //  [self unlikeImage];
