@@ -266,7 +266,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY" id="MxO-aF-3Wd"/>
+                                    <action selector="gotogallery:" destination="zCD-pb-qjH" eventType="touchUpInside" id="Ol4-ff-hEW"/>
+                                    <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY" id="xOr-r0-tBj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="62o-N6-bG8">
@@ -301,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wP7-EA-Ela" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="3"/>
+            <point key="canvasLocation" x="959" y="3"/>
         </scene>
         <!--Master Map View Controller-->
         <scene sceneID="KqT-rk-QDT">

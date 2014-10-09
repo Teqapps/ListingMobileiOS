@@ -22,6 +22,7 @@
     NSMutableArray *list;
   
 }
+- (IBAction)gotogallery:(id)sender;
 - (IBAction)writing:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *fav_image;
