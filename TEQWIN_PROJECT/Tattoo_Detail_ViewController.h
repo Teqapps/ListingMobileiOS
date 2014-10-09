@@ -24,7 +24,6 @@
 }
 - (IBAction)writing:(id)sender;
 
-
 @property (weak, nonatomic) IBOutlet UIImageView *fav_image;
 - (IBAction)favButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *favButton;

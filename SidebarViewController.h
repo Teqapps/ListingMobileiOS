@@ -12,7 +12,6 @@
 {
     NSMutableArray *list;
 }
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 @property (weak, nonatomic) IBOutlet UILabel *loginname;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UILabel *welcome;

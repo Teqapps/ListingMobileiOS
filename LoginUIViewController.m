@@ -43,7 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+   
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
@@ -52,7 +52,6 @@
 
     
  [self.logout setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
-    
     
     self.title=@"我的檔案";
     // Set the gesture
@@ -87,10 +86,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"Loading";
-    [hud show:YES];
+    
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
@@ -139,8 +135,7 @@
                     NSString *displayName = result[@"name"];
                     if (displayName) {
                         self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"%@", nil), name];
-                    
-                        [hud hide:YES];
+                        
                         [self queryParseMethod];
                     }
                 }
@@ -159,7 +154,10 @@
 }
 
 - (void)queryParseMethod {
-   
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
  
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     
@@ -175,7 +173,7 @@
             
                 [TABLEVIEW reloadData];
           
-           
+            [hud hide:YES];
                   }
     }];
 }

@@ -40,7 +40,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
     [self queryParseMethod];
     
     self.title =self.tattoomasterCell.name;
@@ -215,7 +214,7 @@
             
             
     }
-
+    
     [cell.detailTextLabel setNumberOfLines:5];
     
     cell.detailTextLabel.text =[list objectAtIndex:indexPath.row];
@@ -484,7 +483,6 @@
           NSLog(@"請登入")
           ; }
 }
-
 
 
 @end

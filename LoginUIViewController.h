@@ -19,10 +19,8 @@
     PFObject *selectobject;
     NSString * favstring;
     
-    
 }
 - (IBAction)wholiked:(id)sender;
-
 @property (nonatomic, assign) BOOL isFav;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *profile_image;
