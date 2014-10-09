@@ -67,6 +67,7 @@
                     }
                     
                     userProfile[@"pictureURL"] = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID];
+                    
                     [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
                     [[PFUser currentUser] saveInBackground];
                     [self _updateProfileData];

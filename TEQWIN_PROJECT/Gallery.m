@@ -221,8 +221,12 @@ CFShareCircleView *shareCircleView;
     [button convertPoint:button.bounds.origin toView:self.tableView];
     NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
     
+    PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     
-    NSLog(@"%ld",(long)button.tag);
+   shareimageFile = [imageObject objectForKey:@"image"];
+
+  
+   
     lastClickedRow = indexPath.row;
     [shareCircleView show];
     
@@ -236,6 +240,7 @@ CFShareCircleView *shareCircleView;
 
 
 - (void)shareCircleView:(CFShareCircleView *)aShareCircleView didSelectSharer:(CFSharer *)sharer{
+   
     if ([sharer.name isEqual:@"Facebook"]) {
         
         // Check if the Facebook app is installed and we can present the share dialog
@@ -263,8 +268,8 @@ CFShareCircleView *shareCircleView;
             // FALLBACK: publish just a link using the Feed dialog
             
             // Put together the dialog parameters
-            NSString *picURLstring =
-            [NSString stringWithFormat:@"http://files.parsetfss.com/c6afcb1f-6a07-4487-8d0d-8406c9b9f69c/tfss-0366ca1a-894e-45c2-b43b-f45b82d10f6a-gallery_02_5.jpg"] ;
+           // NSString *picURLstring =
+            //[NSString stringWithFormat:@"http://files.parsetfss.com/c6afcb1f-6a07-4487-8d0d-8406c9b9f69c/tfss-0366ca1a-894e-45c2-b43b-f45b82d10f6a-gallery_02_5.jpg"] ;
             
             
             
@@ -274,8 +279,8 @@ CFShareCircleView *shareCircleView;
                                            self.tattoomasterCell.name, @"name",
                                            @"TEQWIN SOLUTION", @"caption",
                                            @"作品", @"description",
-                                           picURLstring, @"link",
-                                           picURLstring,@"picture",
+                                           shareimageFile.url, @"link",
+                                           shareimageFile.url,@"picture",
                                            nil];
             // Show the feed dialog
             [FBWebDialogs presentFeedDialogModallyWithSession:nil

@@ -12,6 +12,7 @@
 {
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
+    PFFile * shareimageFile;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
