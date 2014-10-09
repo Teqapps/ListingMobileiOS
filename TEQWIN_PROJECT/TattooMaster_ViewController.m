@@ -93,18 +93,16 @@
     }
 }
 
--(void)filterResults:(NSString *)searchTerm {
+-(void)filterResults:(NSString *)searchTerm scope:(NSString*)scope
+{
     
     [self.searchResults removeAllObjects];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
-    
+    query.cachePolicy=kPFCachePolicyCacheElseNetwork;
     NSArray *results  = [query findObjects];
-    
-    NSLog(@"%@", results);
-    NSLog(@"%u", results.count);
-    NSLog(@"results^");
+    NSLog(@"%d",results.count);
     
     [self.searchResults addObjectsFromArray:results];
     
@@ -112,19 +110,34 @@
     [NSPredicate predicateWithFormat:@"Name CONTAINS[cd]%@", searchTerm];
     _searchResults = [NSMutableArray arrayWithArray:[results filteredArrayUsingPredicate:searchPredicate]];
     
-    NSLog(@"%@", _searchResults);
-    NSLog(@"%u", _searchResults.count);
-    NSLog(@"search results^");
+    if(![scope isEqualToString:@"全部"]) {
+        // Further filter the array with the scope
+        NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
+       
+        _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
+    }}
+
+//當search 更新時， tableview 就會更新，無論scope select 咩
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchTerm
+{
+    [self filterResults :searchTerm
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
     
-    
-    
-    
-    
-}
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    [self filterResults:searchString];
     return YES;
 }
+//當scope 更新時，tableview 就會更新 （但要有search text)
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    // Tells the table data source to reload when scope bar selection changes
+     [self filterResults :[self.searchDisplayController.searchBar text] scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
 - (void)refreshTable:(NSNotification *) notification
 {
     // Reload the recipes
@@ -152,7 +165,10 @@
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     if (self.objects.count == 0) {
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    
+       
     }
+  
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
     /*    if ([self.objects count] == 0) {
@@ -284,12 +300,12 @@
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
         }
         else
         {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
         }
 
         cell.textLabel.text = [object objectForKey:@"Name"];
