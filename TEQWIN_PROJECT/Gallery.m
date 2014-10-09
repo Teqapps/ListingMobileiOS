@@ -232,11 +232,7 @@ CFShareCircleView *shareCircleView;
     
 }
 
-- (IBAction)like:(id)sender {
-    FBLikeControl * like =[[FBLikeControl alloc]init];
-    like.objectID = @"http://shareitexampleapp.parseapp.com/photo1/";
-    
-}
+
 
 
 - (void)shareCircleView:(CFShareCircleView *)aShareCircleView didSelectSharer:(CFSharer *)sharer{

@@ -246,6 +246,7 @@
 		42AD1ED819B42C4800277278 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1ED719B42C4800277278 /* libsqlite3.0.dylib */; };
 		42AD1EDC19B42E1200277278 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EDB19B42E1200277278 /* Parse.framework */; };
 		42AF1FBD19E382A900FC3BEC /* writing.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF1FBC19E382A900FC3BEC /* writing.png */; };
+		42AF1FCD19E67E9E00FC3BEC /* Comment_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF1FCC19E67E9E00FC3BEC /* Comment_ViewController.m */; };
 		42E4D05419CC0037006D3429 /* logout-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E4D05319CC0037006D3429 /* logout-1.png */; };
 		42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6219C8273F0051057C /* GalleryCell.m */; };
 		42EA3D6619C827600051057C /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6519C827600051057C /* Gallery.m */; };
@@ -553,6 +554,8 @@
 		42AD1ED719B42C4800277278 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.0.dylib; sourceTree = "<group>"; };
 		42AD1EDB19B42E1200277278 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		42AF1FBC19E382A900FC3BEC /* writing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing.png; sourceTree = "<group>"; };
+		42AF1FCB19E67E9E00FC3BEC /* Comment_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment_ViewController.h; sourceTree = "<group>"; };
+		42AF1FCC19E67E9E00FC3BEC /* Comment_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment_ViewController.m; sourceTree = "<group>"; };
 		42E4D05319CC0037006D3429 /* logout-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout-1.png"; sourceTree = "<group>"; };
 		42EA3D6119C8273F0051057C /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
 		42EA3D6219C8273F0051057C /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
@@ -1123,6 +1126,8 @@
 		42AF1FBE19E388EF00FC3BEC /* comment */ = {
 			isa = PBXGroup;
 			children = (
+				42AF1FCB19E67E9E00FC3BEC /* Comment_ViewController.h */,
+				42AF1FCC19E67E9E00FC3BEC /* Comment_ViewController.m */,
 			);
 			name = comment;
 			sourceTree = "<group>";
@@ -1455,6 +1460,7 @@
 				42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */,
 				4263003C198F4110007B8C8F /* DetailFavViewController.m in Sources */,
 				424FAD56198B33270062D13D /* Venue.m in Sources */,
+				42AF1FCD19E67E9E00FC3BEC /* Comment_ViewController.m in Sources */,
 				4285361719C6CFFF00ECA482 /* ParseImageViewController.m in Sources */,
 				421940921987380F007E3C52 /* Master_Map_ViewController.m in Sources */,
 				42193F9D1985FE08007E3C52 /* main.m in Sources */,

@@ -23,7 +23,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    
+
     if ([PFUser currentUser]) {
+        self.loadingSpinner.hidden = NO;
+        [self.loadingSpinner startAnimating];
         self.profile_image.layer.cornerRadius =self.profile_image.frame.size.width / 2;
         self.profile_image.layer.borderWidth = 3.0f;
         self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -44,6 +48,7 @@
             
             // Create Facebook Request for user's details
             FBRequest *request = [FBRequest requestForMe];
+            
             [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                 
                 
@@ -74,6 +79,8 @@
                     NSString *displayName = result[@"name"];
                     if (displayName) {
                         self.welcome.text =[NSString stringWithFormat:NSLocalizedString(@"%@", nil), name];
+                        self.loadingSpinner.hidden = YES;
+                        [self.loadingSpinner stopAnimating];
                     }
                 }
             }];
