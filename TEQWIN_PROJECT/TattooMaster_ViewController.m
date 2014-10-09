@@ -142,17 +142,29 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-
-
+- (void)queryParseMethod {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    /*    if ([self.objects count] == 0) {
+     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+     }*/
+    
+    [query orderByAscending:@"createdAt"];
+    [self queryParseMethod];
+}
 
 
 
 - (PFQuery *)queryForTable{
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    if (self.objects.count == 0) {
+ 
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    }
+    
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
     /*    if ([self.objects count] == 0) {
