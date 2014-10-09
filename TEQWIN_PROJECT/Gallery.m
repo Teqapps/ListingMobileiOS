@@ -137,8 +137,8 @@ CFShareCircleView *shareCircleView;
      cell.image.tag=9999;
     cell.image.userInteractionEnabled=YES;
     [ cell.image addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
-
-    return cell;
+   
+        return cell;
 }
 
 //按圖第一下放大至fullscreen
