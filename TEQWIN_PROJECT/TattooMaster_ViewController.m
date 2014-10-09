@@ -300,7 +300,7 @@
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_red3.png"];
         }
         else
         {

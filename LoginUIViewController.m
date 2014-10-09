@@ -30,7 +30,7 @@
 #import "MainViewController.h"
 
 @interface LoginUIViewController ()
-#define TABLE_HEIGHT 80
+
 {
     int lastClickedRow;
 }
@@ -76,14 +76,16 @@
            
     }
 }
-
+-(CGFloat) tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    int hight=105.0f;
+    
+    return hight;
+    
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (TABLEVIEW.contentSize.height > TABLEVIEW.frame.size.height)
-    {
-        CGPoint offset = CGPointMake(0, TABLEVIEW.contentSize.height -     TABLEVIEW.frame.size.height);
-        [self.TABLEVIEW setContentOffset:offset animated:YES];
-    }
+
     
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
@@ -279,13 +281,7 @@
     return @"我的最愛";
     
 }
--(CGFloat) tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    int hight=63.0f;
-    
-    return hight;
-    
-}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

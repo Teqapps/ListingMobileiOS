@@ -4,7 +4,7 @@
 //
 //  Created by Teqwin on 16/9/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
-
+#import "MBProgressHUD.h"
 #import "GalleryCell.h"
 #import "Gallery.h"
 #import "Tattoo_Detail_ViewController.h"
@@ -63,36 +63,45 @@ CFShareCircleView *shareCircleView;
 }
 - (void)queryParseMethod {
     NSLog(@"start query");
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
+
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
+     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
+            if (imageFilesArray.count==0) {
+                [self noimage];
+                
+            }
                         [tableView reloadData];
+            [hud hide:YES];
             NSLog(@"%d",imageFilesArray.count);
             
-            if (imageFilesArray.count==0) {
-                [self noimage];}
+       
         }
         
     }];
     
 }
 #pragma mark - Table view data source
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
-    if([button isEqualToString:@"OK"])
+//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
+//    if([button isEqualToString:@"OK"])
         
-    {
-        Tattoo_Detail_ViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
-        [self.navigationController pushViewController:galleryVC animated:YES];
-        galleryVC.tattoomasterCell=_tattoomasterCell;
-        ;
+//    {
+//        Tattoo_Detail_ViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+//        [self.navigationController pushViewController:galleryVC animated:YES];
+//        galleryVC.tattoomasterCell=_tattoomasterCell;
+//        ;
 
         
-    }}
+//    }}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

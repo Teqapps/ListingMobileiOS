@@ -910,26 +910,26 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favcell" rowHeight="63" id="VB5-K6-tVo">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="63"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favcell" rowHeight="105" id="VB5-K6-tVo">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VB5-K6-tVo" id="Jj5-wB-9BN">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" id="z1c-z9-DQY" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                    <rect key="frame" x="0.0" y="1" width="103" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zDH-Wm-Fqg">
-                                                    <rect key="frame" x="81" y="10" width="206" height="21"/>
+                                                    <rect key="frame" x="117" y="10" width="206" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2zC-Vc-i2X">
-                                                    <rect key="frame" x="81" y="39" width="50" height="15"/>
+                                                    <rect key="frame" x="117" y="39" width="50" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.67823840729999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
@@ -937,7 +937,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JD2-yw-afT">
-                                                    <rect key="frame" x="238.5" y="11.5" width="39" height="39"/>
+                                                    <rect key="frame" x="239" y="33" width="39" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -947,7 +947,7 @@
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" tag="120" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="b4N-oO-XmT" customClass="PFImageView">
-                                                    <rect key="frame" x="238.5" y="11.5" width="39" height="39"/>
+                                                    <rect key="frame" x="239" y="33" width="39" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -1029,6 +1029,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="Oz0-Qe-dUn"/>
+        <segue reference="imN-Ia-XWJ"/>
     </inferredMetricsTieBreakers>
 </document>
