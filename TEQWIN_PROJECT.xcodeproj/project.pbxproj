@@ -247,8 +247,8 @@
 		42AD1EDC19B42E1200277278 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EDB19B42E1200277278 /* Parse.framework */; };
 		42AF1FBD19E382A900FC3BEC /* writing.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF1FBC19E382A900FC3BEC /* writing.png */; };
 		42AF206D19E7D87000FC3BEC /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42AF206C19E7D87000FC3BEC /* Images-2.xcassets */; };
-		42AF20C519E7E45600FC3BEC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF20C319E7E45600FC3BEC /* splash.png */; };
-		42AF20C619E7E45600FC3BEC /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF20C419E7E45600FC3BEC /* splash@2x.png */; };
+		42AF207019E7D8F100FC3BEC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF206E19E7D8F100FC3BEC /* Default.png */; };
+		42AF207119E7D8F100FC3BEC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF206F19E7D8F100FC3BEC /* Default@2x.png */; };
 		42E4D05419CC0037006D3429 /* logout-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E4D05319CC0037006D3429 /* logout-1.png */; };
 		42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6219C8273F0051057C /* GalleryCell.m */; };
 		42EA3D6619C827600051057C /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6519C827600051057C /* Gallery.m */; };
@@ -557,8 +557,8 @@
 		42AD1EDB19B42E1200277278 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		42AF1FBC19E382A900FC3BEC /* writing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing.png; sourceTree = "<group>"; };
 		42AF206C19E7D87000FC3BEC /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
-		42AF20C319E7E45600FC3BEC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
-		42AF20C419E7E45600FC3BEC /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
+		42AF206E19E7D8F100FC3BEC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		42AF206F19E7D8F100FC3BEC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		42E4D05319CC0037006D3429 /* logout-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout-1.png"; sourceTree = "<group>"; };
 		42EA3D6119C8273F0051057C /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
 		42EA3D6219C8273F0051057C /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
@@ -616,8 +616,8 @@
 		42193F841985FE08007E3C52 = {
 			isa = PBXGroup;
 			children = (
-				42AF20C319E7E45600FC3BEC /* splash.png */,
-				42AF20C419E7E45600FC3BEC /* splash@2x.png */,
+				42AF206E19E7D8F100FC3BEC /* Default.png */,
+				42AF206F19E7D8F100FC3BEC /* Default@2x.png */,
 				42AF1FBE19E388EF00FC3BEC /* comment */,
 				42A4917A19E236EE00E4D65E /* notice */,
 				42A4917919E236E700E4D65E /* history */,
@@ -1250,7 +1250,6 @@
 				4219407A1986354B007E3C52 /* Wat_Yat_Noodles.jpg in Resources */,
 				421940601986354B007E3C52 /* McDonalds(h).jpg in Resources */,
 				42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */,
-				42AF20C519E7E45600FC3BEC /* splash.png in Resources */,
 				42A4917219D5633500E4D65E /* button_heart_red.png in Resources */,
 				421940521986354B007E3C52 /* Hainan_Shaoye.jpg in Resources */,
 				421940491986354B007E3C52 /* Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg in Resources */,
@@ -1346,7 +1345,9 @@
 				4219403F1986354B007E3C52 /* Yummy_Delight.jpg in Resources */,
 				4219405E1986354B007E3C52 /* Lei_Garden_Restaurant.jpg in Resources */,
 				427D34AE199E076400814463 /* pinterest@2x.png in Resources */,
+				42AF207019E7D8F100FC3BEC /* Default.png in Resources */,
 				421940451986354B007E3C52 /* Chan_Kun_Kee.jpg in Resources */,
+				42AF207119E7D8F100FC3BEC /* Default@2x.png in Resources */,
 				42A4913C19D506A700E4D65E /* Exit.png in Resources */,
 				421940631986354B007E3C52 /* Mitsuhashi_Japanese_Restaurant.JPG in Resources */,
 				42A4914F19D508E900E4D65E /* twitter@2x.png in Resources */,
@@ -1396,7 +1397,6 @@
 				42A4914019D506A700E4D65E /* LoginFieldBG.png in Resources */,
 				421940641986354B007E3C52 /* MR._STEAK.jpg in Resources */,
 				426300A71990DAE4007B8C8F /* background3.jpg in Resources */,
-				42AF20C619E7E45600FC3BEC /* splash@2x.png in Resources */,
 				421940781986354B007E3C52 /* Tsui_Wah_Restaurant.jpg in Resources */,
 				427D34A6199E076400814463 /* google_drive@2x.png in Resources */,
 				428188B21994BA48004D09EF /* gallery_01_1.jpg in Resources */,
@@ -1606,7 +1606,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1633,7 +1633,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
