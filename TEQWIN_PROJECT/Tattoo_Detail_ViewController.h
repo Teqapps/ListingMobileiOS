@@ -49,11 +49,3 @@
 
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;
 @end
-
-@interface ImageWallTableCommentCell : UITableViewCell
-
-@end
-
-@interface ImageWallTableNewCommentCell : UITableViewCell
-
-@end
