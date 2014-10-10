@@ -486,3 +486,27 @@
 
 
 @end
+@interface ImageWallTableCommentCell ()
+@property (nonatomic, strong) IBOutlet UIImageView *profilePicture;
+@property (nonatomic, strong) IBOutlet UILabel *comment;
+@end
+@implementation ImageWallTableCommentCell
+@end
+@interface ImageWallTableNewCommentCell () <UITextFieldDelegate>
+@property (nonatomic, strong) IBOutlet UITextField *txtComment;
+@end
+
+@implementation ImageWallTableNewCommentCell
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+	if (_txtComment.text.length == 0) return YES;
+	
+	// We have a new comment, so send it off
+	[_txtComment resignFirstResponder];
+	
+	[_txtComment setText:@""];
+	
+	return YES;
+}
+@end
+
