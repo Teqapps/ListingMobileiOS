@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *TABLEVIEW;
 @property (weak, nonatomic) IBOutlet UIButton *logout;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet UIImageView *fbprofile;
 
 - (IBAction)logOutButtonTapAction:(id)sender;
 

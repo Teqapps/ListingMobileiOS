@@ -9,7 +9,7 @@
 #import "SidebarViewController.h"
 #import "SWRevealViewController.h"
 #import "LoginUIViewController.h"
-
+#import "MBProgressHUD.h"
 #import "LoginUIViewController.h"
 @interface SidebarViewController ()
 
@@ -100,8 +100,7 @@
 
 // Set received values if they are not nil and reload the table
 - (void)_updateProfileData {
-    
-    
+
     // Set the name in the header view label
     NSString *name = [PFUser currentUser][@"profile"][@"name"];
     if (name) {
@@ -136,10 +135,7 @@
 
 - (void)viewDidLoad
 {
- 
-    
-    
-    
+
          self.tableview.backgroundColor = [UIColor clearColor];
 self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background1.jpg"]];
     menuItems = @[@"title", @"新消息",@"紋身歷史" ,@"紋身注意事項",@"找紋身師傅",@"我的最愛"];
@@ -192,6 +188,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             break;
         case 1:
         {
+            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            [cell.textLabel setFont:font];
             cell.imageView.image =[UIImage imageNamed:@"new-icon.png"];
             cell.textLabel.text=@"新消息";
             cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
@@ -242,6 +240,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
+
     // Set the title of navigation bar by using the menu items
     NSIndexPath *indexPath = [self.tableview indexPathForSelectedRow];
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;

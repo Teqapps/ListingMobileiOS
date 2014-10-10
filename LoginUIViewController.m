@@ -91,8 +91,12 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
     if ([PFUser currentUser]) {
-       
-        self.profile_image.image = [UIImage imageNamed:@"Icon.png"];
+        self.profile_image.layer.cornerRadius =self.profile_image.frame.size.width / 2;
+        self.profile_image.layer.borderWidth = 3.0f;
+        self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.profile_image.clipsToBounds = YES;
+        
+        
         
         if ([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
             // If user is linked to Twitter, we'll use their Twitter screen name
@@ -119,7 +123,7 @@
                     NSDictionary *userData = (NSDictionary *)result;
                     
                     NSString *facebookID = userData[@"id"];
-                      NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:7];
+                    NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:7];
                     if (facebookID) {
                         userProfile[@"facebookId"] = facebookID;
                     }
@@ -128,29 +132,60 @@
                     if (name) {
                         userProfile[@"name"] = name;
                     }
-                     userProfile[@"pictureURL"] = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID];
+                    
+                    userProfile[@"pictureURL"] = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID];
+                    
                     [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
                     [[PFUser currentUser] saveInBackground];
-                      [self _updateProfileData];
+                    [self _updateProfileData];
                     NSString *displayName = result[@"name"];
                     if (displayName) {
                         self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"%@", nil), name];
-                        
-                        [self queryParseMethod];
                     }
                 }
             }];
             
         } else {
             // If user is linked to neither, let's use their username for the Welcome label.
-            self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"%@", nil), [PFUser currentUser].username];
+            self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"歡迎 %@", nil), [PFUser currentUser].username];
             
         }
         
-    } else {
-        self.welcomeLabel.text = NSLocalizedString(@"", nil);
+    }
+    [self queryParseMethod];
+}
+// Set received values if they are not nil and reload the table
+- (void)_updateProfileData {
+    
+    
+    // Set the name in the header view label
+    NSString *name = [PFUser currentUser][@"profile"][@"name"];
+    if (name) {
+        self.welcomeLabel.text = name;
     }
     
+    NSString *userProfilePhotoURLString = [PFUser currentUser][@"profile"][@"pictureURL"];
+    // Download the user's facebook profile picture
+    if (userProfilePhotoURLString) {
+        NSURL *pictureURL = [NSURL URLWithString:userProfilePhotoURLString];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:pictureURL];
+        
+        [NSURLConnection sendAsynchronousRequest:urlRequest
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                                   if (connectionError == nil && data != nil) {
+                                       self.profile_image.image = [UIImage imageWithData:data];
+                                       
+                                       // Add a nice corner radius to the image
+                                       self.profile_image.layer.cornerRadius =self.profile_image.frame.size.width / 2;
+                                       self.profile_image.layer.borderWidth = 3.0f;
+                                       self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
+                                       self.profile_image.clipsToBounds = YES;
+                                   } else {
+                                       NSLog(@"Failed to load profile photo.");
+                                   }
+                               }];
+    }
 }
 
 - (void)queryParseMethod {
@@ -289,37 +324,6 @@
 }
 
 
-// Set received values if they are not nil and reload the table
-- (void)_updateProfileData {
-
-    
-    // Set the name in the header view label
-    NSString *name = [PFUser currentUser][@"profile"][@"name"];
-    if (name) {
-        self.welcomeLabel.text = name;
-    }
-    
-    NSString *userProfilePhotoURLString = [PFUser currentUser][@"profile"][@"pictureURL"];
-    // Download the user's facebook profile picture
-    if (userProfilePhotoURLString) {
-        NSURL *pictureURL = [NSURL URLWithString:userProfilePhotoURLString];
-        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:pictureURL];
-        
-        [NSURLConnection sendAsynchronousRequest:urlRequest
-                                           queue:[NSOperationQueue mainQueue]
-                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                                   if (connectionError == nil && data != nil) {
-                                       self.profile_image.image = [UIImage imageWithData:data];
-                                       
-                                       // Add a nice corner radius to the image
-                                       self.profile_image.layer.cornerRadius = 8.0f;
-                                       self.profile_image.layer.masksToBounds = YES;
-                                   } else {
-                                       NSLog(@"Failed to load profile photo.");
-                                   }
-                               }];
-    }
-}
 
 
 #pragma mark - PFLogInViewControllerDelegate

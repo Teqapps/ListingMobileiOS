@@ -477,7 +477,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="8jh-fe-eaJ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
@@ -513,8 +513,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="RKI-9B-dfv">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <mapView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="RKI-9B-dfv">
+                                <rect key="frame" x="0.0" y="57" width="320" height="511"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
@@ -540,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYI-F2-duV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651" y="-1941"/>
+            <point key="canvasLocation" x="1643" y="-1941"/>
         </scene>
         <!--Fav Gallery-->
         <scene sceneID="QUz-tI-Orw">
@@ -956,8 +956,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wBp-0C-8mW" customClass="PFImageView">
-                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICON.png" id="wBp-0C-8mW">
+                                <rect key="frame" x="0.0" y="65" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="af2-mM-SFa">
@@ -994,6 +994,7 @@
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="TABLEVIEW" destination="Kdh-JF-2nr" id="AeF-44-bLZ"/>
+                        <outlet property="fbprofile" destination="wBp-0C-8mW" id="Ke3-RG-mIf"/>
                         <outlet property="profile_image" destination="wBp-0C-8mW" id="yMe-M2-GbD"/>
                         <outlet property="sidebarButton" destination="i99-v3-afQ" id="uIW-yC-BPH"/>
                         <outlet property="welcomeLabel" destination="af2-mM-SFa" id="XtY-wC-itb"/>
@@ -1005,6 +1006,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ICON.png" width="256" height="256"/>
         <image name="Tattoo_Logo.jpg" width="456" height="843"/>
         <image name="background.jpg" width="1920" height="1080"/>
         <image name="menu.png" width="28" height="20"/>

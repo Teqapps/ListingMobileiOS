@@ -152,7 +152,7 @@ CFShareCircleView *shareCircleView;
 
 //按圖第一下放大至fullscreen
 -(void)actionTap:(UITapGestureRecognizer *)sender{
-    
+    NSLog(@"按一下返回");
     
     CGPoint location = [sender locationInView:self.tableView];
     NSIndexPath *indexPath  = [self.tableView indexPathForRowAtPoint:location];
