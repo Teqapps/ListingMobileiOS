@@ -304,7 +304,7 @@
         tattoomasterCell.imageFile = [imageObject objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [imageObject objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = [imageObject objectForKey:@"objectId"];
-        
+        tattoomasterCell.bookmark=[imageObject objectForKey:@"bookmark"];
         destViewController.tattoomasterCell = tattoomasterCell;
         
     }

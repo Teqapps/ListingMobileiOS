@@ -22,9 +22,13 @@
     PFImageView *heart_statues;
     NSIndexPath *indexPath;
 }
+@property (weak, nonatomic) IBOutlet UICollectionView *s;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet UICollectionView *collection_vew;
+
+
 
 
 @property (nonatomic, assign) BOOL isFav;

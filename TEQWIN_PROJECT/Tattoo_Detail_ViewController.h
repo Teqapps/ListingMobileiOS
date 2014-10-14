@@ -43,6 +43,7 @@
 @property (strong, nonatomic) NSDictionary *data;
 @property (weak, nonatomic) IBOutlet UIImageView *bookmark_image;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *s;
 @property (nonatomic, assign) BOOL isbookmark;
 @property (nonatomic, assign) BOOL isFav;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

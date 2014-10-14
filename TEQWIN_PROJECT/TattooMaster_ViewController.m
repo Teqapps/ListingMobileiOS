@@ -5,6 +5,7 @@
 //  Created by Teqwin on 28/7/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 //
+#import "ImageExampleCell.h"
 #import "HomeModel.h"
 #import "Tattoo_Master_Info.h"
 #import "TattooMaster_ViewController.h"
@@ -53,6 +54,7 @@
 {
     [super viewDidLoad];
     self.title =@"師父";
+    [self queryParseMethod_image];
     [self refreshTable:nil];
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
@@ -101,7 +103,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
-    query.cachePolicy=kPFCachePolicyCacheThenNetwork;
+    query.cachePolicy=kPFCachePolicyCacheElseNetwork;
     NSArray *results  = [query findObjects];
     NSLog(@"%d",results.count);
     
@@ -181,9 +183,57 @@
     return query;
     
 }
-
-
-
+- (void)queryParseMethod_image{
+    NSLog(@"start query_image");
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            imageFilesArray = [[NSArray alloc] initWithArray:objects];
+            
+            
+            [_collection_vew reloadData];
+            NSLog(@"%d",imageFilesArray.count);
+        }
+    }];
+}
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [imageFilesArray count];
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 9, 10);
+    layout.itemSize = CGSizeMake(44, 44);
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    
+    static NSString *cellIdentifier = @"imageCell";
+    ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+    PFFile *imageFile = [imageObject objectForKey:@"image"];
+    
+    cell.loadingSpinner.hidden = NO;
+    [cell.loadingSpinner startAnimating];
+    
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            cell.parseImage.image = [UIImage imageWithData:data];
+            [cell.loadingSpinner stopAnimating];
+            cell.loadingSpinner.hidden = YES;
+            [ cell.parseImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
+            
+        }
+    }];
+    
+    return cell;
+}
 
 
 
@@ -271,16 +321,16 @@
         [thumbnailImageView loadInBackground];
         [loadingSpinner stopAnimating];
         loadingSpinner.hidden = YES;
-        
-        PFFile *image_1 = [object objectForKey:@"image"];
+         PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+        PFFile *image_1 = [imageObject objectForKey:@"image"];
         PFImageView *thumbnailImageView_imageview1 = (PFImageView*)[cell viewWithTag:10];
         thumbnailImageView_imageview1.file = image_1;
         [thumbnailImageView_imageview1 loadInBackground];
-        PFFile *image_2 = [object objectForKey:@"image"];
+        PFFile *image_2 = [imageObject objectForKey:@"image"];
         PFImageView *thumbnailImageView_imageview2 = (PFImageView*)[cell viewWithTag:11];
         thumbnailImageView_imageview2.file = image_2;
         [thumbnailImageView_imageview2 loadInBackground];
-        PFFile *image_3 = [object objectForKey:@"image"];
+        PFFile *image_3 = [imageObject objectForKey:@"image"];
         PFImageView *thumbnailImageView_imageview3 = (PFImageView*)[cell viewWithTag:12];
         thumbnailImageView_imageview3.file = image_3;
         [thumbnailImageView_imageview3 loadInBackground];
@@ -334,7 +384,18 @@
     return cell;
     
 }
-
+-(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    int row=[collectionView.restorationIdentifier intValue];
+    return [[[_packages objectAtIndex:row] valueForKey:@"imageGallery"] count];
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    int row=[collectionView.restorationIdentifier intValue];
+    NSString *imgStrLink=[[[_packages objectAtIndex:row] valueForKey:@"imageGallery"] objectAtIndex:indexPath.row];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageID" forIndexPath:indexPath];
+    UIImageView *imageView=(UIImageView *)[cell viewWithTag:2];
+    imageView.image=....;
+    return cell;
+}
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
