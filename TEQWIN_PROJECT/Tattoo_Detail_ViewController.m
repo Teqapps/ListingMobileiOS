@@ -579,7 +579,7 @@
               
               NSLog(@"disliked");
                 self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
-
+             
           }
           
           else{

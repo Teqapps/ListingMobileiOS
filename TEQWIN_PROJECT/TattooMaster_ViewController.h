@@ -25,6 +25,8 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property IBOutlet UISearchBar *searchBar;
+- (IBAction)SEARCH:(id)sender;
 
 
 @property (nonatomic, assign) BOOL isFav;
