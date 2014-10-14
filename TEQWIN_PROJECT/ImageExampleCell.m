@@ -10,7 +10,7 @@
 
 @implementation ImageExampleCell
 
-@synthesize parseImage, loadingSpinner;
+@synthesize parseImage; //loadingSpinner;
 
 - (id)initWithFrame:(CGRect)frame
 {

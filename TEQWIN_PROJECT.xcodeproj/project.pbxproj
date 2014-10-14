@@ -195,8 +195,6 @@
 		428189021999BE10004D09EF /* FavGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 428189011999BE10004D09EF /* FavGalleryCell.m */; };
 		428189041999F55D004D09EF /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 428189031999F55D004D09EF /* gallery.png */; };
 		42818908199AFB0F004D09EF /* navbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42818907199AFB0F004D09EF /* navbackground.jpg */; };
-		4285361719C6CFFF00ECA482 /* ParseImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4285361419C6CFFF00ECA482 /* ParseImageViewController.m */; };
-		4285361819C6CFFF00ECA482 /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4285361619C6CFFF00ECA482 /* ImageExampleCell.m */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
 		42A4844619A47AA20079EAA0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4844519A47AA20079EAA0 /* Social.framework */; };
 		42A4913A19D506A700E4D65E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912B19D506A700E4D65E /* Default.png */; };
@@ -248,6 +246,7 @@
 		42AF1FBD19E382A900FC3BEC /* writing.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF1FBC19E382A900FC3BEC /* writing.png */; };
 		42AF20D519E7E6B800FC3BEC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF20D319E7E6B800FC3BEC /* splash.png */; };
 		42AF20D619E7E6B800FC3BEC /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF20D419E7E6B800FC3BEC /* splash@2x.png */; };
+		42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */; };
 		42E4D05419CC0037006D3429 /* logout-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E4D05319CC0037006D3429 /* logout-1.png */; };
 		42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6219C8273F0051057C /* GalleryCell.m */; };
 		42EA3D6619C827600051057C /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6519C827600051057C /* Gallery.m */; };
@@ -500,10 +499,6 @@
 		428189011999BE10004D09EF /* FavGalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavGalleryCell.m; sourceTree = "<group>"; };
 		428189031999F55D004D09EF /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
 		42818907199AFB0F004D09EF /* navbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = navbackground.jpg; sourceTree = "<group>"; };
-		4285361319C6CFFF00ECA482 /* ParseImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseImageViewController.h; sourceTree = "<group>"; };
-		4285361419C6CFFF00ECA482 /* ParseImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseImageViewController.m; sourceTree = "<group>"; };
-		4285361519C6CFFF00ECA482 /* ImageExampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageExampleCell.h; sourceTree = "<group>"; };
-		4285361619C6CFFF00ECA482 /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		42A4844519A47AA20079EAA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		42A4912B19D506A700E4D65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -557,6 +552,8 @@
 		42AF1FBC19E382A900FC3BEC /* writing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing.png; sourceTree = "<group>"; };
 		42AF20D319E7E6B800FC3BEC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		42AF20D419E7E6B800FC3BEC /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
+		42AF211819EBC6D000FC3BEC /* ImageExampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageExampleCell.h; sourceTree = "<group>"; };
+		42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
 		42E4D05319CC0037006D3429 /* logout-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout-1.png"; sourceTree = "<group>"; };
 		42EA3D6119C8273F0051057C /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
 		42EA3D6219C8273F0051057C /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
@@ -760,10 +757,8 @@
 				42630058199071F3007B8C8F /* Map_ViewController.m */,
 				421940901987380F007E3C52 /* Master_Map_ViewController.h */,
 				421940911987380F007E3C52 /* Master_Map_ViewController.m */,
-				4285361319C6CFFF00ECA482 /* ParseImageViewController.h */,
-				4285361419C6CFFF00ECA482 /* ParseImageViewController.m */,
-				4285361519C6CFFF00ECA482 /* ImageExampleCell.h */,
-				4285361619C6CFFF00ECA482 /* ImageExampleCell.m */,
+				42AF211819EBC6D000FC3BEC /* ImageExampleCell.h */,
+				42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */,
 				42EA3D6419C827600051057C /* Gallery.h */,
 				42EA3D6519C827600051057C /* Gallery.m */,
 				42EA3D6119C8273F0051057C /* GalleryCell.h */,
@@ -1433,6 +1428,7 @@
 				426ED3E219C049760024E817 /* RecipeBookViewController.m in Sources */,
 				4219408A198654A7007E3C52 /* Tattoo_Master_Info.m in Sources */,
 				427D34B9199E079E00814463 /* ShareViewController.m in Sources */,
+				42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */,
 				4263006819908766007B8C8F /* Fav_mappoint_ViewController.m in Sources */,
 				42A4918019E2370C00E4D65E /* noticeViewController.m in Sources */,
 				426ED3E419C049760024E817 /* NewRecipeViewController.m in Sources */,
@@ -1459,11 +1455,9 @@
 				42193FCA1985FE42007E3C52 /* SWRevealViewController.m in Sources */,
 				427D34B5199E077F00814463 /* CFShareCircleView.m in Sources */,
 				42EA3D6619C827600051057C /* Gallery.m in Sources */,
-				4285361819C6CFFF00ECA482 /* ImageExampleCell.m in Sources */,
 				42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */,
 				4263003C198F4110007B8C8F /* DetailFavViewController.m in Sources */,
 				424FAD56198B33270062D13D /* Venue.m in Sources */,
-				4285361719C6CFFF00ECA482 /* ParseImageViewController.m in Sources */,
 				421940921987380F007E3C52 /* Master_Map_ViewController.m in Sources */,
 				42193F9D1985FE08007E3C52 /* main.m in Sources */,
 				42630031198B667E007B8C8F /* AddFavTableViewController.m in Sources */,

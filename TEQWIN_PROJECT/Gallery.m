@@ -70,7 +70,7 @@ CFShareCircleView *shareCircleView;
 
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
@@ -149,7 +149,6 @@ CFShareCircleView *shareCircleView;
    
         return cell;
 }
-
 //按圖第一下放大至fullscreen
 -(void)actionTap:(UITapGestureRecognizer *)sender{
     NSLog(@"按一下返回");
@@ -210,7 +209,6 @@ CFShareCircleView *shareCircleView;
     [UIApplication sharedApplication].statusBarHidden=NO;
     
 }
-
 
 
 

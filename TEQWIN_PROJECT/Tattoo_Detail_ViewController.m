@@ -4,10 +4,10 @@
 //
 //  Created by Teqwin on 29/7/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
-//
-
+//=
+#import "GalleryCell.h"
 #import "Gallery.h"
-#import "ParseImageViewController.h"
+#import "ImageExampleCell.h"
 #import "Tattoo_Detail_ViewController.h"
 #import "SWRevealViewController.h"
 #import "TattooMaster_ViewController.h"
@@ -20,6 +20,9 @@
 @interface Tattoo_Detail_ViewController ()
 {
     int lastClickedRow;
+    CGRect frame_first;
+    UIImageView *fullImageView;
+    
 }
 @end
 
@@ -41,22 +44,34 @@
 {
     [super viewDidLoad];
     [self queryParseMethod];
-    
+    [self queryParseMethod_image];
+   
+
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+     [self.imagesCollection setCollectionViewLayout:flowLayout];
+    flowLayout.itemSize = CGSizeMake(70, 70);
     self.title =self.tattoomasterCell.name;
- 
+    self.count_like.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.favorites.count    ]   ;
     
     //set segmented control
-   
+    if ([self.tattoomasterCell.bookmark containsObject:[PFUser currentUser].objectId]) {
+        self.bookmark_image.image =[UIImage imageNamed:@"button_heart_red.png"];
+    }
+    else {
+        self.bookmark_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+    }
+    
     if ([self.tattoomasterCell.favorites containsObject:[PFUser currentUser].objectId]) {
         self.fav_image.image =[UIImage imageNamed:@"button_heart_red.png"];
     }
         else {
             self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
         }
-
+    self.master_name.text=self.tattoomasterCell.name;
     
     self.profileimage.file=self.tattoomasterCell.imageFile;
-    self.profileimage.layer.cornerRadius =self.profileimage.frame.size.width / 2;
+   self.profileimage.layer.cornerRadius =self.profileimage.frame.size.width / 2;
     self.profileimage.layer.borderWidth = 3.0f;
     self.profileimage.layer.borderColor = [UIColor whiteColor].CGColor;
     self.profileimage.clipsToBounds = YES;
@@ -84,34 +99,110 @@
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.website]];
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.email]];
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.tel]];
-    
-    
-    
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.personage]];
-    
+ //    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.description]];
     
     }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 30.0f;
+    if (section == 0)
+        return 1.0f;
+    return 32.0f;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     
-    return @"師傅資料";
+    if (section == 0) {
+        return nil;
+    } else {
+        return @"xx";
+    }
 }
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-    return @"";
+    if (section == 0) {
+        return nil;
+    } else {
+        return @"xx";
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 30.0f;
+    if (section == 0)
+        return 1.0f;
+    return 32.0f;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [list count];
 }
+- (void)queryParseMethod_image{
+    NSLog(@"start query_image");
+   
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            imageFilesArray_image = [[NSArray alloc] initWithArray:objects];
+            
+            
+            [_imagesCollection reloadData];
+            NSLog(@"%d",imageFilesArray_image.count);
+        }
+    }];
+}
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [imageFilesArray_image count];
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 9, 10);
+    layout.itemSize = CGSizeMake(44, 44);
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+  
+
+    static NSString *cellIdentifier = @"imageCell";
+    ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    PFObject *imageObject = [imageFilesArray_image objectAtIndex:indexPath.row];
+    PFFile *imageFile = [imageObject objectForKey:@"image"];
+    
+    cell.loadingSpinner.hidden = NO;
+    [cell.loadingSpinner startAnimating];
+    
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            cell.parseImage.image = [UIImage imageWithData:data];
+            [cell.loadingSpinner stopAnimating];
+            cell.loadingSpinner.hidden = YES;
+            [ cell.parseImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
+
+        }
+    }];
+    
+    return cell;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%@",[imageFilesArray_image objectAtIndex:indexPath.row]);
+  
+
+}
+
+
+
+- (CGFloat) tableView: (UITableView*) tableView heightForRowAtIndexPath: (NSIndexPath*) indexPath
+{
+    return 30;
+}
+
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -158,7 +249,7 @@
             [cell.textLabel setNumberOfLines:2];
             [cell.detailTextLabel setTextColor:[UIColor blueColor]];
             cell.textLabel.text = @"Address：";
-            cell.accessoryType=UITableViewCellAccessoryDetailButton;
+            //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
             
             break;
@@ -169,7 +260,7 @@
             [cell.textLabel setNumberOfLines:2];
             [cell.detailTextLabel setTextColor:[UIColor blueColor]];
             cell.textLabel.text = @"Website：";
-            cell.accessoryType=UITableViewCellAccessoryDetailButton;
+            //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
             
             break;
@@ -181,7 +272,7 @@
             [cell.textLabel setNumberOfLines:2];
             [cell.detailTextLabel setTextColor:[UIColor blueColor]];
             cell.textLabel.text = @"Email：";
-            cell.accessoryType=UITableViewCellAccessoryDetailButton;
+            //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
             
             break;
@@ -194,7 +285,7 @@
             [cell.textLabel setNumberOfLines:2];
             [cell.detailTextLabel setTextColor:[UIColor blueColor]];
             cell.textLabel.text = @"Telephone：";
-            cell.accessoryType=UITableViewCellAccessoryDetailButton;
+            //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
             
             break;
@@ -210,16 +301,27 @@
         }
             
             break;
+        case 7:
             
+        {
             
+            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
+            [cell.textLabel setNumberOfLines:2];
+            cell.textLabel.text = @"Description：";
             
+  
+        }
     }
     
     [cell.detailTextLabel setNumberOfLines:5];
-    
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
     cell.detailTextLabel.text =[list objectAtIndex:indexPath.row];
-    cell.detailTextLabel.font = [cell.textLabel.font fontWithSize:12];
     
+    cell.contentView.backgroundColor = [UIColor grayColor];
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
     return cell;
     
 }
@@ -260,7 +362,7 @@
 - (void) likeImage {
    
     [object addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
-    [object addUniqueObject:@1 forKey:@"oneorzero"];
+    
     [object saveInBackground];
     [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
@@ -443,6 +545,17 @@
             [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
         }
     }
+    if ([segue.identifier isEqualToString:@"GOGALLERY_collection"]) {
+        
+        
+        if ([segue.destinationViewController isKindOfClass:[Gallery class]]){
+            NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
+            Gallery *receiver = (Gallery*)segue.destinationViewController;
+            receiver.tattoomasterCell=_tattoomasterCell;
+            [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+        }
+    }
+
 }
 
 
@@ -482,7 +595,96 @@
       else{
           NSLog(@"請登入")
           ; }
+    [self.tableView reloadData];
 }
 
 
+- (IBAction)bookmarkbtn:(id)sender {
+    if ([PFUser currentUser]) {
+        
+        UIButton* button = sender;
+        CGPoint correctedPoint =
+        [button convertPoint:button.bounds.origin toView:self.tableView];
+        NSIndexPath* indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
+        object = [imageFilesArray objectAtIndex:indexPath.row];
+        imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+        lastClickedRow = indexPath.row;
+        object = [imageFilesArray objectAtIndex:indexPath.row];
+        NSLog(@"%@",imageFilesArray);
+        
+        
+        if ([[object objectForKey:@"bookmark"]containsObject:[PFUser currentUser].objectId]) {
+            
+            [self nobookmark];
+            
+            NSLog(@"disliked");
+            self.bookmark_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+            
+        }
+        
+        else{
+            
+            
+            [self bookmark];
+            
+            NSLog(@"liked");
+            self.bookmark_image.image =[UIImage imageNamed:@"button_heart_red.png"];
+            
+        }
+    }
+    else{
+        NSLog(@"請登入")
+        ; }
+    [self.tableView reloadData];
+}
+- (void) bookmark {
+    
+    [object addUniqueObject:[PFUser currentUser].objectId forKey:@"bookmark"];
+
+    [object saveInBackground];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            //[self likedSuccess];
+            self.isbookmark = YES;
+        }
+        else {
+            [self bookmarkFail];
+        }
+    }];
+}
+- (void) nobookmark {
+    [object removeObject:[PFUser currentUser].objectId forKey:@"bookmark"];
+    [object saveInBackground];
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            // [self dislikedSuccess];
+            self.isbookmark = NO;
+            
+        }
+        else {
+            [self nobookmarkFail];
+        }
+    }];
+}
+- (void) nobookmarkSuccess {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"已經取消我的最愛" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
+
+- (void) nobookmarkFail {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oooops!" message:@"失敗" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
+
+- (void) bookmarkSuccess {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"已經成功加入我的最愛" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
+
+- (void) bookmarkFail {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oooops!" message:@"失敗" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
 @end

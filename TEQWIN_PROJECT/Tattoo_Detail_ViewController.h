@@ -20,31 +20,35 @@
     NSArray * count;
     PFObject *object;
     NSMutableArray *list;
-  
+    NSArray*imageFilesArray_image;
 }
-- (IBAction)writing:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UICollectionView *imagesCollection;
 
 @property (weak, nonatomic) IBOutlet UIImageView *fav_image;
 - (IBAction)favButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *favButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *likeordislike;
-- (IBAction)likeordislike:(id)sender;
+- (IBAction)bookmarkbtn:(id)sender;
 
-- (IBAction)segmentSelected:(id)sender;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentcontroller;
+
+@property (weak, nonatomic) IBOutlet UILabel *master_name;
+
+
 
 @property (strong, nonatomic) Tattoo_Master_Info *selectedTattoo_Master;
 
 @property (weak, nonatomic) IBOutlet UILabel *count_like;
 
 @property (strong, nonatomic) NSDictionary *data;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+@property (weak, nonatomic) IBOutlet UIImageView *bookmark_image;
 
+@property (nonatomic, assign) BOOL isbookmark;
 @property (nonatomic, assign) BOOL isFav;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSString *venueId;
 
-- (IBAction)valueChanged:(id)sender;
+
 @property (weak, nonatomic) IBOutlet PFImageView *profileimage;
 
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;

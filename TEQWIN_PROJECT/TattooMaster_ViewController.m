@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UISearchDisplayController *searchController;
 @property (nonatomic, strong) NSMutableArray *searchResults;
 
+
 @end
 
 @implementation TattooMaster_ViewController
@@ -100,7 +101,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
-    query.cachePolicy=kPFCachePolicyCacheElseNetwork;
+    query.cachePolicy=kPFCachePolicyCacheThenNetwork;
     NSArray *results  = [query findObjects];
     NSLog(@"%d",results.count);
     
@@ -271,7 +272,22 @@
         [loadingSpinner stopAnimating];
         loadingSpinner.hidden = YES;
         
-        
+        PFFile *image_1 = [object objectForKey:@"image"];
+        PFImageView *thumbnailImageView_imageview1 = (PFImageView*)[cell viewWithTag:10];
+        thumbnailImageView_imageview1.file = image_1;
+        [thumbnailImageView_imageview1 loadInBackground];
+        PFFile *image_2 = [object objectForKey:@"image"];
+        PFImageView *thumbnailImageView_imageview2 = (PFImageView*)[cell viewWithTag:11];
+        thumbnailImageView_imageview2.file = image_2;
+        [thumbnailImageView_imageview2 loadInBackground];
+        PFFile *image_3 = [object objectForKey:@"image"];
+        PFImageView *thumbnailImageView_imageview3 = (PFImageView*)[cell viewWithTag:12];
+        thumbnailImageView_imageview3.file = image_3;
+        [thumbnailImageView_imageview3 loadInBackground];
+        PFFile *image_4 = [object objectForKey:@"image"];
+        PFImageView *thumbnailImageView_imageview4 = (PFImageView*)[cell viewWithTag:13];
+        thumbnailImageView_imageview4.file = image_4;
+        [thumbnailImageView_imageview4 loadInBackground];
         UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
         nameLabel.text = [object objectForKey:@"Name"];
         
@@ -292,6 +308,8 @@
             
             heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
         }
+        // UICollectionView *cellImageCollection=(UICollectionView *)[cell viewWithTag:9];
+        
     }
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -440,6 +458,7 @@
         TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
         tattoomasterCell.object_id = [object objectForKey:@"object"];
         tattoomasterCell.favorites = [object objectForKey:@"favorites"];
+        tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
         tattoomasterCell.name = [object objectForKey:@"Name"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gender = [object objectForKey:@"Gender"];
@@ -454,7 +473,7 @@
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
-        
+        tattoomasterCell.description=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
         
         
