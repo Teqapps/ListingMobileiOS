@@ -807,17 +807,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="7Y6-vs-AP5">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="Xr6-9H-N8V"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="S6P-Ce-FQj">
-                            <connections>
-                                <action selector="searchicon:" destination="488-73-Amk" id="yJs-Ku-jwj"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="searchBar" destination="lah-7H-DfT" id="nAv-pB-MWC"/>
                         <outlet property="searchDisplayController" destination="Uy1-Y9-FLw" id="B8t-eY-lKX"/>
-                        <outlet property="searchicon" destination="S6P-Ce-FQj" id="bDi-CB-cXQ"/>
                         <outlet property="sidebarButton" destination="Xr6-9H-N8V" id="4S4-rJ-tPC"/>
                         <outlet property="table_view" destination="YXb-hL-ggL" id="WGS-w7-EG3"/>
                     </connections>
