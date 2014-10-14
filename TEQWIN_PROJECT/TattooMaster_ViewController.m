@@ -16,6 +16,8 @@
 @interface TattooMaster_ViewController ()<UISearchDisplayDelegate, UISearchBarDelegate>
 {
     int lastClickedRow;
+    UISearchBar *searchBar;
+	UISearchDisplayController *searchDC;
 }
 
 @property (nonatomic, strong) UISearchDisplayController *searchController;
@@ -25,7 +27,7 @@
 @end
 
 @implementation TattooMaster_ViewController
-@synthesize searchbar;
+
 #define TABLE_HEIGHT 80
 - (id)initWithCoder:(NSCoder *)aCoder
 {
@@ -53,9 +55,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     searchbar.hidden=YES;
+     searchBar.hidden=YES;
     self.title =@"師父";
     [self refreshTable:nil];
+    // Create a search bar - you can add this in the viewDidLoad
+	searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 44.0f)];
+	searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
+	searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
+	searchBar.keyboardType = UIKeyboardTypeAlphabet;
+	searchBar.delegate = self;
+	self.table_view.tableHeaderView = searchBar;
+    
+	// Create the search display controller
+	searchDC = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self] ;
+	searchDC.searchResultsDataSource = self;
+	searchDC.searchResultsDelegate = self;
     
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
@@ -80,13 +94,13 @@
 - (void)viewWillAppear:(BOOL)animated {
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    searchbar.hidden=YES;
+    searchBar.hidden=YES;
     
 }
 
 - (IBAction)showsearch:(id)sender {
-    [searchbar becomeFirstResponder];
-    searchbar.hidden=NO;
+    [searchBar becomeFirstResponder];
+    searchBar.hidden=NO;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
