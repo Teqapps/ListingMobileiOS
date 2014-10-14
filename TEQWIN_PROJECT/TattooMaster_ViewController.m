@@ -53,10 +53,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     searchbar.hidden=YES;
+     
     self.title =@"師父";
     [self refreshTable:nil];
-    
+    searchbar.hidden = !searchbar.hidden;
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -78,6 +78,7 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated {
+     searchbar.hidden=YES;
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     searchbar.hidden=YES;

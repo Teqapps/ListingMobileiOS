@@ -18,12 +18,15 @@
 
 @import CoreData;
 @interface Tattoo_Detail_ViewController ()
+
 {
     int lastClickedRow;
     CGRect frame_first;
     UIImageView *fullImageView;
     
 }
+@property (nonatomic, strong) UISearchDisplayController *searchController;
+@property (nonatomic, strong) NSMutableArray *searchResults;
 @end
 
 @implementation Tattoo_Detail_ViewController
@@ -104,7 +107,13 @@
     
     }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    _detailsearchbar .hidden=YES;
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    _detailsearchbar.hidden=YES;
+    
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0)
@@ -134,7 +143,51 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [list count];
+   
+    if (tableView == self.tableView) {
+        
+        return [list count];
+        
+    } else {
+        //NSLog(@"how many in search results");
+        //NSLog(@"%@", self.searchResults.count);
+        return self.searchResults.count;
+        
+    }
+
+}
+-(void)filterResults:(NSString *)searchTerm scope:(NSString*)scope
+{
+    
+    [self.searchResults removeAllObjects];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    //[query whereKey:@"Name" containsString:searchTerm];
+    query.cachePolicy=kPFCachePolicyCacheElseNetwork;
+    NSArray *results  = [query findObjects];
+    NSLog(@"%d",results.count);
+    
+    [self.searchResults addObjectsFromArray:results];
+    
+    NSPredicate *searchPredicate =
+    [NSPredicate predicateWithFormat:@"Name CONTAINS[cd]%@", searchTerm];
+    _searchResults = [NSMutableArray arrayWithArray:[results filteredArrayUsingPredicate:searchPredicate]];
+    
+    // if(![scope isEqualToString:@"全部"]) {
+    // Further filter the array with the scope
+    //   NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
+    
+    //  _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
+}//}
+//當search 更新時， tableview 就會更新，無論scope select 咩
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchTerm
+{
+    [self filterResults :searchTerm
+                   scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                          objectAtIndex:[self.searchDisplayController.searchBar
+                                         selectedScopeButtonIndex]]];
+    
+    return YES;
 }
 - (void)queryParseMethod_image{
     NSLog(@"start query_image");
@@ -217,6 +270,8 @@
     if (cell==nil) {
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:identifier];
     }
+    if (tableView == self.tableView) {
+
     switch (indexPath.row) {
             
             
@@ -321,7 +376,27 @@
     cell.contentView.backgroundColor = [UIColor grayColor];
     
     cell.textLabel.textColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
-    cell.detailTextLabel.textColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
+        cell.detailTextLabel.textColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
+    }
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        PFObject* object = self.searchResults[indexPath.row];
+        
+        
+        if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+            
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_red3.png"];
+        }
+        else
+        {
+            
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
+        }
+        
+        cell.textLabel.text = [object objectForKey:@"Name"];
+        cell.detailTextLabel.text =[object objectForKey:@"Gender"];
+        
+    }
+
     return cell;
     
 }
@@ -414,7 +489,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+     if (tableView == self.tableView) {
     
     switch (indexPath.row) {
                case 2:{
@@ -480,7 +555,38 @@
         }
             break;
             
-    }
+    }}
+     else {
+         //NSLog(@"how many in search results");
+         //NSLog(@"%@", self.searchResults.count);
+         
+        PFObject* selectobject = [_searchResults  objectAtIndex:indexPath.row];
+         NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+         Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+         [self.navigationController pushViewController:mapVC animated:YES];
+         TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
+         tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
+         tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
+         tattoomasterCell.bookmark = [selectobject objectForKey:@"bookmark"];
+         tattoomasterCell.name = [selectobject objectForKey:@"Name"];
+         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+         tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
+         tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
+         tattoomasterCell.email = [selectobject objectForKey:@"Email"];
+         tattoomasterCell.address = [selectobject objectForKey:@"Address"];
+         tattoomasterCell.latitude = [selectobject objectForKey:@"Latitude"];
+         tattoomasterCell.longitude = [selectobject objectForKey:@"Longitude"];
+         tattoomasterCell.website = [selectobject objectForKey:@"Website"];
+         tattoomasterCell.personage = [selectobject objectForKey:@"Personage"];
+         tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
+         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+         tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
+         tattoomasterCell.object_id = selectobject.objectId;
+         
+         mapVC.tattoomasterCell = tattoomasterCell;
+         NSLog(@"%@",tattoomasterCell.master_id);
+     }
+
 }
 //- (IBAction)getDirectionButtonPressed:(id)sender {
 // UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Get Direction"
@@ -686,5 +792,9 @@
 - (void) bookmarkFail {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oooops!" message:@"失敗" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
+}
+- (IBAction)showsearch:(id)sender {
+    [_detailsearchbar  becomeFirstResponder];
+    _detailsearchbar.hidden=NO;
 }
 @end

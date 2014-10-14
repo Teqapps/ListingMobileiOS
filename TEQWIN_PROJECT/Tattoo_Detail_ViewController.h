@@ -22,7 +22,8 @@
     NSMutableArray *list;
     NSArray*imageFilesArray_image;
 }
-
+@property IBOutlet UISearchBar *detailsearchbar;
+- (IBAction)showsearch:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *imagesCollection;
 

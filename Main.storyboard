@@ -346,12 +346,25 @@
                                 <rect key="frame" x="72" y="139" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <searchBar hidden="YES" contentMode="redraw" id="96j-q0-Hz6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zCD-pb-qjH" id="ux3-GM-lh6"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Nao-cD-eUg">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="SV1-4E-WNb">
+                            <connections>
+                                <action selector="showsearch:" destination="zCD-pb-qjH" id="yaY-6w-TBI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -359,15 +372,26 @@
                     <connections>
                         <outlet property="bookmark_image" destination="BkW-5o-UGo" id="rC8-qU-dK3"/>
                         <outlet property="count_like" destination="RDb-eS-fra" id="OWz-us-hqF"/>
+                        <outlet property="detailsearchbar" destination="96j-q0-Hz6" id="M2T-M7-gnH"/>
                         <outlet property="favButton" destination="62o-N6-bG8" id="trU-ZK-hAd"/>
                         <outlet property="fav_image" destination="Vix-Os-tAF" id="xRJ-Ka-bcX"/>
                         <outlet property="imagesCollection" destination="aZp-a7-g2X" id="CvR-DC-6pk"/>
                         <outlet property="master_name" destination="Ip1-9f-SR7" id="ioZ-Ie-iyX"/>
                         <outlet property="profileimage" destination="xO9-7B-uIw" id="nNY-e0-C5Z"/>
+                        <outlet property="searchDisplayController" destination="Fi5-5w-pUQ" id="Pie-Vz-A1a"/>
                         <outlet property="tableView" destination="RFZ-3m-zSA" id="F97-HM-8ak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wP7-EA-Ela" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Fi5-5w-pUQ">
+                    <connections>
+                        <outlet property="delegate" destination="zCD-pb-qjH" id="hrn-kD-s2f"/>
+                        <outlet property="searchBar" destination="96j-q0-Hz6" id="L11-4i-jnq"/>
+                        <outlet property="searchContentsController" destination="zCD-pb-qjH" id="ixc-fk-0pu"/>
+                        <outlet property="searchResultsDataSource" destination="zCD-pb-qjH" id="Nus-ns-Lyb"/>
+                        <outlet property="searchResultsDelegate" destination="zCD-pb-qjH" id="dg4-OE-zrb"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="797" y="-64"/>
         </scene>
