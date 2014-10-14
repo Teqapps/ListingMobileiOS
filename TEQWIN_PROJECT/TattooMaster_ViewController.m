@@ -101,7 +101,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
-    query.cachePolicy=kPFCachePolicyCacheElseNetwork;
+    query.cachePolicy=kPFCachePolicyCacheThenNetwork;
     NSArray *results  = [query findObjects];
     NSLog(@"%d",results.count);
     
