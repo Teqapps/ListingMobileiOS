@@ -17,7 +17,7 @@
 {
     int lastClickedRow;
 }
-@property (nonatomic, strong) UISearchBar *searchBar;
+
 @property (nonatomic, strong) UISearchDisplayController *searchController;
 @property (nonatomic, strong) NSMutableArray *searchResults;
 
@@ -25,6 +25,7 @@
 @end
 
 @implementation TattooMaster_ViewController
+@synthesize searchbar;
 #define TABLE_HEIGHT 80
 - (id)initWithCoder:(NSCoder *)aCoder
 {
@@ -52,8 +53,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     searchbar.hidden=YES;
     self.title =@"師父";
     [self refreshTable:nil];
+    
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -75,11 +78,16 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self refreshTable:nil];
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    searchbar.hidden=YES;
     
 }
 
+- (IBAction)showsearch:(id)sender {
+    [searchbar becomeFirstResponder];
+    searchbar.hidden=NO;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if (tableView == self.tableView) {
@@ -101,7 +109,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
-    query.cachePolicy=kPFCachePolicyCacheThenNetwork;
+    query.cachePolicy=kPFCachePolicyCacheElseNetwork;
     NSArray *results  = [query findObjects];
     NSLog(@"%d",results.count);
     
@@ -111,12 +119,12 @@
     [NSPredicate predicateWithFormat:@"Name CONTAINS[cd]%@", searchTerm];
     _searchResults = [NSMutableArray arrayWithArray:[results filteredArrayUsingPredicate:searchPredicate]];
     
-    if(![scope isEqualToString:@"全部"]) {
+   // if(![scope isEqualToString:@"全部"]) {
         // Further filter the array with the scope
-        NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
+     //   NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
        
-        _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
-    }}
+      //  _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
+    }//}
 
 //當search 更新時， tableview 就會更新，無論scope select 咩
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchTerm
@@ -129,15 +137,15 @@
     return YES;
 }
 //當scope 更新時，tableview 就會更新 （但要有search text)
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
+//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+//{
     // Tells the table data source to reload when scope bar selection changes
-     [self filterResults :[self.searchDisplayController.searchBar text] scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+ //    [self filterResults :[self.searchDisplayController.searchBar text] scope:
+ //    [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
     
     // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
+ //   return YES;
+//}
 
 - (void)refreshTable:(NSNotification *) notification
 {
