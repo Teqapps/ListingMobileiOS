@@ -17,7 +17,7 @@
 {
     int lastClickedRow;
 }
-
+@property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UISearchDisplayController *searchController;
 @property (nonatomic, strong) NSMutableArray *searchResults;
 
@@ -165,7 +165,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     if (self.objects.count == 0) {
-        query.cachePolicy = kpfca;
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     
        
     }
@@ -484,7 +484,4 @@
 }
 
 
-- (IBAction)SEARCH:(id)sender {
-       [_searchBar becomeFirstResponder];
-}
 @end
