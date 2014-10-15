@@ -56,8 +56,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wbj-g4-Y4R">
-                                <rect key="frame" x="0.0" y="114" width="320" height="454"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wbj-g4-Y4R">
+                                <rect key="frame" x="0.0" y="158" width="320" height="293"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -68,7 +68,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="新消息" id="4S7-va-Tyw">
                                         <rect key="frame" x="0.0" y="66" width="320" height="44"/>
@@ -77,7 +77,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="CZH-Rz-gDi" kind="custom" customClass="SWRevealViewControllerSegue" id="jzI-7Q-TeA"/>
                                         </connections>
@@ -89,7 +89,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="v9q-E4-sEi" kind="custom" customClass="SWRevealViewControllerSegue" id="njj-2d-hlP"/>
                                         </connections>
@@ -101,7 +101,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="03e-be-abg" kind="custom" customClass="SWRevealViewControllerSegue" id="MsR-o8-LCf"/>
                                         </connections>
@@ -113,9 +113,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="488-73-Amk" kind="custom" customClass="SWRevealViewControllerSegue" id="Sds-wl-47n"/>
+                                            <segue destination="488-73-Amk" kind="custom" customClass="SWRevealViewControllerSegue" id="BAs-ZL-t3l"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="我的最愛" id="FNl-Ri-x6K">
@@ -125,7 +125,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="9Ph-hb-uEX" kind="custom" customClass="SWRevealViewControllerSegue" id="lyA-5o-E1X"/>
                                         </connections>
@@ -136,39 +136,54 @@
                                     <outlet property="delegate" destination="6ei-0v-7aX" id="Cr5-qr-0Iu"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a42-fl-qwF">
-                                <rect key="frame" x="85" y="36" width="202" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RnO-xK-nYz">
-                                <rect key="frame" x="20" y="26" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goldebackground.jpg" id="37F-Mw-uAb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X2M-mQ-HYa">
-                                <rect key="frame" x="20" y="26" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j7c-f0-LVD">
+                                <rect key="frame" x="3" y="11" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oJ1-Dk-Y59" kind="custom" customClass="SWRevealViewControllerSegue" id="Y2P-3B-5JA"/>
+                                    <segue destination="oJ1-Dk-Y59" kind="custom" customClass="SWRevealViewControllerSegue" id="sRd-Tq-qBz"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Nsf-nZ-a8R">
+                                <rect key="frame" x="13" y="20" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C71-P1-jXa">
+                                <rect key="frame" x="121" y="28" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0037872779187817507" green="0.0037872779187817507" blue="0.0037872779187817507" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="R2f-Yq-HfP">
+                                <rect key="frame" x="0.0" y="108" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tattoologo.png" id="eNS-JJ-k59">
+                                        <rect key="frame" x="41" y="4" width="178" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65323604060913709" green="0.65323604060913709" blue="0.65323604060913709" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="profile_image" destination="RnO-xK-nYz" id="hjn-SR-9hi"/>
+                        <outlet property="profile_image" destination="Nsf-nZ-a8R" id="pQe-w3-Gyb"/>
                         <outlet property="tableview" destination="Wbj-g4-Y4R" id="hvQ-im-hV0"/>
-                        <outlet property="welcome" destination="a42-fl-qwF" id="Txi-3I-fad"/>
+                        <outlet property="welcome" destination="C71-P1-jXa" id="ViA-BV-h5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFu-rl-uXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="3"/>
+            <point key="canvasLocation" x="79" y="-219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wPd-JZ-RwP">
@@ -732,7 +747,7 @@
         <scene sceneID="uPb-CU-JX0">
             <objects>
                 <tableViewController storyboardIdentifier="TattooMaster_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="488-73-Amk" customClass="TattooMaster_ViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="220" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXb-hL-ggL">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXb-hL-ggL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -745,32 +760,32 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipeCell" rowHeight="220" id="acF-SW-3Kp">
-                                <rect key="frame" x="0.0" y="130" width="320" height="220"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipeCell" rowHeight="105" id="acF-SW-3Kp">
+                                <rect key="frame" x="0.0" y="130" width="320" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="acF-SW-3Kp" id="oVP-7v-Zqf">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="219"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" id="kC5-J5-rLH" customClass="PFImageView">
-                                            <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
+                                            <rect key="frame" x="6.5" y="6.5" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <activityIndicatorView opaque="NO" tag="110" contentMode="scaleToFill" style="gray" id="zi9-JQ-mDs">
-                                            <rect key="frame" x="41" y="37" width="20" height="20"/>
+                                            <rect key="frame" x="41" y="15.5" width="20" height="20"/>
                                             <color key="color" red="0.1058782762" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </activityIndicatorView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dNf-Jp-u37">
                                             <rect key="frame" x="111" y="10" width="206" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Hx-Id-6W9">
                                             <rect key="frame" x="111" y="32" width="50" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.67823840729999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.88503331218274117" green="0.74503108255601636" blue="0.053052771770199486" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -796,24 +811,9 @@
                                             <rect key="frame" x="116" y="55" width="40" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="M8g-FO-sbf" customClass="PFImageView">
-                                            <rect key="frame" x="15" y="150" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WfZ-ES-2v1" customClass="PFImageView">
-                                            <rect key="frame" x="83" y="150" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gHe-aj-A2H" customClass="PFImageView">
-                                            <rect key="frame" x="151" y="150" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kH8-Fa-Yao" customClass="PFImageView">
-                                            <rect key="frame" x="219" y="150" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="zCD-pb-qjH" kind="push" identifier="showDetail" id="Oz0-Qe-dUn"/>
                                 </connections>
@@ -854,7 +854,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="389" y="-320"/>
+            <point key="canvasLocation" x="437" y="-64"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="Gdt-n3-lqK">
@@ -1111,7 +1111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNg-eE-dtF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="-715"/>
+            <point key="canvasLocation" x="437" y="-748"/>
         </scene>
         <!--Tattoo Master View Controller - Title-->
         <scene sceneID="chO-6M-IAJ">
@@ -1226,10 +1226,12 @@
         <image name="ICON.png" width="256" height="256"/>
         <image name="Tattoo_Logo.jpg" width="456" height="843"/>
         <image name="background.jpg" width="1920" height="1080"/>
+        <image name="goldebackground.jpg" width="680" height="453"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="navigationicon.png" width="512" height="512"/>
         <image name="tattoo_1.jpg" width="800" height="1057"/>
         <image name="tattoo_3.jpg" width="398" height="398"/>
+        <image name="tattoologo.png" width="763" height="208"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

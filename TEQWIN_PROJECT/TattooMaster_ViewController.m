@@ -262,15 +262,13 @@
         PFFile *thumbnail = [object objectForKey:@"image"];
         PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
         
-        CGSize itemSize = CGSizeMake(70, 70);
-        UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
-        CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+      
         thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
-        thumbnailImageView.layer.cornerRadius=8.0f;
-        thumbnailImageView.layer.borderWidth=2.0;
+        thumbnailImageView.layer.cornerRadius= thumbnailImageView.frame.size.width / 2;
+        thumbnailImageView.layer.borderWidth=0.0;
         thumbnailImageView.layer.masksToBounds = YES;
         thumbnailImageView.layer.borderColor=[[UIColor whiteColor] CGColor];
-        [thumbnailImageView.image drawInRect:imageRect];
+     
         thumbnailImageView.image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
@@ -281,23 +279,7 @@
         [loadingSpinner stopAnimating];
         loadingSpinner.hidden = YES;
         
-        PFFile *image_1 = [object objectForKey:@"image"];
-        PFImageView *thumbnailImageView_imageview1 = (PFImageView*)[cell viewWithTag:10];
-        thumbnailImageView_imageview1.file = image_1;
-        [thumbnailImageView_imageview1 loadInBackground];
-        PFFile *image_2 = [object objectForKey:@"image"];
-        PFImageView *thumbnailImageView_imageview2 = (PFImageView*)[cell viewWithTag:11];
-        thumbnailImageView_imageview2.file = image_2;
-        [thumbnailImageView_imageview2 loadInBackground];
-        PFFile *image_3 = [object objectForKey:@"image"];
-        PFImageView *thumbnailImageView_imageview3 = (PFImageView*)[cell viewWithTag:12];
-        thumbnailImageView_imageview3.file = image_3;
-        [thumbnailImageView_imageview3 loadInBackground];
-        PFFile *image_4 = [object objectForKey:@"image"];
-        PFImageView *thumbnailImageView_imageview4 = (PFImageView*)[cell viewWithTag:13];
-        thumbnailImageView_imageview4.file = image_4;
-        [thumbnailImageView_imageview4 loadInBackground];
-        UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+              UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
         nameLabel.text = [object objectForKey:@"Name"];
         
         UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];

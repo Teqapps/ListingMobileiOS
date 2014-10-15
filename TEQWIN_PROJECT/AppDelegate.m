@@ -31,9 +31,9 @@
     
 
 
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbackground.jpg"]
-                                       forBarMetrics:UIBarMetricsDefault];
-    
+    //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"background.jpg"]
+                                     //  forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.60 green:0.60 blue:0.60 alpha:1.000]];
         NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
     shadow.shadowOffset = CGSizeMake(0, 1);

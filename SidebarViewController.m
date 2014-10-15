@@ -137,9 +137,10 @@
 {
 
          self.tableview.backgroundColor = [UIColor clearColor];
-self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background1.jpg"]];
+self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     menuItems = @[@"title", @"新消息",@"紋身歷史" ,@"紋身注意事項",@"找紋身師傅",@"我的最愛"];
     list =[[NSMutableArray alloc]init];
+    
     [list addObject:[NSString stringWithFormat:@"title"]];
     
     [list addObject:[NSString stringWithFormat:@"新消息"]];
@@ -179,62 +180,81 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     }
 
     switch (indexPath.row) {
+            
             case 0:
         {
-            cell.textLabel.text=@"TEQWIN";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:18];
+            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            [cell.textLabel setFont:font];
+            
+            //cell.imageView.image =[UIImage imageNamed:@"new-icon.png"];
+            cell.textLabel.text=@" • Tattoo";
+            
             [cell.textLabel setTextColor:[UIColor whiteColor]];
+            
+        
         }
             break;
         case 1:
-        {
+        { cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
             UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
-            cell.imageView.image =[UIImage imageNamed:@"new-icon.png"];
-            cell.textLabel.text=@"新消息";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+            
+            //cell.imageView.image =[UIImage imageNamed:@"new-icon.png"];
+            cell.textLabel.text=@" • 新消息";
+           
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
         case 2:
-        {
-            cell.imageView.image =[UIImage imageNamed:@"history.png"];
-            cell.textLabel.text=@"紋身歷史";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+        {   cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            [cell.textLabel setFont:font];
+            //cell.imageView.image =[UIImage imageNamed:@"history.png"];
+            cell.textLabel.text=@" • 紋身歷史";
+            
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
         case 3:
         {
-            cell.imageView.image =[UIImage imageNamed:@"notice.png"];
-            cell.textLabel.text=@"紋身注意事項";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+             cell.textLabel.font=[cell.textLabel.font fontWithSize:32];
+            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            [cell.textLabel setFont:font];
+            //cell.imageView.image =[UIImage imageNamed:@"notice.png"];
+            cell.textLabel.text=@" • 紋身注意事項";
+           
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
 
                case 4 :
         {
-            cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
-            cell.textLabel.text=@"找紋身師傅";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+             cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            [cell.textLabel setFont:font];
+            //cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
+            cell.textLabel.text=@" • 找紋身師傅";
+           
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
         case 5:
-        {
-            cell.imageView.image =[UIImage imageNamed:@"Favorites-icon.png"];
-            cell.textLabel.text=@"我的最愛";
-            cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+        {   cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
+            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            [cell.textLabel setFont:font];
+            //cell.imageView.image =[UIImage imageNamed:@"Favorites-icon.png"];
+            cell.textLabel.text=@" • 我的最愛";
+            
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
        
       
     }
-    cell.backgroundColor = [UIColor clearColor];
-    cell.backgroundView.backgroundColor = [UIColor clearColor];
+    
 
+    
     return cell;
 }
 
