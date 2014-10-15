@@ -55,7 +55,7 @@
      [self.imagesCollection setCollectionViewLayout:flowLayout];
     flowLayout.itemSize = CGSizeMake(70, 70);
     self.title =self.tattoomasterCell.name;
-    self.count_like.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.favorites.count]   ;
+    self.count_like.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.favorites.count    ]   ;
     
     //set segmented control
     if ([self.tattoomasterCell.bookmark containsObject:[PFUser currentUser].objectId]) {
@@ -72,8 +72,8 @@
             self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
         }
     self.master_name.text=self.tattoomasterCell.name;
-    self.cover_image.file=self.tattoomasterCell.imageFile;
-       self.profileimage.file=self.tattoomasterCell.imageFile;
+    
+    self.profileimage.file=self.tattoomasterCell.imageFile;
    self.profileimage.layer.cornerRadius =self.profileimage.frame.size.width / 2;
     self.profileimage.layer.borderWidth = 3.0f;
     self.profileimage.layer.borderColor = [UIColor whiteColor].CGColor;

@@ -43,7 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.likecount.text=[NSString stringWithFormat:@"%d",likearray.count];
+   
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
@@ -152,9 +152,8 @@
         }
         
     }
-    
+    [self queryParseMethod];
 }
-
 // Set received values if they are not nil and reload the table
 - (void)_updateProfileData {
     
@@ -197,7 +196,7 @@
  
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     
-    [query whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
+    [query whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
     
    
     query.cachePolicy = kPFCachePolicyNetworkOnly;
@@ -205,7 +204,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            likearray = imageFilesArray;
+      
             
                 [TABLEVIEW reloadData];
           
@@ -402,14 +401,6 @@
     [PFUser logOut];
     [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"] animated:YES];
 
-}
-
-- (IBAction)showbookmark:(id)sender {
-    [self queryParseMethod];
-}
-
-- (IBAction)showlike:(id)sender {
-  //  [self retrieveLikedImages];
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {

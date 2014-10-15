@@ -36,7 +36,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *master_name;
 
 
-@property (weak, nonatomic) IBOutlet PFImageView *cover_image;
 
 @property (strong, nonatomic) Tattoo_Master_Info *selectedTattoo_Master;
 

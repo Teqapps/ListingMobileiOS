@@ -13,7 +13,6 @@
 #import <Parse/PFLogInViewController.h>
 @interface LoginUIViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate,UITableViewDataSource, UITableViewDelegate>
 {
-    NSArray * likearray;
      NSArray *count;
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
@@ -29,12 +28,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *logout;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIImageView *fbprofile;
-@property (weak, nonatomic) IBOutlet UILabel *bookmarkcount;
-@property (weak, nonatomic) IBOutlet UILabel *likecount;
 
 - (IBAction)logOutButtonTapAction:(id)sender;
-- (IBAction)showbookmark:(id)sender;
-- (IBAction)showlike:(id)sender;
 
 
 
