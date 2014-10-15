@@ -43,23 +43,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     if ([PFUser currentUser]) {
-    PFQuery *bookmarkquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    
-    [bookmarkquery whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
-    
-    
-    bookmarkquery.cachePolicy = kPFCachePolicyNetworkElseCache;
-    
-    [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            self.bookmarks_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
-            
-            
-        }
-    }];
+        PFQuery *bookmarkquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+        
+        [bookmarkquery whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
+        
+        
+        bookmarkquery.cachePolicy = kPFCachePolicyNetworkElseCache;
+        
+        [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                imageFilesArray = [[NSArray alloc] initWithArray:objects];
+                self.bookmarks_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
+                
+                
+            }
+        }];
         PFQuery *likequery = [PFQuery queryWithClassName:@"Tattoo_Master"];
         
         [likequery whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
@@ -76,6 +75,7 @@
             }
         }];
     }
+
  
     
     
