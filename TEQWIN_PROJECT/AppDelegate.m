@@ -28,7 +28,7 @@
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     // If you would like all objects to be private by default, remove this line.
-    
+
 
 
     //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"background.jpg"]
