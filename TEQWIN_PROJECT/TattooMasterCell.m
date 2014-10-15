@@ -12,5 +12,5 @@
 @synthesize name;
 
 @synthesize imageFile;
-
+@synthesize cover_image;
 @end

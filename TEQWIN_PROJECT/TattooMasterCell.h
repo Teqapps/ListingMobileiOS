@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSString *personage; // preparation time
 @property (nonatomic, strong) NSString *master_id; // preparation time
 @property (nonatomic, strong) NSString *object_id; // preparation time
+
 @property (nonatomic, strong) NSArray *favorites; // preparation time
 @property (nonatomic, strong) NSArray *bookmark; // preparation time
 @property (nonatomic, strong) NSString *description; // name of recipe
@@ -30,4 +31,5 @@
 @property (nonatomic, strong) PFFile *gallery_3; // image of gallery3
 @property (nonatomic, strong) PFFile *gallery_4; // image of gallery4
 @property (nonatomic, strong) PFFile *gallery_5; // image of gallery5
+@property (nonatomic, strong) PFFile *cover_image; // image of gallery5
 @end

@@ -53,10 +53,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     
+     [searchbar becomeFirstResponder];
     self.title =@"師父";
     [self refreshTable:nil];
-    searchbar.hidden = !searchbar.hidden;
+   // searchbar.hidden = !searchbar.hidden;
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -78,15 +78,16 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated {
-     searchbar.hidden=YES;
+     //searchbar.hidden=YES;
+     [searchbar becomeFirstResponder];
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    searchbar.hidden=YES;
+   // searchbar.hidden=YES;
     
 }
 
 - (IBAction)showsearch:(id)sender {
-    [searchbar becomeFirstResponder];
+  
     searchbar.hidden=NO;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -188,7 +189,7 @@
     [query orderByAscending:@"createdAt"];
     
     return query;
-    
+   
 }
 
 
@@ -201,7 +202,7 @@
     if (tableView == self.tableView) {
         
         selectobject = [self.objects  objectAtIndex:indexPath.row];
-        NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+         NSLog(@"%@",self.objects);
     } else {
         //NSLog(@"how many in search results");
         //NSLog(@"%@", self.searchResults.count);
@@ -226,6 +227,7 @@
         tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
+        tattoomasterCell.cover_image = [selectobject objectForKey:@"cover_image"];
         tattoomasterCell.object_id = selectobject.objectId;
 
          mapVC.tattoomasterCell = tattoomasterCell;
@@ -306,7 +308,9 @@
         count=[object objectForKey:@"favorites"];
         UILabel *count_like = (UILabel*) [cell viewWithTag:105];
         count_like.text = [NSString stringWithFormat:@"%d",count.count];
-        
+        UITextView * description =(UITextView*)[cell viewWithTag:141];
+        description.text =[object objectForKey:@"description"];
+        description.editable=NO;
         heart_statues = (PFImageView*)[cell viewWithTag:107];
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
@@ -470,6 +474,7 @@
         tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
         tattoomasterCell.name = [object objectForKey:@"Name"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        tattoomasterCell.cover_image=[object objectForKey:@"cover"];
         tattoomasterCell.gender = [object objectForKey:@"Gender"];
         tattoomasterCell.tel = [object objectForKey:@"Tel"];
         tattoomasterCell.email = [object objectForKey:@"Email"];
@@ -479,10 +484,11 @@
         tattoomasterCell.website = [object objectForKey:@"Website"];
         tattoomasterCell.personage = [object objectForKey:@"Personage"];
         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
-        tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
+        
         destViewController.tattoomasterCell = tattoomasterCell;
         
         
