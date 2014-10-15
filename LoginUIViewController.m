@@ -43,8 +43,48 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
-    _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+    
+    if ([PFUser currentUser]) {
+    PFQuery *bookmarkquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    
+    [bookmarkquery whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
+    
+    
+    bookmarkquery.cachePolicy = kPFCachePolicyNetworkElseCache;
+    
+    [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            imageFilesArray = [[NSArray alloc] initWithArray:objects];
+            self.bookmarks_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
+            
+            
+        }
+    }];
+        PFQuery *likequery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+        
+        [likequery whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
+        
+        
+        likequery.cachePolicy = kPFCachePolicyNetworkElseCache;
+        
+        [likequery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                imageFilesArray = [[NSArray alloc] initWithArray:objects];
+                self.liked_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
+                
+                
+            }
+        }];
+    }
+ 
+    
+    
+ 
+    
+
+  
+    
+      _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
@@ -78,7 +118,7 @@
 }
 -(CGFloat) tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    int hight=105.0f;
+    int hight=78.0f;
     
     return hight;
     
@@ -152,7 +192,7 @@
         }
         
     }
-    [self queryParseMethod];
+   
 }
 // Set received values if they are not nil and reload the table
 - (void)_updateProfileData {
@@ -204,12 +244,35 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-      
             
-                [TABLEVIEW reloadData];
+                            [TABLEVIEW reloadData];
           
             [hud hide:YES];
                   }
+    }];
+}
+- (void)bookmark_query {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    
+    [query whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
+    
+    
+    query.cachePolicy = kPFCachePolicyNetworkOnly;
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            imageFilesArray = [[NSArray alloc] initWithArray:objects];
+           
+            
+            [TABLEVIEW reloadData];
+            
+            [hud hide:YES];
+        }
     }];
 }
 
@@ -225,13 +288,12 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    lastClickedRow = indexPath.row;
+    //lastClickedRow = indexPath.row;
 
-    selectobject = [imageFilesArray objectAtIndex:indexPath.row];
-    PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+   // selectobject = [imageFilesArray objectAtIndex:indexPath.row];
+   // PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     
-    count=[imageObject objectForKey:@"favorites"];
-    NSLog(@"%d",count.count);
+   
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -240,6 +302,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
+      
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
@@ -291,6 +354,7 @@
         TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
         tattoomasterCell.name = [imageObject objectForKey:@"Name"];
         tattoomasterCell.favorites = [imageObject objectForKey:@"favorites"];
+        tattoomasterCell.bookmark = [imageObject objectForKey:@"bookmark"];
         tattoomasterCell.imageFile = [imageObject objectForKey:@"image"];
         tattoomasterCell.gender = [imageObject objectForKey:@"Gender"];
         tattoomasterCell.tel = [imageObject objectForKey:@"Tel"];
@@ -309,13 +373,7 @@
         
     }
 }
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 
-{
-    
-    return @"我的最愛";
-    
-}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -396,6 +454,17 @@
 
 
 #pragma mark - ()
+
+- (IBAction)showlike:(id)sender {
+     [self queryParseMethod];
+    NSLog(@"%@",imageFilesArray);
+   
+}
+
+- (IBAction)showbookmark:(id)sender {
+       [self bookmark_query];
+   
+}
 
 - (IBAction)logOutButtonTapAction:(id)sender {
     [PFUser logOut];

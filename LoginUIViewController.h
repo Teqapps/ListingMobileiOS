@@ -13,14 +13,18 @@
 #import <Parse/PFLogInViewController.h>
 @interface LoginUIViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate,UITableViewDataSource, UITableViewDelegate>
 {
-     NSArray *count;
+ 
+
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
     PFObject *selectobject;
     NSString * favstring;
     
 }
+@property (weak, nonatomic) IBOutlet UILabel *like;
+@property (weak, nonatomic) IBOutlet UILabel *bookmark;
 - (IBAction)wholiked:(id)sender;
+@property (nonatomic, strong) TattooMasterCell *tattoomasterCell;
 @property (nonatomic, assign) BOOL isFav;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *profile_image;
@@ -28,6 +32,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *logout;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIImageView *fbprofile;
+- (IBAction)showlike:(id)sender;
+- (IBAction)showbookmark:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *bookmarks_count;
+@property (weak, nonatomic) IBOutlet UILabel *liked_count;
+
 
 - (IBAction)logOutButtonTapAction:(id)sender;
 
