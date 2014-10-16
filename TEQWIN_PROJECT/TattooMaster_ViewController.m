@@ -56,7 +56,8 @@
     [super viewDidLoad];
       [self refreshTable:nil];
     self.title =@"師父";
-   
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+
     searchbar.hidden = !searchbar.hidden;
     self.navigationController.navigationBar.translucent=NO;
     // Change button color

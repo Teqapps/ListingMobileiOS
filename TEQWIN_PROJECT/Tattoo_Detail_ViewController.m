@@ -46,7 +46,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+
 
     [self queryParseMethod];
     [self queryParseMethod_image];
@@ -112,17 +113,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     // scroll search bar out of sight
     
-    CGRect newBounds = self.tableView.bounds;
-    if (_tableView.bounds.origin.y < 44) {
-        newBounds.origin.y = newBounds.origin.y + self.detailsearchbar.bounds.size.height;
-        self.tableView.bounds = newBounds;
-    }
+
 
 }
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-     [self viewWillAppear:YES];
-    
-}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0)
@@ -210,8 +204,11 @@
             imageFilesArray_image = [[NSArray alloc] initWithArray:objects];
             
             
+            [query orderByAscending:@"createdAt"];
+            
+
             [_imagesCollection reloadData];
-            NSLog(@"%d",imageFilesArray_image.count);
+            NSLog(@"%@",imageFilesArray_image );
         }
     }];
 }
@@ -261,7 +258,7 @@
 
 - (CGFloat) tableView: (UITableView*) tableView heightForRowAtIndexPath: (NSIndexPath*) indexPath
 {
-    return 30;
+    return 50;
 }
 
 
@@ -287,8 +284,10 @@
         case 0:
             
         {
-            
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
+            cell.detailTextLabel.textColor =[UIColor whiteColor];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
             [cell.textLabel setNumberOfLines:2];
             cell.textLabel.text = @"Name：";
             
@@ -299,7 +298,10 @@
         case 1:
             
         {
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
+            cell.detailTextLabel.textColor =[UIColor whiteColor];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
             [cell.textLabel setNumberOfLines:2];
             cell.textLabel.text = @"Gender：";
         }
@@ -309,9 +311,10 @@
         case 2:
             
         {
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setNumberOfLines:2];
-            [cell.detailTextLabel setTextColor:[UIColor blueColor]];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Address：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -320,9 +323,10 @@
         case 3:
             
         {
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setNumberOfLines:2];
-            [cell.detailTextLabel setTextColor:[UIColor blueColor]];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Website：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -332,9 +336,10 @@
         case 4:
             
         {
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setNumberOfLines:2];
-            [cell.detailTextLabel setTextColor:[UIColor blueColor]];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Email：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -345,9 +350,10 @@
             
         {
             
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setNumberOfLines:2];
-            [cell.detailTextLabel setTextColor:[UIColor blueColor]];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Telephone：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -357,9 +363,10 @@
         case 6:
             
         {
-            
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setNumberOfLines:2];
+            cell.detailTextLabel.textColor =[UIColor whiteColor];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
             cell.textLabel.text = @"Personage：";
             
         }
@@ -368,47 +375,29 @@
         case 7:
             
         {
-            
-            cell.textLabel.font = [cell.textLabel.font fontWithSize:12];
-            [cell.textLabel setNumberOfLines:2];
+            cell.detailTextLabel.textColor =[UIColor whiteColor];
+            [cell.detailTextLabel setNumberOfLines:5];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
             cell.textLabel.text = @"Description：";
             
   
         }
     }
-    
-    [cell.detailTextLabel setNumberOfLines:5];
-    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-    cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+        
+        cell.textLabel.textColor=[UIColor whiteColor];
     cell.detailTextLabel.text =[list objectAtIndex:indexPath.row];
     
     cell.contentView.backgroundColor = [UIColor grayColor];
     
-    cell.textLabel.textColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
-        cell.detailTextLabel.textColor = [UIColor colorWithRed:100 green:100 blue:100 alpha:1];
+   
     }
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        PFObject* object = self.searchResults[indexPath.row];
-        
-        
-        if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-            
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_red3.png"];
-        }
-        else
-        {
-            
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
-        }
-        
-        cell.textLabel.text = [object objectForKey:@"Name"];
-        cell.detailTextLabel.text =[object objectForKey:@"Gender"];
-        
-    }
+
 
     return cell;
     
 }
+
 - (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
