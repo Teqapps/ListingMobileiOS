@@ -197,7 +197,7 @@
                                     <segue destination="oJ1-Dk-Y59" kind="custom" customClass="SWRevealViewControllerSegue" id="sRd-Tq-qBz"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Nsf-nZ-a8R">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Nsf-nZ-a8R">
                                 <rect key="frame" x="13" y="20" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -259,6 +259,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tQ0-MQ-Nzf"/>
                     <connections>
                         <segue destination="zfS-u6-Ljf" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="6Vy-y6-L9v"/>
                         <segue destination="6ei-0v-7aX" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="FKG-vU-OYd"/>
@@ -322,7 +323,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ciM-Jw-CVq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ciM-Jw-CVq">
                                                     <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -344,7 +345,7 @@
                                     <outlet property="delegate" destination="zCD-pb-qjH" id="oZ6-a3-Cz8"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xO9-7B-uIw" customClass="PFImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xO9-7B-uIw" customClass="PFImageView">
                                 <rect key="frame" x="12" y="31" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -534,7 +535,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" id="kC5-J5-rLH" customClass="PFImageView">
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" id="kC5-J5-rLH" customClass="PFImageView">
                                             <rect key="frame" x="6.5" y="6.5" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -643,7 +644,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="111" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="H1m-vl-B4a">
+                                                <imageView userInteractionEnabled="NO" tag="111" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="H1m-vl-B4a">
                                                     <rect key="frame" x="60" y="33" width="200" height="200"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <gestureRecognizers/>
@@ -779,11 +780,11 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favcell" rowHeight="78" id="VB5-K6-tVo">
                                         <rect key="frame" x="0.0" y="22" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VB5-K6-tVo" id="Jj5-wB-9BN">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="VB5-K6-tVo" id="Jj5-wB-9BN">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" id="z1c-z9-DQY" customClass="PFImageView">
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" id="z1c-z9-DQY" customClass="PFImageView">
                                                     <rect key="frame" x="10" y="2" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -832,7 +833,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICON.png" id="wBp-0C-8mW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICON.png" id="wBp-0C-8mW">
                                 <rect key="frame" x="110" y="9" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -953,7 +954,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="Oz0-Qe-dUn"/>
+        <segue reference="imN-Ia-XWJ"/>
         <segue reference="tXv-zd-sxh"/>
     </inferredMetricsTieBreakers>
 </document>

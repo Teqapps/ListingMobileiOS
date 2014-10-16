@@ -44,40 +44,6 @@
 {
     [super viewDidLoad];
 
-
-    if ([PFUser currentUser]) {
-        PFQuery *bookmarkquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
-        
-        [bookmarkquery whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
-        
-        
-        bookmarkquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
-        
-        [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                imageFilesArray = [[NSArray alloc] initWithArray:objects];
-                self.bookmarks_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
-                
-            }
-        }];
-        PFQuery *likequery = [PFQuery queryWithClassName:@"Tattoo_Master"];
-        
-        [likequery whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
-        
-        
-        likequery.cachePolicy = kPFCachePolicyCacheThenNetwork;
-        
-        [likequery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                imageFilesArray = [[NSArray alloc] initWithArray:objects];
-                self.liked_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
-                
-                
-            }
-        }];
-    }
-
- 
     
     
  
@@ -126,7 +92,41 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-  
+    
+    if ([PFUser currentUser]) {
+        PFQuery *bookmarkquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+        
+        [bookmarkquery whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
+        
+        
+        bookmarkquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        
+        [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                imageFilesArray = [[NSArray alloc] initWithArray:objects];
+                self.bookmarks_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
+                
+            }
+        }];
+        PFQuery *likequery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+        
+        [likequery whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
+        
+        
+        likequery.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        
+        [likequery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                imageFilesArray = [[NSArray alloc] initWithArray:objects];
+                self.liked_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
+                
+                
+            }
+        }];
+    }
+    
+    
+
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 

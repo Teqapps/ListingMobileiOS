@@ -42,7 +42,7 @@
 
 
     self.title = @"News";
-self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background1.jpg"]];
+self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     

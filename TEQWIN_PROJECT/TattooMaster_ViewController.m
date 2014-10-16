@@ -5,6 +5,7 @@
 //  Created by Teqwin on 28/7/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 //
+#import "ImageExampleCell.h"
 #import "HomeModel.h"
 #import "Tattoo_Master_Info.h"
 #import "TattooMaster_ViewController.h"
@@ -242,8 +243,6 @@
     
 }
 
-
-
 // Override to customize the look of a cell representing an object. The default is to display
 // a UITableViewCellStyleDefault style cell with the label being the first key in the object.
 
@@ -261,6 +260,11 @@
     // Configure the cell
     
     if (tableView == self.tableView) {
+     
+        
+        
+        
+        
         
         UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
         loadingSpinner.hidden= NO;

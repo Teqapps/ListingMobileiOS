@@ -21,6 +21,7 @@
     PFObject * object_id;
     PFImageView *heart_statues;
     NSIndexPath *indexPath;
+    NSArray*imageFilesArray_image;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;
