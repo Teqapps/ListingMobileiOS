@@ -46,10 +46,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
+
     [self queryParseMethod];
     [self queryParseMethod_image];
    
-
+    _tableView.bounces=NO;
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
      [self.imagesCollection setCollectionViewLayout:flowLayout];
@@ -108,10 +110,17 @@
     }
 
 - (void)viewWillAppear:(BOOL)animated {
-    _detailsearchbar .hidden=YES;
+    // scroll search bar out of sight
+    
+    CGRect newBounds = self.tableView.bounds;
+    if (_tableView.bounds.origin.y < 44) {
+        newBounds.origin.y = newBounds.origin.y + self.detailsearchbar.bounds.size.height;
+        self.tableView.bounds = newBounds;
+    }
+
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    _detailsearchbar.hidden=YES;
+     [self viewWillAppear:YES];
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -794,7 +803,5 @@
     [alert show];
 }
 - (IBAction)showsearch:(id)sender {
-    [_detailsearchbar  becomeFirstResponder];
-    _detailsearchbar.hidden=NO;
-}
+    [_detailsearchbar becomeFirstResponder];}
 @end

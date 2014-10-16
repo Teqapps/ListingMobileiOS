@@ -31,6 +31,7 @@
 - (IBAction)favButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *favButton;
 - (IBAction)bookmarkbtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *description;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *master_name;

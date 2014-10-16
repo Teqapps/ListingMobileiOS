@@ -53,9 +53,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     
+      [self refreshTable:nil];
     self.title =@"師父";
-    [self refreshTable:nil];
+   
     searchbar.hidden = !searchbar.hidden;
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
@@ -78,16 +78,23 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated {
-     searchbar.hidden=YES;
+      [self refreshTable:nil];
+    // scroll search bar out of sight
+    
+    CGRect newBounds = self.tableView.bounds;
+    if (self.tableView.bounds.origin.y < 44) {
+        newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
+        self.tableView.bounds = newBounds;
+    }
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    searchbar.hidden=YES;
+    [self viewWillAppear:YES];
     
 }
 
 - (IBAction)showsearch:(id)sender {
     [searchbar becomeFirstResponder];
-    searchbar.hidden=NO;
+    
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     

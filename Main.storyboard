@@ -48,6 +48,56 @@
             </objects>
             <point key="canvasLocation" x="427" y="723"/>
         </scene>
+        <!--Search Table View Controller-->
+        <scene sceneID="JXO-CM-VWK">
+            <objects>
+                <tableViewController id="BkO-Bn-u5x" customClass="Search_TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jlc-gq-ycJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="t4I-ic-ehf">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="BkO-Bn-u5x" id="BC3-0k-Gpu"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SXG-HN-RQI">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SXG-HN-RQI" id="NdU-wZ-cT7">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BkO-Bn-u5x" id="egl-TC-dxz"/>
+                            <outlet property="delegate" destination="BkO-Bn-u5x" id="RYs-14-dCf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="KCf-8R-3L5"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="vo4-18-pNo" id="ZCh-kr-rW6"/>
+                        <outlet property="searchbar" destination="t4I-ic-ehf" id="syu-6x-Xyc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6i-79-0YV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="vo4-18-pNo">
+                    <connections>
+                        <outlet property="delegate" destination="BkO-Bn-u5x" id="dfO-80-Mzw"/>
+                        <outlet property="searchBar" destination="t4I-ic-ehf" id="f6B-Qk-p5n"/>
+                        <outlet property="searchContentsController" destination="BkO-Bn-u5x" id="MNk-tM-bSB"/>
+                        <outlet property="searchResultsDataSource" destination="BkO-Bn-u5x" id="kqM-kq-XcR"/>
+                        <outlet property="searchResultsDelegate" destination="BkO-Bn-u5x" id="gb6-5R-NVE"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="797" y="723"/>
+        </scene>
         <!--Sidebar View Controller-->
         <scene sceneID="PIX-3s-mzZ">
             <objects>
@@ -226,8 +276,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RFZ-3m-zSA">
-                                <rect key="frame" x="0.0" y="248" width="320" height="256"/>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RFZ-3m-zSA">
+                                <rect key="frame" x="0.0" y="247" width="320" height="257"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -359,7 +409,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <searchBar hidden="YES" contentMode="redraw" id="96j-q0-Hz6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="-13" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -463,13 +513,14 @@
         <scene sceneID="uPb-CU-JX0">
             <objects>
                 <tableViewController storyboardIdentifier="TattooMaster_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="488-73-Amk" customClass="TattooMaster_ViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXb-hL-ggL">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXb-hL-ggL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" hidden="YES" contentMode="scaleToFill" text="" id="lah-7H-DfT">
+                        <searchBar key="tableHeaderView" hidden="YES" opaque="NO" contentMode="scaleToFill" text="" id="lah-7H-DfT">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <rect key="contentStretch" x="0.0" y="0.0" width="0.79999999999999982" height="1"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="488-73-Amk" id="mYO-UH-gAn"/>
@@ -520,7 +571,7 @@
                                             <rect key="frame" x="164" y="64" width="72" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="107" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="59Q-ji-xB6">
@@ -544,7 +595,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="Xr6-9H-N8V"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="5Eq-d1-2wt">
                             <connections>
-                                <action selector="showsearch:" destination="488-73-Amk" id="4gw-OA-4gf"/>
+                                <action selector="showsearch:" destination="488-73-Amk" id="7RZ-rc-0df"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -795,7 +846,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w7v-Ex-kgy">
                                 <rect key="frame" x="212" y="144" width="46" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Liked">
+                                <state key="normal">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -804,9 +855,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="48e-TO-wHz">
-                                <rect key="frame" x="41" y="144" width="85" height="52"/>
+                                <rect key="frame" x="41" y="145" width="85" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bookmarks">
+                                <state key="normal">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -823,6 +874,20 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lMh-f9-BO0">
                                 <rect key="frame" x="225" y="141" width="21" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qkN-By-umM">
+                                <rect key="frame" x="39" y="160" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gqW-OD-bqU">
+                                <rect key="frame" x="214" y="160" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -855,8 +920,10 @@
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="TABLEVIEW" destination="Kdh-JF-2nr" id="AeF-44-bLZ"/>
+                        <outlet property="bookmark" destination="qkN-By-umM" id="Wkx-f9-5wv"/>
                         <outlet property="bookmarks_count" destination="6LE-N1-m40" id="pu5-3l-CGu"/>
                         <outlet property="fbprofile" destination="wBp-0C-8mW" id="Ke3-RG-mIf"/>
+                        <outlet property="like" destination="gqW-OD-bqU" id="yQI-oa-gvi"/>
                         <outlet property="liked_count" destination="lMh-f9-BO0" id="FHT-uW-SE1"/>
                         <outlet property="profile_image" destination="wBp-0C-8mW" id="yMe-M2-GbD"/>
                         <outlet property="sidebarButton" destination="i99-v3-afQ" id="uIW-yC-BPH"/>

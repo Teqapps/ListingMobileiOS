@@ -43,19 +43,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+
     if ([PFUser currentUser]) {
         PFQuery *bookmarkquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
         
         [bookmarkquery whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
         
         
-        bookmarkquery.cachePolicy = kPFCachePolicyNetworkElseCache;
+        bookmarkquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
         
         [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 imageFilesArray = [[NSArray alloc] initWithArray:objects];
                 self.bookmarks_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
-                
                 
             }
         }];
@@ -64,7 +65,7 @@
         [likequery whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
         
         
-        likequery.cachePolicy = kPFCachePolicyNetworkElseCache;
+        likequery.cachePolicy = kPFCachePolicyCacheThenNetwork;
         
         [likequery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
@@ -125,8 +126,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
-    
+  
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
@@ -457,13 +457,19 @@
 
 - (IBAction)showlike:(id)sender {
      [self queryParseMethod];
-    NSLog(@"%@",imageFilesArray);
-   
+    self.like.textColor=[UIColor grayColor];
+    self.bookmark.textColor=[UIColor whiteColor];
+
+
 }
+
 
 - (IBAction)showbookmark:(id)sender {
        [self bookmark_query];
-   
+    self.like.textColor=[UIColor whiteColor];
+    self.bookmark.textColor=[UIColor grayColor];
+
+
 }
 
 - (IBAction)logOutButtonTapAction:(id)sender {

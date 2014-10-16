@@ -19,8 +19,12 @@
     NSMutableArray *imagesArray;
     PFObject *selectobject;
     NSString * favstring;
-    
+    NSString * like_update;
+    NSArray * colorstring;
+    NSString *str;
+    NSMutableArray *list;
 }
+@property (nonatomic, assign) BOOL isclicked;
 @property (weak, nonatomic) IBOutlet UILabel *like;
 @property (weak, nonatomic) IBOutlet UILabel *bookmark;
 - (IBAction)wholiked:(id)sender;

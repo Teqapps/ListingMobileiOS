@@ -199,6 +199,7 @@
 		428189041999F55D004D09EF /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 428189031999F55D004D09EF /* gallery.png */; };
 		42818908199AFB0F004D09EF /* navbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42818907199AFB0F004D09EF /* navbackground.jpg */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
+		42A0095C19EF5E05003DCD0D /* Search_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */; };
 		42A4844619A47AA20079EAA0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4844519A47AA20079EAA0 /* Social.framework */; };
 		42A4913A19D506A700E4D65E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912B19D506A700E4D65E /* Default.png */; };
 		42A4913B19D506A700E4D65E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912C19D506A700E4D65E /* Default@2x.png */; };
@@ -506,6 +507,8 @@
 		428189031999F55D004D09EF /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
 		42818907199AFB0F004D09EF /* navbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = navbackground.jpg; sourceTree = "<group>"; };
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		42A0095A19EF5E05003DCD0D /* Search_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search_TableViewController.h; sourceTree = "<group>"; };
+		42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search_TableViewController.m; sourceTree = "<group>"; };
 		42A4844519A47AA20079EAA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		42A4912B19D506A700E4D65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		42A4912C19D506A700E4D65E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -769,6 +772,8 @@
 				42EA3D6519C827600051057C /* Gallery.m */,
 				42EA3D6119C8273F0051057C /* GalleryCell.h */,
 				42EA3D6219C8273F0051057C /* GalleryCell.m */,
+				42A0095A19EF5E05003DCD0D /* Search_TableViewController.h */,
+				42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */,
 			);
 			name = "Tattoo Master";
 			sourceTree = "<group>";
@@ -1474,6 +1479,7 @@
 				42193F9D1985FE08007E3C52 /* main.m in Sources */,
 				42630031198B667E007B8C8F /* AddFavTableViewController.m in Sources */,
 				424FAD53198B32ED0062D13D /* Model.xcdatamodeld in Sources */,
+				42A0095C19EF5E05003DCD0D /* Search_TableViewController.m in Sources */,
 				427D34B6199E077F00814463 /* CFSharer.m in Sources */,
 				42193FC91985FE42007E3C52 /* SidebarViewController.m in Sources */,
 			);
