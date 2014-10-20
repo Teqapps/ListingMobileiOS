@@ -478,6 +478,7 @@
         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
+        
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;

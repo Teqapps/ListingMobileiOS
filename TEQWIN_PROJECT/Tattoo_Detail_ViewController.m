@@ -192,6 +192,21 @@
     
     return YES;
 }
+- (void)queryParseMethod {
+    NSLog(@"start query");
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            imageFilesArray = [[NSArray alloc] initWithArray:objects];
+            
+        }
+    }];
+    
+    
+}
 - (void)queryParseMethod_image{
     NSLog(@"start query_image");
    
@@ -208,8 +223,7 @@
             
 
             [_imagesCollection reloadData];
-            NSLog(@"%@",imageFilesArray_image );
-        }
+                   }
     }];
 }
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -480,21 +494,7 @@
         [UIPasteboard generalPasteboard].string = [list objectAtIndex:indexPath.row];
     NSLog(@"COPY  %@",[UIPasteboard generalPasteboard].string);
 }
-- (void)queryParseMethod {
-    NSLog(@"start query");
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    
-    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            imageFilesArray = [[NSArray alloc] initWithArray:objects];
-           
-        }
-    }];
-   
 
-}
 
 
 - (void) likeImage {

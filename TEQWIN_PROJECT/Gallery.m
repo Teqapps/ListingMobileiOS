@@ -52,7 +52,7 @@ CFShareCircleView *shareCircleView;
     
     [super viewDidAppear:animated];
     NSIndexPath *indexPat = [NSIndexPath indexPathForRow:self.tattoomasterCell.clickindexpath.row inSection:0];
-    [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];
 }
 
 
