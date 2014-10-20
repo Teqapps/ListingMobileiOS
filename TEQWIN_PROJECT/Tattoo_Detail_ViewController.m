@@ -287,7 +287,7 @@
             cell.detailTextLabel.textColor =[UIColor whiteColor];
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
             [cell.textLabel setNumberOfLines:2];
             cell.textLabel.text = @"Name：";
             
@@ -312,9 +312,9 @@
             
         {
             [cell.detailTextLabel setNumberOfLines:5];
-            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15 ];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
+            cell.detailTextLabel.textColor=[UIColor whiteColor];
             cell.textLabel.text = @"Address：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -325,8 +325,8 @@
         {
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
+            cell.detailTextLabel.textColor=[UIColor whiteColor];
             cell.textLabel.text = @"Website：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -338,8 +338,8 @@
         {
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
+            cell.detailTextLabel.textColor=[UIColor whiteColor];
             cell.textLabel.text = @"Email：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -352,8 +352,8 @@
             
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
+             cell.detailTextLabel.textColor=[UIColor whiteColor];
             cell.textLabel.text = @"Telephone：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
