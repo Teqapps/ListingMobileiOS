@@ -249,9 +249,74 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@",[imageFilesArray_image objectAtIndex:indexPath.row]);
-  
+    
+  //    Gallery * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Gallery"];
+// [self.navigationController pushViewController:mapVC animated:YES];
+ //    mapVC.tattoomasterCell=_tattoomasterCell;
 
+  //   [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+  //  NSLog(@"反反反反%@",[imageFilesArray_image objectAtIndex:indexPath.row]);
+     NSLog(@"反反反反%d",indexPath.row);
+}
+//按圖第一下放大至fullscreen
+-(void)actionTap:(UITapGestureRecognizer *)sender{
+    NSLog(@"按一下返回");
+    
+    CGPoint location = [sender locationInView:self.tableView];
+    NSIndexPath *indexPath  = [self.tableView indexPathForRowAtPoint:location];
+    
+    UITableViewCell *cell = (UITableViewCell *)[self.tableView  cellForRowAtIndexPath:indexPath];
+    
+    
+    UIImageView *imageView=(UIImageView *)[cell.contentView viewWithTag:9999];
+    
+    
+    frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x, cell.frame.origin.y+imageView.frame.origin.y-self.tableView.contentOffset.y, imageView.frame.size.width, imageView.frame.size.height);
+    
+    fullImageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height)];
+    fullImageView.backgroundColor=[UIColor blackColor];
+    fullImageView.userInteractionEnabled=YES;
+    [fullImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap2:)]];
+    fullImageView.contentMode=UIViewContentModeScaleAspectFit;
+    
+    if (![fullImageView superview]) {
+        
+        fullImageView.image=imageView.image;
+        
+        [self.view.window addSubview:fullImageView];
+        
+        
+        
+        fullImageView.frame=frame_first;
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            fullImageView.frame=CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height);
+            
+            
+        } completion:^(BOOL finished) {
+            
+            [UIApplication sharedApplication].statusBarHidden=YES;
+            
+        }];
+        
+    }
+    
+}
+////按圖第二下縮回原型
+-(void)actionTap2:(UITapGestureRecognizer *)sender{
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        fullImageView.frame=frame_first;
+        
+    } completion:^(BOOL finished) {
+        
+        [fullImageView removeFromSuperview];
+        
+    }];
+    
+    [UIApplication sharedApplication].statusBarHidden=NO;
+    
 }
 
 
@@ -651,12 +716,14 @@
     }
     if ([segue.identifier isEqualToString:@"GOGALLERY_collection"]) {
         
-        
+       
         if ([segue.destinationViewController isKindOfClass:[Gallery class]]){
-            NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
+            self.tattoomasterCell.clickindexpath = [self.imagesCollection indexPathForCell:sender];
             Gallery *receiver = (Gallery*)segue.destinationViewController;
+            NSLog(@"ha%d",self.tattoomasterCell.clickindexpath.row);
             receiver.tattoomasterCell=_tattoomasterCell;
-            [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+            
+            [self.tableView deselectRowAtIndexPath:self.tattoomasterCell.clickindexpath animated:NO];
         }
     }
 

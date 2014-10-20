@@ -283,7 +283,7 @@
                                 <color key="backgroundColor" red="0.058823533359999999" green="0.023529414089999999" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.91764712333679199" green="0.69411766529083252" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="8C843A87-BD85-4FA5-9172-2A4F548C15AA" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="950DB946-2BA1-492C-B28B-BEBC9A4BB066" colorSpace="pattern"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="65" id="qAn-GL-ojM">
                                         <rect key="frame" x="0.0" y="55" width="320" height="65"/>
@@ -328,7 +328,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ciM-Jw-CVq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="86" height="83"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="EkM-0f-ipe">
@@ -340,7 +340,7 @@
                                         <connections>
                                             <outlet property="loadingSpinner" destination="EkM-0f-ipe" id="wjj-9H-cIA"/>
                                             <outlet property="parseImage" destination="ciM-Jw-CVq" id="kJg-Ba-lgw"/>
-                                            <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY_collection" id="tXv-zd-sxh"/>
+                                            <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY_collection" id="sqL-XN-2Gv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -360,9 +360,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY" id="MxO-aF-3Wd"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="62o-N6-bG8">
                                 <rect key="frame" x="209" y="139" width="30" height="30"/>
@@ -636,7 +633,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="279" sectionHeaderHeight="22" sectionFooterHeight="22" id="oo9-Ec-Qh1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="279" sectionHeaderHeight="22" sectionFooterHeight="22" id="oo9-Ec-Qh1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -694,7 +691,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bi0-AO-PGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="317"/>
+            <point key="canvasLocation" x="1254" y="-59"/>
         </scene>
         <!--Notice View Controller - Title-->
         <scene sceneID="iXt-wp-hrl">
@@ -941,7 +938,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8C843A87-BD85-4FA5-9172-2A4F548C15AA" width="320" height="460">
+        <image name="950DB946-2BA1-492C-B28B-BEBC9A4BB066" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10846,6 +10843,5 @@ AAAAAAAAAAAJCvs
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
         <segue reference="imN-Ia-XWJ"/>
-        <segue reference="tXv-zd-sxh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -200,6 +200,8 @@
 		42818908199AFB0F004D09EF /* navbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42818907199AFB0F004D09EF /* navbackground.jpg */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
 		42A0095C19EF5E05003DCD0D /* Search_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */; };
+		42A0095F19F4A1EB003DCD0D /* tattoo_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */; };
+		42A0096019F4A1EB003DCD0D /* tattoo_cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A0095E19F4A1EB003DCD0D /* tattoo_cover@2x.png */; };
 		42A4844619A47AA20079EAA0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4844519A47AA20079EAA0 /* Social.framework */; };
 		42A4913A19D506A700E4D65E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912B19D506A700E4D65E /* Default.png */; };
 		42A4913B19D506A700E4D65E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4912C19D506A700E4D65E /* Default@2x.png */; };
@@ -509,6 +511,8 @@
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		42A0095A19EF5E05003DCD0D /* Search_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search_TableViewController.h; sourceTree = "<group>"; };
 		42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search_TableViewController.m; sourceTree = "<group>"; };
+		42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tattoo_cover.png; sourceTree = "<group>"; };
+		42A0095E19F4A1EB003DCD0D /* tattoo_cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tattoo_cover@2x.png"; sourceTree = "<group>"; };
 		42A4844519A47AA20079EAA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		42A4912B19D506A700E4D65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		42A4912C19D506A700E4D65E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -620,6 +624,8 @@
 		42193F841985FE08007E3C52 = {
 			isa = PBXGroup;
 			children = (
+				42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */,
+				42A0095E19F4A1EB003DCD0D /* tattoo_cover@2x.png */,
 				42AF20D319E7E6B800FC3BEC /* splash.png */,
 				42AF20D419E7E6B800FC3BEC /* splash@2x.png */,
 				42AF1FBE19E388EF00FC3BEC /* comment */,
@@ -1274,6 +1280,7 @@
 				42630043198F5F3C007B8C8F /* heart.png in Resources */,
 				42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */,
 				4263004B198F8DFD007B8C8F /* Gallery_icon.png in Resources */,
+				42A0095F19F4A1EB003DCD0D /* tattoo_cover.png in Resources */,
 				421940541986354B007E3C52 /* Hip_Sushi.jpg in Resources */,
 				42A4917619D56D7200E4D65E /* loading.gif in Resources */,
 				4219403E1986354B007E3C52 /* rest_image_5.jpg in Resources */,
@@ -1403,6 +1410,7 @@
 				42A4914919D5082800E4D65E /* facebook@2x.png in Resources */,
 				42A4914019D506A700E4D65E /* LoginFieldBG.png in Resources */,
 				421940641986354B007E3C52 /* MR._STEAK.jpg in Resources */,
+				42A0096019F4A1EB003DCD0D /* tattoo_cover@2x.png in Resources */,
 				426300A71990DAE4007B8C8F /* background3.jpg in Resources */,
 				421940781986354B007E3C52 /* Tsui_Wah_Restaurant.jpg in Resources */,
 				427D34A6199E076400814463 /* google_drive@2x.png in Resources */,
