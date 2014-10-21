@@ -76,7 +76,7 @@
         }
     self.master_name.text=self.tattoomasterCell.name;
     
-    self.profileimage.file=self.tattoomasterCell.imageFile;
+    self.profileimage.file=self.tattoomasterCell.promotion;
    self.profileimage.layer.cornerRadius =self.profileimage.frame.size.width / 2;
     self.profileimage.layer.borderWidth = 3.0f;
     self.profileimage.layer.borderColor = [UIColor whiteColor].CGColor;
