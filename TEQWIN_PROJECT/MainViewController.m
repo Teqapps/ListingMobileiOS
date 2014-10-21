@@ -34,14 +34,14 @@
 {
     [super viewDidLoad];
     
-    [self queryParseMethod];
+   
 
     // scroll search bar out of sight
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [self.image_collection setCollectionViewLayout:flowLayout];
     
-    flowLayout.itemSize = CGSizeMake(320, 230);
+    flowLayout.itemSize = CGSizeMake(320, 246);
     
     [flowLayout setMinimumLineSpacing:0.0f];
 
@@ -70,8 +70,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
    }
 - (void)viewWillAppear:(BOOL)animated {
-   
-    
+    [self queryParseMethod];
+    [self queryParseMethod_news];
     
 }
 -(void)itemsDownloaded:(NSArray *)items
@@ -83,20 +83,53 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     
 }
+- (void)queryParseMethod_news {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
+    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
+
+    [query orderByDescending:@"news"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            news_array = [[NSArray alloc] initWithArray:objects];
+            
+          
+            [_main_tableview reloadData];
+            //   NSLog(@"%@",imageFilesArray);
+            [hud hide:YES];
+            
+            NSLog(@"haha%d",news_array.count);
+            
+        }
+        
+    }];
+    
+    
+}
 
 - (void)queryParseMethod {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
-[query orderByAscending:@"createdAt"];
+[query orderByAscending:@"updatedAt"];
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
 
            [_image_collection reloadData];
-            [_main_tableview reloadData];
-         //   NSLog(@"%@",imageFilesArray);
            
+         //   NSLog(@"%@",imageFilesArray);
+            [hud hide:YES];
+
                     NSLog(@"%d",imageFilesArray.count);
 
         }
@@ -107,15 +140,27 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    
-    return @"最新消息";
-}
 
+       return @"最新消息";
+}
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    // Background color
+    view.tintColor = [UIColor blackColor];
+    
+    // Text Color
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    [header.textLabel setTextColor:[UIColor whiteColor]];
+    
+    // Another way to set the background color
+    // Note: does not preserve gradient effect of original header
+    // header.contentView.backgroundColor = [UIColor blackColor];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [imageFilesArray count];
+    return [news_array count];
 }
 
 
@@ -132,14 +177,14 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     // Configure the cell
     // Configure the cell
-    PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+    PFObject *imageObject = [news_array objectAtIndex:indexPath.row];
     PFFile *thumbnail = [imageObject objectForKey:@"image"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
     CGSize itemSize = CGSizeMake(70, 70);
     UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
     CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
     thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
-    thumbnailImageView.layer.cornerRadius=8.0f;
+    thumbnailImageView.layer.cornerRadius=thumbnailImageView.frame.size.width/2;
     thumbnailImageView.layer.borderWidth=2.0;
     thumbnailImageView.layer.masksToBounds = YES;
     thumbnailImageView.layer.borderColor=[[UIColor whiteColor] CGColor];
@@ -181,20 +226,27 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     PFFile *imageFile = [imageObject objectForKey:@"promotion"];
-   
+   PFFile *avstar = [imageObject objectForKey:@"image"];
+    
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
     UILabel *name = (UILabel*) [cell viewWithTag:166];
     name.text = [imageObject objectForKey:@"Name"];
+    
 
-    
-    
+  
+    [avstar getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            cell.thumbnail.image = [UIImage imageWithData:data];
+        }}];
+
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
+            
             cell.parseImage.image = [UIImage imageWithData:data];
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;
-            [ cell.parseImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
+           
                   }
     }];
     

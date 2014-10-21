@@ -16,6 +16,7 @@
 @end
 @interface MainViewController : UIViewController <HomeModelProtocol>
 {
+    NSArray *news_array;
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
  

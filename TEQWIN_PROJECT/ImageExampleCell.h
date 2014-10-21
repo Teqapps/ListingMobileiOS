@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
 //@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 @end
