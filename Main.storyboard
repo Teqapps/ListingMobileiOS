@@ -18,20 +18,54 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="0Q9-hX-Uzp">
-                                <rect key="frame" x="0.0" y="64" width="320" height="248"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="1HA-mE-MRo">
+                                <rect key="frame" x="0.0" y="63" width="320" height="240"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gLg-Lu-gAm">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.047058828179999998" green="0.066666670139999995" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fs1-KR-jyM">
+                                    <size key="itemSize" width="320" height="242"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tattoo_Logo.jpg" id="ywf-h9-L5d">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="imageCell" id="hzx-UR-fyL" customClass="ImageExampleCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="242"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="242"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BQQ-Tc-ck7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="qWo-fw-QI6">
+                                                    <rect key="frame" x="34" y="34.5" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="150" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rua-Vx-FCg">
+                                                    <rect key="frame" x="12" y="208" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="320" height="242"/>
+                                        <connections>
+                                            <outlet property="loadingSpinner" destination="qWo-fw-QI6" id="Tio-a8-pHf"/>
+                                            <outlet property="name" destination="rua-Vx-FCg" id="IqE-0a-ReT"/>
+                                            <outlet property="parseImage" destination="BQQ-Tc-ck7" id="y0y-hc-ir1"/>
+                                            <segue destination="zCD-pb-qjH" kind="push" identifier="godetail" id="4Gd-mc-Pqq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="CZH-Rz-gDi" id="7J2-cF-af4"/>
+                                    <outlet property="delegate" destination="CZH-Rz-gDi" id="nHf-Kp-G9m"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,6 +75,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="image_collection" destination="1HA-mE-MRo" id="68W-8K-fCe"/>
                         <outlet property="sidebarButton" destination="Vc6-88-Sbc" id="eT5-cb-F3X"/>
                     </connections>
                 </viewController>
@@ -283,7 +318,7 @@
                                 <color key="backgroundColor" red="0.058823533359999999" green="0.023529414089999999" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.91764712333679199" green="0.69411766529083252" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="A17C4A59-E9FA-4A42-BEC5-3AA3F49076E6" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="29EB9C04-F67E-49E7-BBA7-ABDEE27E7C3D" colorSpace="pattern"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="65" id="qAn-GL-ojM">
                                         <rect key="frame" x="0.0" y="55" width="320" height="65"/>
@@ -296,7 +331,7 @@
                                                     <rect key="frame" x="117" y="11" width="104" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" red="0.0012545620437956204" green="0.51853330291970801" blue="0.96196395985401462" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.23529411764705882" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -310,7 +345,7 @@
                                 </connections>
                             </tableView>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="aZp-a7-g2X">
-                                <rect key="frame" x="0.0" y="167" width="320" height="82"/>
+                                <rect key="frame" x="0.0" y="163" width="320" height="82"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.047058828179999998" green="0.066666670139999995" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1hC-kh-4t8">
@@ -340,7 +375,7 @@
                                         <connections>
                                             <outlet property="loadingSpinner" destination="EkM-0f-ipe" id="wjj-9H-cIA"/>
                                             <outlet property="parseImage" destination="ciM-Jw-CVq" id="kJg-Ba-lgw"/>
-                                            <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY_collection" id="tXv-zd-sxh"/>
+                                            <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY_collection" id="sqL-XN-2Gv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -360,9 +395,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="wiJ-JE-w9h" kind="push" identifier="GOGALLERY" id="MxO-aF-3Wd"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="62o-N6-bG8">
                                 <rect key="frame" x="209" y="139" width="30" height="30"/>
@@ -460,7 +492,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="797" y="-64"/>
+            <point key="canvasLocation" x="747" y="84"/>
         </scene>
         <!--Master Map View Controller-->
         <scene sceneID="KqT-rk-QDT">
@@ -636,7 +668,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="279" sectionHeaderHeight="22" sectionFooterHeight="22" id="oo9-Ec-Qh1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="279" sectionHeaderHeight="22" sectionFooterHeight="22" id="oo9-Ec-Qh1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -649,7 +681,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="111" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="H1m-vl-B4a">
-                                                    <rect key="frame" x="60" y="33" width="200" height="200"/>
+                                                    <rect key="frame" x="20" y="20" width="280" height="224"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
@@ -658,7 +690,7 @@
                                                     <color key="color" red="0.1058782762" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </activityIndicatorView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="5vt-l0-AS3">
-                                                    <rect key="frame" x="133" y="241" width="54" height="30"/>
+                                                    <rect key="frame" x="133" y="243" width="54" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Share">
@@ -694,7 +726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bi0-AO-PGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="317"/>
+            <point key="canvasLocation" x="1254" y="-59"/>
         </scene>
         <!--Notice View Controller - Title-->
         <scene sceneID="iXt-wp-hrl">
@@ -941,7 +973,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A17C4A59-E9FA-4A42-BEC5-3AA3F49076E6" width="320" height="460">
+        <image name="29EB9C04-F67E-49E7-BBA7-ABDEE27E7C3D" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10829,7 +10861,6 @@ AAAAAAAAAAAJCvs
 </mutableData>
         </image>
         <image name="ICON.png" width="256" height="256"/>
-        <image name="Tattoo_Logo.jpg" width="456" height="843"/>
         <image name="background.jpg" width="1920" height="1080"/>
         <image name="goldebackground.jpg" width="680" height="453"/>
         <image name="menu.png" width="28" height="20"/>
@@ -10844,8 +10875,7 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="4Gd-mc-Pqq"/>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="imN-Ia-XWJ"/>
-        <segue reference="tXv-zd-sxh"/>
     </inferredMetricsTieBreakers>
 </document>

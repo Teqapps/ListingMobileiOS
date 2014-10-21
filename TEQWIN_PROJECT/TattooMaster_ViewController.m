@@ -55,6 +55,7 @@
 {
     [super viewDidLoad];
       [self refreshTable:nil];
+ 
     self.title =@"師父";
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
 
@@ -82,6 +83,8 @@
 - (void)viewWillAppear:(BOOL)animated {
       [self refreshTable:nil];
     // scroll search bar out of sight
+  
+
     
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
@@ -475,6 +478,7 @@
         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
+        
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
