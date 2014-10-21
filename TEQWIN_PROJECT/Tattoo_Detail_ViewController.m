@@ -235,10 +235,7 @@
     return [imageFilesArray_image count];
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.sectionInset = UIEdgeInsetsMake(10, 10, 9, 10);
-    layout.itemSize = CGSizeMake(44, 44);
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+
   
 
     static NSString *cellIdentifier = @"imageCell";

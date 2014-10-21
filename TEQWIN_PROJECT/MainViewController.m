@@ -35,13 +35,17 @@
     [super viewDidLoad];
     
     [self queryParseMethod];
+
+    // scroll search bar out of sight
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [self.image_collection setCollectionViewLayout:flowLayout];
-
-       flowLayout.itemSize = CGSizeMake(320, 199);
-    [flowLayout setMinimumInteritemSpacing:0.0f];
+    
+    flowLayout.itemSize = CGSizeMake(320, 230);
+    
     [flowLayout setMinimumLineSpacing:0.0f];
+
+   // [flowLayout setMinimumLineSpacing:0.0f];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         self.test.text = @"hihiuser";
@@ -65,7 +69,11 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
    }
-
+- (void)viewWillAppear:(BOOL)animated {
+   
+    
+    
+}
 -(void)itemsDownloaded:(NSArray *)items
 {
     // This delegate method will get called when the items are finished downloading
@@ -166,9 +174,6 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     return [imageFilesArray count];
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-   
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     
     static NSString *cellIdentifier = @"imageCell";
