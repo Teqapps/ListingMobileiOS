@@ -33,12 +33,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self queryParseMethod];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [self.image_collection setCollectionViewLayout:flowLayout];
-    flowLayout.itemSize = CGSizeMake(320, 240);
 
+       flowLayout.itemSize = CGSizeMake(320, 199);
+    [flowLayout setMinimumInteritemSpacing:0.0f];
+    [flowLayout setMinimumLineSpacing:0.0f];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         self.test.text = @"hihiuser";
@@ -48,8 +51,8 @@
     }
     int randomImgNumber = arc4random_uniform(5);
     PFObject *object = [imageFilesArray objectAtIndex:randomImgNumber];
-    _main_image.file=[object objectForKey:@"image"];
-    NSLog(@"goooood%d",randomImgNumber);
+
+    
     self.title = @"News";
 self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     // Change button color
@@ -75,22 +78,84 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 
 - (void)queryParseMethod {
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+   // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
+[query orderByAscending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-              query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+
            [_image_collection reloadData];
+            [_main_tableview reloadData];
          //   NSLog(@"%@",imageFilesArray);
-            
-            [query orderByAscending:@"createdAt"];
-            
+           
+                    NSLog(@"%d",imageFilesArray.count);
+
         }
-        
+
     }];
 
 
 }
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    
+    return @"最新消息";
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return [imageFilesArray count];
+}
+
+
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    static NSString *simpleTableIdentifier = @"favcell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    // Configure the cell
+    // Configure the cell
+    PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
+    PFFile *thumbnail = [imageObject objectForKey:@"image"];
+    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    CGSize itemSize = CGSizeMake(70, 70);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    thumbnailImageView.layer.cornerRadius=8.0f;
+    thumbnailImageView.layer.borderWidth=2.0;
+    thumbnailImageView.layer.masksToBounds = YES;
+    thumbnailImageView.layer.borderColor=[[UIColor whiteColor] CGColor];
+    [thumbnailImageView.image drawInRect:imageRect];
+    thumbnailImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    
+    thumbnailImageView.file = thumbnail;
+    [thumbnailImageView loadInBackground];
+    
+    
+    UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+    nameLabel.text = [imageObject objectForKey:@"Name"];
+    
+    UITextView *news = (UITextView*) [cell viewWithTag:155];
+      
+    news.text = [imageObject objectForKey:@"news"];
+    
+      return cell;
+}
+
+
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -102,8 +167,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    layout.itemSize = CGSizeMake(0, 0);
+   
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     
@@ -111,11 +175,11 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
-    PFFile *imageFile = [imageObject objectForKey:@"image"];
-    
+    PFFile *imageFile = [imageObject objectForKey:@"promotion"];
+   
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
-    UILabel *name = (UILabel*) [cell viewWithTag:150];
+    UILabel *name = (UILabel*) [cell viewWithTag:166];
     name.text = [imageObject objectForKey:@"Name"];
 
     
@@ -126,27 +190,43 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;
             [ cell.parseImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
-            
-        }
+                  }
     }];
     
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-       // Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
-  //   [self.navigationController pushViewController:mapVC animated:YES];
-    //    mapVC.tattoomasterCell=_tattoomasterCell;
+    PFObject* selectobject = [imageFilesArray  objectAtIndex:indexPath.row];
+    NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+    Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+    [self.navigationController pushViewController:mapVC animated:YES];
+    TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
+    tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
+    tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
+    tattoomasterCell.bookmark = [selectobject objectForKey:@"bookmark"];
+    tattoomasterCell.name = [selectobject objectForKey:@"Name"];
+    tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+    tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
+    tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
+    tattoomasterCell.email = [selectobject objectForKey:@"Email"];
+    tattoomasterCell.address = [selectobject objectForKey:@"Address"];
+    tattoomasterCell.latitude = [selectobject objectForKey:@"Latitude"];
+    tattoomasterCell.longitude = [selectobject objectForKey:@"Longitude"];
+    tattoomasterCell.website = [selectobject objectForKey:@"Website"];
+    tattoomasterCell.personage = [selectobject objectForKey:@"Personage"];
+    tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
+    tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+    tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
+    tattoomasterCell.object_id = selectobject.objectId;
     
-          //  NSLog(@"反反反反%@",[imageFilesArray_image objectAtIndex:indexPath.row]);
-   // Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
-   // [self.navigationController pushViewController:mapVC animated:YES];
-    
-  //  mapVC.tattoomasterCell=_tattoomasterCell;
-    NSLog(@"%@%@",self.tattoomasterCell.latitude,self.tattoomasterCell.longitude);
-
-    NSLog(@"反反反反%d",indexPath.row);
+    mapVC.tattoomasterCell = tattoomasterCell;
+    NSLog(@"%@",tattoomasterCell.master_id);
 }
+
+
+
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"godetail"]) {
@@ -171,7 +251,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         tattoomasterCell.website = [object objectForKey:@"Website"];
         tattoomasterCell.personage = [object objectForKey:@"Personage"];
         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
-        tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
@@ -179,7 +259,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
         destViewController.tattoomasterCell = tattoomasterCell;
             
-        NSLog(@"Haaaaa%@",tattoomasterCell.master_id);
+        NSLog(@"Haaaaa%@",tattoomasterCell.imageFile);
         }
     }
 

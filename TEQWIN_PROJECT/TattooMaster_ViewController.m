@@ -51,7 +51,7 @@
     }
     return self;
 }
-- (void)viewDidLoad
+- (void)viewDidLoad;
 {
     [super viewDidLoad];
       [self refreshTable:nil];
@@ -324,7 +324,7 @@
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_red3.png"];
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
         }
         else
         {
@@ -484,7 +484,7 @@
         destViewController.tattoomasterCell = tattoomasterCell;
         
         
-        
+       
         
     }
     

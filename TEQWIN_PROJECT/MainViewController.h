@@ -25,5 +25,7 @@
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;
 @property (weak, nonatomic) IBOutlet PFImageView *main_image;
 @property (weak, nonatomic) IBOutlet UICollectionView *image_collection;
+@property (weak, nonatomic) IBOutlet UITableView *main_tableview;
+
 
 @end
