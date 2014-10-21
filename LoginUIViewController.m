@@ -239,7 +239,7 @@
     [query whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
     
    
-    query.cachePolicy = kPFCachePolicyNetworkOnly;
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {

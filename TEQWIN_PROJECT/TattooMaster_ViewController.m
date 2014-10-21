@@ -5,6 +5,7 @@
 //  Created by Teqwin on 28/7/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 //
+
 #import "ImageExampleCell.h"
 #import "HomeModel.h"
 #import "Tattoo_Master_Info.h"
@@ -55,7 +56,12 @@
 {
     [super viewDidLoad];
       [self refreshTable:nil];
- 
+    CGRect newBounds = self.tableView.bounds;
+    if (self.tableView.bounds.origin.y < 44) {
+        newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
+        self.tableView.bounds = newBounds;
+    }
+
     self.title =@"師父";
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
 
@@ -83,17 +89,21 @@
 - (void)viewWillAppear:(BOOL)animated {
       [self refreshTable:nil];
     // scroll search bar out of sight
-  
+    CGRect newBounds = self.tableView.bounds;
+    if (self.tableView.bounds.origin.y < 44) {
+        newBounds.origin.y = newBounds.origin.y;
+        self.tableView.bounds = newBounds;
+    }
 
     
+   }
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
         self.tableView.bounds = newBounds;
     }
-}
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [self viewWillAppear:YES];
+
     
 }
 

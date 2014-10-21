@@ -223,13 +223,13 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     static NSString *cellIdentifier = @"imageCell";
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    
+    cell.loadingSpinner.hidden = NO;
+    [cell.loadingSpinner startAnimating];
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     PFFile *imageFile = [imageObject objectForKey:@"promotion"];
    PFFile *avstar = [imageObject objectForKey:@"image"];
     
-    cell.loadingSpinner.hidden = NO;
-    [cell.loadingSpinner startAnimating];
+    
     UILabel *name = (UILabel*) [cell viewWithTag:166];
     name.text = [imageObject objectForKey:@"Name"];
     
