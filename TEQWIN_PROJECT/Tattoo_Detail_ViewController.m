@@ -76,7 +76,7 @@
         }
     self.master_name.text=self.tattoomasterCell.name;
     
-    self.profileimage.file=self.tattoomasterCell.promotion;
+    self.profileimage.file=self.tattoomasterCell.imageFile;
    self.profileimage.layer.cornerRadius =self.profileimage.frame.size.width / 2;
     self.profileimage.layer.borderWidth = 3.0f;
     self.profileimage.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -192,21 +192,6 @@
     
     return YES;
 }
-- (void)queryParseMethod {
-    NSLog(@"start query");
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            
-        }
-    }];
-    
-    
-}
 - (void)queryParseMethod_image{
     NSLog(@"start query_image");
    
@@ -223,7 +208,8 @@
             
 
             [_imagesCollection reloadData];
-                   }
+            NSLog(@"%@",imageFilesArray_image );
+        }
     }];
 }
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -263,74 +249,9 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-  //    Gallery * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Gallery"];
-// [self.navigationController pushViewController:mapVC animated:YES];
- //    mapVC.tattoomasterCell=_tattoomasterCell;
+    NSLog(@"%@",[imageFilesArray_image objectAtIndex:indexPath.row]);
+  
 
-  //   [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
-  //  NSLog(@"反反反反%@",[imageFilesArray_image objectAtIndex:indexPath.row]);
-     NSLog(@"反反反反%d",indexPath.row);
-}
-//按圖第一下放大至fullscreen
--(void)actionTap:(UITapGestureRecognizer *)sender{
-    NSLog(@"按一下返回");
-    
-    CGPoint location = [sender locationInView:self.tableView];
-    NSIndexPath *indexPath  = [self.tableView indexPathForRowAtPoint:location];
-    
-    UITableViewCell *cell = (UITableViewCell *)[self.tableView  cellForRowAtIndexPath:indexPath];
-    
-    
-    UIImageView *imageView=(UIImageView *)[cell.contentView viewWithTag:9999];
-    
-    
-    frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x, cell.frame.origin.y+imageView.frame.origin.y-self.tableView.contentOffset.y, imageView.frame.size.width, imageView.frame.size.height);
-    
-    fullImageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height)];
-    fullImageView.backgroundColor=[UIColor blackColor];
-    fullImageView.userInteractionEnabled=YES;
-    [fullImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap2:)]];
-    fullImageView.contentMode=UIViewContentModeScaleAspectFit;
-    
-    if (![fullImageView superview]) {
-        
-        fullImageView.image=imageView.image;
-        
-        [self.view.window addSubview:fullImageView];
-        
-        
-        
-        fullImageView.frame=frame_first;
-        [UIView animateWithDuration:0.5 animations:^{
-            
-            fullImageView.frame=CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height);
-            
-            
-        } completion:^(BOOL finished) {
-            
-            [UIApplication sharedApplication].statusBarHidden=YES;
-            
-        }];
-        
-    }
-    
-}
-////按圖第二下縮回原型
--(void)actionTap2:(UITapGestureRecognizer *)sender{
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        fullImageView.frame=frame_first;
-        
-    } completion:^(BOOL finished) {
-        
-        [fullImageView removeFromSuperview];
-        
-    }];
-    
-    [UIApplication sharedApplication].statusBarHidden=NO;
-    
 }
 
 
@@ -366,7 +287,7 @@
             cell.detailTextLabel.textColor =[UIColor whiteColor];
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
             [cell.textLabel setNumberOfLines:2];
             cell.textLabel.text = @"Name：";
             
@@ -391,9 +312,9 @@
             
         {
             [cell.detailTextLabel setNumberOfLines:5];
-            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15 ];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
-            cell.detailTextLabel.textColor=[UIColor whiteColor];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Address：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -404,8 +325,8 @@
         {
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
-            cell.detailTextLabel.textColor=[UIColor whiteColor];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Website：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -417,8 +338,8 @@
         {
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
-            cell.detailTextLabel.textColor=[UIColor whiteColor];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Email：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -431,8 +352,8 @@
             
             [cell.detailTextLabel setNumberOfLines:5];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
-             cell.detailTextLabel.textColor=[UIColor whiteColor];
+            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+            cell.detailTextLabel.textColor=[UIColor colorWithRed:0 green:132 blue:245 alpha:1.0];
             cell.textLabel.text = @"Telephone：";
             //cell.accessoryType=UITableViewCellAccessoryDetailButton;
         }
@@ -494,7 +415,21 @@
         [UIPasteboard generalPasteboard].string = [list objectAtIndex:indexPath.row];
     NSLog(@"COPY  %@",[UIPasteboard generalPasteboard].string);
 }
+- (void)queryParseMethod {
+    NSLog(@"start query");
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    
+    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            imageFilesArray = [[NSArray alloc] initWithArray:objects];
+           
+        }
+    }];
+   
 
+}
 
 
 - (void) likeImage {
@@ -716,14 +651,12 @@
     }
     if ([segue.identifier isEqualToString:@"GOGALLERY_collection"]) {
         
-       
+        
         if ([segue.destinationViewController isKindOfClass:[Gallery class]]){
-            self.tattoomasterCell.clickindexpath = [self.imagesCollection indexPathForCell:sender];
+            NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
             Gallery *receiver = (Gallery*)segue.destinationViewController;
-            NSLog(@"ha%d",self.tattoomasterCell.clickindexpath.row);
             receiver.tattoomasterCell=_tattoomasterCell;
-            
-            [self.tableView deselectRowAtIndexPath:self.tattoomasterCell.clickindexpath animated:NO];
+            [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
         }
     }
 

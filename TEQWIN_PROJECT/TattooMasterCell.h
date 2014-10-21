@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 @interface TattooMasterCell : NSObject
-@property (nonatomic, strong) NSIndexPath *clickindexpath; // name of recipe
+
 @property (nonatomic, strong) NSString *name; // name of recipe
 @property (nonatomic, strong) NSString *gender; // name of recipe
 @property (nonatomic, strong) NSString *tel; // name of recipe
@@ -24,7 +24,6 @@
 @property (nonatomic, strong) NSArray *favorites; // preparation time
 @property (nonatomic, strong) NSArray *bookmark; // preparation time
 @property (nonatomic, strong) NSString *description; // name of recipe
-@property (nonatomic, strong) PFFile *promotion; // image of recipe
 @property (nonatomic, strong) PFFile *imageFile; // image of recipe
 @property (nonatomic, strong) PFFile *gallery_m1; // image of gallery1
 @property (nonatomic, strong) PFFile *gallery_2; // image of gallery2

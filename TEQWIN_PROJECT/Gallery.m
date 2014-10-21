@@ -15,14 +15,12 @@
 #import <FacebookSDK/FacebookSDK.h>
 @interface Gallery ()<UIScrollViewDelegate,CFShareCircleViewDelegate>
 {
-    
     TattooMasterCell *tattoomasterCell;
 CFShareCircleView *shareCircleView;
     CGRect frame_first;
     UIImageView *fullImageView;
      int lastClickedRow;
 }
-
 @end
 
 @implementation Gallery
@@ -30,9 +28,8 @@ CFShareCircleView *shareCircleView;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    NSLog(@"%@",self.tattoomasterCell);
+   
+
     [self queryParseMethod];
     
     
@@ -51,11 +48,9 @@ CFShareCircleView *shareCircleView;
 {
     
     [super viewDidAppear:animated];
-    NSIndexPath *indexPat = [NSIndexPath indexPathForRow:self.tattoomasterCell.clickindexpath.row inSection:0];
-    [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];
+    
+    
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -85,10 +80,9 @@ CFShareCircleView *shareCircleView;
             }
                         [tableView reloadData];
             [hud hide:YES];
-        
+            NSLog(@"%d",imageFilesArray.count);
             
-            [query orderByAscending:@"createdAt"];
-
+       
         }
         
     }];
@@ -121,7 +115,7 @@ CFShareCircleView *shareCircleView;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // NSLog(@"%@", imageFilesArray);
+    NSLog(@"%@", imageFilesArray);
 }
 - (void) noimage {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"對不起" message:@"沒有照片" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -155,8 +149,6 @@ CFShareCircleView *shareCircleView;
    
         return cell;
 }
-
-
 //按圖第一下放大至fullscreen
 -(void)actionTap:(UITapGestureRecognizer *)sender{
     NSLog(@"按一下返回");
