@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property IBOutlet UISearchBar *searchbar;
 - (IBAction)showsearch:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSearch;
 
 @property (nonatomic, assign) BOOL isFav;
 
