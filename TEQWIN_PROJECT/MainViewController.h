@@ -19,7 +19,7 @@
     NSArray *news_array;
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
-    PFObject *imageObject;
+ 
 }
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UILabel *test;

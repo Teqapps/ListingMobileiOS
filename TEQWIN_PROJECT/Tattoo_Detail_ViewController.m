@@ -212,7 +212,6 @@
    
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-    
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -247,7 +246,7 @@
     
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
-    cell.parseImage.image = [UIImage imageNamed:@"background.jpg"];
+    
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
             cell.parseImage.image = [UIImage imageWithData:data];
