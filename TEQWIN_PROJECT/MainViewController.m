@@ -91,6 +91,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
+    [query whereKey:@"news_approve" equalTo:[NSNumber numberWithBool:YES]];
+
 
     [query orderByDescending:@"news"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -117,9 +119,10 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     hud.labelText = @"Loading";
     [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-   // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
-[query orderByAscending:@"updatedAt"];
+    [query whereKey:@"promotion_approve" equalTo:[NSNumber numberWithBool:YES]];
+    [query orderByAscending:@"updatedAt"];
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -146,7 +149,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
     // Background color
-    view.tintColor = [UIColor blackColor];
+    view.tintColor = [UIColor grayColor];
     
     // Text Color
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
