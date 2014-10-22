@@ -19,32 +19,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="1HA-mE-MRo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.047058828179999998" green="0.066666670139999995" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fs1-KR-jyM">
-                                    <size key="itemSize" width="320" height="246"/>
+                                    <size key="itemSize" width="320" height="228"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="imageCell" id="hzx-UR-fyL" customClass="ImageExampleCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BQQ-Tc-ck7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="293"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BQQ-Tc-ck7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="qWo-fw-QI6">
                                                     <rect key="frame" x="150" y="113" width="20" height="20"/>
                                                 </activityIndicatorView>
                                                 <view contentMode="scaleToFill" id="sOV-eE-h3d">
-                                                    <rect key="frame" x="0.0" y="170" width="320" height="76"/>
+                                                    <rect key="frame" x="0.0" y="152" width="320" height="76"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="166" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C26-wH-e3N">
@@ -64,7 +64,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <size key="customSize" width="320" height="246"/>
+                                        <size key="customSize" width="320" height="228"/>
                                         <connections>
                                             <outlet property="loadingSpinner" destination="qWo-fw-QI6" id="Tio-a8-pHf"/>
                                             <outlet property="name" destination="C26-wH-e3N" id="SDL-ii-39h"/>
@@ -79,7 +79,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="QFX-Bq-rU0">
-                                <rect key="frame" x="0.0" y="247" width="320" height="257"/>
+                                <rect key="frame" x="0.0" y="227" width="320" height="277"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.058823533359999999" green="0.023529414089999999" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
@@ -107,7 +107,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="155" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" id="Bg5-Uo-Ogy">
                                                     <rect key="frame" x="83" y="8" width="204" height="85"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" red="0.91764712329999998" green="0.69411766529999996" blue="0.2588235438" alpha="1" colorSpace="deviceRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wbj-g4-Y4R">
-                                <rect key="frame" x="0.0" y="158" width="320" height="288"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="244"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -263,15 +263,6 @@
                                             <segue destination="488-73-Amk" kind="custom" customClass="SWRevealViewControllerSegue" id="BAs-ZL-t3l"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="我的最愛" rowHeight="42" id="FNl-Ri-x6K">
-                                        <rect key="frame" x="0.0" y="242" width="320" height="42"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FNl-Ri-x6K" id="T8T-uK-snf">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="6ei-0v-7aX" id="our-sH-4jh"/>
@@ -325,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFu-rl-uXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79" y="-219"/>
+            <point key="canvasLocation" x="9" y="-59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wPd-JZ-RwP">
@@ -362,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uD-aD-kgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397" y="3"/>
+            <point key="canvasLocation" x="-397" y="-59"/>
         </scene>
         <!--Tattoo Detail View Controller-->
         <scene sceneID="ONM-03-lkX">
@@ -378,7 +369,7 @@
                                 <color key="backgroundColor" red="0.058823533359999999" green="0.023529414089999999" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.91764712333679199" green="0.69411766529083252" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="38507F2A-F0FC-41F6-825C-D590DB271EC4" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="F201AD67-0123-4856-BB65-08A89170E326" colorSpace="pattern"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="65" id="qAn-GL-ojM">
                                         <rect key="frame" x="0.0" y="55" width="320" height="65"/>
@@ -422,7 +413,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="86" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading.gif" id="ciM-Jw-CVq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_image.gif" id="ciM-Jw-CVq">
                                                     <rect key="frame" x="0.0" y="0.0" width="86" height="83"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -538,7 +529,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="747" y="84"/>
+            <point key="canvasLocation" x="843" y="-64"/>
         </scene>
         <!--Master Map View Controller-->
         <scene sceneID="KqT-rk-QDT">
@@ -553,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqW-IJ-SoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="-621"/>
+            <point key="canvasLocation" x="1648" y="-733"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="q22-Yo-vwJ">
@@ -590,7 +581,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzS-1Z-WpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1212" y="-621"/>
+            <point key="canvasLocation" x="1254" y="-733"/>
         </scene>
         <!--Tattoo Master View Controller - Title-->
         <scene sceneID="uPb-CU-JX0">
@@ -783,15 +774,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MkC-kP-z1m">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" id="ogh-fk-XLe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">第一、刺青之後的三到五個小時之內，用溫水來清洗身體，把表面多餘的顏料或者是滲出的血液擦去，請記住，這一個步驟十分重要，如果時間過早，則會容易讓皮膚下層的顏料淡化，如果時間過長，滲出的血液不容易擦掉，而且以後每天要注意清洗，保持皮膚的乾淨和清潔，這樣會讓刺青的顏色起到很好的保護。
-　　第二、不要使用任何的藥品或者藥膏來塗抹，有一些人往往擔心自己的皮膚出現感染或者其他的證狀，所以就會自主的使用一些藥膏來塗抹，因爲有化學成分的一些藥膏會對於刺青的顏色形成一定的傷害，最後破壞掉整體的美觀性。
-　　第三、不能在刺青之後的一個星期之內進行長時間浸水的接觸，比如泡澡、桑拿等等，這個時候，皮膚下面的的色素還沒有完全固定，容易隨著水的滲入而產生變化，另外也不可以曬太陽。
-　　第四、不可對皮膚任何的抓撓行爲，有些人的皮膚往往會在刺青之後的三到四天之內，出現癢的現象，請不要擔心，這是皮膚的正常反應，一般兩天之後就會消失，一定不能抓，也不能撓。</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="backgroundColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">第一、刺青之後的三到五個小時之內，用溫水來清洗身體，把表面多餘的顏料或者是滲出的血液擦去，請記住，這一個步驟十分重要，如果時間過早，則會容易讓皮膚下層的顏料淡化，如果時間過長，滲出的血液不容易擦掉，而且以後每天要注意清洗，保持皮膚的乾淨和清潔，這樣會讓刺青的顏色起到很好的保護。                      
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="YuppyTC-Regular"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="　　">
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="STHeitiTC-Light"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">                                                                    第二、不要使用任何的藥品或者藥膏來塗抹，有一些人往往擔心自己的皮膚出現感染或者其他的證狀，所以就會自主的使用一些藥膏來塗抹，因</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="YuppyTC-Regular"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="爲">
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="STHeitiTC-Light"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">有化學成分的一些藥膏會對於刺青的顏色形成一定的傷害，最後破壞掉整體的美觀性。
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="YuppyTC-Regular"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="　　">
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="STHeitiTC-Light"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">                                                                    第三、不能在刺青之後的一個星期之內進行長時間浸水的接觸，比如泡澡、桑拿等等，這個時候，皮膚下面的的色素還沒有完全固定，容易隨著水的滲入而產生變化，另外也不可以曬太陽。
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="YuppyTC-Regular"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="　　">
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="STHeitiTC-Light"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="                                                                    第四、不可對皮膚任何的抓撓行">
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="YuppyTC-Regular"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="爲">
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="STHeitiTC-Light"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="，有些人的皮膚往往會在刺青之後的三到四天之內，出現癢的現象，請不要擔心，這是皮膚的正常反應，一般兩天之後就會消失，一定不能抓，也不能撓。">
+                                        <attributes>
+                                            <color key="NSColor" red="0.80784313725490198" green="0.70588235294117652" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="YuppyTC-Regular"/>
+                                            <font key="NSOriginalFont" size="16" name="YuppyTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -807,7 +890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1E7-6J-lZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473" y="-2709"/>
+            <point key="canvasLocation" x="437" y="-2141"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="6YF-EL-tk6">
@@ -820,7 +903,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="刺青，又稱文身或紋身，指用有墨的針刺入皮膚底層而在皮膚上書畫出圖案或詞彙。商務印書館《現代漢語詞典》中对「紋身」的解釋為：“在人體上繪成或刺成帶顏色的花紋或圖形”。" id="qNV-Ln-XxK">
                                 <rect key="frame" x="0.0" y="225" width="320" height="343"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.031372550874948502" green="0.0078431377187371254" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.84705889229999998" green="0.74901962280000001" blue="0.066666670139999995" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -833,7 +917,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="wkr-jM-bWN">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="h7O-EJ-lxh"/>
@@ -845,7 +929,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGr-eO-GOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473" y="-2049"/>
+            <point key="canvasLocation" x="437" y="-1441"/>
         </scene>
         <!--LoginUI View Controller - Title-->
         <scene sceneID="4wR-XP-GeQ">
@@ -1020,7 +1104,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="38507F2A-F0FC-41F6-825C-D590DB271EC4" width="320" height="460">
+        <image name="F201AD67-0123-4856-BB65-08A89170E326" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10910,7 +10994,7 @@ AAAAAAAAAAAJCvs
         <image name="ICON.png" width="256" height="256"/>
         <image name="background.jpg" width="1920" height="1080"/>
         <image name="goldebackground.jpg" width="680" height="453"/>
-        <image name="loading.gif" width="520" height="290"/>
+        <image name="loading_image.gif" width="500" height="400"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="navigationicon.png" width="512" height="512"/>
         <image name="tattoo_1.jpg" width="800" height="1057"/>
@@ -10923,7 +11007,7 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Oz0-Qe-dUn"/>
         <segue reference="jzI-7Q-TeA"/>
+        <segue reference="Oz0-Qe-dUn"/>
     </inferredMetricsTieBreakers>
 </document>

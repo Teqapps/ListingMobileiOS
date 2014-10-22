@@ -9,5 +9,6 @@
 #import "ViewController.h"
 
 @interface noticeViewController : ViewController
+@property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @end

@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.textview setFont:[UIFont fontWithName:@"Arial" size:25]];
+    self.textview.text=@"fuwof汁判囤炕岩久光陳汀火ck"  ;
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.

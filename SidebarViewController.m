@@ -138,7 +138,7 @@
 
          self.tableview.backgroundColor = [UIColor clearColor];
 self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
-    menuItems = @[@"title", @"新消息",@"紋身歷史" ,@"紋身注意事項",@"找紋身師傅",@"我的最愛"];
+    menuItems = @[@"title", @"新消息",@"紋身歷史" ,@"紋身注意事項",@"找紋身師傅"];
     list =[[NSMutableArray alloc]init];
     
     [list addObject:[NSString stringWithFormat:@"title"]];
@@ -147,7 +147,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     [list addObject:[NSString stringWithFormat:@"紋身歷史"]];
     [list addObject:[NSString stringWithFormat:@"紋身注意事項"]];
     [list addObject:[NSString stringWithFormat:@"找紋身師傅"]];
-[list addObject:[NSString stringWithFormat:@"我的最愛"]];
+
    ;
 }
 
@@ -239,18 +239,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
-        case 5:
-        {   cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
-            [cell.textLabel setFont:font];
-            //cell.imageView.image =[UIImage imageNamed:@"Favorites-icon.png"];
-            cell.textLabel.text=@" • 我的最愛";
             
-            [cell.textLabel setTextColor:[UIColor whiteColor]];
-        }
-            break;
-       
-      
     }
     
 

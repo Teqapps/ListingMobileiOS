@@ -41,7 +41,7 @@
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [self.image_collection setCollectionViewLayout:flowLayout];
     
-    flowLayout.itemSize = CGSizeMake(320, 246);
+    flowLayout.itemSize = CGSizeMake(320, 228);
     
     [flowLayout setMinimumLineSpacing:0.0f];
 
