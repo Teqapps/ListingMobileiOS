@@ -90,25 +90,19 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
-
+    //check 如果news is null , 就唔會query 出黎
+    [query whereKey:@"news_approve"  equalTo:[NSNumber numberWithBool:YES]];
+     // [query whereKey:@"news" containsString:@""];
     [query orderByDescending:@"news"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             news_array = [[NSArray alloc] initWithArray:objects];
-            
-          
             [_main_tableview reloadData];
             //   NSLog(@"%@",imageFilesArray);
             [hud hide:YES];
-            
             NSLog(@"haha%d",news_array.count);
-            
         }
-        
     }];
-    
-    
 }
 
 - (void)queryParseMethod {
@@ -117,26 +111,24 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     hud.labelText = @"Loading";
     [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-   // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
-[query orderByAscending:@"updatedAt"];
-
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+    //check 如果news is null , 就唔會query 出黎
+    
+    [query whereKey:@"promotion_approve"  equalTo:[NSNumber numberWithBool:YES]];
+   
+    
+    [query orderByAscending:@"updatedAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            imageFilesArray = [[NSArray alloc] initWithArray:objects];
-
+                      imageFilesArray = [[NSArray alloc] initWithArray:objects];
            [_image_collection reloadData];
-           
          //   NSLog(@"%@",imageFilesArray);
             [hud hide:YES];
-
-                    NSLog(@"%d",imageFilesArray.count);
-
+      
+            
+                    NSLog(@"%@",imageFilesArray );
         }
-
     }];
-
-
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -202,7 +194,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     nameLabel.text = [imageObject objectForKey:@"Name"];
     
     UITextView *news = (UITextView*) [cell viewWithTag:155];
-      
+    
     news.text = [imageObject objectForKey:@"news"];
     
       return cell;
@@ -232,17 +224,21 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     UILabel *name = (UILabel*) [cell viewWithTag:166];
     name.text = [imageObject objectForKey:@"Name"];
+    UILabel *title = (UILabel*) [cell viewWithTag:168];
     
+    title.text = [imageObject objectForKey:@"promotion_title"];
+
 
   
     [avstar getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
+            
             cell.thumbnail.image = [UIImage imageWithData:data];
         }}];
 
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
-            
+           
             cell.parseImage.image = [UIImage imageWithData:data];
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;

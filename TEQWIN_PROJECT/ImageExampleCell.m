@@ -11,6 +11,9 @@
 @implementation ImageExampleCell
 
 @synthesize parseImage; //loadingSpinner;
+@synthesize name;
+
+@synthesize thumbnail;
 
 - (id)initWithFrame:(CGRect)frame
 {
