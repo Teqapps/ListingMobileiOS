@@ -30,9 +30,79 @@
 		42193FD219860221007E3C52 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42193FD019860221007E3C52 /* menu@2x.png */; };
 		42193FD619860291007E3C52 /* TattooMaster_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42193FD519860291007E3C52 /* TattooMaster_ViewController.m */; };
 		42193FDF19860A9B007E3C52 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42193FDC19860A9B007E3C52 /* HomeModel.m */; };
+		4219403B1986354B007E3C52 /* rest_image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FF71986354B007E3C52 /* rest_image_2.jpg */; };
+		4219403C1986354B007E3C52 /* rest_image_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FF81986354B007E3C52 /* rest_image_3.jpg */; };
+		4219403D1986354B007E3C52 /* rest_image_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FF91986354B007E3C52 /* rest_image_4.jpg */; };
+		4219403E1986354B007E3C52 /* rest_image_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FFA1986354B007E3C52 /* rest_image_5.jpg */; };
+		4219403F1986354B007E3C52 /* Yummy_Delight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FFB1986354B007E3C52 /* Yummy_Delight.jpg */; };
+		421940401986354B007E3C52 /* Bangkok_Thai_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FFC1986354B007E3C52 /* Bangkok_Thai_Restaurant.jpg */; };
+		421940411986354B007E3C52 /* Bene_Italian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FFD1986354B007E3C52 /* Bene_Italian.jpg */; };
+		421940421986354B007E3C52 /* Café_de_Coral(NTP).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FFE1986354B007E3C52 /* Café_de_Coral(NTP).jpg */; };
+		421940431986354B007E3C52 /* Café_de_Coral.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42193FFF1986354B007E3C52 /* Café_de_Coral.jpg */; };
+		421940441986354B007E3C52 /* Café_de_Itamomo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940001986354B007E3C52 /* Café_de_Itamomo.jpg */; };
+		421940451986354B007E3C52 /* Chan_Kun_Kee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940011986354B007E3C52 /* Chan_Kun_Kee.jpg */; };
+		421940461986354B007E3C52 /* Chiuchow_Garden_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940021986354B007E3C52 /* Chiuchow_Garden_Restaurant.jpg */; };
+		421940471986354B007E3C52 /* Classis_in_Shun_Tak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940031986354B007E3C52 /* Classis_in_Shun_Tak.jpg */; };
+		421940481986354B007E3C52 /* Comes_Seafood_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940041986354B007E3C52 /* Comes_Seafood_Restaurant.jpg */; };
+		421940491986354B007E3C52 /* Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940051986354B007E3C52 /* Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg */; };
+		4219404A1986354B007E3C52 /* DIN_TAI_FUNG .jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940061986354B007E3C52 /* DIN_TAI_FUNG .jpg */; };
+		4219404B1986354B007E3C52 /* Dining_Fine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940071986354B007E3C52 /* Dining_Fine.jpg */; };
+		4219404C1986354B007E3C52 /* Dun_Ho_Seafood_Restaurant.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 421940081986354B007E3C52 /* Dun_Ho_Seafood_Restaurant.JPG */; };
+		4219404D1986354B007E3C52 /* Eat_East.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940091986354B007E3C52 /* Eat_East.jpg */; };
+		4219404E1986354B007E3C52 /* Fairwood(NTP).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219400A1986354B007E3C52 /* Fairwood(NTP).jpg */; };
+		4219404F1986354B007E3C52 /* Fairwood.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4219400B1986354B007E3C52 /* Fairwood.JPG */; };
+		421940501986354B007E3C52 /* Fu_Wing_Cafe_Stall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219400C1986354B007E3C52 /* Fu_Wing_Cafe_Stall.jpg */; };
+		421940511986354B007E3C52 /* GINZA_BAIRIN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219400D1986354B007E3C52 /* GINZA_BAIRIN.jpg */; };
+		421940521986354B007E3C52 /* Hainan_Shaoye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219400E1986354B007E3C52 /* Hainan_Shaoye.jpg */; };
+		421940531986354B007E3C52 /* Hang_Yuen_Café.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4219400F1986354B007E3C52 /* Hang_Yuen_Café.JPG */; };
+		421940541986354B007E3C52 /* Hip_Sushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940101986354B007E3C52 /* Hip_Sushi.jpg */; };
+		421940551986354B007E3C52 /* HOKKAIDO_RAMEN_SANTOUKA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940111986354B007E3C52 /* HOKKAIDO_RAMEN_SANTOUKA.jpg */; };
+		421940561986354B007E3C52 /* Hung_Wan_restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940121986354B007E3C52 /* Hung_Wan_restaurant.jpg */; };
+		421940571986354B007E3C52 /* IKI_teppanyaki_bento.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940131986354B007E3C52 /* IKI_teppanyaki_bento.jpg */; };
+		421940581986354B007E3C52 /* Jade_Garden.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940141986354B007E3C52 /* Jade_Garden.jpg */; };
+		421940591986354B007E3C52 /* JAPANESE_RESTAURANT_IMASUKE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940151986354B007E3C52 /* JAPANESE_RESTAURANT_IMASUKE.jpg */; };
+		4219405A1986354B007E3C52 /* Jully_jake_restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940161986354B007E3C52 /* Jully_jake_restaurant.jpg */; };
+		4219405B1986354B007E3C52 /* Jun_Sushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940171986354B007E3C52 /* Jun_Sushi.jpg */; };
+		4219405C1986354B007E3C52 /* Ka_Heung_Shan_Tau_Noodles_Shop.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 421940181986354B007E3C52 /* Ka_Heung_Shan_Tau_Noodles_Shop.JPG */; };
+		4219405D1986354B007E3C52 /* Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940191986354B007E3C52 /* Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg */; };
+		4219405E1986354B007E3C52 /* Lei_Garden_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219401A1986354B007E3C52 /* Lei_Garden_Restaurant.jpg */; };
+		4219405F1986354B007E3C52 /* Maccha_House.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219401B1986354B007E3C52 /* Maccha_House.jpg */; };
+		421940601986354B007E3C52 /* McDonalds(h).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219401C1986354B007E3C52 /* McDonalds(h).jpg */; };
+		421940611986354B007E3C52 /* Mei_Sik_Hin_Fastfood_Shop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219401D1986354B007E3C52 /* Mei_Sik_Hin_Fastfood_Shop.jpg */; };
+		421940621986354B007E3C52 /* Ming_General_Japanese_Sushi_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219401E1986354B007E3C52 /* Ming_General_Japanese_Sushi_Restaurant.jpg */; };
+		421940631986354B007E3C52 /* Mitsuhashi_Japanese_Restaurant.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4219401F1986354B007E3C52 /* Mitsuhashi_Japanese_Restaurant.JPG */; };
+		421940641986354B007E3C52 /* MR._STEAK.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940201986354B007E3C52 /* MR._STEAK.jpg */; };
+		421940651986354B007E3C52 /* Nha_Trang_Vietnamese_Cuisine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940211986354B007E3C52 /* Nha_Trang_Vietnamese_Cuisine.jpg */; };
+		421940661986354B007E3C52 /* Ocean_Empire_Food_Shop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940221986354B007E3C52 /* Ocean_Empire_Food_Shop.jpg */; };
+		421940671986354B007E3C52 /* Orchid_Garden_Restaurant.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 421940231986354B007E3C52 /* Orchid_Garden_Restaurant.JPG */; };
+		421940681986354B007E3C52 /* PARKVIEW.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940241986354B007E3C52 /* PARKVIEW.jpg */; };
+		421940691986354B007E3C52 /* Pearl_Delights.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940251986354B007E3C52 /* Pearl_Delights.jpg */; };
+		4219406A1986354B007E3C52 /* Pepper_Lunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940261986354B007E3C52 /* Pepper_Lunch.jpg */; };
+		4219406B1986354B007E3C52 /* PHD.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 421940271986354B007E3C52 /* PHD.JPG */; };
+		4219406C1986354B007E3C52 /* Pizza_Hut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940281986354B007E3C52 /* Pizza_Hut.jpg */; };
+		4219406D1986354B007E3C52 /* PIZZAEXPRESS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940291986354B007E3C52 /* PIZZAEXPRESS.jpg */; };
+		4219406E1986354B007E3C52 /* Ruby_Tuesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219402A1986354B007E3C52 /* Ruby_Tuesday.jpg */; };
+		4219406F1986354B007E3C52 /* Shabu_Sai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219402B1986354B007E3C52 /* Shabu_Sai.jpg */; };
+		421940701986354B007E3C52 /* SHANGHAI_MIN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219402C1986354B007E3C52 /* SHANGHAI_MIN.jpg */; };
+		421940711986354B007E3C52 /* Sichuan_Garden_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219402D1986354B007E3C52 /* Sichuan_Garden_Restaurant.jpg */; };
+		421940721986354B007E3C52 /* Spaghetti_360°.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219402E1986354B007E3C52 /* Spaghetti_360°.jpg */; };
+		421940731986354B007E3C52 /* Tai_Hing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219402F1986354B007E3C52 /* Tai_Hing.jpg */; };
+		421940741986354B007E3C52 /* Tak_Hing_Eating_Center.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940301986354B007E3C52 /* Tak_Hing_Eating_Center.jpg */; };
+		421940751986354B007E3C52 /* Tak_Hing_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940311986354B007E3C52 /* Tak_Hing_Restaurant.jpg */; };
+		421940761986354B007E3C52 /* Tak_Hing_Yunnan _Noodle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940321986354B007E3C52 /* Tak_Hing_Yunnan _Noodle.jpg */; };
+		421940771986354B007E3C52 /* The_Spaghetti_House.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940331986354B007E3C52 /* The_Spaghetti_House.jpg */; };
+		421940781986354B007E3C52 /* Tsui_Wah_Restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940341986354B007E3C52 /* Tsui_Wah_Restaurant.jpg */; };
+		421940791986354B007E3C52 /* UCC_COFFEE_SHOP_B.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940351986354B007E3C52 /* UCC_COFFEE_SHOP_B.jpg */; };
+		4219407A1986354B007E3C52 /* Wat_Yat_Noodles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940361986354B007E3C52 /* Wat_Yat_Noodles.jpg */; };
+		4219407B1986354B007E3C52 /* Wing Lok Cafe.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 421940371986354B007E3C52 /* Wing Lok Cafe.JPG */; };
+		4219407C1986354B007E3C52 /* WONG_CHI_KEI.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940381986354B007E3C52 /* WONG_CHI_KEI.jpg */; };
+		4219407D1986354B007E3C52 /* Worldwide_kitchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421940391986354B007E3C52 /* Worldwide_kitchen.jpg */; };
+		4219407E1986354B007E3C52 /* Yoshinoya(L).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219403A1986354B007E3C52 /* Yoshinoya(L).jpg */; };
+		4219408019863639007E3C52 /* beckham.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219407F19863639007E3C52 /* beckham.jpg */; };
 		4219408519863BE5007E3C52 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219408419863BE5007E3C52 /* MessageUI.framework */; };
 		4219408719863C9F007E3C52 /* ive.png in Resources */ = {isa = PBXBuildFile; fileRef = 4219408619863C9F007E3C52 /* ive.png */; };
 		4219408A198654A7007E3C52 /* Tattoo_Master_Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 42194089198654A7007E3C52 /* Tattoo_Master_Info.m */; };
+		4219408C198731EC007E3C52 /* master1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4219408B198731EC007E3C52 /* master1.jpg */; };
 		421940921987380F007E3C52 /* Master_Map_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421940911987380F007E3C52 /* Master_Map_ViewController.m */; };
 		42194094198738E0007E3C52 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42194093198738E0007E3C52 /* MapKit.framework */; };
 		42194096198743F7007E3C52 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42194095198743F7007E3C52 /* QuartzCore.framework */; };
@@ -84,6 +154,11 @@
 		426ED39319B9AF560024E817 /* TattooMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39219B9AF560024E817 /* TattooMasterCell.m */; };
 		426ED39B19BD88990024E817 /* Tattoo_Detail_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39A19BD88990024E817 /* Tattoo_Detail_ViewController.m */; };
 		426ED3D219C02C740024E817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3D119C02C740024E817 /* Main.storyboard */; };
+		426ED3E219C049760024E817 /* RecipeBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3DB19C049760024E817 /* RecipeBookViewController.m */; };
+		426ED3E319C049760024E817 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3DD19C049760024E817 /* RecipeDetailViewController.m */; };
+		426ED3E419C049760024E817 /* NewRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3DF19C049760024E817 /* NewRecipeViewController.m */; };
+		426ED3E519C049760024E817 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3E119C049760024E817 /* Recipe.m */; };
+		426ED3E919C04A030024E817 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3E819C04A030024E817 /* MBProgressHUD.m */; };
 		426ED3F819C2C3D00024E817 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED3F719C2C3D00024E817 /* VPImageCropperViewController.m */; };
 		427D3429199DA73400814463 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D3417199DA73400814463 /* AFHTTPClient.m */; };
 		427D342A199DA73400814463 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D3419199DA73400814463 /* AFHTTPRequestOperation.m */; };
@@ -118,6 +193,7 @@
 		427D34B6199E077F00814463 /* CFSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D34B4199E077F00814463 /* CFSharer.m */; };
 		427D34B9199E079E00814463 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D34B8199E079E00814463 /* ShareViewController.m */; };
 		427D3B2F19A32B9E00814463 /* LoginUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D3B2E19A32B9E00814463 /* LoginUIViewController.m */; };
+		428188B21994BA48004D09EF /* gallery_01_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428188B11994BA48004D09EF /* gallery_01_1.jpg */; };
 		428188FF1999BDF6004D09EF /* FavGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 428188FE1999BDF6004D09EF /* FavGallery.m */; };
 		428189021999BE10004D09EF /* FavGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 428189011999BE10004D09EF /* FavGalleryCell.m */; };
 		428189041999F55D004D09EF /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 428189031999F55D004D09EF /* gallery.png */; };
@@ -145,10 +221,15 @@
 		42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 42A4914C19D5087C00E4D65E /* FACEBOOK.JPG */; };
 		42A4914F19D508E900E4D65E /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4914E19D508E900E4D65E /* twitter@2x.png */; };
 		42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4915019D5090000E4D65E /* Facebook-icon.png */; };
+		42A4916719D51D8E00E4D65E /* add-photo-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916319D51D8E00E4D65E /* add-photo-placeholder.png */; };
+		42A4916919D51D8E00E4D65E /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916519D51D8E00E4D65E /* photo-frame.png */; };
+		42A4916A19D51D8E00E4D65E /* photo-frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916619D51D8E00E4D65E /* photo-frame@2x.png */; };
+		42A4916C19D51FAC00E4D65E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916B19D51FAC00E4D65E /* Default-568h@2x.png */; };
 		42A4916F19D54C4300E4D65E /* heart_no.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916D19D54C4300E4D65E /* heart_no.png */; };
 		42A4917019D54C4300E4D65E /* heart_yes.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4916E19D54C4300E4D65E /* heart_yes.png */; };
 		42A4917219D5633500E4D65E /* button_heart_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4917119D5633500E4D65E /* button_heart_red.png */; };
 		42A4917419D5633A00E4D65E /* button_heart_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4917319D5633A00E4D65E /* button_heart_blue.png */; };
+		42A4917619D56D7200E4D65E /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 42A4917519D56D7200E4D65E /* loading.gif */; };
 		42A4917819D56DE600E4D65E /* loading_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = 42A4917719D56DE600E4D65E /* loading_image.gif */; };
 		42A4917D19E2370300E4D65E /* historyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A4917C19E2370300E4D65E /* historyViewController.m */; };
 		42A4918019E2370C00E4D65E /* noticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A4917F19E2370C00E4D65E /* noticeViewController.m */; };
@@ -168,11 +249,16 @@
 		42AD1EC019B071ED00277278 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EBF19B071ED00277278 /* SystemConfiguration.framework */; };
 		42AD1ED819B42C4800277278 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1ED719B42C4800277278 /* libsqlite3.0.dylib */; };
 		42AD1EDC19B42E1200277278 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EDB19B42E1200277278 /* Parse.framework */; };
+		42AF1FBD19E382A900FC3BEC /* writing.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF1FBC19E382A900FC3BEC /* writing.png */; };
 		42AF20D519E7E6B800FC3BEC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF20D319E7E6B800FC3BEC /* splash.png */; };
 		42AF20D619E7E6B800FC3BEC /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AF20D419E7E6B800FC3BEC /* splash@2x.png */; };
 		42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */; };
+		42E4D05419CC0037006D3429 /* logout-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E4D05319CC0037006D3429 /* logout-1.png */; };
 		42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6219C8273F0051057C /* GalleryCell.m */; };
 		42EA3D6619C827600051057C /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6519C827600051057C /* Gallery.m */; };
+		42EA4ECE19CAE1B20051057C /* Facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EA4ECD19CAE1B20051057C /* Facebook-icon.png */; };
+		42EA4ED019CAE4770051057C /* FACEBOOK.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 42EA4ECF19CAE4770051057C /* FACEBOOK.JPG */; };
+		42EA4ED219CAE5EC0051057C /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EA4ED119CAE5EC0051057C /* logout.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,9 +272,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		42065FC419EE29A80012628C /* goldebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = goldebackground.jpg; path = ../goldebackground.jpg; sourceTree = "<group>"; };
-		42065FC619EE2CEE0012628C /* title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = title.jpg; path = ../title.jpg; sourceTree = "<group>"; };
-		42065FC819EE31D20012628C /* tattoologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tattoologo.png; path = ../tattoologo.png; sourceTree = "<group>"; };
+		42065FC419EE29A80012628C /* goldebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goldebackground.jpg; sourceTree = "<group>"; };
+		42065FC619EE2CEE0012628C /* title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = title.jpg; sourceTree = "<group>"; };
+		42065FC819EE31D20012628C /* tattoologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tattoologo.png; sourceTree = "<group>"; };
 		42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEQWIN_PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42193F901985FE08007E3C52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42193F921985FE08007E3C52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -219,10 +305,80 @@
 		42193FD519860291007E3C52 /* TattooMaster_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattooMaster_ViewController.m; sourceTree = "<group>"; };
 		42193FDB19860A9B007E3C52 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		42193FDC19860A9B007E3C52 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		42193FF71986354B007E3C52 /* rest_image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rest_image_2.jpg; sourceTree = "<group>"; };
+		42193FF81986354B007E3C52 /* rest_image_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rest_image_3.jpg; sourceTree = "<group>"; };
+		42193FF91986354B007E3C52 /* rest_image_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rest_image_4.jpg; sourceTree = "<group>"; };
+		42193FFA1986354B007E3C52 /* rest_image_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rest_image_5.jpg; sourceTree = "<group>"; };
+		42193FFB1986354B007E3C52 /* Yummy_Delight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yummy_Delight.jpg; sourceTree = "<group>"; };
+		42193FFC1986354B007E3C52 /* Bangkok_Thai_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bangkok_Thai_Restaurant.jpg; sourceTree = "<group>"; };
+		42193FFD1986354B007E3C52 /* Bene_Italian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bene_Italian.jpg; sourceTree = "<group>"; };
+		42193FFE1986354B007E3C52 /* Café_de_Coral(NTP).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Café_de_Coral(NTP).jpg"; sourceTree = "<group>"; };
+		42193FFF1986354B007E3C52 /* Café_de_Coral.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Café_de_Coral.jpg"; sourceTree = "<group>"; };
+		421940001986354B007E3C52 /* Café_de_Itamomo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Café_de_Itamomo.jpg"; sourceTree = "<group>"; };
+		421940011986354B007E3C52 /* Chan_Kun_Kee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chan_Kun_Kee.jpg; sourceTree = "<group>"; };
+		421940021986354B007E3C52 /* Chiuchow_Garden_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chiuchow_Garden_Restaurant.jpg; sourceTree = "<group>"; };
+		421940031986354B007E3C52 /* Classis_in_Shun_Tak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Classis_in_Shun_Tak.jpg; sourceTree = "<group>"; };
+		421940041986354B007E3C52 /* Comes_Seafood_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Comes_Seafood_Restaurant.jpg; sourceTree = "<group>"; };
+		421940051986354B007E3C52 /* Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg; sourceTree = "<group>"; };
+		421940061986354B007E3C52 /* DIN_TAI_FUNG .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DIN_TAI_FUNG .jpg"; sourceTree = "<group>"; };
+		421940071986354B007E3C52 /* Dining_Fine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dining_Fine.jpg; sourceTree = "<group>"; };
+		421940081986354B007E3C52 /* Dun_Ho_Seafood_Restaurant.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dun_Ho_Seafood_Restaurant.JPG; sourceTree = "<group>"; };
+		421940091986354B007E3C52 /* Eat_East.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eat_East.jpg; sourceTree = "<group>"; };
+		4219400A1986354B007E3C52 /* Fairwood(NTP).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Fairwood(NTP).jpg"; sourceTree = "<group>"; };
+		4219400B1986354B007E3C52 /* Fairwood.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fairwood.JPG; sourceTree = "<group>"; };
+		4219400C1986354B007E3C52 /* Fu_Wing_Cafe_Stall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fu_Wing_Cafe_Stall.jpg; sourceTree = "<group>"; };
+		4219400D1986354B007E3C52 /* GINZA_BAIRIN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GINZA_BAIRIN.jpg; sourceTree = "<group>"; };
+		4219400E1986354B007E3C52 /* Hainan_Shaoye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hainan_Shaoye.jpg; sourceTree = "<group>"; };
+		4219400F1986354B007E3C52 /* Hang_Yuen_Café.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hang_Yuen_Café.JPG"; sourceTree = "<group>"; };
+		421940101986354B007E3C52 /* Hip_Sushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hip_Sushi.jpg; sourceTree = "<group>"; };
+		421940111986354B007E3C52 /* HOKKAIDO_RAMEN_SANTOUKA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HOKKAIDO_RAMEN_SANTOUKA.jpg; sourceTree = "<group>"; };
+		421940121986354B007E3C52 /* Hung_Wan_restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hung_Wan_restaurant.jpg; sourceTree = "<group>"; };
+		421940131986354B007E3C52 /* IKI_teppanyaki_bento.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IKI_teppanyaki_bento.jpg; sourceTree = "<group>"; };
+		421940141986354B007E3C52 /* Jade_Garden.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jade_Garden.jpg; sourceTree = "<group>"; };
+		421940151986354B007E3C52 /* JAPANESE_RESTAURANT_IMASUKE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JAPANESE_RESTAURANT_IMASUKE.jpg; sourceTree = "<group>"; };
+		421940161986354B007E3C52 /* Jully_jake_restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jully_jake_restaurant.jpg; sourceTree = "<group>"; };
+		421940171986354B007E3C52 /* Jun_Sushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jun_Sushi.jpg; sourceTree = "<group>"; };
+		421940181986354B007E3C52 /* Ka_Heung_Shan_Tau_Noodles_Shop.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ka_Heung_Shan_Tau_Noodles_Shop.JPG; sourceTree = "<group>"; };
+		421940191986354B007E3C52 /* Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg; sourceTree = "<group>"; };
+		4219401A1986354B007E3C52 /* Lei_Garden_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lei_Garden_Restaurant.jpg; sourceTree = "<group>"; };
+		4219401B1986354B007E3C52 /* Maccha_House.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Maccha_House.jpg; sourceTree = "<group>"; };
+		4219401C1986354B007E3C52 /* McDonalds(h).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "McDonalds(h).jpg"; sourceTree = "<group>"; };
+		4219401D1986354B007E3C52 /* Mei_Sik_Hin_Fastfood_Shop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mei_Sik_Hin_Fastfood_Shop.jpg; sourceTree = "<group>"; };
+		4219401E1986354B007E3C52 /* Ming_General_Japanese_Sushi_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ming_General_Japanese_Sushi_Restaurant.jpg; sourceTree = "<group>"; };
+		4219401F1986354B007E3C52 /* Mitsuhashi_Japanese_Restaurant.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mitsuhashi_Japanese_Restaurant.JPG; sourceTree = "<group>"; };
+		421940201986354B007E3C52 /* MR._STEAK.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MR._STEAK.jpg; sourceTree = "<group>"; };
+		421940211986354B007E3C52 /* Nha_Trang_Vietnamese_Cuisine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nha_Trang_Vietnamese_Cuisine.jpg; sourceTree = "<group>"; };
+		421940221986354B007E3C52 /* Ocean_Empire_Food_Shop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ocean_Empire_Food_Shop.jpg; sourceTree = "<group>"; };
+		421940231986354B007E3C52 /* Orchid_Garden_Restaurant.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Orchid_Garden_Restaurant.JPG; sourceTree = "<group>"; };
+		421940241986354B007E3C52 /* PARKVIEW.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PARKVIEW.jpg; sourceTree = "<group>"; };
+		421940251986354B007E3C52 /* Pearl_Delights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pearl_Delights.jpg; sourceTree = "<group>"; };
+		421940261986354B007E3C52 /* Pepper_Lunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pepper_Lunch.jpg; sourceTree = "<group>"; };
+		421940271986354B007E3C52 /* PHD.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PHD.JPG; sourceTree = "<group>"; };
+		421940281986354B007E3C52 /* Pizza_Hut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pizza_Hut.jpg; sourceTree = "<group>"; };
+		421940291986354B007E3C52 /* PIZZAEXPRESS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PIZZAEXPRESS.jpg; sourceTree = "<group>"; };
+		4219402A1986354B007E3C52 /* Ruby_Tuesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ruby_Tuesday.jpg; sourceTree = "<group>"; };
+		4219402B1986354B007E3C52 /* Shabu_Sai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shabu_Sai.jpg; sourceTree = "<group>"; };
+		4219402C1986354B007E3C52 /* SHANGHAI_MIN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SHANGHAI_MIN.jpg; sourceTree = "<group>"; };
+		4219402D1986354B007E3C52 /* Sichuan_Garden_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sichuan_Garden_Restaurant.jpg; sourceTree = "<group>"; };
+		4219402E1986354B007E3C52 /* Spaghetti_360°.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Spaghetti_360°.jpg"; sourceTree = "<group>"; };
+		4219402F1986354B007E3C52 /* Tai_Hing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tai_Hing.jpg; sourceTree = "<group>"; };
+		421940301986354B007E3C52 /* Tak_Hing_Eating_Center.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tak_Hing_Eating_Center.jpg; sourceTree = "<group>"; };
+		421940311986354B007E3C52 /* Tak_Hing_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tak_Hing_Restaurant.jpg; sourceTree = "<group>"; };
+		421940321986354B007E3C52 /* Tak_Hing_Yunnan _Noodle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tak_Hing_Yunnan _Noodle.jpg"; sourceTree = "<group>"; };
+		421940331986354B007E3C52 /* The_Spaghetti_House.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = The_Spaghetti_House.jpg; sourceTree = "<group>"; };
+		421940341986354B007E3C52 /* Tsui_Wah_Restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tsui_Wah_Restaurant.jpg; sourceTree = "<group>"; };
+		421940351986354B007E3C52 /* UCC_COFFEE_SHOP_B.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UCC_COFFEE_SHOP_B.jpg; sourceTree = "<group>"; };
+		421940361986354B007E3C52 /* Wat_Yat_Noodles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wat_Yat_Noodles.jpg; sourceTree = "<group>"; };
+		421940371986354B007E3C52 /* Wing Lok Cafe.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wing Lok Cafe.JPG"; sourceTree = "<group>"; };
+		421940381986354B007E3C52 /* WONG_CHI_KEI.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WONG_CHI_KEI.jpg; sourceTree = "<group>"; };
+		421940391986354B007E3C52 /* Worldwide_kitchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Worldwide_kitchen.jpg; sourceTree = "<group>"; };
+		4219403A1986354B007E3C52 /* Yoshinoya(L).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Yoshinoya(L).jpg"; sourceTree = "<group>"; };
+		4219407F19863639007E3C52 /* beckham.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beckham.jpg; sourceTree = "<group>"; };
 		4219408419863BE5007E3C52 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4219408619863C9F007E3C52 /* ive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ive.png; sourceTree = "<group>"; };
 		42194088198654A7007E3C52 /* Tattoo_Master_Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tattoo_Master_Info.h; sourceTree = "<group>"; };
 		42194089198654A7007E3C52 /* Tattoo_Master_Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tattoo_Master_Info.m; sourceTree = "<group>"; };
+		4219408B198731EC007E3C52 /* master1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = master1.jpg; sourceTree = "<group>"; };
 		4219408D1987363B007E3C52 /* Tattoo_Detail_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tattoo_Detail_ViewController.h; sourceTree = "<group>"; };
 		421940901987380F007E3C52 /* Master_Map_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Master_Map_ViewController.h; sourceTree = "<group>"; };
 		421940911987380F007E3C52 /* Master_Map_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Master_Map_ViewController.m; sourceTree = "<group>"; };
@@ -286,6 +442,16 @@
 		426ED39219B9AF560024E817 /* TattooMasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattooMasterCell.m; sourceTree = "<group>"; };
 		426ED39A19BD88990024E817 /* Tattoo_Detail_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tattoo_Detail_ViewController.m; sourceTree = "<group>"; };
 		426ED3D119C02C740024E817 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		426ED3DA19C049760024E817 /* RecipeBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeBookViewController.h; sourceTree = "<group>"; };
+		426ED3DB19C049760024E817 /* RecipeBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeBookViewController.m; sourceTree = "<group>"; };
+		426ED3DC19C049760024E817 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
+		426ED3DD19C049760024E817 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
+		426ED3DE19C049760024E817 /* NewRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRecipeViewController.h; sourceTree = "<group>"; };
+		426ED3DF19C049760024E817 /* NewRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRecipeViewController.m; sourceTree = "<group>"; };
+		426ED3E019C049760024E817 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		426ED3E119C049760024E817 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		426ED3E719C04A030024E817 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		426ED3E819C04A030024E817 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		426ED3F619C2C3D00024E817 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
 		426ED3F719C2C3D00024E817 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		427D3416199DA73400814463 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -335,6 +501,7 @@
 		427D34B8199E079E00814463 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		427D3B2D19A32B9E00814463 /* LoginUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUIViewController.h; sourceTree = "<group>"; };
 		427D3B2E19A32B9E00814463 /* LoginUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginUIViewController.m; sourceTree = "<group>"; };
+		428188B11994BA48004D09EF /* gallery_01_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gallery_01_1.jpg; sourceTree = "<group>"; };
 		428188FD1999BDF6004D09EF /* FavGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavGallery.h; sourceTree = "<group>"; };
 		428188FE1999BDF6004D09EF /* FavGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavGallery.m; sourceTree = "<group>"; };
 		428189001999BE10004D09EF /* FavGalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavGalleryCell.h; sourceTree = "<group>"; };
@@ -344,8 +511,8 @@
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		42A0095A19EF5E05003DCD0D /* Search_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search_TableViewController.h; sourceTree = "<group>"; };
 		42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search_TableViewController.m; sourceTree = "<group>"; };
-		42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tattoo_cover.png; path = ../tattoo_cover.png; sourceTree = "<group>"; };
-		42A0095E19F4A1EB003DCD0D /* tattoo_cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tattoo_cover@2x.png"; path = "../tattoo_cover@2x.png"; sourceTree = "<group>"; };
+		42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tattoo_cover.png; sourceTree = "<group>"; };
+		42A0095E19F4A1EB003DCD0D /* tattoo_cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tattoo_cover@2x.png"; sourceTree = "<group>"; };
 		42A4844519A47AA20079EAA0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		42A4912B19D506A700E4D65E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		42A4912C19D506A700E4D65E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -365,10 +532,15 @@
 		42A4914C19D5087C00E4D65E /* FACEBOOK.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FACEBOOK.JPG; sourceTree = "<group>"; };
 		42A4914E19D508E900E4D65E /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 		42A4915019D5090000E4D65E /* Facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-icon.png"; sourceTree = "<group>"; };
-		42A4916D19D54C4300E4D65E /* heart_no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart_no.png; path = ../heart_no.png; sourceTree = "<group>"; };
-		42A4916E19D54C4300E4D65E /* heart_yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart_yes.png; path = ../heart_yes.png; sourceTree = "<group>"; };
+		42A4916319D51D8E00E4D65E /* add-photo-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-photo-placeholder.png"; sourceTree = "<group>"; };
+		42A4916519D51D8E00E4D65E /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
+		42A4916619D51D8E00E4D65E /* photo-frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame@2x.png"; sourceTree = "<group>"; };
+		42A4916B19D51FAC00E4D65E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		42A4916D19D54C4300E4D65E /* heart_no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_no.png; sourceTree = "<group>"; };
+		42A4916E19D54C4300E4D65E /* heart_yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_yes.png; sourceTree = "<group>"; };
 		42A4917119D5633500E4D65E /* button_heart_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_heart_red.png; sourceTree = "<group>"; };
 		42A4917319D5633A00E4D65E /* button_heart_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_heart_blue.png; sourceTree = "<group>"; };
+		42A4917519D56D7200E4D65E /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		42A4917719D56DE600E4D65E /* loading_image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading_image.gif; sourceTree = "<group>"; };
 		42A4917B19E2370300E4D65E /* historyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historyViewController.h; sourceTree = "<group>"; };
 		42A4917C19E2370300E4D65E /* historyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = historyViewController.m; sourceTree = "<group>"; };
@@ -390,14 +562,19 @@
 		42AD1EBF19B071ED00277278 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		42AD1ED719B42C4800277278 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.0.dylib; sourceTree = "<group>"; };
 		42AD1EDB19B42E1200277278 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		42AF20D319E7E6B800FC3BEC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../splash.png; sourceTree = "<group>"; };
-		42AF20D419E7E6B800FC3BEC /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash@2x.png"; path = "../splash@2x.png"; sourceTree = "<group>"; };
+		42AF1FBC19E382A900FC3BEC /* writing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = writing.png; sourceTree = "<group>"; };
+		42AF20D319E7E6B800FC3BEC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		42AF20D419E7E6B800FC3BEC /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		42AF211819EBC6D000FC3BEC /* ImageExampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageExampleCell.h; sourceTree = "<group>"; };
 		42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
+		42E4D05319CC0037006D3429 /* logout-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout-1.png"; sourceTree = "<group>"; };
 		42EA3D6119C8273F0051057C /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
 		42EA3D6219C8273F0051057C /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
 		42EA3D6419C827600051057C /* Gallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gallery.h; sourceTree = "<group>"; };
 		42EA3D6519C827600051057C /* Gallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gallery.m; sourceTree = "<group>"; };
+		42EA4ECD19CAE1B20051057C /* Facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-icon.png"; sourceTree = "<group>"; };
+		42EA4ECF19CAE4770051057C /* FACEBOOK.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FACEBOOK.JPG; sourceTree = "<group>"; };
+		42EA4ED119CAE5EC0051057C /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,9 +624,18 @@
 		42193F841985FE08007E3C52 = {
 			isa = PBXGroup;
 			children = (
+				42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */,
+				42A0095E19F4A1EB003DCD0D /* tattoo_cover@2x.png */,
+				42AF20D319E7E6B800FC3BEC /* splash.png */,
+				42AF20D419E7E6B800FC3BEC /* splash@2x.png */,
+				42AF1FBE19E388EF00FC3BEC /* comment */,
 				42A4917A19E236EE00E4D65E /* notice */,
 				42A4917919E236E700E4D65E /* history */,
+				42EA403119C934F90051057C /* ShareKit */,
+				426ED3D919C048320024E817 /* AddShare */,
 				426ED3D119C02C740024E817 /* Main.storyboard */,
+				42A4916D19D54C4300E4D65E /* heart_no.png */,
+				42A4916E19D54C4300E4D65E /* heart_yes.png */,
 				427D3487199E071800814463 /* Share */,
 				427D3415199DA73400814463 /* AFNetworking */,
 				42818909199C577A004D09EF /* Login System */,
@@ -571,6 +757,7 @@
 			isa = PBXGroup;
 			children = (
 				42193FB51985FE08007E3C52 /* TEQWIN_PROJECTTests */,
+				42193FF61986352F007E3C52 /* rest_image */,
 				42193FDC19860A9B007E3C52 /* HomeModel.m */,
 				42194088198654A7007E3C52 /* Tattoo_Master_Info.h */,
 				42194089198654A7007E3C52 /* Tattoo_Master_Info.m */,
@@ -595,6 +782,89 @@
 				42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */,
 			);
 			name = "Tattoo Master";
+			sourceTree = "<group>";
+		};
+		42193FF61986352F007E3C52 /* rest_image */ = {
+			isa = PBXGroup;
+			children = (
+				42AF1FBC19E382A900FC3BEC /* writing.png */,
+				42A4917719D56DE600E4D65E /* loading_image.gif */,
+				42A4917519D56D7200E4D65E /* loading.gif */,
+				42A4917319D5633A00E4D65E /* button_heart_blue.png */,
+				42A4917119D5633500E4D65E /* button_heart_red.png */,
+				428188B11994BA48004D09EF /* gallery_01_1.jpg */,
+				4219408B198731EC007E3C52 /* master1.jpg */,
+				4219407F19863639007E3C52 /* beckham.jpg */,
+				42193FF71986354B007E3C52 /* rest_image_2.jpg */,
+				42193FF81986354B007E3C52 /* rest_image_3.jpg */,
+				42193FF91986354B007E3C52 /* rest_image_4.jpg */,
+				42193FFA1986354B007E3C52 /* rest_image_5.jpg */,
+				42193FFB1986354B007E3C52 /* Yummy_Delight.jpg */,
+				42193FFC1986354B007E3C52 /* Bangkok_Thai_Restaurant.jpg */,
+				42193FFD1986354B007E3C52 /* Bene_Italian.jpg */,
+				42193FFE1986354B007E3C52 /* Café_de_Coral(NTP).jpg */,
+				42193FFF1986354B007E3C52 /* Café_de_Coral.jpg */,
+				421940001986354B007E3C52 /* Café_de_Itamomo.jpg */,
+				421940011986354B007E3C52 /* Chan_Kun_Kee.jpg */,
+				421940021986354B007E3C52 /* Chiuchow_Garden_Restaurant.jpg */,
+				421940031986354B007E3C52 /* Classis_in_Shun_Tak.jpg */,
+				421940041986354B007E3C52 /* Comes_Seafood_Restaurant.jpg */,
+				421940051986354B007E3C52 /* Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg */,
+				421940061986354B007E3C52 /* DIN_TAI_FUNG .jpg */,
+				421940071986354B007E3C52 /* Dining_Fine.jpg */,
+				421940081986354B007E3C52 /* Dun_Ho_Seafood_Restaurant.JPG */,
+				421940091986354B007E3C52 /* Eat_East.jpg */,
+				4219400A1986354B007E3C52 /* Fairwood(NTP).jpg */,
+				4219400B1986354B007E3C52 /* Fairwood.JPG */,
+				4219400C1986354B007E3C52 /* Fu_Wing_Cafe_Stall.jpg */,
+				4219400D1986354B007E3C52 /* GINZA_BAIRIN.jpg */,
+				4219400E1986354B007E3C52 /* Hainan_Shaoye.jpg */,
+				4219400F1986354B007E3C52 /* Hang_Yuen_Café.JPG */,
+				421940101986354B007E3C52 /* Hip_Sushi.jpg */,
+				421940111986354B007E3C52 /* HOKKAIDO_RAMEN_SANTOUKA.jpg */,
+				421940121986354B007E3C52 /* Hung_Wan_restaurant.jpg */,
+				421940131986354B007E3C52 /* IKI_teppanyaki_bento.jpg */,
+				421940141986354B007E3C52 /* Jade_Garden.jpg */,
+				421940151986354B007E3C52 /* JAPANESE_RESTAURANT_IMASUKE.jpg */,
+				421940161986354B007E3C52 /* Jully_jake_restaurant.jpg */,
+				421940171986354B007E3C52 /* Jun_Sushi.jpg */,
+				421940181986354B007E3C52 /* Ka_Heung_Shan_Tau_Noodles_Shop.JPG */,
+				421940191986354B007E3C52 /* Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg */,
+				4219401A1986354B007E3C52 /* Lei_Garden_Restaurant.jpg */,
+				4219401B1986354B007E3C52 /* Maccha_House.jpg */,
+				4219401C1986354B007E3C52 /* McDonalds(h).jpg */,
+				4219401D1986354B007E3C52 /* Mei_Sik_Hin_Fastfood_Shop.jpg */,
+				4219401E1986354B007E3C52 /* Ming_General_Japanese_Sushi_Restaurant.jpg */,
+				4219401F1986354B007E3C52 /* Mitsuhashi_Japanese_Restaurant.JPG */,
+				421940201986354B007E3C52 /* MR._STEAK.jpg */,
+				421940211986354B007E3C52 /* Nha_Trang_Vietnamese_Cuisine.jpg */,
+				421940221986354B007E3C52 /* Ocean_Empire_Food_Shop.jpg */,
+				421940231986354B007E3C52 /* Orchid_Garden_Restaurant.JPG */,
+				421940241986354B007E3C52 /* PARKVIEW.jpg */,
+				421940251986354B007E3C52 /* Pearl_Delights.jpg */,
+				421940261986354B007E3C52 /* Pepper_Lunch.jpg */,
+				421940271986354B007E3C52 /* PHD.JPG */,
+				421940281986354B007E3C52 /* Pizza_Hut.jpg */,
+				421940291986354B007E3C52 /* PIZZAEXPRESS.jpg */,
+				4219402A1986354B007E3C52 /* Ruby_Tuesday.jpg */,
+				4219402B1986354B007E3C52 /* Shabu_Sai.jpg */,
+				4219402C1986354B007E3C52 /* SHANGHAI_MIN.jpg */,
+				4219402D1986354B007E3C52 /* Sichuan_Garden_Restaurant.jpg */,
+				4219402E1986354B007E3C52 /* Spaghetti_360°.jpg */,
+				4219402F1986354B007E3C52 /* Tai_Hing.jpg */,
+				421940301986354B007E3C52 /* Tak_Hing_Eating_Center.jpg */,
+				421940311986354B007E3C52 /* Tak_Hing_Restaurant.jpg */,
+				421940321986354B007E3C52 /* Tak_Hing_Yunnan _Noodle.jpg */,
+				421940331986354B007E3C52 /* The_Spaghetti_House.jpg */,
+				421940341986354B007E3C52 /* Tsui_Wah_Restaurant.jpg */,
+				421940351986354B007E3C52 /* UCC_COFFEE_SHOP_B.jpg */,
+				421940361986354B007E3C52 /* Wat_Yat_Noodles.jpg */,
+				421940371986354B007E3C52 /* Wing Lok Cafe.JPG */,
+				421940381986354B007E3C52 /* WONG_CHI_KEI.jpg */,
+				421940391986354B007E3C52 /* Worldwide_kitchen.jpg */,
+				4219403A1986354B007E3C52 /* Yoshinoya(L).jpg */,
+			);
+			name = rest_image;
 			sourceTree = "<group>";
 		};
 		42223EE219B569ED00F0D058 /* asset */ = {
@@ -626,6 +896,9 @@
 		424FAC8A19888CF60062D13D /* SideBar & Main */ = {
 			isa = PBXGroup;
 			children = (
+				42065FC819EE31D20012628C /* tattoologo.png */,
+				42065FC419EE29A80012628C /* goldebackground.jpg */,
+				42065FC619EE2CEE0012628C /* title.jpg */,
 				4263005619906AB3007B8C8F /* Sidebar-icon */,
 				42193FC51985FE42007E3C52 /* SidebarViewController.h */,
 				42193FC61985FE42007E3C52 /* SidebarViewController.m */,
@@ -676,18 +949,6 @@
 		42630028198B3A72007B8C8F /* photo */ = {
 			isa = PBXGroup;
 			children = (
-				42A4917719D56DE600E4D65E /* loading_image.gif */,
-				42A4917319D5633A00E4D65E /* button_heart_blue.png */,
-				42A4917119D5633500E4D65E /* button_heart_red.png */,
-				42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */,
-				42A0095E19F4A1EB003DCD0D /* tattoo_cover@2x.png */,
-				42AF20D319E7E6B800FC3BEC /* splash.png */,
-				42AF20D419E7E6B800FC3BEC /* splash@2x.png */,
-				42A4916D19D54C4300E4D65E /* heart_no.png */,
-				42A4916E19D54C4300E4D65E /* heart_yes.png */,
-				42065FC819EE31D20012628C /* tattoologo.png */,
-				42065FC419EE29A80012628C /* goldebackground.jpg */,
-				42065FC619EE2CEE0012628C /* title.jpg */,
 				4266572319A6F3BF001D94B5 /* share_icon.png */,
 				4266571D19A6F2DC001D94B5 /* comment_icon.png */,
 				4266571E19A6F2DC001D94B5 /* like_icon.png */,
@@ -723,6 +984,47 @@
 				42630048198F8DA2007B8C8F /* Favorites-icon.png */,
 			);
 			name = "Sidebar-icon";
+			sourceTree = "<group>";
+		};
+		426ED3D919C048320024E817 /* AddShare */ = {
+			isa = PBXGroup;
+			children = (
+				426ED3EA19C04AAE0024E817 /* IMAGE */,
+				426ED3E619C049EE0024E817 /* MBProgressHUB */,
+				426ED3DA19C049760024E817 /* RecipeBookViewController.h */,
+				426ED3DB19C049760024E817 /* RecipeBookViewController.m */,
+				426ED3DC19C049760024E817 /* RecipeDetailViewController.h */,
+				426ED3DD19C049760024E817 /* RecipeDetailViewController.m */,
+				426ED3DE19C049760024E817 /* NewRecipeViewController.h */,
+				426ED3DF19C049760024E817 /* NewRecipeViewController.m */,
+				426ED3E019C049760024E817 /* Recipe.h */,
+				426ED3E119C049760024E817 /* Recipe.m */,
+			);
+			name = AddShare;
+			sourceTree = "<group>";
+		};
+		426ED3E619C049EE0024E817 /* MBProgressHUB */ = {
+			isa = PBXGroup;
+			children = (
+				426ED3E719C04A030024E817 /* MBProgressHUD.h */,
+				426ED3E819C04A030024E817 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUB;
+			sourceTree = "<group>";
+		};
+		426ED3EA19C04AAE0024E817 /* IMAGE */ = {
+			isa = PBXGroup;
+			children = (
+				42A4916B19D51FAC00E4D65E /* Default-568h@2x.png */,
+				42A4916319D51D8E00E4D65E /* add-photo-placeholder.png */,
+				42A4916519D51D8E00E4D65E /* photo-frame.png */,
+				42A4916619D51D8E00E4D65E /* photo-frame@2x.png */,
+				42E4D05319CC0037006D3429 /* logout-1.png */,
+				42EA4ECF19CAE4770051057C /* FACEBOOK.JPG */,
+				42EA4ED119CAE5EC0051057C /* logout.png */,
+				42EA4ECD19CAE1B20051057C /* Facebook-icon.png */,
+			);
+			name = IMAGE;
 			sourceTree = "<group>";
 		};
 		426ED3F519C2C3C00024E817 /* VPImageCropper */ = {
@@ -839,6 +1141,20 @@
 			name = notice;
 			sourceTree = "<group>";
 		};
+		42AF1FBE19E388EF00FC3BEC /* comment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = comment;
+			sourceTree = "<group>";
+		};
+		42EA403119C934F90051057C /* ShareKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ShareKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -934,10 +1250,21 @@
 			files = (
 				42193FD119860221007E3C52 /* menu.png in Resources */,
 				4263006C19908FDA007B8C8F /* background1.jpg in Resources */,
+				421940531986354B007E3C52 /* Hang_Yuen_Café.JPG in Resources */,
+				421940431986354B007E3C52 /* Café_de_Coral.jpg in Resources */,
+				4219408C198731EC007E3C52 /* master1.jpg in Resources */,
 				424FAC901988E3870062D13D /* gabe_01.jpg in Resources */,
+				421940741986354B007E3C52 /* Tak_Hing_Eating_Center.jpg in Resources */,
+				421940771986354B007E3C52 /* The_Spaghetti_House.jpg in Resources */,
+				4219406C1986354B007E3C52 /* Pizza_Hut.jpg in Resources */,
 				4219409E198789DB007E3C52 /* ICON.png in Resources */,
+				4219407B1986354B007E3C52 /* Wing Lok Cafe.JPG in Resources */,
+				4219407A1986354B007E3C52 /* Wat_Yat_Noodles.jpg in Resources */,
+				421940601986354B007E3C52 /* McDonalds(h).jpg in Resources */,
 				42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */,
 				42A4917219D5633500E4D65E /* button_heart_red.png in Resources */,
+				421940521986354B007E3C52 /* Hainan_Shaoye.jpg in Resources */,
+				421940491986354B007E3C52 /* Crystal_Jade_La_Mian_Xiao_Long_Bao.jpg in Resources */,
 				427D349E199E076400814463 /* close@2x.png in Resources */,
 				427D34A0199E076400814463 /* dropbox@2x.png in Resources */,
 				42A4913E19D506A700E4D65E /* Facebook.png in Resources */,
@@ -946,29 +1273,47 @@
 				42065FC719EE2CEE0012628C /* title.jpg in Resources */,
 				4263005D199083C3007B8C8F /* app-map-icon.png in Resources */,
 				4219409A19878191007E3C52 /* Tattoo_Logo.jpg in Resources */,
+				4219406B1986354B007E3C52 /* PHD.JPG in Resources */,
+				42A4916919D51D8E00E4D65E /* photo-frame.png in Resources */,
 				427D34A9199E076400814463 /* more.png in Resources */,
 				42818908199AFB0F004D09EF /* navbackground.jpg in Resources */,
 				42630043198F5F3C007B8C8F /* heart.png in Resources */,
 				42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */,
 				4263004B198F8DFD007B8C8F /* Gallery_icon.png in Resources */,
 				42A0095F19F4A1EB003DCD0D /* tattoo_cover.png in Resources */,
+				421940541986354B007E3C52 /* Hip_Sushi.jpg in Resources */,
+				42A4917619D56D7200E4D65E /* loading.gif in Resources */,
+				4219403E1986354B007E3C52 /* rest_image_5.jpg in Resources */,
+				421940691986354B007E3C52 /* Pearl_Delights.jpg in Resources */,
 				42193FA91985FE08007E3C52 /* Images.xcassets in Resources */,
 				42A4913A19D506A700E4D65E /* Default.png in Resources */,
 				42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */,
 				427D34AB199E076400814463 /* photo_library.png in Resources */,
+				421940481986354B007E3C52 /* Comes_Seafood_Restaurant.jpg in Resources */,
 				42A4916F19D54C4300E4D65E /* heart_no.png in Resources */,
+				421940761986354B007E3C52 /* Tak_Hing_Yunnan _Noodle.jpg in Resources */,
 				4263005B19908265007B8C8F /* map.png in Resources */,
 				42630051198F8EA6007B8C8F /* NEW.png in Resources */,
+				4219404C1986354B007E3C52 /* Dun_Ho_Seafood_Restaurant.JPG in Resources */,
 				4266572419A6F3BF001D94B5 /* share_icon.png in Resources */,
+				4219403D1986354B007E3C52 /* rest_image_4.jpg in Resources */,
 				426ED3D219C02C740024E817 /* Main.storyboard in Resources */,
+				421940551986354B007E3C52 /* HOKKAIDO_RAMEN_SANTOUKA.jpg in Resources */,
 				427D34A1199E076400814463 /* evernote.png in Resources */,
 				4263004F198F8E7D007B8C8F /* new-icon.png in Resources */,
+				4219405C1986354B007E3C52 /* Ka_Heung_Shan_Tau_Noodles_Shop.JPG in Resources */,
 				424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */,
 				42A4918619E2375500E4D65E /* tattoo_3.jpg in Resources */,
+				421940561986354B007E3C52 /* Hung_Wan_restaurant.jpg in Resources */,
+				421940751986354B007E3C52 /* Tak_Hing_Restaurant.jpg in Resources */,
 				42193FD219860221007E3C52 /* menu@2x.png in Resources */,
 				42A4914219D506A700E4D65E /* MainBG.png in Resources */,
 				42A4918819E239C600E4D65E /* history.png in Resources */,
 				4266572119A6F2DC001D94B5 /* like_icon.png in Resources */,
+				4219407C1986354B007E3C52 /* WONG_CHI_KEI.jpg in Resources */,
+				421940661986354B007E3C52 /* Ocean_Empire_Food_Shop.jpg in Resources */,
+				4219405B1986354B007E3C52 /* Jun_Sushi.jpg in Resources */,
+				421940571986354B007E3C52 /* IKI_teppanyaki_bento.jpg in Resources */,
 				427D34A3199E076400814463 /* facebook.png in Resources */,
 				42A4917419D5633A00E4D65E /* button_heart_blue.png in Resources */,
 				427D34A8199E076400814463 /* mail@2x.png in Resources */,
@@ -977,55 +1322,107 @@
 				4266571B19A6F1AE001D94B5 /* comment.png in Resources */,
 				42A4914719D506A700E4D65E /* TwitterDown.png in Resources */,
 				42A4917019D54C4300E4D65E /* heart_yes.png in Resources */,
+				421940581986354B007E3C52 /* Jade_Garden.jpg in Resources */,
 				42A4918219E2374F00E4D65E /* tattoo_1.jpg in Resources */,
+				4219404D1986354B007E3C52 /* Eat_East.jpg in Resources */,
 				427D34A7199E076400814463 /* mail.png in Resources */,
+				4219404B1986354B007E3C52 /* Dining_Fine.jpg in Resources */,
 				42193F9B1985FE08007E3C52 /* InfoPlist.strings in Resources */,
 				42A4914319D506A700E4D65E /* SignUp.png in Resources */,
+				42EA4ED219CAE5EC0051057C /* logout.png in Resources */,
+				4219407E1986354B007E3C52 /* Yoshinoya(L).jpg in Resources */,
+				421940411986354B007E3C52 /* Bene_Italian.jpg in Resources */,
+				42AF1FBD19E382A900FC3BEC /* writing.png in Resources */,
+				4219405D1986354B007E3C52 /* Kung_Tak_Lam_Shanghai_Vegetarian_Cuisine.jpg in Resources */,
 				42A4914419D506A700E4D65E /* SignUpDown.png in Resources */,
 				4263005F19908433007B8C8F /* mapicon.png in Resources */,
+				4219403C1986354B007E3C52 /* rest_image_3.jpg in Resources */,
+				421940461986354B007E3C52 /* Chiuchow_Garden_Restaurant.jpg in Resources */,
 				424FAC911988E3870062D13D /* gabe_02.jpg in Resources */,
+				421940731986354B007E3C52 /* Tai_Hing.jpg in Resources */,
 				4219408719863C9F007E3C52 /* ive.png in Resources */,
 				4266571819A6F1A6001D94B5 /* share.png in Resources */,
 				42AF20D519E7E6B800FC3BEC /* splash.png in Resources */,
 				42A4918A19E23CB800E4D65E /* notice.png in Resources */,
 				428189041999F55D004D09EF /* gallery.png in Resources */,
+				4219405F1986354B007E3C52 /* Maccha_House.jpg in Resources */,
+				421940791986354B007E3C52 /* UCC_COFFEE_SHOP_B.jpg in Resources */,
+				4219406F1986354B007E3C52 /* Shabu_Sai.jpg in Resources */,
 				42A4913F19D506A700E4D65E /* FacebookDown.png in Resources */,
+				421940721986354B007E3C52 /* Spaghetti_360°.jpg in Resources */,
 				4266571C19A6F1AE001D94B5 /* like.png in Resources */,
 				42A4917819D56DE600E4D65E /* loading_image.gif in Resources */,
 				42630049198F8DA2007B8C8F /* Favorites-icon.png in Resources */,
 				4219409C19878375007E3C52 /* news.jpg in Resources */,
 				42A4918419E2375200E4D65E /* tattoo_2.jpg in Resources */,
 				427D34AC199E076400814463 /* photo_library@2x.png in Resources */,
+				4219403F1986354B007E3C52 /* Yummy_Delight.jpg in Resources */,
+				4219405E1986354B007E3C52 /* Lei_Garden_Restaurant.jpg in Resources */,
 				427D34AE199E076400814463 /* pinterest@2x.png in Resources */,
+				421940451986354B007E3C52 /* Chan_Kun_Kee.jpg in Resources */,
 				42A4913C19D506A700E4D65E /* Exit.png in Resources */,
+				421940631986354B007E3C52 /* Mitsuhashi_Japanese_Restaurant.JPG in Resources */,
 				42A4914F19D508E900E4D65E /* twitter@2x.png in Resources */,
 				4263004D198F8E5C007B8C8F /* master_icon.png in Resources */,
 				427D34A4199E076400814463 /* facebook@2x.png in Resources */,
 				424FAC941988E3870062D13D /* gabe_05.jpg in Resources */,
+				421940471986354B007E3C52 /* Classis_in_Shun_Tak.jpg in Resources */,
+				421940651986354B007E3C52 /* Nha_Trang_Vietnamese_Cuisine.jpg in Resources */,
 				4263005519906A40007B8C8F /* setting-icon.png in Resources */,
+				42A4916719D51D8E00E4D65E /* add-photo-placeholder.png in Resources */,
+				421940401986354B007E3C52 /* Bangkok_Thai_Restaurant.jpg in Resources */,
+				4219403B1986354B007E3C52 /* rest_image_2.jpg in Resources */,
+				42A4916A19D51D8E00E4D65E /* photo-frame@2x.png in Resources */,
+				4219407D1986354B007E3C52 /* Worldwide_kitchen.jpg in Resources */,
 				42A4914519D506A700E4D65E /* SignUpFieldBG.png in Resources */,
 				42A4913B19D506A700E4D65E /* Default@2x.png in Resources */,
+				42A4916C19D51FAC00E4D65E /* Default-568h@2x.png in Resources */,
 				42065FC519EE29A80012628C /* goldebackground.jpg in Resources */,
 				424FAC921988E3870062D13D /* gabe_03.jpg in Resources */,
+				421940621986354B007E3C52 /* Ming_General_Japanese_Sushi_Restaurant.jpg in Resources */,
+				4219404A1986354B007E3C52 /* DIN_TAI_FUNG .jpg in Resources */,
+				4219404E1986354B007E3C52 /* Fairwood(NTP).jpg in Resources */,
+				421940501986354B007E3C52 /* Fu_Wing_Cafe_Stall.jpg in Resources */,
+				42EA4ED019CAE4770051057C /* FACEBOOK.JPG in Resources */,
 				421940A019878A7B007E3C52 /* background.jpg in Resources */,
 				427D34AA199E076400814463 /* more@2x.png in Resources */,
+				421940701986354B007E3C52 /* SHANGHAI_MIN.jpg in Resources */,
 				427D34AD199E076400814463 /* pinterest.png in Resources */,
 				42630053199069F8007B8C8F /* settings.png in Resources */,
 				427D34B0199E076400814463 /* twitter@2x.png in Resources */,
 				427D34A5199E076400814463 /* google_drive.png in Resources */,
+				4219408019863639007E3C52 /* beckham.jpg in Resources */,
+				421940681986354B007E3C52 /* PARKVIEW.jpg in Resources */,
 				4266572019A6F2DC001D94B5 /* comment_icon.png in Resources */,
 				42A4913D19D506A700E4D65E /* ExitDown.png in Resources */,
+				421940441986354B007E3C52 /* Café_de_Itamomo.jpg in Resources */,
 				42AF20D619E7E6B800FC3BEC /* splash@2x.png in Resources */,
+				421940611986354B007E3C52 /* Mei_Sik_Hin_Fastfood_Shop.jpg in Resources */,
+				421940591986354B007E3C52 /* JAPANESE_RESTAURANT_IMASUKE.jpg in Resources */,
+				42E4D05419CC0037006D3429 /* logout-1.png in Resources */,
+				4219406D1986354B007E3C52 /* PIZZAEXPRESS.jpg in Resources */,
 				42A4914619D506A700E4D65E /* Twitter.png in Resources */,
+				421940511986354B007E3C52 /* GINZA_BAIRIN.jpg in Resources */,
+				421940671986354B007E3C52 /* Orchid_Garden_Restaurant.JPG in Resources */,
+				4219405A1986354B007E3C52 /* Jully_jake_restaurant.jpg in Resources */,
+				4219406E1986354B007E3C52 /* Ruby_Tuesday.jpg in Resources */,
 				424FAC931988E3870062D13D /* gabe_04.jpg in Resources */,
 				42A4914919D5082800E4D65E /* facebook@2x.png in Resources */,
 				42A4914019D506A700E4D65E /* LoginFieldBG.png in Resources */,
+				421940641986354B007E3C52 /* MR._STEAK.jpg in Resources */,
 				42A0096019F4A1EB003DCD0D /* tattoo_cover@2x.png in Resources */,
 				426300A71990DAE4007B8C8F /* background3.jpg in Resources */,
+				421940781986354B007E3C52 /* Tsui_Wah_Restaurant.jpg in Resources */,
 				427D34A6199E076400814463 /* google_drive@2x.png in Resources */,
 				42065FC919EE31D20012628C /* tattoologo.png in Resources */,
+				428188B21994BA48004D09EF /* gallery_01_1.jpg in Resources */,
 				427D349D199E076400814463 /* close.png in Resources */,
+				4219404F1986354B007E3C52 /* Fairwood.JPG in Resources */,
 				42630044198F5F3C007B8C8F /* heart_empty.png in Resources */,
+				421940421986354B007E3C52 /* Café_de_Coral(NTP).jpg in Resources */,
+				4219406A1986354B007E3C52 /* Pepper_Lunch.jpg in Resources */,
+				42EA4ECE19CAE1B20051057C /* Facebook-icon.png in Resources */,
+				421940711986354B007E3C52 /* Sichuan_Garden_Restaurant.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,6 +1442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				427D342B199DA73400814463 /* AFImageRequestOperation.m in Sources */,
+				426ED3E519C049760024E817 /* Recipe.m in Sources */,
 				427D3431199DA73400814463 /* UIImageView+AFNetworking.m in Sources */,
 				427D342A199DA73400814463 /* AFHTTPRequestOperation.m in Sources */,
 				42193FDF19860A9B007E3C52 /* HomeModel.m in Sources */,
@@ -1052,11 +1450,13 @@
 				427D342E199DA73400814463 /* AFPropertyListRequestOperation.m in Sources */,
 				424FAD59198B333F0062D13D /* FavDataManager.m in Sources */,
 				42193FA71985FE08007E3C52 /* ViewController.m in Sources */,
+				426ED3E219C049760024E817 /* RecipeBookViewController.m in Sources */,
 				4219408A198654A7007E3C52 /* Tattoo_Master_Info.m in Sources */,
 				427D34B9199E079E00814463 /* ShareViewController.m in Sources */,
 				42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */,
 				4263006819908766007B8C8F /* Fav_mappoint_ViewController.m in Sources */,
 				42A4918019E2370C00E4D65E /* noticeViewController.m in Sources */,
+				426ED3E419C049760024E817 /* NewRecipeViewController.m in Sources */,
 				426ED3F819C2C3D00024E817 /* VPImageCropperViewController.m in Sources */,
 				426ED39319B9AF560024E817 /* TattooMasterCell.m in Sources */,
 				42193FCE1985FECF007E3C52 /* MainViewController.m in Sources */,
@@ -1065,8 +1465,10 @@
 				42A4917D19E2370300E4D65E /* historyViewController.m in Sources */,
 				42193FD619860291007E3C52 /* TattooMaster_ViewController.m in Sources */,
 				427D342D199DA73400814463 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				426ED3E319C049760024E817 /* RecipeDetailViewController.m in Sources */,
 				427D3430199DA73400814463 /* AFXMLRequestOperation.m in Sources */,
 				427D342F199DA73400814463 /* AFURLConnectionOperation.m in Sources */,
+				426ED3E919C04A030024E817 /* MBProgressHUD.m in Sources */,
 				42630059199071F3007B8C8F /* Map_ViewController.m in Sources */,
 				427D342C199DA73400814463 /* AFJSONRequestOperation.m in Sources */,
 				428189021999BE10004D09EF /* FavGalleryCell.m in Sources */,
