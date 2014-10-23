@@ -16,11 +16,15 @@
 @end
 @interface MainViewController : UIViewController <HomeModelProtocol>
 {
+     PFObject *selectobject;
     NSArray *news_array;
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
+      PFQuery * searchquery;
  
 }
+- (IBAction)showsearch:(id)sender;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UILabel *test;
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;

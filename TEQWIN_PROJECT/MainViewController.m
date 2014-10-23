@@ -22,7 +22,8 @@
     Tattoo_Master_Info *_selected_tattoo_master;
     NSArray *searchResults;
 }
-
+@property (nonatomic, strong) UISearchDisplayController *searchController;
+@property (nonatomic, strong) NSMutableArray *searchResults;
 
 
 @end
@@ -33,15 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-   
-
+  
     // scroll search bar out of sight
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [self.image_collection setCollectionViewLayout:flowLayout];
     
-    flowLayout.itemSize = CGSizeMake(320, 228);
+    flowLayout.itemSize = CGSizeMake(320, 163);
     
     [flowLayout setMinimumLineSpacing:0.0f];
 
@@ -69,10 +68,25 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
    }
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    
+    
+}
+
+- (IBAction)showsearch:(id)sender {
+    [_searchbar becomeFirstResponder];
+      }
+
+
+
 - (void)viewWillAppear:(BOOL)animated {
     [self queryParseMethod];
     [self queryParseMethod_news];
+    searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    //[query whereKey:@"Name" containsString:searchTerm];
     
+    searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
+
 }
 -(void)itemsDownloaded:(NSArray *)items
 {
@@ -143,8 +157,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-
-       return @"最新消息";
+    return nil;
+      // return @"最新消息";
 }
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
@@ -163,8 +177,51 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
+    if (tableView == self.main_tableview) {
+        
     return [news_array count];
+        
+    } else {
+        //NSLog(@"how many in search results");
+        //NSLog(@"%@", self.searchResults.count);
+        return self.searchResults.count;
+        
+    }
 }
+-(void)filterResults:(NSString *)searchTerm scope:(NSString*)scope
+{
+
+    [self.searchResults removeAllObjects];
+    
+    
+    
+    NSArray *results  = [searchquery findObjects];
+    NSLog(@"%d",results.count);
+    searchquery.cachePolicy=kPFCachePolicyCacheElseNetwork;
+    [self.searchResults addObjectsFromArray:results];
+    
+    NSPredicate *searchPredicate =
+    [NSPredicate predicateWithFormat:@"Name CONTAINS[cd]%@", searchTerm];
+    _searchResults = [NSMutableArray arrayWithArray:[results filteredArrayUsingPredicate:searchPredicate]];
+    
+    // if(![scope isEqualToString:@"全部"]) {
+    // Further filter the array with the scope
+    //   NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
+    
+    //  _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
+}//}
+
+//當search 更新時， tableview 就會更新，無論scope select 咩
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchTerm
+{
+    [self filterResults :searchTerm
+                   scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                          objectAtIndex:[self.searchDisplayController.searchBar
+                                         selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -177,7 +234,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    
+    if (tableView == self.main_tableview) {
     // Configure the cell
     // Configure the cell
     PFObject *imageObject = [news_array objectAtIndex:indexPath.row];
@@ -207,7 +264,27 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     UITextView *news = (UITextView*) [cell viewWithTag:155];
       
     news.text = [imageObject objectForKey:@"news"];
+    }
     
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        PFObject* object = self.searchResults[indexPath.row];
+        
+        
+        if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
+            
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
+        }
+        else
+        {
+            
+            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
+        }
+        
+        cell.textLabel.text = [object objectForKey:@"Name"];
+        cell.detailTextLabel.text =[object objectForKey:@"Gender"];
+        
+    }
+
       return cell;
 }
 
@@ -255,6 +332,45 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.main_tableview) {
+        
+        selectobject = [news_array  objectAtIndex:indexPath.row];
+        NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+    } else {
+        //NSLog(@"how many in search results");
+        //NSLog(@"%@", self.searchResults.count);
+        
+        selectobject = [_searchResults  objectAtIndex:indexPath.row];
+        NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+        Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+        [self.navigationController pushViewController:mapVC animated:YES];
+        TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
+        tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
+        tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
+        tattoomasterCell.name = [selectobject objectForKey:@"Name"];
+        tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+        tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
+        tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
+        tattoomasterCell.email = [selectobject objectForKey:@"Email"];
+        tattoomasterCell.address = [selectobject objectForKey:@"Address"];
+        tattoomasterCell.latitude = [selectobject objectForKey:@"Latitude"];
+        tattoomasterCell.longitude = [selectobject objectForKey:@"Longitude"];
+        tattoomasterCell.website = [selectobject objectForKey:@"Website"];
+        tattoomasterCell.personage = [selectobject objectForKey:@"Personage"];
+        tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
+        tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+        tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
+        tattoomasterCell.object_id = selectobject.objectId;
+        
+        mapVC.tattoomasterCell = tattoomasterCell;
+        NSLog(@"%@",tattoomasterCell.master_id);
+    }
+    
+    
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     PFObject* selectobject = [imageFilesArray  objectAtIndex:indexPath.row];
@@ -322,6 +438,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         NSLog(@"Haaaaa%@",tattoomasterCell.imageFile);
         }
     }
+
 
 
 @end

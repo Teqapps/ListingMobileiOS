@@ -207,6 +207,7 @@
     
     
 }
+
 - (void)queryParseMethod_image{
     NSLog(@"start query_image");
    

@@ -22,6 +22,7 @@
     PFImageView *heart_statues;
     NSIndexPath *indexPath;
     NSArray*imageFilesArray_image;
+    PFQuery * searchquery;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;

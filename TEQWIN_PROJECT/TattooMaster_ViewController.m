@@ -55,7 +55,7 @@
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
-      [self refreshTable:nil];
+    
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
@@ -94,6 +94,10 @@
         newBounds.origin.y = newBounds.origin.y;
         self.tableView.bounds = newBounds;
     }
+    searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    //[query whereKey:@"Name" containsString:searchTerm];
+    
+    searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
 
     
    }
@@ -127,27 +131,28 @@
 
 -(void)filterResults:(NSString *)searchTerm scope:(NSString*)scope
 {
-    
     [self.searchResults removeAllObjects];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    //[query whereKey:@"Name" containsString:searchTerm];
-    query.cachePolicy=kPFCachePolicyCacheElseNetwork;
-    NSArray *results  = [query findObjects];
-    NSLog(@"%d",results.count);
     
+    
+    NSArray *results  = [searchquery findObjects];
+    NSLog(@"%d",results.count);
+    searchquery.cachePolicy=kPFCachePolicyCacheElseNetwork;
     [self.searchResults addObjectsFromArray:results];
     
     NSPredicate *searchPredicate =
     [NSPredicate predicateWithFormat:@"Name CONTAINS[cd]%@", searchTerm];
     _searchResults = [NSMutableArray arrayWithArray:[results filteredArrayUsingPredicate:searchPredicate]];
     
+    
+    
    // if(![scope isEqualToString:@"全部"]) {
         // Further filter the array with the scope
      //   NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
        
       //  _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
-    }//}
+    
+}//}
 
 //當search 更新時， tableview 就會更新，無論scope select 咩
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchTerm
@@ -274,12 +279,7 @@
     // Configure the cell
     
     if (tableView == self.tableView) {
-     
-        
-        
-        
-        
-        
+    
         UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
         loadingSpinner.hidden= NO;
         [loadingSpinner startAnimating];
@@ -352,14 +352,14 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
     // Remove the row from data model
-    PFObject *object = [self.objects objectAtIndex:indexPath.row];
-    [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        [self refreshTable:nil];
-    }];
-}
+//    PFObject *object = [self.objects objectAtIndex:indexPath.row];
+ //   [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+ //       [self refreshTable:nil];
+ //   }];
+//}
 
 
 
