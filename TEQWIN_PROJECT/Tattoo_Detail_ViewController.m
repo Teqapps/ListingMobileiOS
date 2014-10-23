@@ -75,13 +75,16 @@
             self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
         }
     self.master_name.text=self.tattoomasterCell.name;
-    
+    NSLog(@"dddd%@",self.tattoomasterCell.name);
     self.profileimage.file=self.tattoomasterCell.imageFile;
+  
    self.profileimage.layer.cornerRadius =self.profileimage.frame.size.width / 2;
     self.profileimage.layer.borderWidth = 3.0f;
     self.profileimage.layer.borderColor = [UIColor whiteColor].CGColor;
     self.profileimage.clipsToBounds = YES;
     _tableView.bounces=YES;
+  
+    //self.test_images.image=self.tattoomasterCell.img;
 	//
 	// note: the following can be done in Interface Builder, but we show this in code for clarity
 	
@@ -242,7 +245,7 @@
     static NSString *cellIdentifier = @"imageCell";
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    PFObject *imageObject = [imageFilesArray_image objectAtIndex:indexPath.row];
+   imageObject = [imageFilesArray_image objectAtIndex:indexPath.row];
     PFFile *imageFile = [imageObject objectForKey:@"image"];
     
     cell.loadingSpinner.hidden = NO;
@@ -271,65 +274,7 @@
      NSLog(@"反反反反%d",indexPath.row);
 }
 //按圖第一下放大至fullscreen
--(void)actionTap:(UITapGestureRecognizer *)sender{
-    NSLog(@"按一下返回");
-    
-    CGPoint location = [sender locationInView:self.tableView];
-    NSIndexPath *indexPath  = [self.tableView indexPathForRowAtPoint:location];
-    
-    UITableViewCell *cell = (UITableViewCell *)[self.tableView  cellForRowAtIndexPath:indexPath];
-    
-    
-    UIImageView *imageView=(UIImageView *)[cell.contentView viewWithTag:9999];
-    
-    
-    frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x, cell.frame.origin.y+imageView.frame.origin.y-self.tableView.contentOffset.y, imageView.frame.size.width, imageView.frame.size.height);
-    
-    fullImageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height)];
-    fullImageView.backgroundColor=[UIColor blackColor];
-    fullImageView.userInteractionEnabled=YES;
-    [fullImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap2:)]];
-    fullImageView.contentMode=UIViewContentModeScaleAspectFit;
-    
-    if (![fullImageView superview]) {
-        
-        fullImageView.image=imageView.image;
-        
-        [self.view.window addSubview:fullImageView];
-        
-        
-        
-        fullImageView.frame=frame_first;
-        [UIView animateWithDuration:0.5 animations:^{
-            
-            fullImageView.frame=CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height);
-            
-            
-        } completion:^(BOOL finished) {
-            
-            [UIApplication sharedApplication].statusBarHidden=YES;
-            
-        }];
-        
-    }
-    
-}
 ////按圖第二下縮回原型
--(void)actionTap2:(UITapGestureRecognizer *)sender{
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        fullImageView.frame=frame_first;
-        
-    } completion:^(BOOL finished) {
-        
-        [fullImageView removeFromSuperview];
-        
-    }];
-    
-    [UIApplication sharedApplication].statusBarHidden=NO;
-    
-}
 
 
 

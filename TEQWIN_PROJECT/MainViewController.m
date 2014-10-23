@@ -306,19 +306,33 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
-    PFFile *imageFile = [imageObject objectForKey:@"promotion"];
-   PFFile *avstar = [imageObject objectForKey:@"image"];
+      PFFile *avstar = [imageObject objectForKey:@"image"];
     
     
     UILabel *name = (UILabel*) [cell viewWithTag:166];
     name.text = [imageObject objectForKey:@"Name"];
     
+   
+    PFFile *imageFile = [imageObject objectForKey:@"promotion"];
+
+   // CGSize itemSize = CGSizeMake(70, 70);
+   // UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+    //CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    //cell.thumbnail.layer.backgroundColor=[[UIColor clearColor] CGColor];
+   // cell.thumbnail.layer.cornerRadius= cell.thumbnail.frame.size.width/2;
+    //cell.thumbnail.layer.borderWidth=2.0;
+   // cell.thumbnail.layer.masksToBounds = YES;
+   // cell.thumbnail.layer.borderColor=[[UIColor whiteColor] CGColor];
+   // [ cell.thumbnail.image drawInRect:imageRect];
+   // cell.thumbnail.image = UIGraphicsGetImageFromCurrentImageContext();
+   // UIGraphicsEndImageContext();
+    
+    cell.thumbnail.image = [UIImage imageNamed:@"placeholder.jpg"];
+    
+    cell.thumbnail.file = avstar;
+    [ cell.thumbnail loadInBackground];
 
   
-    [avstar getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        if (!error) {
-            cell.thumbnail.image = [UIImage imageWithData:data];
-        }}];
 
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
@@ -371,34 +385,34 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    PFObject* selectobject = [imageFilesArray  objectAtIndex:indexPath.row];
-    NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
-    Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
-    [self.navigationController pushViewController:mapVC animated:YES];
-    TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
-    tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
-    tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
-    tattoomasterCell.bookmark = [selectobject objectForKey:@"bookmark"];
-    tattoomasterCell.name = [selectobject objectForKey:@"Name"];
-    tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
-    tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
-    tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
-    tattoomasterCell.email = [selectobject objectForKey:@"Email"];
-    tattoomasterCell.address = [selectobject objectForKey:@"Address"];
-    tattoomasterCell.latitude = [selectobject objectForKey:@"Latitude"];
-    tattoomasterCell.longitude = [selectobject objectForKey:@"Longitude"];
-    tattoomasterCell.website = [selectobject objectForKey:@"Website"];
-    tattoomasterCell.personage = [selectobject objectForKey:@"Personage"];
-    tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
-    tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
-    tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
-    tattoomasterCell.object_id = selectobject.objectId;
+ //   PFObject* selectobject = [imageFilesArray  objectAtIndex:indexPath.row];
+ //   NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+ //   Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+ //   [self.navigationController pushViewController:mapVC animated:YES];
+ //   TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
+//    tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
+ //   tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
+  //  tattoomasterCell.bookmark = [selectobject objectForKey:@"bookmark"];
+ //   tattoomasterCell.name = [selectobject objectForKey:@"Name"];
+ //   tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+ //   tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
+ //   tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
+ //   tattoomasterCell.email = [selectobject objectForKey:@"Email"];
+  //  tattoomasterCell.address = [selectobject objectForKey:@"Address"];
+  //  tattoomasterCell.latitude = [selectobject objectForKey:@"Latitude"];
+  //  tattoomasterCell.longitude = [selectobject objectForKey:@"Longitude"];
+  //  tattoomasterCell.website = [selectobject objectForKey:@"Website"];
+  //  tattoomasterCell.personage = [selectobject objectForKey:@"Personage"];
+  //  tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
+  //  tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
+  //  tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
+  //  tattoomasterCell.object_id = selectobject.objectId;
     
-    mapVC.tattoomasterCell = tattoomasterCell;
-    NSLog(@"%@",tattoomasterCell.master_id);
-}
+  //  mapVC.tattoomasterCell = tattoomasterCell;
+   // NSLog(@"%@",tattoomasterCell.master_id);
+//}
 
 
 
@@ -418,6 +432,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
         tattoomasterCell.name = [object objectForKey:@"Name"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
+  
+   
         tattoomasterCell.gender = [object objectForKey:@"Gender"];
         tattoomasterCell.tel = [object objectForKey:@"Tel"];
         tattoomasterCell.email = [object objectForKey:@"Email"];

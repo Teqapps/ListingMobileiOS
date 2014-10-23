@@ -230,7 +230,7 @@ CFShareCircleView *shareCircleView;
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     
    shareimageFile = [imageObject objectForKey:@"image"];
-
+    
   
    
     lastClickedRow = indexPath.row;

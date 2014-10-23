@@ -476,7 +476,9 @@
         tattoomasterCell.favorites = [object objectForKey:@"favorites"];
         tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
         tattoomasterCell.name = [object objectForKey:@"Name"];
+
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
+      
         tattoomasterCell.gender = [object objectForKey:@"Gender"];
         tattoomasterCell.tel = [object objectForKey:@"Tel"];
         tattoomasterCell.email = [object objectForKey:@"Email"];

@@ -54,7 +54,7 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" tag="167" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gAe-YN-HeB">
+                                                        <imageView userInteractionEnabled="NO" tag="167" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gAe-YN-HeB" customClass="PFImageView">
                                                             <rect key="frame" x="7" y="2" width="55" height="54"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
@@ -70,6 +70,7 @@
                                             <outlet property="name" destination="C26-wH-e3N" id="SDL-ii-39h"/>
                                             <outlet property="parseImage" destination="BQQ-Tc-ck7" id="y0y-hc-ir1"/>
                                             <outlet property="thumbnail" destination="gAe-YN-HeB" id="bsE-Ob-Xto"/>
+                                            <segue destination="zCD-pb-qjH" kind="push" identifier="godetail" id="QTr-PV-D3h"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -107,7 +108,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="155" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" id="Bg5-Uo-Ogy">
                                                     <rect key="frame" x="83" y="12" width="204" height="85"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" red="0.91764712329999998" green="0.69411766529999996" blue="0.2588235438" alpha="1" colorSpace="deviceRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -401,7 +402,7 @@
                                 <color key="backgroundColor" red="0.058823533359999999" green="0.023529414089999999" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.91764712333679199" green="0.69411766529083252" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="E4BFBCA6-8FFE-442C-B951-BB9C6F0ECF50" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="7A7A484D-06B7-4020-B089-FE4B08E47954" colorSpace="pattern"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="65" id="qAn-GL-ojM">
                                         <rect key="frame" x="0.0" y="55" width="320" height="65"/>
@@ -529,6 +530,10 @@
                                 <rect key="frame" x="72" y="139" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="50T-6J-ED4">
+                                <rect key="frame" x="209" y="20" width="82" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
@@ -549,6 +554,7 @@
                         <outlet property="profileimage" destination="xO9-7B-uIw" id="nNY-e0-C5Z"/>
                         <outlet property="searchDisplayController" destination="Fi5-5w-pUQ" id="Pie-Vz-A1a"/>
                         <outlet property="tableView" destination="RFZ-3m-zSA" id="F97-HM-8ak"/>
+                        <outlet property="test_images" destination="50T-6J-ED4" id="xNo-Vp-cWn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wP7-EA-Ela" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -561,7 +567,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="843" y="-64"/>
+            <point key="canvasLocation" x="754" y="157"/>
         </scene>
         <!--Master Map View Controller-->
         <scene sceneID="KqT-rk-QDT">
@@ -1136,7 +1142,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E4BFBCA6-8FFE-442C-B951-BB9C6F0ECF50" width="320" height="460">
+        <image name="7A7A484D-06B7-4020-B089-FE4B08E47954" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11040,6 +11046,6 @@ AAAAAAAAAAAJCvs
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="Oz0-Qe-dUn"/>
+        <segue reference="QTr-PV-D3h"/>
     </inferredMetricsTieBreakers>
 </document>
