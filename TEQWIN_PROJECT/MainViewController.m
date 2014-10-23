@@ -331,7 +331,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     cell.thumbnail.file = avstar;
     [ cell.thumbnail loadInBackground];
-
+    [cell.loadingSpinner stopAnimating];
+    cell.loadingSpinner.hidden = YES;
   
 
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
