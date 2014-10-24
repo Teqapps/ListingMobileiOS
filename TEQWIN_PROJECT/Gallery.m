@@ -222,6 +222,11 @@ CFShareCircleView *shareCircleView;
 
 
 - (IBAction)btn_share:(id)sender {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud show:YES];
+
     UIButton *button = sender;
     CGPoint correctedPoint =
     [button convertPoint:button.bounds.origin toView:self.tableView];
@@ -234,8 +239,14 @@ CFShareCircleView *shareCircleView;
   
    
     lastClickedRow = indexPath.row;
-    [shareCircleView show];
+    NSLog(@"%@",shareimageFile.url);
     
+      imageToShare = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",shareimageFile.url]]]];
+ 
+    [shareCircleView show];
+    [hud hide:YES];
+    
+
 }
 
 - (IBAction)like:(id)sender {
@@ -276,11 +287,7 @@ CFShareCircleView *shareCircleView;
             // Put together the dialog parameters
            // NSString *picURLstring =
             //[NSString stringWithFormat:@"http://files.parsetfss.com/c6afcb1f-6a07-4487-8d0d-8406c9b9f69c/tfss-0366ca1a-894e-45c2-b43b-f45b82d10f6a-gallery_02_5.jpg"] ;
-            
-            
-            
-            
-            
+
             NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                            self.tattoomasterCell.name, @"name",
                                            @"TEQWIN SOLUTION", @"caption",
@@ -370,44 +377,74 @@ CFShareCircleView *shareCircleView;
         }
         
     }
-     if ([sharer.name isEqual:@"Twitter"]) {
+     if ([sharer.name isEqual:@"more"]) {
+        
+         
+         NSString *textToShare = self.tattoomasterCell.name;
+         
+
+ 
+         NSURL *urlToShare = [NSURL URLWithString:@"http://www.iosbook3.com"];
+         
+         NSArray *activityItems = @[textToShare, imageToShare, urlToShare];
+       
+
+         UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+     ;
+
+         
+         [self presentViewController:activityVC animated:TRUE completion:nil];
      }
-    if ([sharer.name isEqual:@"Twitter"]) {
+    if ([sharer.name isEqual:@"Google Drive"]) {
+        NSLog(@"clicked googledrive");
     }
-    if ([sharer.name isEqual:@"Twitter"]) {
+    if ([sharer.name isEqual:@"Dropbox"]) {
+         NSLog(@"clicked dropbox");
     }
-    if ([sharer.name isEqual:@"Twitter"]) {
+    if ([sharer.name isEqual:@"line"]) {
+        NSLog(@"clicked line");
+        NSURL *appURL = [NSURL URLWithString:@"line://msg/text/IamHappyMan:)"];
+        if ([[UIApplication sharedApplication] canOpenURL: appURL]) {
+            [[UIApplication sharedApplication] openURL: appURL];
+        }
+        else { //如果使用者沒有安裝，連結到App Store
+            NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id443904275"];
+            [[UIApplication sharedApplication] openURL:itunesURL];
+                NSLog(@"no line");
+        }
     }
     if ([sharer.name isEqual:@"Whatsapp"]) {
-        
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        
-        NSString *getImagePath = [documentsDirectory stringByAppendingPathComponent:@"savedImage.png"]; //here i am fetched image path from document directory and convert it in to URL and use bellow
-        
-        
-        NSURL *imageFileURL =[NSURL fileURLWithPath:getImagePath];
-        NSLog(@"imag %@",imageFileURL);
-        
-        self.documentationInteractionController.delegate = self;
-        self.documentationInteractionController.UTI = @"net.whatsapp.image";
-        self.documentationInteractionController = [self setupControllerWithURL:imageFileURL usingDelegate:self];
-        [self.documentationInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
+        NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello%2C%20World!"];
+        if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+            [[UIApplication sharedApplication] openURL: whatsappURL];
+        }
+        else { //如果使用者沒有安裝，連結到App Store
+            NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id310633997"];
+            [[UIApplication sharedApplication] openURL:itunesURL];
+            NSLog(@"no whatsapp");
+        }}
         
         
         
-    }
-    
-    
-    
+        // NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
+        //NSString *documentsDirectory = [paths objectAtIndex:0];
+        
+       // NSString *getImagePath = [documentsDirectory stringByAppendingPathComponent:@"savedImage.png"]; //here i am fetched image path from document directory and convert it in to URL and use bellow
+        
+        
+       // NSURL *imageFileURL =[NSURL fileURLWithPath:shareimageFile.url];
+        //NSLog(@"imag %@",imageFileURL);
+        
+       // self.documentationInteractionController.delegate = self;
+        //self.documentationInteractionController.UTI = @"net.whatsapp.image";
+        //self.documentationInteractionController = [self setupControllerWithURL:imageFileURL usingDelegate:self];
+        //[self.documentationInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
+    //}
 }
 
 - (UIDocumentInteractionController *) setupControllerWithURL: (NSURL*) fileURL
-
                                                usingDelegate: (id ) interactionDelegate {
-    
-    
-    
+
     self.documentationInteractionController =
     
     [UIDocumentInteractionController interactionControllerWithURL: fileURL];

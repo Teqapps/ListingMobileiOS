@@ -13,6 +13,8 @@
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
     PFFile * shareimageFile;
+    UIImage *imageToShare;
+    PFObject *imageObject;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

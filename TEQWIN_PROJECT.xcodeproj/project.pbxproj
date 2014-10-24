@@ -12,6 +12,8 @@
 		42065FC919EE31D20012628C /* tattoologo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42065FC819EE31D20012628C /* tattoologo.png */; };
 		420E2F6119F9EC3F00667E6C /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F5F19F9EC3F00667E6C /* whatsapp.png */; };
 		420E2F6219F9EC3F00667E6C /* whatsapp@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F6019F9EC3F00667E6C /* whatsapp@2X.png */; };
+		420E2F6519FA3C1A00667E6C /* lineicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F6319FA3C1A00667E6C /* lineicon.png */; };
+		420E2F6619FA3C1A00667E6C /* lineicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F6419FA3C1A00667E6C /* lineicon@2x.png */; };
 		42193F911985FE08007E3C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F901985FE08007E3C52 /* Foundation.framework */; };
 		42193F931985FE08007E3C52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F921985FE08007E3C52 /* CoreGraphics.framework */; };
 		42193F951985FE08007E3C52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F941985FE08007E3C52 /* UIKit.framework */; };
@@ -198,6 +200,8 @@
 		42065FC819EE31D20012628C /* tattoologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tattoologo.png; path = ../tattoologo.png; sourceTree = "<group>"; };
 		420E2F5F19F9EC3F00667E6C /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
 		420E2F6019F9EC3F00667E6C /* whatsapp@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whatsapp@2X.png"; sourceTree = "<group>"; };
+		420E2F6319FA3C1A00667E6C /* lineicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineicon.png; sourceTree = "<group>"; };
+		420E2F6419FA3C1A00667E6C /* lineicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lineicon@2x.png"; sourceTree = "<group>"; };
 		42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEQWIN_PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42193F901985FE08007E3C52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42193F921985FE08007E3C52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -808,6 +812,8 @@
 		427D3488199E074A00814463 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				420E2F6319FA3C1A00667E6C /* lineicon.png */,
+				420E2F6419FA3C1A00667E6C /* lineicon@2x.png */,
 				427D3489199E076400814463 /* close.png */,
 				427D348A199E076400814463 /* close@2x.png */,
 				427D348B199E076400814463 /* dropbox.png */,
@@ -976,6 +982,7 @@
 				424FAC901988E3870062D13D /* gabe_01.jpg in Resources */,
 				4219409E198789DB007E3C52 /* ICON.png in Resources */,
 				42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */,
+				420E2F6519FA3C1A00667E6C /* lineicon.png in Resources */,
 				42A4917219D5633500E4D65E /* button_heart_red.png in Resources */,
 				427D349E199E076400814463 /* close@2x.png in Resources */,
 				427D34A0199E076400814463 /* dropbox@2x.png in Resources */,
@@ -1017,6 +1024,7 @@
 				427D34AF199E076400814463 /* twitter.png in Resources */,
 				42D3D5DA19F7481800B01A97 /* FACEBOOK.JPG in Resources */,
 				4266571B19A6F1AE001D94B5 /* comment.png in Resources */,
+				420E2F6619FA3C1A00667E6C /* lineicon@2x.png in Resources */,
 				42A4914719D506A700E4D65E /* TwitterDown.png in Resources */,
 				42A4917019D54C4300E4D65E /* heart_yes.png in Resources */,
 				42A4918219E2374F00E4D65E /* tattoo_1.jpg in Resources */,

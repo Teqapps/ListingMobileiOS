@@ -22,9 +22,7 @@
     return self;    
 }
 
-+ (CFSharer *)mail {
-    return [[CFSharer alloc] initWithName:@"Mail" imageName:@"mail.png"];
-}
+
 
 + (CFSharer *)photoLibrary {
     return [[CFSharer alloc] initWithName:@"Photos" imageName:@"photo_library.png"];
@@ -41,6 +39,9 @@
 + (CFSharer *)facebook {
     return [[CFSharer alloc] initWithName:@"Facebook" imageName:@"facebook.png"];
 }
++ (CFSharer *)line {
+    return [[CFSharer alloc] initWithName:@"line" imageName:@"lineicon.png"];
+}
 
 + (CFSharer *)googleDrive {
     return [[CFSharer alloc] initWithName:@"Google Drive" imageName:@"google_drive.png"];
@@ -49,9 +50,11 @@
 + (CFSharer *)pinterest {
     return [[CFSharer alloc] initWithName:@"photo_library" imageName:@"photo_library.png"];
 }
-
++ (CFSharer *)more {
+    return [[CFSharer alloc] initWithName:@"more" imageName:@"more.png"];
+}
 + (CFSharer *)twitter {
-    return [[CFSharer alloc] initWithName:@"Mail" imageName:@"mail.png"];
+    return [[CFSharer alloc] initWithName:@"twitter" imageName:@"twitter.png"];
 }
 
 @end

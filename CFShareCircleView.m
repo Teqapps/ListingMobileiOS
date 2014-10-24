@@ -38,14 +38,15 @@
 #define PATH_SIZE 200
 #define IMAGE_SIZE 45
 #define TOUCH_SIZE 70
-#define MAX_VISIBLE_SHARERS 6
+#define MAX_VISIBLE_SHARERS 8
 
 @synthesize delegate = _delegate;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _sharers = [[NSMutableArray alloc] initWithObjects:  [CFSharer googleDrive], [CFSharer mail], [CFSharer facebook], [CFSharer whatsapp], [CFSharer dropbox], [CFSharer mail], [CFSharer photoLibrary], nil];
+        _sharers = [[NSMutableArray alloc] initWithObjects:  [CFSharer googleDrive],[CFSharer line], [CFSharer facebook], [CFSharer whatsapp], [CFSharer dropbox],[CFSharer twitter] ,[CFSharer more],nil];
+
         [self setUpCircleLayers];
     }
     return self;
@@ -125,7 +126,7 @@
     // Create the layers for all the sharing service images.
     for(int i = 0; i < _numberSharersInCircle; i++) {
         CFSharer *sharer;
-        if(i == 5 && _sharers.count > 6)
+        if(i == 7 && _sharers.count > 8)
             sharer = [[CFSharer alloc] initWithName:@"More" imageName:@"more.png"];
         else
             sharer = [_sharers objectAtIndex:i];
