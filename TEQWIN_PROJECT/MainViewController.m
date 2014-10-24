@@ -99,7 +99,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 }
 - (void)queryParseMethod_news {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.mode = MBProgressHUDModeIndeterminate   ;
     hud.labelText = @"Loading";
     [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];

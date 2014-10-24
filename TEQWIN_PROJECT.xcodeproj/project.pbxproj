@@ -10,6 +10,8 @@
 		42065FC519EE29A80012628C /* goldebackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42065FC419EE29A80012628C /* goldebackground.jpg */; };
 		42065FC719EE2CEE0012628C /* title.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42065FC619EE2CEE0012628C /* title.jpg */; };
 		42065FC919EE31D20012628C /* tattoologo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42065FC819EE31D20012628C /* tattoologo.png */; };
+		420E2F6119F9EC3F00667E6C /* whatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F5F19F9EC3F00667E6C /* whatsapp.png */; };
+		420E2F6219F9EC3F00667E6C /* whatsapp@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F6019F9EC3F00667E6C /* whatsapp@2X.png */; };
 		42193F911985FE08007E3C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F901985FE08007E3C52 /* Foundation.framework */; };
 		42193F931985FE08007E3C52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F921985FE08007E3C52 /* CoreGraphics.framework */; };
 		42193F951985FE08007E3C52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F941985FE08007E3C52 /* UIKit.framework */; };
@@ -194,6 +196,8 @@
 		42065FC419EE29A80012628C /* goldebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = goldebackground.jpg; path = ../goldebackground.jpg; sourceTree = "<group>"; };
 		42065FC619EE2CEE0012628C /* title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = title.jpg; path = ../title.jpg; sourceTree = "<group>"; };
 		42065FC819EE31D20012628C /* tattoologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tattoologo.png; path = ../tattoologo.png; sourceTree = "<group>"; };
+		420E2F5F19F9EC3F00667E6C /* whatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsapp.png; sourceTree = "<group>"; };
+		420E2F6019F9EC3F00667E6C /* whatsapp@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whatsapp@2X.png"; sourceTree = "<group>"; };
 		42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEQWIN_PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42193F901985FE08007E3C52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42193F921985FE08007E3C52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -807,6 +811,8 @@
 				427D3489199E076400814463 /* close.png */,
 				427D348A199E076400814463 /* close@2x.png */,
 				427D348B199E076400814463 /* dropbox.png */,
+				420E2F5F19F9EC3F00667E6C /* whatsapp.png */,
+				420E2F6019F9EC3F00667E6C /* whatsapp@2X.png */,
 				427D348C199E076400814463 /* dropbox@2x.png */,
 				427D348D199E076400814463 /* evernote.png */,
 				427D348E199E076400814463 /* evernote@2x.png */,
@@ -974,6 +980,7 @@
 				427D349E199E076400814463 /* close@2x.png in Resources */,
 				427D34A0199E076400814463 /* dropbox@2x.png in Resources */,
 				42A4913E19D506A700E4D65E /* Facebook.png in Resources */,
+				420E2F6119F9EC3F00667E6C /* whatsapp.png in Resources */,
 				427D349F199E076400814463 /* dropbox.png in Resources */,
 				427D34A2199E076400814463 /* evernote@2x.png in Resources */,
 				42065FC719EE2CEE0012628C /* title.jpg in Resources */,
@@ -1028,6 +1035,7 @@
 				42A4913F19D506A700E4D65E /* FacebookDown.png in Resources */,
 				4266571C19A6F1AE001D94B5 /* like.png in Resources */,
 				42A4917819D56DE600E4D65E /* loading_image.gif in Resources */,
+				420E2F6219F9EC3F00667E6C /* whatsapp@2X.png in Resources */,
 				42630049198F8DA2007B8C8F /* Favorites-icon.png in Resources */,
 				4219409C19878375007E3C52 /* news.jpg in Resources */,
 				42A4918419E2375200E4D65E /* tattoo_2.jpg in Resources */,

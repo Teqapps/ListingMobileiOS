@@ -370,6 +370,14 @@ CFShareCircleView *shareCircleView;
         }
         
     }
+     if ([sharer.name isEqual:@"Twitter"]) {
+     }
+    if ([sharer.name isEqual:@"Twitter"]) {
+    }
+    if ([sharer.name isEqual:@"Twitter"]) {
+    }
+    if ([sharer.name isEqual:@"Twitter"]) {
+    }
     if ([sharer.name isEqual:@"Whatsapp"]) {
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
@@ -389,6 +397,9 @@ CFShareCircleView *shareCircleView;
         
         
     }
+    
+    
+    
 }
 
 - (UIDocumentInteractionController *) setupControllerWithURL: (NSURL*) fileURL

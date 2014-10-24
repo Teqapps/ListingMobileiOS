@@ -35,7 +35,7 @@
 }
 
 + (CFSharer *)whatsapp {
-    return [[CFSharer alloc] initWithName:@"Whatsapp" imageName:@"evernote.png"];
+    return [[CFSharer alloc] initWithName:@"Whatsapp" imageName:@"whatsapp.png"];
 }
 
 + (CFSharer *)facebook {
@@ -47,11 +47,11 @@
 }
 
 + (CFSharer *)pinterest {
-    return [[CFSharer alloc] initWithName:@"Pinterest" imageName:@"pinterest.png"];
+    return [[CFSharer alloc] initWithName:@"photo_library" imageName:@"photo_library.png"];
 }
 
 + (CFSharer *)twitter {
-    return [[CFSharer alloc] initWithName:@"Twitter" imageName:@"twitter.png"];
+    return [[CFSharer alloc] initWithName:@"Mail" imageName:@"mail.png"];
 }
 
 @end
