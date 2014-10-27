@@ -371,13 +371,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="V3r-N3-tbS">
-                                <rect key="frame" x="0.0" y="227" width="320" height="341"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="V3r-N3-tbS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="Lug-ty-pDF">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="218"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text">TEQHOST Asia is a dedicated Solution Architect and Systems Integration business.
+ 
+We address business-critical problems in order to implement major change programs in large and complex systems across a variety of industries throughout the APAC, and are driven to be recognized for excellence in performance, value-creation and service, concentrating on delivering outcomes for our clients, rather than simply seeing a series of deliveries.</string>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bfr-bE-vE5">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="304" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bfr-bE-vE5" id="ZRk-sS-TL5">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -390,17 +401,6 @@
                                     <outlet property="delegate" destination="e2j-PC-NFL" id="h6y-tS-x2O"/>
                                 </connections>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Sdy-sr-ymn">
-                                <rect key="frame" x="0.0" y="65" width="320" height="226"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">TEQHOST Asia is a dedicated Solution Architect and Systems Integration business.
- 
-We address business-critical problems in order to implement major change programs in large and complex systems across a variety of industries throughout the APAC, and are driven to be recognized for excellence in performance, value-creation and service, concentrating on delivering outcomes for our clients, rather than simply seeing a series of deliveries.</mutableString>
-                                <color key="textColor" red="0.96014435279999999" green="0.68872326340000001" blue="0.22904393810000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -468,7 +468,7 @@ We address business-critical problems in order to implement major change program
                                 <color key="backgroundColor" red="0.058823533359999999" green="0.023529414089999999" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.91764712333679199" green="0.69411766529083252" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="A3927FB5-B811-47D4-92FB-C6D2F91A919D" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="F37DEF29-BB04-42BB-BF46-9E7816D1FCB1" colorSpace="pattern"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="65" id="qAn-GL-ojM">
                                         <rect key="frame" x="0.0" y="55" width="320" height="65"/>
@@ -874,7 +874,7 @@ We address business-critical problems in order to implement major change program
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" id="ogh-fk-XLe">
-                                <rect key="frame" x="0.0" y="62" width="320" height="506"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <attributedString key="attributedText">
@@ -976,11 +976,6 @@ We address business-critical problems in order to implement major change program
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tattoologo.png" id="1bj-AU-QlG">
-                                <rect key="frame" x="0.0" y="62" width="320" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99215692280000001" green="0.98039221759999995" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1008,22 +1003,17 @@ We address business-critical problems in order to implement major change program
                                 <rect key="frame" x="0.0" y="225" width="320" height="343"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.031372550874948502" green="0.0078431377187371254" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="textColor" red="0.84705889229999998" green="0.74901962280000001" blue="0.066666670139999995" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.99307139598540151" green="0.69199057614540416" blue="0.036280528212247032" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tattoo_1.jpg" id="qMm-Z7-j31">
-                                <rect key="frame" x="20" y="139" width="130" height="130"/>
+                                <rect key="frame" x="20" y="87" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tattoo_3.jpg" id="9IM-nM-X4Q">
-                                <rect key="frame" x="170" y="139" width="130" height="130"/>
+                                <rect key="frame" x="175" y="87" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tattoologo.png" id="ZBG-x9-jIU">
-                                <rect key="frame" x="0.0" y="64" width="320" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99215692280000001" green="0.98039221759999995" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1211,11 +1201,10 @@ We address business-critical problems in order to implement major change program
             </objects>
             <point key="canvasLocation" x="437" y="-748"/>
         </scene>
-        <!--Master Map View Controller-->
+        <!--Aboutus map detail-->
         <scene sceneID="f04-Sn-MEO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd2-qa-Gjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="AMy-ln-h6M" customClass="Master_Map_ViewController" sceneMemberID="viewController">
+                <viewController id="AMy-ln-h6M" customClass="aboutus_map_detail" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MU8-Nf-53W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1223,14 +1212,14 @@ We address business-critical problems in order to implement major change program
                     </view>
                     <navigationItem key="navigationItem" id="euS-lw-EMP"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd2-qa-Gjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804" y="1394"/>
         </scene>
-        <!--View Controller-->
+        <!--Aboutus map-->
         <scene sceneID="sYr-5c-5X0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pow-jv-hbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="giV-nR-yl8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutus_map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="giV-nR-yl8" customClass="aboutus_map" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oyI-Kq-obV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1257,15 +1246,16 @@ We address business-critical problems in order to implement major change program
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mymap" destination="bIx-6U-jjE" id="fPS-GE-WOA"/>
+                        <outlet property="mymap" destination="bIx-6U-jjE" id="LHK-zY-SJp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pow-jv-hbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="427" y="1402"/>
         </scene>
     </scenes>
     <resources>
-        <image name="A3927FB5-B811-47D4-92FB-C6D2F91A919D" width="320" height="460">
+        <image name="F37DEF29-BB04-42BB-BF46-9E7816D1FCB1" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11169,6 +11159,6 @@ AAAAAAAAAAAJCvs
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="Oz0-Qe-dUn"/>
+        <segue reference="imN-Ia-XWJ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,5 @@
 //
-//  aboutus_map.h
+//  aboutus_map_detail.h
 //  TEQWIN_PROJECT
 //
 //  Created by Teqwin on 27/10/14.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-@interface aboutus_map : UIViewController
-@property (weak, nonatomic) IBOutlet MKMapView *mymap;
+@interface aboutus_map_detail : UIViewController
 
 @end

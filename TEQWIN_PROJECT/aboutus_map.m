@@ -7,7 +7,7 @@
 //
 
 #import "aboutus_map.h"
-
+#import "SWRevealViewController.h"
 @interface aboutus_map ()
 
 @end
@@ -23,27 +23,26 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Create coordinates from location lat/long
+      [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    CLLocationCoordinate2D poiCoodinates;
+    poiCoodinates.latitude = 22.308948;
+    poiCoodinates.longitude= 114.226022;
+    
+    // Zoom to region
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(poiCoodinates, 750, 750);
+    
+    [self.mymap setRegion:viewRegion animated:YES];
+    
+    // Plot pin
+    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+    pin.title =@"TEQWIN";
+    pin.subtitle=@"觀塘興業街 31 號,興業工廠大廈 9樓E室";
+    pin.coordinate = poiCoodinates;
+    [self.mymap addAnnotation:pin];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

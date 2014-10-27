@@ -5,6 +5,7 @@
 //  Created by Teqwin on 16/9/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 #import "MBProgressHUD.h"
+
 #import "GalleryCell.h"
 #import "Gallery.h"
 #import "Tattoo_Detail_ViewController.h"
@@ -399,9 +400,7 @@ CFShareCircleView *shareCircleView;
     if ([sharer.name isEqual:@"Google Drive"]) {
         NSLog(@"clicked googledrive");
     }
-    if ([sharer.name isEqual:@"Dropbox"]) {
-         NSLog(@"clicked dropbox");
-    }
+
     if ([sharer.name isEqual:@"line"]) {
         NSLog(@"clicked line");
         NSURL *appURL = [NSURL URLWithString:@"line://msg/text/IamHappyMan:)"];

@@ -125,7 +125,7 @@
                 cell.detailTextLabel.textColor =[UIColor whiteColor];
                 [cell.detailTextLabel setNumberOfLines:5];
                 cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-                cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+                cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
                 [cell.textLabel setNumberOfLines:2];
                 cell.textLabel.text = @"Address：";
             }
@@ -173,7 +173,8 @@
             
         }
         
-        cell.textLabel.textColor=[UIColor whiteColor];
+        cell.textLabel.textColor=[UIColor colorWithRed:0.85 green:0.655 blue:0.0 alpha:1];
+        cell.detailTextLabel.textColor=[UIColor colorWithRed:0.85 green:0.655 blue:0.0 alpha:1];
         cell.detailTextLabel.text =[list objectAtIndex:indexPath.row];
         
         cell.contentView.backgroundColor = [UIColor grayColor];
@@ -191,14 +192,11 @@
     if (tableView == self.tableview) {
         
         switch (indexPath.row) {
-            //case 2:{
-            //    Map_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Map_ViewController"];
-            //    [self.navigationController pushViewController:mapVC animated:YES];
-                
-            //    mapVC.tattoomasterCell=_tattoomasterCell;
-            //    NSLog(@"%@%@",self.tattoomasterCell.latitude,self.tattoomasterCell.longitude);
-          //  }
-            //    break;
+            case 1:{
+                Map_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"aboutus_map"];
+                [self.navigationController pushViewController:mapVC animated:YES];
+                break;
+            }
             case 2:{
                 
                 NSURL *url = [NSURL URLWithString:@"http://www.teqwin.com.hk" ];
