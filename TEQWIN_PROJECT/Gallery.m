@@ -136,7 +136,7 @@ CFShareCircleView *shareCircleView;
   
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     
-    PFFile *imageFile = [imageObject objectForKey:@"image"];
+    imageFile = [imageObject objectForKey:@"image"];
 
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
@@ -152,7 +152,7 @@ CFShareCircleView *shareCircleView;
      cell.image.tag=9999;
     cell.image.userInteractionEnabled=YES;
     [ cell.image addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
-   
+
         return cell;
 }
 
@@ -222,11 +222,10 @@ CFShareCircleView *shareCircleView;
 
 
 - (IBAction)btn_share:(id)sender {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"Loading";
-    [hud show:YES];
-
+   // MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+   // hud.mode = MBProgressHUDModeIndeterminate;
+   // hud.labelText = @"Loading";
+  
     UIButton *button = sender;
     CGPoint correctedPoint =
     [button convertPoint:button.bounds.origin toView:self.tableView];
@@ -236,15 +235,16 @@ CFShareCircleView *shareCircleView;
     
    shareimageFile = [imageObject objectForKey:@"image"];
     
-  
-   
-    lastClickedRow = indexPath.row;
-    NSLog(@"%@",shareimageFile.url);
-    
-      imageToShare = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",shareimageFile.url]]]];
+    [shareimageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+           imageToShare = [UIImage imageWithData:data];
  
+    }];
+    lastClickedRow = indexPath.row;
+   
+
+
+  
     [shareCircleView show];
-    [hud hide:YES];
     
 
 }
@@ -379,11 +379,12 @@ CFShareCircleView *shareCircleView;
     }
      if ([sharer.name isEqual:@"more"]) {
         
-         
+       
          NSString *textToShare = self.tattoomasterCell.name;
          
-
- 
+         
+        // imageToShare = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",@"http://files.parsetfss.com/c6afcb1f-6a07-4487-8d0d-8406c9b9f69c/tfss-d8fda74a-c9ff-436b-ab3e-a3b3d5c3e9d9-davee_05.jpg"]]]];
+       //  imageToShare =[UIImage imageNamed:@"twitter.png"];
          NSURL *urlToShare = [NSURL URLWithString:@"http://www.iosbook3.com"];
          
          NSArray *activityItems = @[textToShare, imageToShare, urlToShare];
@@ -450,8 +451,6 @@ CFShareCircleView *shareCircleView;
     [UIDocumentInteractionController interactionControllerWithURL: fileURL];
     
     self.documentationInteractionController.delegate = interactionDelegate;
-    
-    
     
     return self.documentationInteractionController;
     

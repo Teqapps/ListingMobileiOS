@@ -15,6 +15,7 @@
     PFFile * shareimageFile;
     UIImage *imageToShare;
     PFObject *imageObject;
+    PFFile *imageFile ;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
