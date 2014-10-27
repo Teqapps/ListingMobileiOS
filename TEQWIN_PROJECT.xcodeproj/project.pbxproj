@@ -14,6 +14,8 @@
 		420E2F6219F9EC3F00667E6C /* whatsapp@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F6019F9EC3F00667E6C /* whatsapp@2X.png */; };
 		420E2F6519FA3C1A00667E6C /* lineicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F6319FA3C1A00667E6C /* lineicon.png */; };
 		420E2F6619FA3C1A00667E6C /* lineicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 420E2F6419FA3C1A00667E6C /* lineicon@2x.png */; };
+		420E2F6F19FDFB8900667E6C /* aboutusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 420E2F6E19FDFB8900667E6C /* aboutusViewController.m */; };
+		420E2F7819FE225900667E6C /* aboutus_map.m in Sources */ = {isa = PBXBuildFile; fileRef = 420E2F7719FE225900667E6C /* aboutus_map.m */; };
 		42193F911985FE08007E3C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F901985FE08007E3C52 /* Foundation.framework */; };
 		42193F931985FE08007E3C52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F921985FE08007E3C52 /* CoreGraphics.framework */; };
 		42193F951985FE08007E3C52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42193F941985FE08007E3C52 /* UIKit.framework */; };
@@ -202,6 +204,10 @@
 		420E2F6019F9EC3F00667E6C /* whatsapp@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whatsapp@2X.png"; sourceTree = "<group>"; };
 		420E2F6319FA3C1A00667E6C /* lineicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineicon.png; sourceTree = "<group>"; };
 		420E2F6419FA3C1A00667E6C /* lineicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lineicon@2x.png"; sourceTree = "<group>"; };
+		420E2F6D19FDFB8900667E6C /* aboutusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutusViewController.h; sourceTree = "<group>"; };
+		420E2F6E19FDFB8900667E6C /* aboutusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutusViewController.m; sourceTree = "<group>"; };
+		420E2F7619FE225900667E6C /* aboutus_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutus_map.h; sourceTree = "<group>"; };
+		420E2F7719FE225900667E6C /* aboutus_map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutus_map.m; sourceTree = "<group>"; };
 		42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEQWIN_PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42193F901985FE08007E3C52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42193F921985FE08007E3C52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -614,6 +620,10 @@
 				42EA3D6219C8273F0051057C /* GalleryCell.m */,
 				42A0095A19EF5E05003DCD0D /* Search_TableViewController.h */,
 				42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */,
+				420E2F6D19FDFB8900667E6C /* aboutusViewController.h */,
+				420E2F6E19FDFB8900667E6C /* aboutusViewController.m */,
+				420E2F7619FE225900667E6C /* aboutus_map.h */,
+				420E2F7719FE225900667E6C /* aboutus_map.m */,
 			);
 			name = "Tattoo Master";
 			sourceTree = "<group>";
@@ -1106,6 +1116,7 @@
 				424FAD59198B333F0062D13D /* FavDataManager.m in Sources */,
 				42193FA71985FE08007E3C52 /* ViewController.m in Sources */,
 				4219408A198654A7007E3C52 /* Tattoo_Master_Info.m in Sources */,
+				420E2F7819FE225900667E6C /* aboutus_map.m in Sources */,
 				427D34B9199E079E00814463 /* ShareViewController.m in Sources */,
 				42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */,
 				4263006819908766007B8C8F /* Fav_mappoint_ViewController.m in Sources */,
@@ -1125,6 +1136,7 @@
 				427D342C199DA73400814463 /* AFJSONRequestOperation.m in Sources */,
 				428189021999BE10004D09EF /* FavGalleryCell.m in Sources */,
 				428188FF1999BDF6004D09EF /* FavGallery.m in Sources */,
+				420E2F6F19FDFB8900667E6C /* aboutusViewController.m in Sources */,
 				42630047198F6207007B8C8F /* Fav_Map_ViewController.m in Sources */,
 				42223EDF19B5677F00F0D058 /* MySignUpViewController.m in Sources */,
 				427D3429199DA73400814463 /* AFHTTPClient.m in Sources */,

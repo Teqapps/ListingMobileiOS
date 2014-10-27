@@ -264,6 +264,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     UITextView *news = (UITextView*) [cell viewWithTag:155];
       
     news.text = [imageObject objectForKey:@"news"];
+        news.textColor =[UIColor colorWithRed:252.0/255.0
+                                        green:194.0/255.0 blue:0 alpha:1.0];
     }
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
