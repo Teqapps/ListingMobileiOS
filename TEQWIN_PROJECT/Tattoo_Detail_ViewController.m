@@ -46,8 +46,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+    if (self.tattoomasterCell.description ==nil) {
+        self.description_textview.text = @"沒有簡介";
+    }
+    else{
     self.description_textview.text=self.tattoomasterCell.description;
+    }
      self.description_textview.layer.cornerRadius=8.0f;
      self.description_textview.layer.borderWidth=2.0;
     self.description_textview.layer.borderColor =[[UIColor grayColor] CGColor];
@@ -66,14 +70,14 @@
      [self.imagesCollection setCollectionViewLayout:flowLayout];
     flowLayout.itemSize = CGSizeMake(70, 70);
     self.title =self.tattoomasterCell.name;
-    self.count_like.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.favorites.count    ]   ;
+    self.count_like.text =[NSString stringWithFormat:@"%d likes",self.tattoomasterCell.favorites.count    ]   ;
     
     //set segmented control
     if ([self.tattoomasterCell.bookmark containsObject:[PFUser currentUser].objectId]) {
-        self.bookmark_image.image =[UIImage imageNamed:@"button_heart_red.png"];
+        self.bookmark_image.image =[UIImage imageNamed:@"star.png"];
     }
     else {
-        self.bookmark_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+        self.bookmark_image.image =[UIImage imageNamed:@"nostar.png"];
     }
     
     if ([self.tattoomasterCell.favorites containsObject:[PFUser currentUser].objectId]) {
@@ -351,7 +355,8 @@
             cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
             cell.detailTextLabel.textColor=[UIColor whiteColor];
             cell.textLabel.text = @"Address：";
-            //cell.accessoryType=UITableViewCellAccessoryDetailButton;
+            //cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+            
         }
             
             break;
@@ -763,7 +768,7 @@
             [self nobookmark];
             
             NSLog(@"disliked");
-            self.bookmark_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+            self.bookmark_image.image =[UIImage imageNamed:@"nostar.png"];
             
         }
         
@@ -773,7 +778,7 @@
             [self bookmark];
             
             NSLog(@"liked");
-            self.bookmark_image.image =[UIImage imageNamed:@"button_heart_red.png"];
+            self.bookmark_image.image =[UIImage imageNamed:@"star.png"];
             
         }
     }
