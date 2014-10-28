@@ -247,12 +247,12 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
+            cell.imageView.image = [UIImage imageNamed:@"yes_like.png"];
         }
         else
         {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
+            cell.imageView.image = [UIImage imageNamed:@"no_like.png"];
         }
         
         cell.textLabel.text = [object objectForKey:@"Name"];

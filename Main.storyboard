@@ -469,7 +469,7 @@ We address business-critical problems in order to implement major change program
                                 <color key="backgroundColor" red="0.058823533359999999" green="0.023529414089999999" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="separatorColor" red="0.91764712333679199" green="0.69411766529083252" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="4519D0AF-63BE-497B-8965-8526781CB875" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="B3C1BD08-2864-4626-8DC6-9D86C12A22C1" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1266,7 +1266,7 @@ We address business-critical problems in order to implement major change program
         </scene>
     </scenes>
     <resources>
-        <image name="4519D0AF-63BE-497B-8965-8526781CB875" width="320" height="460">
+        <image name="B3C1BD08-2864-4626-8DC6-9D86C12A22C1" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

@@ -318,12 +318,12 @@
         heart_statues = (PFImageView*)[cell viewWithTag:107];
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            heart_statues.image = [UIImage imageNamed:@"button_heart_red.png"];
+            heart_statues.image = [UIImage imageNamed:@"yes_like.png"];
         }
         else
         {
             
-            heart_statues.image = [UIImage imageNamed:@"button_heart_blue.png"];
+            heart_statues.image = [UIImage imageNamed:@"no_like.png"];
         }
         // UICollectionView *cellImageCollection=(UICollectionView *)[cell viewWithTag:9];
         
@@ -335,12 +335,12 @@
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_red.png"];
+            cell.imageView.image = [UIImage imageNamed:@"yes_like.png"];
         }
         else
         {
             
-            cell.imageView.image = [UIImage imageNamed:@"button_heart_blue.png"];
+            cell.imageView.image = [UIImage imageNamed:@"no_like.png"];
         }
 
         cell.textLabel.text = [object objectForKey:@"Name"];

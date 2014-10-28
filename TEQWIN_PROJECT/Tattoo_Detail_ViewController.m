@@ -46,6 +46,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     if (self.tattoomasterCell.description ==nil) {
         self.description_textview.text = @"沒有簡介";
     }
@@ -81,10 +82,10 @@
     }
     
     if ([self.tattoomasterCell.favorites containsObject:[PFUser currentUser].objectId]) {
-        self.fav_image.image =[UIImage imageNamed:@"button_heart_red.png"];
+        self.fav_image.image =[UIImage imageNamed:@"yes_like.png"];
     }
         else {
-            self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+            self.fav_image.image =[UIImage imageNamed:@"no_like.png"];
         }
     self.master_name.text=self.tattoomasterCell.name;
     NSLog(@"dddd%@",self.tattoomasterCell.name);
@@ -719,7 +720,7 @@
               [self dislike];
               
               NSLog(@"disliked");
-                self.fav_image.image =[UIImage imageNamed:@"button_heart_blue.png"];
+                self.fav_image.image =[UIImage imageNamed:@"no_like.png"];
 
           }
           
@@ -729,7 +730,7 @@
               [self likeImage];
               
               NSLog(@"liked");
-  self.fav_image.image =[UIImage imageNamed:@"button_heart_red.png"];
+  self.fav_image.image =[UIImage imageNamed:@"yes_like.png"];
 
                         }
       }

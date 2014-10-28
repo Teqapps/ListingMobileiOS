@@ -133,6 +133,8 @@
 		42818908199AFB0F004D09EF /* navbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42818907199AFB0F004D09EF /* navbackground.jpg */; };
 		428E7B6319FF765D00CA2C14 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7B6119FF765D00CA2C14 /* star.png */; };
 		428E7B6419FF765D00CA2C14 /* nostar.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7B6219FF765D00CA2C14 /* nostar.png */; };
+		428E7C4F19FF9DA100CA2C14 /* no_like.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C4D19FF9DA100CA2C14 /* no_like.png */; };
+		428E7C5019FF9DA100CA2C14 /* yes_like.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C4E19FF9DA100CA2C14 /* yes_like.png */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
 		42A0095C19EF5E05003DCD0D /* Search_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */; };
 		42A0095F19F4A1EB003DCD0D /* tattoo_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */; };
@@ -371,6 +373,8 @@
 		42818907199AFB0F004D09EF /* navbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = navbackground.jpg; sourceTree = "<group>"; };
 		428E7B6119FF765D00CA2C14 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		428E7B6219FF765D00CA2C14 /* nostar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nostar.png; sourceTree = "<group>"; };
+		428E7C4D19FF9DA100CA2C14 /* no_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_like.png; sourceTree = "<group>"; };
+		428E7C4E19FF9DA100CA2C14 /* yes_like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yes_like.png; sourceTree = "<group>"; };
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		42A0095A19EF5E05003DCD0D /* Search_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search_TableViewController.h; sourceTree = "<group>"; };
 		42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search_TableViewController.m; sourceTree = "<group>"; };
@@ -718,6 +722,8 @@
 		42630028198B3A72007B8C8F /* photo */ = {
 			isa = PBXGroup;
 			children = (
+				428E7C4D19FF9DA100CA2C14 /* no_like.png */,
+				428E7C4E19FF9DA100CA2C14 /* yes_like.png */,
 				428E7B6119FF765D00CA2C14 /* star.png */,
 				428E7B6219FF765D00CA2C14 /* nostar.png */,
 				420E2F7C19FE282900667E6C /* image001.jpg */,
@@ -1001,6 +1007,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428E7C5019FF9DA100CA2C14 /* yes_like.png in Resources */,
 				42193FD119860221007E3C52 /* menu.png in Resources */,
 				4263006C19908FDA007B8C8F /* background1.jpg in Resources */,
 				424FAC901988E3870062D13D /* gabe_01.jpg in Resources */,
@@ -1038,6 +1045,7 @@
 				4263004F198F8E7D007B8C8F /* new-icon.png in Resources */,
 				424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */,
 				42A4918619E2375500E4D65E /* tattoo_3.jpg in Resources */,
+				428E7C4F19FF9DA100CA2C14 /* no_like.png in Resources */,
 				42193FD219860221007E3C52 /* menu@2x.png in Resources */,
 				42A4914219D506A700E4D65E /* MainBG.png in Resources */,
 				42A4918819E239C600E4D65E /* history.png in Resources */,
