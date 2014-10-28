@@ -15,7 +15,7 @@
 #import "FavDataManager.h"
 #import "Venue.h"
 #import "Map_ViewController.h"
-
+#import "LoginUIViewController.h"
 @import CoreData;
 @interface Tattoo_Detail_ViewController ()
 
@@ -46,9 +46,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    self.description_textview.text=self.tattoomasterCell.description;
+     self.description_textview.layer.cornerRadius=8.0f;
+     self.description_textview.layer.borderWidth=2.0;
+    self.description_textview.layer.borderColor =[[UIColor grayColor] CGColor];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
-
-
+    CGRect frame =  self.description_textview.frame;
+    frame.size.height =  self.description_textview.contentSize.height;
+    self.description_textview.frame = frame;
+[ self.description_textview sizeToFit];
+    [self.description_textview setScrollEnabled:YES];
     [self queryParseMethod];
     [self queryParseMethod_image];
    
@@ -108,8 +116,8 @@
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.website]];
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.email]];
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.tel]];
-    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.personage]];
- //    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.description]];
+   
+   // [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.description]];
     
     }
 
@@ -338,7 +346,7 @@
         case 2:
             
         {
-            [cell.detailTextLabel setNumberOfLines:5];
+            [cell.detailTextLabel setNumberOfLines:30];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15 ];
             cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
             cell.detailTextLabel.textColor=[UIColor whiteColor];
@@ -391,25 +399,27 @@
             
         {
             cell.detailTextLabel.textColor =[UIColor whiteColor];
-            [cell.detailTextLabel setNumberOfLines:5];
+            [cell.detailTextLabel setNumberOfLines:6];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
             cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.textLabel.text = @"Personage：";
-            
-        }
-            
-            break;
-        case 7:
-            
-        {
-            cell.detailTextLabel.textColor =[UIColor whiteColor];
-            [cell.detailTextLabel setNumberOfLines:5];
-            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+              [cell.textLabel setNumberOfLines:30];
             cell.textLabel.text = @"Description：";
             
-  
         }
+      //  }
+            
+       //     break;
+      //  case 7:
+            
+      //  {
+      //      cell.detailTextLabel.textColor =[UIColor whiteColor];
+       //    [cell.detailTextLabel setNumberOfLines:5];
+       //     cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+       //     cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+      //      cell.textLabel.text = @"Description：";
+            
+  
+       // }
     }
         
         cell.textLabel.textColor=[UIColor whiteColor];
@@ -647,7 +657,14 @@
         [[UIApplication sharedApplication] openURL:url];
         NSLog(@"done%@",self.tattoomasterCell.tel);
         
-    }}
+    }
+    if([button isEqualToString:@"確定"])
+    { LoginUIViewController * loginvc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginUIViewController"];
+        [self.navigationController pushViewController:loginvc animated:YES];
+
+        
+    }
+}
 
 
 
@@ -712,6 +729,15 @@
                         }
       }
       else{
+          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"尚未登入"
+                                                          message:@"需要進入登入頁嗎？"
+                                                         delegate:self
+                                                cancelButtonTitle:@"取消"
+                                                otherButtonTitles:@"確定",nil];
+          //然后这里设定关联，此处把indexPath关联到alert上
+          
+          [alert show];
+
           NSLog(@"請登入")
           ; }
     [self.tableView reloadData];
@@ -752,6 +778,15 @@
         }
     }
     else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"尚未登入"
+                                                        message:@"需要進入登入頁嗎？"
+                                                       delegate:self
+                                              cancelButtonTitle:@"取消"
+                                              otherButtonTitles:@"確定",nil];
+        //然后这里设定关联，此处把indexPath关联到alert上
+        
+        [alert show];
+
         NSLog(@"請登入")
         ; }
     [self.tableView reloadData];

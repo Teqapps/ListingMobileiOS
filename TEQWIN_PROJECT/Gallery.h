@@ -8,7 +8,7 @@
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "Tattoo_Detail_ViewController.h"
-@interface Gallery : UIViewController
+@interface Gallery : UIViewController <UIDocumentInteractionControllerDelegate>
 {
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
@@ -19,7 +19,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (retain) UIDocumentInteractionController * documentInteractionController;
 
 - (IBAction)btn_share:(id)sender;
 - (IBAction)like:(id)sender;

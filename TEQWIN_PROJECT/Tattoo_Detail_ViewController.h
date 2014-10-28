@@ -24,6 +24,7 @@
     
     
 }
+
 @property (weak, nonatomic) IBOutlet UILabel *noimage;
 @property IBOutlet UISearchBar *detailsearchbar;
 - (IBAction)showsearch:(id)sender;
@@ -35,7 +36,8 @@
 - (IBAction)favButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *favButton;
 - (IBAction)bookmarkbtn:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextView *description;
+
+@property (weak, nonatomic) IBOutlet UITextView *description_textview;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *master_name;

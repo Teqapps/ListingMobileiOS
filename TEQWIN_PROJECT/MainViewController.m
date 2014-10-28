@@ -45,15 +45,10 @@
     [flowLayout setMinimumLineSpacing:0.0f];
 
    // [flowLayout setMinimumLineSpacing:0.0f];
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        self.test.text = @"hihiuser";
-    } else {
-        self.test.text = @"on9son";
-        
-    }
-    int randomImgNumber = arc4random_uniform(5);
-    PFObject *object = [imageFilesArray objectAtIndex:randomImgNumber];
+  
+   // int randomImgNumber = arc4random_uniform(5);
+
+   // PFObject *object = [imageFilesArray objectAtIndex:randomImgNumber];
 
     
     self.title = @"新消息";
@@ -68,14 +63,6 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
    }
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    
-    
-}
-
-- (IBAction)showsearch:(id)sender {
-    [_searchbar becomeFirstResponder];
-      }
 
 
 
@@ -84,9 +71,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     [self queryParseMethod_news];
     searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
-    
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
-
 }
 -(void)itemsDownloaded:(NSArray *)items
 {
@@ -112,19 +97,11 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             news_array = [[NSArray alloc] initWithArray:objects];
-            
-          
             [_main_tableview reloadData];
             //   NSLog(@"%@",imageFilesArray);
             [hud hide:YES];
-            
-            NSLog(@"haha%d",news_array.count);
-            
         }
-        
     }];
-    
-    
 }
 
 - (void)queryParseMethod {
@@ -141,20 +118,17 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-
            [_image_collection reloadData];
-           
          //   NSLog(@"%@",imageFilesArray);
             [hud hide:YES];
 
-                    NSLog(@"%d",imageFilesArray.count);
-
         }
-
+   
     }];
 
 
 }
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return nil;
@@ -164,7 +138,6 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 {
     // Background color
     view.tintColor = [UIColor grayColor];
-    
     // Text Color
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     [header.textLabel setTextColor:[UIColor whiteColor]];
@@ -196,7 +169,6 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     
     NSArray *results  = [searchquery findObjects];
-    NSLog(@"%d",results.count);
     searchquery.cachePolicy=kPFCachePolicyCacheElseNetwork;
     [self.searchResults addObjectsFromArray:results];
     
@@ -453,8 +425,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
          tattoomasterCell.promotion=[object objectForKey:@"promotion"];
     
         destViewController.tattoomasterCell = tattoomasterCell;
-            
-        NSLog(@"Haaaaa%@",tattoomasterCell.imageFile);
+
         }
     }
 

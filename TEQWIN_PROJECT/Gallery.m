@@ -386,7 +386,7 @@ CFShareCircleView *shareCircleView;
          
         // imageToShare = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",@"http://files.parsetfss.com/c6afcb1f-6a07-4487-8d0d-8406c9b9f69c/tfss-d8fda74a-c9ff-436b-ab3e-a3b3d5c3e9d9-davee_05.jpg"]]]];
        //  imageToShare =[UIImage imageNamed:@"twitter.png"];
-         NSURL *urlToShare = [NSURL URLWithString:@"http://www.iosbook3.com"];
+         NSURL *urlToShare = [NSURL URLWithString:@""];
          
          NSArray *activityItems = @[textToShare, imageToShare, urlToShare];
        
@@ -402,27 +402,63 @@ CFShareCircleView *shareCircleView;
     }
 
     if ([sharer.name isEqual:@"line"]) {
-        NSLog(@"clicked line");
-        NSURL *appURL = [NSURL URLWithString:@"line://msg/text/IamHappyMan:)"];
-        if ([[UIApplication sharedApplication] canOpenURL: appURL]) {
-            [[UIApplication sharedApplication] openURL: appURL];
+        if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"line://app"]]){
+            
+            UIImage     * iconImage = imageToShare;
+            NSString    * savePath  = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/lineTmp.wai"];
+            
+            [UIImageJPEGRepresentation(iconImage, 1.0) writeToFile:savePath atomically:YES];
+            
+            _documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:savePath]];
+            _documentInteractionController.UTI = @"net.line.image";
+            _documentInteractionController.delegate = self;
+            
+            [_documentInteractionController presentOpenInMenuFromRect:CGRectMake(0, 0, 0, 0) inView:self.view animated: YES];
+            
+            
+        } else {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Line not installed." message:@"Your device has no Line installed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         }
-        else { //如果使用者沒有安裝，連結到App Store
-            NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id443904275"];
-            [[UIApplication sharedApplication] openURL:itunesURL];
-                NSLog(@"no line");
-        }
+       // NSLog(@"clicked line");
+       // NSURL *appURL = [NSURL URLWithString:@"line://msg/text/IamHappyMan:)"];
+       // if ([[UIApplication sharedApplication] canOpenURL: appURL]) {
+       //     [[UIApplication sharedApplication] openURL: appURL];
+       // }
+       // else { //如果使用者沒有安裝，連結到App Store
+        //    NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id443904275"];
+        //    [[UIApplication sharedApplication] openURL:itunesURL];
+        //        NSLog(@"no line");
+       // }
     }
     if ([sharer.name isEqual:@"Whatsapp"]) {
-        NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello%2C%20World!"];
-        if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
-            [[UIApplication sharedApplication] openURL: whatsappURL];
+        if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"whatsapp://app"]]){
+            
+            UIImage     * iconImage = imageToShare;
+            NSString    * savePath  = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/whatsAppTmp.wai"];
+            
+            [UIImageJPEGRepresentation(iconImage, 1.0) writeToFile:savePath atomically:YES];
+            
+            _documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:savePath]];
+            _documentInteractionController.UTI = @"net.whatsapp.image";
+            _documentInteractionController.delegate = self;
+            
+            [_documentInteractionController presentOpenInMenuFromRect:CGRectMake(0, 0, 0, 0) inView:self.view animated: YES];
+            
+            
+        } else {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"WhatsApp not installed." message:@"Your device has no WhatsApp installed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         }
-        else { //如果使用者沒有安裝，連結到App Store
-            NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id310633997"];
-            [[UIApplication sharedApplication] openURL:itunesURL];
-            NSLog(@"no whatsapp");
-        }}
+       // NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello%2C%20World!"];
+       // if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+       //     [[UIApplication sharedApplication] openURL: whatsappURL];
+       // }
+        //else { //如果使用者沒有安裝，連結到App Store
+        //    NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id310633997"];
+       //     [[UIApplication sharedApplication] openURL:itunesURL];
+       //     NSLog(@"no whatsapp");
+       // }}
         
         
         
@@ -440,6 +476,7 @@ CFShareCircleView *shareCircleView;
         //self.documentationInteractionController = [self setupControllerWithURL:imageFileURL usingDelegate:self];
         //[self.documentationInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
     //}
+    }
 }
 
 - (UIDocumentInteractionController *) setupControllerWithURL: (NSURL*) fileURL

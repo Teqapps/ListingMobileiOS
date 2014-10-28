@@ -5,7 +5,7 @@
 //  Created by Teqwin on 28/7/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 //
-
+#import "LoginUIViewController.h"
 #import "ImageExampleCell.h"
 #import "HomeModel.h"
 #import "Tattoo_Master_Info.h"
@@ -205,6 +205,7 @@
     
        
     }
+    
   
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
@@ -391,8 +392,28 @@
         }
     }
     else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"尚未登入"
+                                                        message:@"需要進入登入頁嗎？"
+                                                       delegate:self
+                                              cancelButtonTitle:@"取消"
+                                              otherButtonTitles:@"確定",nil];
+        //然后这里设定关联，此处把indexPath关联到alert上
+        
+        [alert show];
+
         NSLog(@"請登入")
         ; }
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
+
+    if([button isEqualToString:@"確定"])
+    { LoginUIViewController * loginvc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginUIViewController"];
+        [self.navigationController pushViewController:loginvc animated:YES];
+        
+        
+    }
 }
 - (void) likeImage {
     [selectobject addUniqueObject:[PFUser currentUser].objectId forKey:@"favorites"];
