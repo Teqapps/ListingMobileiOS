@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <MessageUI/MessageUI.h>
-@interface aboutusViewController : UIViewController
+@interface aboutusViewController : UIViewController <MFMailComposeViewControllerDelegate>
 { NSMutableArray *list;
     NSMutableArray *intro_list;
 

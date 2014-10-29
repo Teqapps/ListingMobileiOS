@@ -90,7 +90,7 @@
     cell.label3.text =@"Share";
     //cell.subtitleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"This is a parallex cell %d",),indexPath.row];
     
-    NSString *picURLstring = [NSString stringWithFormat:@"https://localhost:443/phpMyAdmin/fyp_php/gallery_0%@_%d.jpg",[self.data valueForKey:@"master_id"],indexPath.row+1] ;
+    NSString *picURLstring = [NSString stringWithFormat:@"https://localhost:443/phpMyAdmin/fyp_php/gallery_0%@_%ld.jpg",[self.data valueForKey:@"master_id"],indexPath.row+1] ;
     
     NSURL *picURL = [NSURL URLWithString:picURLstring] ;
     
@@ -183,8 +183,9 @@
     NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
     
     
-    NSLog(@"%d",button.tag);
-    lastClickedRow = indexPath.row;
+    NSLog(@"%ld",(long)button.tag);
+    NSLog(@"%ld",(long)indexPath.row);
+   // lastClickedRow = indexPath.row;
      [shareCircleView show];
 }
 - (void)shareCircleView:(CFShareCircleView *)aShareCircleView didSelectSharer:(CFSharer *)sharer{

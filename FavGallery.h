@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailFavViewController.h"
-@interface FavGallery : UIViewController
+@interface FavGallery : UIViewController<UIDocumentInteractionControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, assign) BOOL isFav;

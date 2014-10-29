@@ -23,10 +23,10 @@
       PFQuery * searchquery;
  
 }
-- (IBAction)showsearch:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
-@property (weak, nonatomic) IBOutlet UILabel *test;
+
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;
 @property (weak, nonatomic) IBOutlet PFImageView *main_image;
 @property (weak, nonatomic) IBOutlet UICollectionView *image_collection;

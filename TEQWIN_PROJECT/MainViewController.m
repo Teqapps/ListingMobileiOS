@@ -20,7 +20,7 @@
     HomeModel *_homeModel;
     NSArray *_feedItems;
     Tattoo_Master_Info *_selected_tattoo_master;
-    NSArray *searchResults;
+   
 }
 @property (nonatomic, strong) UISearchDisplayController *searchController;
 @property (nonatomic, strong) NSMutableArray *searchResults;
@@ -148,7 +148,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     if (tableView == self.main_tableview) {
         
@@ -236,9 +236,9 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     UITextView *news = (UITextView*) [cell viewWithTag:155];
       
     news.text = [imageObject objectForKey:@"news"];
-      //  news.textColor =[UIColor colorWithRed:252.0/255.0
-                                      //  green:194.0/255.0 blue:0 alpha:1.0];
-        news.textColor =[UIColor grayColor];
+       news.textColor =[UIColor colorWithRed:247.0/255.0
+                                        green:247.0/255.0 blue:249/255.0 alpha:1.0];
+       // news.textColor =[UIColor grayColor];
     }
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {

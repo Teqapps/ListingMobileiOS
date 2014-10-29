@@ -299,7 +299,7 @@
         UIGraphicsEndImageContext();
         
         //
-        thumbnailImageView.image = [UIImage imageNamed:@"loading_image.gif"];
+        thumbnailImageView.image = [UIImage imageNamed:@"ICON.PNG"];
         thumbnailImageView.file = thumbnail;
         [thumbnailImageView loadInBackground];
         [loadingSpinner stopAnimating];

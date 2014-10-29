@@ -43,8 +43,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "-showsearch:"
-            landmarkType = "4">
+            landmarkName = "@interface MainViewController"
+            landmarkType = "2">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -212,11 +212,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FavGallery.m"
-            timestampString = "430391237.54531"
+            timestampString = "436245834.074971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "-shareCircleView:didSelectSharer:"
             landmarkType = "5">
          </BreakpointContent>

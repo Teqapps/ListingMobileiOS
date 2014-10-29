@@ -141,7 +141,7 @@ CFShareCircleView *shareCircleView;
 
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
-      cell.image.image = [UIImage imageNamed:@"loading_image.gif"];
+      cell.image.image = [UIImage imageNamed:@"loading.png"];
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         cell.image.layer.borderWidth=2.0;
          cell.image.layer.masksToBounds = YES;

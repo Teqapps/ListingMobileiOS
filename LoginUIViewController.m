@@ -104,7 +104,7 @@
         [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 imageFilesArray = [[NSArray alloc] initWithArray:objects];
-                self.bookmarks_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
+                self.bookmarks_count.text=[NSString stringWithFormat:@"%lu",(unsigned long)imageFilesArray.count];
                 
             }
         }];
@@ -118,7 +118,7 @@
         [likequery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 imageFilesArray = [[NSArray alloc] initWithArray:objects];
-                self.liked_count.text=[NSString stringWithFormat:@"%d",imageFilesArray.count];
+                self.liked_count.text=[NSString stringWithFormat:@"%lu",(unsigned long)imageFilesArray.count];
                 
                 
             }
@@ -490,7 +490,7 @@
     NSIndexPath *indexPath =  [self.TABLEVIEW indexPathForRowAtPoint:correctedPoint];
 
    // NSLog(@"%ld",(long)button.tag);
-    lastClickedRow = indexPath.row;
+   
      selectobject = [imageFilesArray objectAtIndex:indexPath.row];
    // NSLog(@"%@",selectobject);
     if ([[selectobject objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
