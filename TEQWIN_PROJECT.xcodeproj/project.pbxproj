@@ -141,6 +141,8 @@
 		428E7C5A1A0087B800CA2C14 /* goldebackground@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C591A0087B800CA2C14 /* goldebackground@2x.jpg */; };
 		428E7C5D1A008B5900CA2C14 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C5B1A008B5900CA2C14 /* loading.png */; };
 		428E7C5E1A008B5900CA2C14 /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C5C1A008B5900CA2C14 /* loading@2x.png */; };
+		428E7C611A00C2BD00CA2C14 /* tattoo_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C5F1A00C2BD00CA2C14 /* tattoo_icon.jpg */; };
+		428E7C621A00C2BD00CA2C14 /* tattoo_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C601A00C2BD00CA2C14 /* tattoo_icon@2x.jpg */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
 		42A0095C19EF5E05003DCD0D /* Search_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */; };
 		42A0095F19F4A1EB003DCD0D /* tattoo_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A0095D19F4A1EA003DCD0D /* tattoo_cover.png */; };
@@ -387,6 +389,8 @@
 		428E7C591A0087B800CA2C14 /* goldebackground@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "goldebackground@2x.jpg"; sourceTree = "<group>"; };
 		428E7C5B1A008B5900CA2C14 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		428E7C5C1A008B5900CA2C14 /* loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@2x.png"; sourceTree = "<group>"; };
+		428E7C5F1A00C2BD00CA2C14 /* tattoo_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tattoo_icon.jpg; sourceTree = "<group>"; };
+		428E7C601A00C2BD00CA2C14 /* tattoo_icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tattoo_icon@2x.jpg"; sourceTree = "<group>"; };
 		429F00ED19AC7128008F0B31 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		42A0095A19EF5E05003DCD0D /* Search_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search_TableViewController.h; sourceTree = "<group>"; };
 		42A0095B19EF5E05003DCD0D /* Search_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search_TableViewController.m; sourceTree = "<group>"; };
@@ -734,6 +738,8 @@
 		42630028198B3A72007B8C8F /* photo */ = {
 			isa = PBXGroup;
 			children = (
+				428E7C5F1A00C2BD00CA2C14 /* tattoo_icon.jpg */,
+				428E7C601A00C2BD00CA2C14 /* tattoo_icon@2x.jpg */,
 				428E7C4D19FF9DA100CA2C14 /* no_like.png */,
 				428E7C4E19FF9DA100CA2C14 /* yes_like.png */,
 				428E7B6119FF765D00CA2C14 /* star.png */,
@@ -1034,6 +1040,7 @@
 				42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */,
 				420E2F6519FA3C1A00667E6C /* lineicon.png in Resources */,
 				42A4917219D5633500E4D65E /* button_heart_red.png in Resources */,
+				428E7C611A00C2BD00CA2C14 /* tattoo_icon.jpg in Resources */,
 				427D349E199E076400814463 /* close@2x.png in Resources */,
 				427D34A0199E076400814463 /* dropbox@2x.png in Resources */,
 				428E7C561A0086A900CA2C14 /* ICON.png in Resources */,
@@ -1089,6 +1096,7 @@
 				4263005F19908433007B8C8F /* mapicon.png in Resources */,
 				424FAC911988E3870062D13D /* gabe_02.jpg in Resources */,
 				4219408719863C9F007E3C52 /* ive.png in Resources */,
+				428E7C621A00C2BD00CA2C14 /* tattoo_icon@2x.jpg in Resources */,
 				4266571819A6F1A6001D94B5 /* share.png in Resources */,
 				42AF20D519E7E6B800FC3BEC /* splash.png in Resources */,
 				428E7B6319FF765D00CA2C14 /* star.png in Resources */,

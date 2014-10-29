@@ -10,6 +10,7 @@
 
 @interface historyViewController : ViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet UITextView *textview_1;
 
 
 @end

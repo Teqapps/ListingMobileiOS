@@ -114,9 +114,10 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"promotion_approve" equalTo:[NSNumber numberWithBool:YES]];
     [query orderByAscending:@"updatedAt"];
-
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
+            
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
            [_image_collection reloadData];
          //   NSLog(@"%@",imageFilesArray);
@@ -204,7 +205,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:simpleTableIdentifier];
     }
     if (tableView == self.main_tableview) {
     // Configure the cell
@@ -246,15 +247,15 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-            
             cell.imageView.image = [UIImage imageNamed:@"yes_like.png"];
+            
         }
         else
         {
             
             cell.imageView.image = [UIImage imageNamed:@"no_like.png"];
         }
-        
+       
         cell.textLabel.text = [object objectForKey:@"Name"];
         cell.detailTextLabel.text =[object objectForKey:@"Gender"];
         
@@ -278,17 +279,17 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     static NSString *cellIdentifier = @"imageCell";
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    cell.loadingSpinner.hidden = NO;
-    [cell.loadingSpinner startAnimating];
+ 
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
       PFFile *avstar = [imageObject objectForKey:@"image"];
-    
     
     UILabel *name = (UILabel*) [cell viewWithTag:166];
     name.text = [imageObject objectForKey:@"Name"];
     
    
     PFFile *imageFile = [imageObject objectForKey:@"promotion"];
+    cell.loadingSpinner.hidden = NO;
+    [cell.loadingSpinner startAnimating];
 
    // CGSize itemSize = CGSizeMake(70, 70);
    // UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
@@ -306,8 +307,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     
     cell.thumbnail.file = avstar;
     [ cell.thumbnail loadInBackground];
-    [cell.loadingSpinner stopAnimating];
-    cell.loadingSpinner.hidden = YES;
+  
   
 
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -319,7 +319,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
            
                   }
     }];
-    
+   
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -352,6 +352,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
+          tattoomasterCell.description = [selectobject objectForKey:@"description"];
         tattoomasterCell.object_id = selectobject.objectId;
         
         mapVC.tattoomasterCell = tattoomasterCell;

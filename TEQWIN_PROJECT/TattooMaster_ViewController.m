@@ -1,4 +1,3 @@
-//
 //  TattooMaster_ViewController.m
 //  TEQWIN_PROJECT
 //
@@ -15,6 +14,7 @@
 #import "SWRevealViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MBProgressHUD.h"
+#import "Gallery.h"
 @interface TattooMaster_ViewController ()<UISearchDisplayDelegate, UISearchBarDelegate>
 {
     int lastClickedRow;
@@ -55,16 +55,15 @@
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
-    
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
         self.tableView.bounds = newBounds;
     }
-
+    
     self.title =@"師父";
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
-
+    
     searchbar.hidden = !searchbar.hidden;
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
@@ -87,7 +86,8 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated {
-      [self refreshTable:nil];
+    [self refreshTable:nil];
+    
     // scroll search bar out of sight
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
@@ -98,16 +98,18 @@
     //[query whereKey:@"Name" containsString:searchTerm];
     
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
+    //
 
     
-   }
+    
+}
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
         self.tableView.bounds = newBounds;
     }
-
+    
     
 }
 
@@ -146,11 +148,11 @@
     
     
     
-   // if(![scope isEqualToString:@"全部"]) {
-        // Further filter the array with the scope
-     //   NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
-       
-      //  _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
+    // if(![scope isEqualToString:@"全部"]) {
+    // Further filter the array with the scope
+    //   NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"Gender contains[cd] %@", scope];
+    
+    //  _searchResults = [NSMutableArray arrayWithArray:[_searchResults filteredArrayUsingPredicate:resultPredicate]];
     
 }//}
 
@@ -158,21 +160,21 @@
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchTerm
 {
     [self filterResults :searchTerm
-                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar
-                                                     selectedScopeButtonIndex]]];
+                   scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                          objectAtIndex:[self.searchDisplayController.searchBar
+                                         selectedScopeButtonIndex]]];
     
     return YES;
 }
 //當scope 更新時，tableview 就會更新 （但要有search text)
 //- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
 //{
-    // Tells the table data source to reload when scope bar selection changes
- //    [self filterResults :[self.searchDisplayController.searchBar text] scope:
- //    [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
-    
-    // Return YES to cause the search result table view to be reloaded.
- //   return YES;
+// Tells the table data source to reload when scope bar selection changes
+//    [self filterResults :[self.searchDisplayController.searchBar text] scope:
+//    [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+
+// Return YES to cause the search result table view to be reloaded.
+//   return YES;
 //}
 
 - (void)refreshTable:(NSNotification *) notification
@@ -200,13 +202,13 @@
 - (PFQuery *)queryForTable{
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    if (self.objects.count == 0) {
-        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     
-       
-    }
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    [query whereKey:@"allow_display" equalTo:[NSNumber numberWithBool:YES]];
     
-  
+    
+    
+    
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
     /*    if ([self.objects count] == 0) {
@@ -234,14 +236,15 @@
         //NSLog(@"how many in search results");
         //NSLog(@"%@", self.searchResults.count);
         
-                selectobject = [_searchResults  objectAtIndex:indexPath.row];
+        selectobject = [_searchResults  objectAtIndex:indexPath.row];
         NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
         Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
-         [self.navigationController pushViewController:mapVC animated:YES];
+        [self.navigationController pushViewController:mapVC animated:YES];
         TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
         tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
         tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
         tattoomasterCell.name = [selectobject objectForKey:@"Name"];
+        tattoomasterCell.description = [selectobject objectForKey:@"description"];
         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
         tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
         tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
@@ -255,8 +258,8 @@
         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = selectobject.objectId;
-
-         mapVC.tattoomasterCell = tattoomasterCell;
+        
+        mapVC.tattoomasterCell = tattoomasterCell;
         NSLog(@"%@",tattoomasterCell.master_id);
     }
     
@@ -280,7 +283,7 @@
     // Configure the cell
     
     if (tableView == self.tableView) {
-    
+        
         UIActivityIndicatorView *loadingSpinner = (UIActivityIndicatorView*) [cell viewWithTag:110];
         loadingSpinner.hidden= NO;
         [loadingSpinner startAnimating];
@@ -288,13 +291,13 @@
         PFFile *thumbnail = [object objectForKey:@"image"];
         PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
         
-      
+        
         thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
         thumbnailImageView.layer.cornerRadius= thumbnailImageView.frame.size.width / 2;
         thumbnailImageView.layer.borderWidth=0.0;
         thumbnailImageView.layer.masksToBounds = YES;
         thumbnailImageView.layer.borderColor=[[UIColor whiteColor] CGColor];
-     
+        
         thumbnailImageView.image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
@@ -305,7 +308,7 @@
         [loadingSpinner stopAnimating];
         loadingSpinner.hidden = YES;
         
-              UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
+        UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
         nameLabel.text = [object objectForKey:@"Name"];
         
         UILabel *prepTimeLabel = (UILabel*) [cell viewWithTag:102];
@@ -328,7 +331,7 @@
         // UICollectionView *cellImageCollection=(UICollectionView *)[cell viewWithTag:9];
         
     }
-    
+    cell.backgroundColor = [UIColor clearColor];
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         PFObject* object = self.searchResults[indexPath.row];
         
@@ -342,7 +345,7 @@
             
             cell.imageView.image = [UIImage imageNamed:@"no_like.png"];
         }
-
+        
         cell.textLabel.text = [object objectForKey:@"Name"];
         cell.detailTextLabel.text =[object objectForKey:@"Gender"];
         
@@ -355,11 +358,11 @@
 
 //- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-    // Remove the row from data model
+// Remove the row from data model
 //    PFObject *object = [self.objects objectAtIndex:indexPath.row];
- //   [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
- //       [self refreshTable:nil];
- //   }];
+//   [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//       [self refreshTable:nil];
+//   }];
 //}
 
 
@@ -400,14 +403,14 @@
         //然后这里设定关联，此处把indexPath关联到alert上
         
         [alert show];
-
+        
         NSLog(@"請登入")
         ; }
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
-
+    
     if([button isEqualToString:@"確定"])
     { LoginUIViewController * loginvc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginUIViewController"];
         [self.navigationController pushViewController:loginvc animated:YES];
@@ -497,9 +500,9 @@
         tattoomasterCell.favorites = [object objectForKey:@"favorites"];
         tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
         tattoomasterCell.name = [object objectForKey:@"Name"];
-
+        
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
-      
+        
         tattoomasterCell.gender = [object objectForKey:@"Gender"];
         tattoomasterCell.tel = [object objectForKey:@"Tel"];
         tattoomasterCell.email = [object objectForKey:@"Email"];
@@ -517,7 +520,7 @@
         destViewController.tattoomasterCell = tattoomasterCell;
         
         
-       
+        
         
     }
     

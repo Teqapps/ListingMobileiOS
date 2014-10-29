@@ -18,13 +18,13 @@
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "tattoo_app_icon.png",
+      "filename" : "tattoo_icon.png",
       "scale" : "1x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "tattoo_app_icon@2x.png",
+      "filename" : "tattoo_icon@2x.png",
       "scale" : "2x"
     },
     {

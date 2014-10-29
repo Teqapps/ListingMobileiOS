@@ -65,7 +65,7 @@
     [self queryParseMethod];
     [self queryParseMethod_image];
    
-    _tableView.bounces=NO;
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
      [self.imagesCollection setCollectionViewLayout:flowLayout];
