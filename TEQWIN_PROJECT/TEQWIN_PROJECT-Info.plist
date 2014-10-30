@@ -27,6 +27,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>db-7l559zioujqsxae</string>
 				<string>fb618305734957150</string>
 			</array>
 		</dict>

@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.textview.text=@"TEQHOST Asia is a dedicated Solution Architect and Systems Integration business.\n\nWe address business-critical problems in order to implement major change programs in large and complex systems across a variety of industries throughout the APAC, and are driven to be recognized for excellence in performance, value-creation and service, concentrating on delivering outcomes for our clients, rather than simply seeing a series of deliveries.";
+    self.textview.text=@"Formed in 2010 TeqHost & TeqApps group of company has been serving many HK, China, Macau and international business ranging from Commercial sector, retail , Education and Government organization.\n\nWe provide IOS/Android application and web solution using the latest and industry most widely adopted technology. Our team of designers, developers  has expertise on a diverse range of platform and toolkit such as (Apple, Android API, SEO,  Joomla, Drupal, Silverstripe, Wordpress, PHP, MySql, Magento, VirtueMart, Zencart , HTML5, Java script, Flash Animation, etc.). And our marketing professional are well equipped with the latest toolkits to ensure your digital platform effectively create and maintain the relationship with your target customer.";
     self.textview.layer.cornerRadius=8.0f;
     self.textview.layer.borderWidth=2.0;
     //self.textview.layer.borderColor =[[UIColor colorWithRed:0.95 green:0.900 blue:0.0 alpha:1] CGColor];
@@ -48,15 +48,16 @@
     self.title =@"關於我們";
     list =[[NSMutableArray alloc]init];
     [list addObject:[NSString stringWithFormat:@"TEQWIN SOLUTION LIMITED"]];
-    [list addObject:[NSString stringWithFormat:@"觀塘興業街 31 號,興業工廠大廈 9樓E室"]];
-    [list addObject:[NSString stringWithFormat:@"http://www.teqwin.com.hk/"]];
-    [list addObject:[NSString stringWithFormat:@"(852)23893939"]];
-    [list addObject:[NSString stringWithFormat:@"teqwin@gmail.com"]];
+    [list addObject:[NSString stringWithFormat:@"Flat E, 9/F, Hing Yip Factory Bldg., 31 Hing Yip Street, Kwun Tong, Kowloon"]];
+    [list addObject:[NSString stringWithFormat:@"http://www.teqapps.com/"]];
+    [list addObject:[NSString stringWithFormat:@"(852)2389 3939"]];
+        [list addObject:[NSString stringWithFormat:@"(852)2389 1499"]];
+    [list addObject:[NSString stringWithFormat:@"info@teqapps.com"]];
     
 
        intro_list =[[NSMutableArray alloc]init];
     [intro_list addObject:[NSString stringWithFormat:@"TEQWIN SOLUTION LIMITED"]];
-
+    NSLog(@"%@",list );
 
 }
 
@@ -93,8 +94,28 @@
 }
 - (CGFloat) tableView: (UITableView*) tableView heightForRowAtIndexPath: (NSIndexPath*) indexPath
 {
-    return 50;
+    
+    NSString *cellText = [list objectAtIndex:indexPath.row];
+    UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:17.0];
+    NSAttributedString *attributedText =
+    [[NSAttributedString alloc]
+     initWithString:cellText
+     attributes:@
+     {
+     NSFontAttributeName: cellFont
+     }];
+    CGRect rect = [attributedText boundingRectWithSize:CGSizeMake(_tableview.bounds.size.width, CGFLOAT_MAX)
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil];
+
+            return rect.size.height + 35;
+
+    
+    
+    
+    
 }
+
 
 
 
@@ -110,6 +131,9 @@
     
     if (cell==nil) {
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:identifier];
+        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
     }
     if (tableView == self.tableview) {
         
@@ -168,6 +192,18 @@
                 
                 break;
             case 4:
+                
+            {
+                [cell.detailTextLabel setNumberOfLines:5];
+                cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15 ];
+                cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
+                cell.detailTextLabel.textColor=[UIColor whiteColor];
+                cell.textLabel.text = @"Fax：";
+                //cell.accessoryType=UITableViewCellAccessoryDetailButton;
+            }
+                
+                break;
+            case 5:
                 
             {
                 [cell.detailTextLabel setNumberOfLines:5];

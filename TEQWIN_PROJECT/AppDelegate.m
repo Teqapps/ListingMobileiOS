@@ -11,11 +11,13 @@
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "LoginUIViewController.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     sleep(2);
+
     // Override point for customization after application launch.
     [Parse setApplicationId:@"X5ipXQpsYBTBQEtozIli4dZQUsEy8aigsfy1Ynd3"
                   clientKey:@"8AybZTMuyy9hmgnneN15udBK4x8nlTWS4fZCXiJ0"];

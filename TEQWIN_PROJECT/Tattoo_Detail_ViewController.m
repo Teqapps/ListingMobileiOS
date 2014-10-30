@@ -297,9 +297,23 @@
 
 
 - (CGFloat) tableView: (UITableView*) tableView heightForRowAtIndexPath: (NSIndexPath*) indexPath
-{
-    return 50;
-}
+{ NSString *cellText = [list objectAtIndex:indexPath.row];
+    UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:17.0];
+    NSAttributedString *attributedText =
+    [[NSAttributedString alloc]
+     initWithString:cellText
+     attributes:@
+     {
+     NSFontAttributeName: cellFont
+     }];
+    CGRect rect = [attributedText boundingRectWithSize:CGSizeMake(tableView.bounds.size.width, CGFLOAT_MAX)
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil];
+    return rect.size.height + 20;
+
+
+  }
+
 
 
 
@@ -315,6 +329,9 @@
     
     if (cell==nil) {
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:identifier];
+        cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
     }
     if (tableView == self.tableView) {
 
@@ -351,13 +368,14 @@
         case 2:
             
         {
-            [cell.detailTextLabel setNumberOfLines:30];
+            [cell.detailTextLabel setNumberOfLines:7];
+            [cell.detailTextLabel setNumberOfLines:20];
             cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15 ];
             cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
             cell.detailTextLabel.textColor=[UIColor whiteColor];
             cell.textLabel.text = @"Address：";
             //cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-            
+           // cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         }
             
             break;
@@ -427,12 +445,12 @@
   
        // }
     }
-        
-        cell.textLabel.textColor=[UIColor whiteColor];
+               cell.textLabel.textColor=[UIColor whiteColor];
     cell.detailTextLabel.text =[list objectAtIndex:indexPath.row];
     
     cell.contentView.backgroundColor = [UIColor grayColor];
-    
+
+
    
     }
 

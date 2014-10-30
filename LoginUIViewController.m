@@ -43,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor=[UIColor grayColor];
 
     
     
@@ -91,6 +92,7 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated {
+    self.view.backgroundColor=[UIColor grayColor];
     [super viewWillAppear:animated];
     
     if ([PFUser currentUser]) {
