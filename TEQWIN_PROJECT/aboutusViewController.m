@@ -27,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    
      UIImage *image = [UIImage imageNamed:@"teqapps_logo_ai_G.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     CGRect aRect = CGRectMake(0, 15, 320,76);
@@ -35,7 +38,8 @@
      self.textview.textContainer.exclusionPaths = @[exclusionPath];
     [ self.textview addSubview:imageView];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.textview.text=@"\nFormed in 2010 TeqHost & TeqApps group of company has been serving many HK, China, Macau and international business ranging from Commercial sector, retail , Education and Government organization.\r We provide IOS/Android application and web solution using the latest and industry most widely adopted technology. Our team of designers, developers  has expertise on a diverse range of platform and toolkit such as (Apple, Android API, SEO,  Joomla, Drupal, Silverstripe, Wordpress, PHP, MySql, Magento, VirtueMart, Zencart , HTML5, Java script, Flash Animation, etc.). And our marketing professional are well equipped with the latest toolkits to ensure your digital platform effectively create and maintain the relationship with your target customer.";
+    
+    self.textview.text=@"\n\n\n\n\nFormed in 2010 TeqHost & TeqApps group of company has been serving many HK, China, Macau and international business ranging from Commercial sector, retail , Education and Government organization.\nWe provide IOS/Android application and web solution using the latest and industry most widely adopted technology. Our team of designers, developers  has expertise on a diverse range of platform and toolkit such as (Apple, Android API, SEO,  Joomla, Drupal, Silverstripe, Wordpress, PHP, MySql, Magento, VirtueMart, Zencart , HTML5, Java script, Flash Animation, etc.). And our marketing professional are well equipped with the latest toolkits to ensure your digital platform effectively create and maintain the relationship with your target customer.";
     self.textview.layer.cornerRadius=8.0f;
     self.textview.layer.borderWidth=2.0;
     //self.textview.layer.borderColor =[[UIColor colorWithRed:0.95 green:0.900 blue:0.0 alpha:1] CGColor];
@@ -67,7 +71,10 @@
     NSLog(@"%@",list );
 
 }
-
+- (CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(CGRect)rect
+{
+return 1;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0)

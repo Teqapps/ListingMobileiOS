@@ -331,15 +331,19 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.3551713198" green="0.3551713198" blue="0.3551713198" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
-                                <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Lug-ty-pDF">
+                                <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" id="Lug-ty-pDF">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="218"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">TEQHOST Asia is a dedicated Solution Architect and Systems Integration business.
- 
-We address business-critical problems in order to implement major change programs in large and complex systems across a variety of industries throughout the APAC, and are driven to be recognized for excellence in performance, value-creation and service, concentrating on delivering outcomes for our clients, rather than simply seeing a series of deliveries.</string>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="14"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="asddd">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="14" name="LucidaGrande"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="1" paragraphSpacingBefore="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <prototypes>
@@ -426,7 +430,7 @@ We address business-critical problems in order to implement major change program
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.91764712333679199" green="0.69411766529083252" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="EEAC736D-CD4F-402D-A51E-8ECDFE498D3A" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="8F66121B-B90A-44C0-9B0A-97D4A1F5072D" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1280,7 +1284,7 @@ We address business-critical problems in order to implement major change program
         </scene>
     </scenes>
     <resources>
-        <image name="EEAC736D-CD4F-402D-A51E-8ECDFE498D3A" width="320" height="460">
+        <image name="8F66121B-B90A-44C0-9B0A-97D4A1F5072D" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
