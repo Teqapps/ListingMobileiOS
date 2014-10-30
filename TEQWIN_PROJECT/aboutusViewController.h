@@ -17,6 +17,7 @@
 }
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 - (IBAction)segmented:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @end

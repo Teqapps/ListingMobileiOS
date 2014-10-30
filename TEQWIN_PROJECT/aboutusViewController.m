@@ -27,6 +27,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.textview.text=@"TEQHOST Asia is a dedicated Solution Architect and Systems Integration business.\n\nWe address business-critical problems in order to implement major change programs in large and complex systems across a variety of industries throughout the APAC, and are driven to be recognized for excellence in performance, value-creation and service, concentrating on delivering outcomes for our clients, rather than simply seeing a series of deliveries.";
+    self.textview.layer.cornerRadius=8.0f;
+    self.textview.layer.borderWidth=2.0;
+    //self.textview.layer.borderColor =[[UIColor colorWithRed:0.95 green:0.900 blue:0.0 alpha:1] CGColor];
+    self.textview.layer.borderColor =[[UIColor grayColor]CGColor];
+    CGRect frame =  self.textview.frame;
+    frame.size.height =  self.textview.contentSize.height;
+    self.textview.frame = frame;
+    [ self.textview sizeToFit];
+    [self.textview setScrollEnabled:YES];
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
