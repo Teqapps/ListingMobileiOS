@@ -179,6 +179,9 @@
 		42A4918619E2375500E4D65E /* tattoo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918519E2375500E4D65E /* tattoo_3.jpg */; };
 		42A4918819E239C600E4D65E /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918719E239C600E4D65E /* history.png */; };
 		42A4918A19E23CB800E4D65E /* notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A4918919E23CB800E4D65E /* notice.png */; };
+		42A95FD81A022EB4002C0508 /* image001.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A95FD71A022EB4002C0508 /* image001.png */; };
+		42A95FDA1A0231BD002C0508 /* teqapps_logo_ai_G.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A95FD91A0231BD002C0508 /* teqapps_logo_ai_G.jpg */; };
+		42A95FDC1A02335C002C0508 /* teqapps_logo_ai_G.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A95FDB1A02335C002C0508 /* teqapps_logo_ai_G.png */; };
 		42AD1EB019B0718C00277278 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAD19B0718B00277278 /* Bolts.framework */; };
 		42AD1EB219B0718C00277278 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */; };
 		42AD1EB419B071AC00277278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EB319B071AC00277278 /* AudioToolbox.framework */; };
@@ -430,6 +433,9 @@
 		42A4918519E2375500E4D65E /* tattoo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tattoo_3.jpg; sourceTree = "<group>"; };
 		42A4918719E239C600E4D65E /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		42A4918919E23CB800E4D65E /* notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notice.png; path = ../notice.png; sourceTree = "<group>"; };
+		42A95FD71A022EB4002C0508 /* image001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image001.png; sourceTree = "<group>"; };
+		42A95FD91A0231BD002C0508 /* teqapps_logo_ai_G.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teqapps_logo_ai_G.jpg; sourceTree = "<group>"; };
+		42A95FDB1A02335C002C0508 /* teqapps_logo_ai_G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teqapps_logo_ai_G.png; sourceTree = "<group>"; };
 		42AD1EAD19B0718B00277278 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		42AD1EB319B071AC00277278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -738,6 +744,7 @@
 		42630028198B3A72007B8C8F /* photo */ = {
 			isa = PBXGroup;
 			children = (
+				42A95FD71A022EB4002C0508 /* image001.png */,
 				428E7C5F1A00C2BD00CA2C14 /* tattoo_icon.jpg */,
 				428E7C601A00C2BD00CA2C14 /* tattoo_icon@2x.jpg */,
 				428E7C4D19FF9DA100CA2C14 /* no_like.png */,
@@ -771,6 +778,8 @@
 				4266571E19A6F2DC001D94B5 /* like_icon.png */,
 				4266571919A6F1AE001D94B5 /* comment.png */,
 				4266571A19A6F1AE001D94B5 /* like.png */,
+				42A95FDB1A02335C002C0508 /* teqapps_logo_ai_G.png */,
+				42A95FD91A0231BD002C0508 /* teqapps_logo_ai_G.jpg */,
 				4266571719A6F1A6001D94B5 /* share.png */,
 				42818907199AFB0F004D09EF /* navbackground.jpg */,
 				428E7C591A0087B800CA2C14 /* goldebackground@2x.jpg */,
@@ -1035,6 +1044,7 @@
 				42193FD119860221007E3C52 /* menu.png in Resources */,
 				428E7C5E1A008B5900CA2C14 /* loading@2x.png in Resources */,
 				4263006C19908FDA007B8C8F /* background1.jpg in Resources */,
+				42A95FDA1A0231BD002C0508 /* teqapps_logo_ai_G.jpg in Resources */,
 				424FAC901988E3870062D13D /* gabe_01.jpg in Resources */,
 				4219409E198789DB007E3C52 /* ICON.png in Resources */,
 				42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */,
@@ -1065,6 +1075,7 @@
 				427D34AB199E076400814463 /* photo_library.png in Resources */,
 				42A4916F19D54C4300E4D65E /* heart_no.png in Resources */,
 				4263005B19908265007B8C8F /* map.png in Resources */,
+				42A95FDC1A02335C002C0508 /* teqapps_logo_ai_G.png in Resources */,
 				42630051198F8EA6007B8C8F /* NEW.png in Resources */,
 				4266572419A6F3BF001D94B5 /* share_icon.png in Resources */,
 				426ED3D219C02C740024E817 /* Main.storyboard in Resources */,
@@ -1110,6 +1121,7 @@
 				42630049198F8DA2007B8C8F /* Favorites-icon.png in Resources */,
 				4219409C19878375007E3C52 /* news.jpg in Resources */,
 				42A4918419E2375200E4D65E /* tattoo_2.jpg in Resources */,
+				42A95FD81A022EB4002C0508 /* image001.png in Resources */,
 				428E7C5D1A008B5900CA2C14 /* loading.png in Resources */,
 				427D34AC199E076400814463 /* photo_library@2x.png in Resources */,
 				427D34AE199E076400814463 /* pinterest@2x.png in Resources */,

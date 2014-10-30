@@ -27,8 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     UIImage *image = [UIImage imageNamed:@"teqapps_logo_ai_G.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    CGRect aRect = CGRectMake(0, 15, 320,76);
+    [imageView setFrame:aRect];
+    UIBezierPath *exclusionPath = [UIBezierPath bezierPathWithRect:CGRectMake(CGRectGetMinX(imageView.frame), CGRectGetMinY(imageView.frame), CGRectGetWidth( self.textview.frame), CGRectGetHeight(imageView.frame))];
+     self.textview.textContainer.exclusionPaths = @[exclusionPath];
+    [ self.textview addSubview:imageView];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.textview.text=@"Formed in 2010 TeqHost & TeqApps group of company has been serving many HK, China, Macau and international business ranging from Commercial sector, retail , Education and Government organization.\n\nWe provide IOS/Android application and web solution using the latest and industry most widely adopted technology. Our team of designers, developers  has expertise on a diverse range of platform and toolkit such as (Apple, Android API, SEO,  Joomla, Drupal, Silverstripe, Wordpress, PHP, MySql, Magento, VirtueMart, Zencart , HTML5, Java script, Flash Animation, etc.). And our marketing professional are well equipped with the latest toolkits to ensure your digital platform effectively create and maintain the relationship with your target customer.";
+    self.textview.text=@"\nFormed in 2010 TeqHost & TeqApps group of company has been serving many HK, China, Macau and international business ranging from Commercial sector, retail , Education and Government organization.\r We provide IOS/Android application and web solution using the latest and industry most widely adopted technology. Our team of designers, developers  has expertise on a diverse range of platform and toolkit such as (Apple, Android API, SEO,  Joomla, Drupal, Silverstripe, Wordpress, PHP, MySql, Magento, VirtueMart, Zencart , HTML5, Java script, Flash Animation, etc.). And our marketing professional are well equipped with the latest toolkits to ensure your digital platform effectively create and maintain the relationship with your target customer.";
     self.textview.layer.cornerRadius=8.0f;
     self.textview.layer.borderWidth=2.0;
     //self.textview.layer.borderColor =[[UIColor colorWithRed:0.95 green:0.900 blue:0.0 alpha:1] CGColor];
@@ -158,7 +165,7 @@
                 
             {
                 cell.detailTextLabel.textColor =[UIColor whiteColor];
-                [cell.detailTextLabel setNumberOfLines:5];
+                [cell.detailTextLabel setNumberOfLines:10];
                 cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
                 cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
                 [cell.textLabel setNumberOfLines:2];
