@@ -15,6 +15,7 @@
  about handling errors in our Error Handling guide:
  https://developers.facebook.com/docs/ios/errors
 */
+#import "Gallery.h"
 #import "MBProgressHUD.h"
 #import "Tattoo_Detail_ViewController.h"
 #import "Tattoo_Master_Info.h"
@@ -52,7 +53,7 @@
 
   
     
-      _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+      _sidebarButton.tintColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
@@ -318,7 +319,7 @@
     CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
     thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
     thumbnailImageView.layer.cornerRadius=8.0f;
-    thumbnailImageView.layer.borderWidth=2.0;
+    thumbnailImageView.layer.borderWidth=0.0;
     thumbnailImageView.layer.masksToBounds = YES;
     thumbnailImageView.layer.borderColor=[[UIColor whiteColor] CGColor];
     [thumbnailImageView.image drawInRect:imageRect];
@@ -330,7 +331,18 @@
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
     
-    
+    sex_statues = (PFImageView*)[cell viewWithTag:144];
+    if ([[imageObject objectForKey:@"Gender"]isEqualToString:@"男"]) {
+        
+        
+        sex_statues.image = [UIImage imageNamed:@"icon-sex-m.png"];
+    }
+    else
+        if ([[imageObject objectForKey:@"Gender"]isEqualToString:@"女"]) {
+            
+            sex_statues.image = [UIImage imageNamed:@"icon-sex-f.png"];
+        }
+
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [imageObject objectForKey:@"Name"];
     
@@ -374,6 +386,45 @@
         destViewController.tattoomasterCell = tattoomasterCell;
         
     }
+    if ([segue.identifier isEqualToString:@"GOGALLERY_PROFILE"]) {
+        UIButton *button = sender;
+        CGPoint correctedPoint =
+        [button convertPoint:button.bounds.origin toView:self.TABLEVIEW];
+        NSIndexPath *indexPath =  [self.TABLEVIEW indexPathForRowAtPoint:correctedPoint];
+        Gallery *destViewController = segue.destinationViewController;
+        
+        PFObject *object = [imageFilesArray objectAtIndex:indexPath.row];
+        TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
+      //  tattoomasterCell.clickindexpath =[self.TABLEVIEW indexPathForRowAtPoint:correctedPoint];
+        tattoomasterCell.clickindexpath =0;
+        tattoomasterCell.object_id = [object objectForKey:@"object"];
+        tattoomasterCell.favorites = [object objectForKey:@"favorites"];
+        tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
+        tattoomasterCell.name = [object objectForKey:@"Name"];
+        
+        tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        
+        tattoomasterCell.gender = [object objectForKey:@"Gender"];
+        tattoomasterCell.tel = [object objectForKey:@"Tel"];
+        tattoomasterCell.email = [object objectForKey:@"Email"];
+        tattoomasterCell.address = [object objectForKey:@"Address"];
+        tattoomasterCell.latitude = [object objectForKey:@"Latitude"];
+        tattoomasterCell.longitude = [object objectForKey:@"Longitude"];
+        tattoomasterCell.website = [object objectForKey:@"Website"];
+        tattoomasterCell.personage = [object objectForKey:@"Personage"];
+        tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
+        tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
+        
+        tattoomasterCell.object_id = object.objectId;
+        tattoomasterCell.description=[object objectForKey:@"description"];
+        destViewController.tattoomasterCell = tattoomasterCell;
+        
+        
+        NSLog(@"%@333",tattoomasterCell.clickindexpath);
+        
+    }
+
 }
 
 
@@ -460,8 +511,9 @@
 - (IBAction)showlike:(id)sender {
      [self queryParseMethod];
     self.like.textColor=[UIColor grayColor];
+    self.like_btn.image=[UIImage imageNamed:@"icon-liked.png"];
     self.bookmark.textColor=[UIColor whiteColor];
-
+    self.bookmark_btn.image=[UIImage imageNamed:@"icon-favorite.png"];
 
 }
 
@@ -469,8 +521,9 @@
 - (IBAction)showbookmark:(id)sender {
        [self bookmark_query];
     self.like.textColor=[UIColor whiteColor];
+     self.like_btn.image=[UIImage imageNamed:@"icon-like.png"];
     self.bookmark.textColor=[UIColor grayColor];
-
+   self.bookmark_btn.image=[UIImage imageNamed:@"icon-favorited.png"];
 
 }
 
@@ -556,4 +609,6 @@
     [alert show];
 }
 
+- (IBAction)GOGALLARY:(id)sender {
+}
 @end

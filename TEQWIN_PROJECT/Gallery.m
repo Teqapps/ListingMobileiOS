@@ -158,7 +158,9 @@ CFShareCircleView *shareCircleView;
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         cell.image.layer.borderWidth=1.0;
          cell.image.layer.masksToBounds = YES;
-         cell.image.layer.borderColor=[[UIColor whiteColor] CGColor];
+       // cell.image.layer.borderColor=[[UIColor colorWithRed:176.0/255.0
+                                    //                 green:147.0/255.0 blue:78/255.0 alpha:1.0]CGColor];
+        cell.image.layer.borderColor=[[UIColor grayColor]CGColor];
             cell.image.image = [UIImage imageWithData:data];
         [cell.loadingSpinner stopAnimating];
         cell.loadingSpinner.hidden = YES;

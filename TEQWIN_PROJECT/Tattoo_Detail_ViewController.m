@@ -56,7 +56,8 @@
      self.description_textview.layer.cornerRadius=8.0f;
      self.description_textview.layer.borderWidth=2.0;
     self.description_textview.layer.borderColor =[[UIColor grayColor] CGColor];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+  //  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+    self.view.backgroundColor =[UIColor blackColor];
     CGRect frame =  self.description_textview.frame;
     frame.size.height =  self.description_textview.contentSize.height;
     self.description_textview.frame = frame;
@@ -85,10 +86,10 @@
 
     //set segmented control
     if ([self.tattoomasterCell.bookmark containsObject:[PFUser currentUser].objectId]) {
-        self.bookmark_image.image =[UIImage imageNamed:@"icon-favorite.png"];
+        self.bookmark_image.image =[UIImage imageNamed:@"icon-favorited.png"];
     }
     else {
-        self.bookmark_image.image =[UIImage imageNamed:@"icon-favorited.png"];
+        self.bookmark_image.image =[UIImage imageNamed:@"icon-favorite.png"];
     }
     
     if ([self.tattoomasterCell.favorites containsObject:[PFUser currentUser].objectId]) {
@@ -458,7 +459,7 @@
                cell.textLabel.textColor=[UIColor whiteColor];
     cell.detailTextLabel.text =[list objectAtIndex:indexPath.row];
     
-    cell.contentView.backgroundColor = [UIColor grayColor];
+    cell.contentView.backgroundColor = [UIColor blackColor];
 
 
    

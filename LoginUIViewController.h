@@ -23,10 +23,14 @@
     NSArray * colorstring;
     NSString *str;
     NSMutableArray *list;
+    PFImageView *sex_statues;
 }
 @property (nonatomic, assign) BOOL isclicked;
 @property (weak, nonatomic) IBOutlet UILabel *like;
 @property (weak, nonatomic) IBOutlet UILabel *bookmark;
+@property (weak, nonatomic) IBOutlet UIImageView *bookmark_btn;
+@property (weak, nonatomic) IBOutlet UIImageView *like_btn;
+- (IBAction)GOGALLARY:(id)sender;
 
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;
 @property (nonatomic, assign) BOOL isFav;

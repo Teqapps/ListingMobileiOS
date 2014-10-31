@@ -71,7 +71,7 @@
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Change button color
-    _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+    _sidebarButton.tintColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
@@ -548,7 +548,8 @@
         
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
         TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
-       tattoomasterCell.clickindexpath =nil;
+        //tattoomasterCell.clickindexpath =[self.tableView indexPathForRowAtPoint:correctedPoint];
+        tattoomasterCell.clickindexpath =0;
         tattoomasterCell.object_id = [object objectForKey:@"object"];
         tattoomasterCell.favorites = [object objectForKey:@"favorites"];
         tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
@@ -573,7 +574,7 @@
         destViewController.tattoomasterCell = tattoomasterCell;
         
         
-        NSLog(@"%@",tattoomasterCell.clickindexpath);
+        NSLog(@"%D",tattoomasterCell.clickindexpath.row);
         
     }
 
