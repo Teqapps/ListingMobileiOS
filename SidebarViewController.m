@@ -187,8 +187,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             
-            //cell.imageView.image =[UIImage imageNamed:@"new-icon.png"];
-            cell.textLabel.text=@" • Tattoo";
+            cell.imageView.image =[UIImage imageNamed:@"m-icon-home.png"];
+            cell.textLabel.text=@"主頁";
             
             [cell.textLabel setTextColor:[UIColor whiteColor]];
             
@@ -200,8 +200,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             
-            //cell.imageView.image =[UIImage imageNamed:@"new-icon.png"];
-            cell.textLabel.text=@" • 新消息";
+                   cell.imageView.image=[UIImage imageNamed:@"m-icon-news.png"];
+            cell.textLabel.text=@"新消息";
            
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
@@ -210,8 +210,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         {   cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
             UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
-            //cell.imageView.image =[UIImage imageNamed:@"history.png"];
-            cell.textLabel.text=@" • 紋身歷史";
+                   cell.imageView.image=[UIImage imageNamed:@"m-icon-favorite.png"];
+            cell.textLabel.text=@"紋身歷史";
             
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
@@ -221,9 +221,9 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
              cell.textLabel.font=[cell.textLabel.font fontWithSize:32];
             UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
-            //cell.imageView.image =[UIImage imageNamed:@"notice.png"];
-            cell.textLabel.text=@" • 紋身注意事項";
-           
+          
+            cell.textLabel.text=@"紋身注意事項";
+             cell.imageView.image=[UIImage imageNamed:@"m-icon-tnc.png"];
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
@@ -234,8 +234,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             //cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
-            cell.textLabel.text=@" • 找紋身師傅";
-           
+            cell.textLabel.text=@"找紋身師傅";
+             cell.imageView.image=[UIImage imageNamed:@"m-icon-search.png"];
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
@@ -246,15 +246,15 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             //cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
-            cell.textLabel.text=@" • 關於我們";
-            
+            cell.textLabel.text=@"關於我們";
+             cell.imageView.image=[UIImage imageNamed:@"m-icon-about.png"];
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
 
     }
     
-
+   
     
     return cell;
 }

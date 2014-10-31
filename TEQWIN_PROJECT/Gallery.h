@@ -16,11 +16,14 @@
     UIImage *imageToShare;
     PFObject *imageObject;
     PFFile *imageFile ;
+    UILabel *image_desc;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (retain) UIDocumentInteractionController * documentInteractionController;
 
+@property (weak, nonatomic) IBOutlet UILabel *master_name;
+@property (weak, nonatomic) IBOutlet PFImageView *master_image;
 - (IBAction)btn_share:(id)sender;
 - (IBAction)like:(id)sender;
 

@@ -72,20 +72,30 @@
     flowLayout.itemSize = CGSizeMake(70, 70);
     self.title =self.tattoomasterCell.name;
     self.count_like.text =[NSString stringWithFormat:@"%d likes",self.tattoomasterCell.favorites.count    ]   ;
-    
+    if ([self.tattoomasterCell.gender isEqualToString:@"男"]) {
+        
+        
+        _sexy_image.image = [UIImage imageNamed:@"icon-sex-m.png"];
+    }
+    else
+        if ([self.tattoomasterCell.gender isEqualToString:@"女"]) {
+            
+            _sexy_image.image = [UIImage imageNamed:@"icon-sex-f.png"];
+        }
+
     //set segmented control
     if ([self.tattoomasterCell.bookmark containsObject:[PFUser currentUser].objectId]) {
-        self.bookmark_image.image =[UIImage imageNamed:@"star.png"];
+        self.bookmark_image.image =[UIImage imageNamed:@"icon-favorite.png"];
     }
     else {
-        self.bookmark_image.image =[UIImage imageNamed:@"nostar.png"];
+        self.bookmark_image.image =[UIImage imageNamed:@"icon-favorited.png"];
     }
     
     if ([self.tattoomasterCell.favorites containsObject:[PFUser currentUser].objectId]) {
-        self.fav_image.image =[UIImage imageNamed:@"yes_like.png"];
+        self.fav_image.image =[UIImage imageNamed:@"icon-liked.png"];
     }
         else {
-            self.fav_image.image =[UIImage imageNamed:@"no_like.png"];
+            self.fav_image.image =[UIImage imageNamed:@"icon-like.png"];
         }
     self.master_name.text=self.tattoomasterCell.name;
     NSLog(@"dddd%@",self.tattoomasterCell.name);
@@ -738,7 +748,7 @@
               [self dislike];
               
               NSLog(@"disliked");
-                self.fav_image.image =[UIImage imageNamed:@"no_like.png"];
+                self.fav_image.image =[UIImage imageNamed:@"icon-like.png"];
 
           }
           
@@ -748,7 +758,7 @@
               [self likeImage];
               
               NSLog(@"liked");
-  self.fav_image.image =[UIImage imageNamed:@"yes_like.png"];
+  self.fav_image.image =[UIImage imageNamed:@"icon-liked.png"];
 
                         }
       }
@@ -787,7 +797,7 @@
             [self nobookmark];
             
             NSLog(@"disliked");
-            self.bookmark_image.image =[UIImage imageNamed:@"nostar.png"];
+            self.bookmark_image.image =[UIImage imageNamed:@"icon-favorite.png"];
             
         }
         
@@ -797,7 +807,7 @@
             [self bookmark];
             
             NSLog(@"liked");
-            self.bookmark_image.image =[UIImage imageNamed:@"star.png"];
+            self.bookmark_image.image =[UIImage imageNamed:@"icon-favorited.png"];
             
         }
     }

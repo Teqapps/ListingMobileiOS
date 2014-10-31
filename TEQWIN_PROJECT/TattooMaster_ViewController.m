@@ -62,8 +62,9 @@
     }
     
     self.title =@"師父";
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
-    
+    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+    self.view.backgroundColor = [UIColor blackColor];
+
     searchbar.hidden = !searchbar.hidden;
     self.navigationController.navigationBar.translucent=NO;
     // Change button color
@@ -318,15 +319,30 @@
         UILabel *count_like = (UILabel*) [cell viewWithTag:105];
         count_like.text = [NSString stringWithFormat:@"%d",count.count];
         
+        UILabel *master_desc = (UILabel*) [cell viewWithTag:187];
+        master_desc.text = [object objectForKey:@"description"];
+        
+        sex_statues = (PFImageView*)[cell viewWithTag:177];
+        if ([[object objectForKey:@"Gender"]isEqualToString:@"男"]) {
+
+            
+            sex_statues.image = [UIImage imageNamed:@"icon-sex-m.png"];
+        }
+        else
+         if ([[object objectForKey:@"Gender"]isEqualToString:@"女"]) {
+            
+            sex_statues.image = [UIImage imageNamed:@"icon-sex-f.png"];
+        }
+
         heart_statues = (PFImageView*)[cell viewWithTag:107];
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            heart_statues.image = [UIImage imageNamed:@"yes_like.png"];
+            heart_statues.image = [UIImage imageNamed:@"icon-liked.png"];
         }
         else
         {
             
-            heart_statues.image = [UIImage imageNamed:@"no_like.png"];
+            heart_statues.image = [UIImage imageNamed:@"icon-like.png"];
         }
         // UICollectionView *cellImageCollection=(UICollectionView *)[cell viewWithTag:9];
         
@@ -338,12 +354,12 @@
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            cell.imageView.image = [UIImage imageNamed:@"yes_like.png"];
+            cell.imageView.image = [UIImage imageNamed:@"icon-liked.png"];
         }
         else
         {
             
-            cell.imageView.image = [UIImage imageNamed:@"no_like.png"];
+            cell.imageView.image = [UIImage imageNamed:@"icon-like.png"];
         }
         
         cell.textLabel.text = [object objectForKey:@"Name"];
@@ -523,8 +539,61 @@
         
         
     }
-    
+    if ([segue.identifier isEqualToString:@"GOGALLERY_button"]) {
+        UIButton *button = sender;
+        CGPoint correctedPoint =
+        [button convertPoint:button.bounds.origin toView:self.tableView];
+        NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
+        Gallery *destViewController = segue.destinationViewController;
+        
+        PFObject *object = [self.objects objectAtIndex:indexPath.row];
+        TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
+       tattoomasterCell.clickindexpath =nil;
+        tattoomasterCell.object_id = [object objectForKey:@"object"];
+        tattoomasterCell.favorites = [object objectForKey:@"favorites"];
+        tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
+        tattoomasterCell.name = [object objectForKey:@"Name"];
+        
+        tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        
+        tattoomasterCell.gender = [object objectForKey:@"Gender"];
+        tattoomasterCell.tel = [object objectForKey:@"Tel"];
+        tattoomasterCell.email = [object objectForKey:@"Email"];
+        tattoomasterCell.address = [object objectForKey:@"Address"];
+        tattoomasterCell.latitude = [object objectForKey:@"Latitude"];
+        tattoomasterCell.longitude = [object objectForKey:@"Longitude"];
+        tattoomasterCell.website = [object objectForKey:@"Website"];
+        tattoomasterCell.personage = [object objectForKey:@"Personage"];
+        tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
+        tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
+        
+        tattoomasterCell.object_id = object.objectId;
+        tattoomasterCell.description=[object objectForKey:@"description"];
+        destViewController.tattoomasterCell = tattoomasterCell;
+        
+        
+        NSLog(@"%@",tattoomasterCell.clickindexpath);
+        
+    }
+
+
 }
 
 
+- (IBAction)gogallery:(id)sender {
+    UIButton *button = sender;
+    CGPoint correctedPoint =
+    [button convertPoint:button.bounds.origin toView:self.tableView];
+    NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
+    Gallery * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Gallery"];
+    [self.navigationController pushViewController:mapVC animated:YES];
+    
+    PFObject *object = [self.objects objectAtIndex:indexPath.row];
+    TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
+       tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
+
+    mapVC.tattoomasterCell = tattoomasterCell;
+    
+}
 @end

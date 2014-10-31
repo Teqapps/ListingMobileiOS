@@ -52,7 +52,8 @@
 
     
     self.title = @"新消息";
-self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+//self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+    self.view.backgroundColor = [UIColor blackColor];
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
@@ -247,13 +248,13 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-            cell.imageView.image = [UIImage imageNamed:@"yes_like.png"];
+            cell.imageView.image = [UIImage imageNamed:@"icon-liked.png"];
             
         }
         else
         {
             
-            cell.imageView.image = [UIImage imageNamed:@"no_like.png"];
+            cell.imageView.image = [UIImage imageNamed:@"icon-like.png"];
         }
        
         cell.textLabel.text = [object objectForKey:@"Name"];

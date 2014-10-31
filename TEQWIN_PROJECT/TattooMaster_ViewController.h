@@ -20,6 +20,7 @@
     NSArray * hehe;
     PFObject * object_id;
     PFImageView *heart_statues;
+    PFImageView *sex_statues;
     NSIndexPath *indexPath;
     NSArray*imageFilesArray_image;
     PFQuery * searchquery;
@@ -30,6 +31,8 @@
 @property IBOutlet UISearchBar *searchbar;
 - (IBAction)showsearch:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSearch;
+
+- (IBAction)gogallery:(id)sender;
 
 @property (nonatomic, assign) BOOL isFav;
 

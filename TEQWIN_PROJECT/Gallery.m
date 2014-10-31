@@ -35,8 +35,15 @@ CFShareCircleView *shareCircleView;
     
     NSLog(@"%@",self.tattoomasterCell);
     [self queryParseMethod];
+    self.master_image.file=self.tattoomasterCell.imageFile;
     
-    
+    self.master_image.layer.cornerRadius =self.master_image.frame.size.width / 2;
+    self.master_image.layer.borderWidth = 1.0f;
+    self.master_image.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.master_image.clipsToBounds = YES;
+   
+
+    self.master_name.text=self.tattoomasterCell.name    ;
     self.title=@"作品庫";
     self.tableView.bounces=NO;
     // Create array object and assign it to _feedItems variable
@@ -52,8 +59,14 @@ CFShareCircleView *shareCircleView;
 {
     
     [super viewDidAppear:animated];
+    if (self.tattoomasterCell.clickindexpath==nil) {
+        NSIndexPath *indexPat = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];
+
+    }
+    else{
     NSIndexPath *indexPat = [NSIndexPath indexPathForRow:self.tattoomasterCell.clickindexpath.row inSection:0];
-    [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];
+        [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];}
 }
 
 
@@ -138,12 +151,12 @@ CFShareCircleView *shareCircleView;
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     
     imageFile = [imageObject objectForKey:@"image"];
-
+    
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
       cell.image.image = [UIImage imageNamed:@"loading.png"];
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        cell.image.layer.borderWidth=2.0;
+        cell.image.layer.borderWidth=1.0;
          cell.image.layer.masksToBounds = YES;
          cell.image.layer.borderColor=[[UIColor whiteColor] CGColor];
             cell.image.image = [UIImage imageWithData:data];
@@ -153,7 +166,9 @@ CFShareCircleView *shareCircleView;
      cell.image.tag=9999;
     cell.image.userInteractionEnabled=YES;
     [ cell.image addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
-
+    image_desc = (UILabel*) [cell viewWithTag:199];
+    image_desc.text = [imageObject objectForKey:@"image_desc"];
+    
         return cell;
 }
 
@@ -235,7 +250,7 @@ CFShareCircleView *shareCircleView;
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
     
    shareimageFile = [imageObject objectForKey:@"image"];
-    
+    image_desc =[imageObject objectForKey:@"image_desc"];
     [shareimageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
            imageToShare = [UIImage imageWithData:data];
  
@@ -292,7 +307,7 @@ CFShareCircleView *shareCircleView;
             NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                            self.tattoomasterCell.name, @"name",
                                            @"TEQWIN SOLUTION", @"caption",
-                                           @"作品", @"description",
+                                          image_desc, @"description",
                                            shareimageFile.url, @"link",
                                            shareimageFile.url,@"picture",
                                            nil];
@@ -388,7 +403,7 @@ CFShareCircleView *shareCircleView;
        //  imageToShare =[UIImage imageNamed:@"twitter.png"];
          NSURL *urlToShare = [NSURL URLWithString:@""];
          
-         NSArray *activityItems = @[textToShare, imageToShare, urlToShare];
+         NSArray *activityItems = @[image_desc, imageToShare, urlToShare];
        
 
          UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
