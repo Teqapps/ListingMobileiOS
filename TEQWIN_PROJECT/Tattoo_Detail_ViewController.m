@@ -48,10 +48,12 @@
     [super viewDidLoad];
   
     
-    
-    
-    self.view_count.text =[NSString stringWithFormat:@"%@",self.tattoomasterCell.view];
-
+    if (self.tattoomasterCell.view ==nil) {
+        self.view_count.text = @"1";
+    }
+    else{
+    self.view_count.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.view.count];
+    }
    //self.view_count.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.view.count    ]   ;
     self.description_textview.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     if (self.tattoomasterCell.description ==nil) {
@@ -146,7 +148,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     // scroll search bar out of sight
-    
+    self.screenName =@"detail page";
 
 
 }

@@ -89,7 +89,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [self refreshTable:nil];
-    
+    NSLog(@"%@",[PFInstallation currentInstallation].objectId);
     // scroll search bar out of sight
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
@@ -101,9 +101,18 @@
     
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
     //
+    installquery = [PFQuery queryWithClassName:@"Installation"];
+    
+    installquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    [installquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            installarray = [[NSArray alloc] initWithArray:objects];
+            
+        }
+    }];
 
     
-    
+    NSLog(@"ssssss%d",installarray.count);
 }
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     CGRect newBounds = self.tableView.bounds;
@@ -220,7 +229,8 @@
     [query orderByAscending:@"createdAt"];
     
     return query;
-    
+   
+
 }
 
 
@@ -536,11 +546,14 @@
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
-        NSInteger myInteger = [tattoomasterCell.view integerValue];
-        object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
-        [object saveInBackground];
-        NSLog(@"%@",object[@"view"]);
+      //  NSInteger myInteger = [tattoomasterCell.view integerValue];
+      //  object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
+      //  [object saveInBackground];
+      //  NSLog(@"%@",object[@"view"]);
         
+        
+        [object addUniqueObject:[PFInstallation currentInstallation].objectId forKey:@"view"];
+        [object saveInBackground];
     }
     if ([segue.identifier isEqualToString:@"GOGALLERY_button"]) {
         UIButton *button = sender;

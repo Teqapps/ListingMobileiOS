@@ -10,6 +10,7 @@
 #import "TattooMasterCell.h"
 #import "Tattoo_Detail_ViewController.h"
 #import <Parse/Parse.h>
+
 @interface TattooMaster_ViewController : PFQueryTableViewController{
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
@@ -24,7 +25,9 @@
     NSIndexPath *indexPath;
     NSArray*imageFilesArray_image;
     PFQuery * searchquery;
-    
+    PFObject *installid;
+     PFQuery * installquery;
+         NSArray * installarray;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;

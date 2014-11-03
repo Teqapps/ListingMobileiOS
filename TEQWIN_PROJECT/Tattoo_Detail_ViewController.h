@@ -11,7 +11,8 @@
 #import "Tattoo_Master_Info.h"
 #import <MessageUI/MessageUI.h>
 #import "TattooMasterCell.h"
-@interface Tattoo_Detail_ViewController : UIViewController<MFMailComposeViewControllerDelegate,UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate >
+#import "GAITrackedViewController.h"
+@interface Tattoo_Detail_ViewController : GAITrackedViewController<MFMailComposeViewControllerDelegate,UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate >
 
 {
     PFObject *imageObject;

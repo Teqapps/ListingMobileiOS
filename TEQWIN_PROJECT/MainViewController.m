@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
+
     // scroll search bar out of sight
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -68,11 +68,13 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    self.screenName = @"Main";
     [self queryParseMethod];
     [self queryParseMethod_news];
     searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
+   // NSLog(@"%@",[PFInstallation currentInstallation].objectId);
 }
 -(void)itemsDownloaded:(NSArray *)items
 {
@@ -428,10 +430,12 @@
          tattoomasterCell.promotion=[object objectForKey:@"promotion"];
     
         destViewController.tattoomasterCell = tattoomasterCell;
-        NSInteger myInteger = [tattoomasterCell.view integerValue];
-        object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
+      //  NSInteger myInteger = [tattoomasterCell.view integerValue];
+        //object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
+        //[object saveInBackground];
+        //NSLog(@"%@",object[@"view"]);
+        [object addUniqueObject:[PFInstallation currentInstallation].objectId forKey:@"view"];
         [object saveInBackground];
-        NSLog(@"%@",object[@"view"]);
 
         }
     }

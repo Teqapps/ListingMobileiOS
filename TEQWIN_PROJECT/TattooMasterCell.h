@@ -26,7 +26,7 @@
 @property (nonatomic, strong) NSArray *favorites; // preparation time
 @property (nonatomic, strong) NSArray *bookmark; // preparation time
 @property (nonatomic, strong) NSString *description; // name of recipe
-@property (nonatomic, strong) NSNumber *view; // name of recipe
+@property (nonatomic, strong) NSArray *view; // name of recipe
 
 @property (nonatomic, strong) PFFile *promotion; // image of recipe
 @property (nonatomic, strong) UIImage *img; // image of recipe

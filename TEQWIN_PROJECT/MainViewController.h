@@ -10,11 +10,12 @@
 #import "HomeModel.h"
 #import <Parse/Parse.h>
 #import "TattooMasterCell.h"
+#import "GAITrackedViewController.h"
 @protocol passNames <NSObject>
 
 
 @end
-@interface MainViewController : UIViewController <HomeModelProtocol>
+@interface MainViewController : GAITrackedViewController <HomeModelProtocol>
 {
      PFObject *selectobject;
     NSArray *news_array;
