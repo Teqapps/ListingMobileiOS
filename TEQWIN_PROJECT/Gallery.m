@@ -135,7 +135,7 @@ CFShareCircleView *shareCircleView;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // NSLog(@"%@", imageFilesArray);
+NSLog(@"%@", imageFilesArray);
 }
 - (void) noimage {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"對不起" message:@"沒有照片" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];

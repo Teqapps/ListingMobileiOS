@@ -46,7 +46,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
     
+    
+    
+    self.view_count.text =[NSString stringWithFormat:@"%@",self.tattoomasterCell.view];
+
+   //self.view_count.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.view.count    ]   ;
+    self.description_textview.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     if (self.tattoomasterCell.description ==nil) {
         self.description_textview.text = @"沒有簡介";
     }
@@ -54,7 +61,7 @@
     self.description_textview.text=self.tattoomasterCell.description;
     }
      self.description_textview.layer.cornerRadius=8.0f;
-     self.description_textview.layer.borderWidth=2.0;
+     self.description_textview.layer.borderWidth=1.0f;
     self.description_textview.layer.borderColor =[[UIColor grayColor] CGColor];
   //  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     self.view.backgroundColor =[UIColor blackColor];
@@ -224,6 +231,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+   
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {

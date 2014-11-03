@@ -210,6 +210,9 @@
 		42A9601A1A037BAE002C0508 /* bg-login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960191A037BAE002C0508 /* bg-login@2x.png */; };
 		42A9601C1A037D06002C0508 /* button-facebook-login_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A9601B1A037D06002C0508 /* button-facebook-login_down.png */; };
 		42A960201A038034002C0508 /* icon-favorited.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A9601F1A038034002C0508 /* icon-favorited.png */; };
+		42A960221A038F88002C0508 /* icon-gallery_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960211A038F88002C0508 /* icon-gallery_down.png */; };
+		42A960241A07151A002C0508 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960231A07151A002C0508 /* bar.png */; };
+		42A960261A071AD2002C0508 /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960251A071AD2002C0508 /* view.png */; };
 		42AD1EB019B0718C00277278 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAD19B0718B00277278 /* Bolts.framework */; };
 		42AD1EB219B0718C00277278 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */; };
 		42AD1EB419B071AC00277278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EB319B071AC00277278 /* AudioToolbox.framework */; };
@@ -492,6 +495,9 @@
 		42A960191A037BAE002C0508 /* bg-login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-login@2x.png"; sourceTree = "<group>"; };
 		42A9601B1A037D06002C0508 /* button-facebook-login_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-facebook-login_down.png"; path = "../button-facebook-login_down.png"; sourceTree = "<group>"; };
 		42A9601F1A038034002C0508 /* icon-favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-favorited.png"; sourceTree = "<group>"; };
+		42A960211A038F88002C0508 /* icon-gallery_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gallery_down.png"; sourceTree = "<group>"; };
+		42A960231A07151A002C0508 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		42A960251A071AD2002C0508 /* view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view.png; sourceTree = "<group>"; };
 		42AD1EAD19B0718B00277278 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		42AD1EB319B071AC00277278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -1000,6 +1006,8 @@
 		42A95FDE1A032F1F002C0508 /* photo_lastest */ = {
 			isa = PBXGroup;
 			children = (
+				42A960251A071AD2002C0508 /* view.png */,
+				42A960231A07151A002C0508 /* bar.png */,
 				42A960171A0378E9002C0508 /* bg-login拷貝.png */,
 				42A95FDF1A032F41002C0508 /* bg-login.png */,
 				42A960191A037BAE002C0508 /* bg-login@2x.png */,
@@ -1010,6 +1018,7 @@
 				42A9601F1A038034002C0508 /* icon-favorited.png */,
 				42A95FE41A032F41002C0508 /* icon-favorite.png */,
 				42A95FE61A032F41002C0508 /* icon-gallery.png */,
+				42A960211A038F88002C0508 /* icon-gallery_down.png */,
 				42A95FE71A032F41002C0508 /* icon-like.png */,
 				42A95FE91A032F41002C0508 /* icon-search.png */,
 				42A960151A036E31002C0508 /* icon-liked.png */,
@@ -1186,6 +1195,8 @@
 				424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */,
 				42A4918619E2375500E4D65E /* tattoo_3.jpg in Resources */,
 				428E7C4F19FF9DA100CA2C14 /* no_like.png in Resources */,
+				42A960261A071AD2002C0508 /* view.png in Resources */,
+				42A960221A038F88002C0508 /* icon-gallery_down.png in Resources */,
 				42193FD219860221007E3C52 /* menu@2x.png in Resources */,
 				42A4914219D506A700E4D65E /* MainBG.png in Resources */,
 				42A4918819E239C600E4D65E /* history.png in Resources */,
@@ -1218,6 +1229,7 @@
 				4219408719863C9F007E3C52 /* ive.png in Resources */,
 				428E7C621A00C2BD00CA2C14 /* tattoo_icon@2x.jpg in Resources */,
 				4266571819A6F1A6001D94B5 /* share.png in Resources */,
+				42A960241A07151A002C0508 /* bar.png in Resources */,
 				42AF20D519E7E6B800FC3BEC /* splash.png in Resources */,
 				428E7B6319FF765D00CA2C14 /* star.png in Resources */,
 				42A4918A19E23CB800E4D65E /* notice.png in Resources */,

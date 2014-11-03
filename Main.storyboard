@@ -428,15 +428,15 @@
                                 <rect key="frame" x="0.0" y="222" width="320" height="282"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="separatorColor" red="0.70588237047195435" green="0.58431375026702881" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="947AA7BE-4CE2-4A74-8799-FD96E1A19A71" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="E6DF9F15-DD87-45D9-B9E2-9E064BEBC6F3" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                    <color key="textColor" red="0.53333336114883423" green="0.44313728809356689" blue="0.23529413342475891" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" red="0.62218432741116758" green="0.5043485319592419" blue="0.24639397952600012" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
@@ -570,6 +570,17 @@
                                 <rect key="frame" x="131" y="101" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="view.png" id="akD-Xd-80H">
+                                <rect key="frame" x="249" y="8" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12,34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aev-48-0cJ">
+                                <rect key="frame" x="272" y="8" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.74593512055837563" green="0.73394748914764762" blue="0.74293821270569371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
@@ -593,6 +604,7 @@
                         <outlet property="searchDisplayController" destination="Fi5-5w-pUQ" id="Pie-Vz-A1a"/>
                         <outlet property="sexy_image" destination="uC1-yY-NiD" id="fB8-wd-wwI"/>
                         <outlet property="tableView" destination="RFZ-3m-zSA" id="F97-HM-8ak"/>
+                        <outlet property="view_count" destination="Aev-48-0cJ" id="Ifc-Hs-NJI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wP7-EA-Ela" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -725,12 +737,12 @@
                                             <rect key="frame" x="146" y="66" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-gallery.png" id="NXy-EB-MZN">
-                                            <rect key="frame" x="107" y="66" width="30" height="30"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-gallery.png" highlighted="YES" id="NXy-EB-MZN">
+                                            <rect key="frame" x="108" y="66" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ypk-gn-SG9">
-                                            <rect key="frame" x="107" y="66" width="30" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Ypk-gn-SG9">
+                                            <rect key="frame" x="108" y="66" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -800,25 +812,25 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="279" sectionHeaderHeight="22" sectionFooterHeight="22" id="oo9-Ec-Qh1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="294" sectionHeaderHeight="22" sectionFooterHeight="22" id="oo9-Ec-Qh1">
                                 <rect key="frame" x="0.0" y="46" width="320" height="458"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="parallaxCell" rowHeight="279" id="qni-f1-GMN" customClass="GalleryCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="279"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="parallaxCell" rowHeight="294" id="qni-f1-GMN" customClass="GalleryCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="294"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qni-f1-GMN" id="1nQ-jk-iJX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="111" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="H1m-vl-B4a">
-                                                    <rect key="frame" x="4" y="9" width="313" height="199"/>
+                                                    <rect key="frame" x="4" y="9" width="313" height="200"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="2UC-sq-uGK">
-                                                    <rect key="frame" x="150" y="90" width="20" height="20"/>
+                                                    <rect key="frame" x="150" y="95.5" width="20" height="20"/>
                                                     <color key="color" red="0.1058782762" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </activityIndicatorView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="5vt-l0-AS3">
@@ -844,6 +856,10 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bar.png" id="Oup-zX-qOu">
+                                                    <rect key="frame" x="0.0" y="274" width="320" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.031372550874948502" green="0.0078431377187371254" blue="0.0039215688593685627" alpha="1" colorSpace="deviceRGB"/>
                                         </tableViewCellContentView>
@@ -1045,7 +1061,7 @@
                                                     <rect key="frame" x="98" y="38" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hSa-R2-Lge">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="hSa-R2-Lge">
                                                     <rect key="frame" x="143" y="38" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal">
@@ -1344,7 +1360,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="947AA7BE-4CE2-4A74-8799-FD96E1A19A71" width="320" height="460">
+        <image name="E6DF9F15-DD87-45D9-B9E2-9E064BEBC6F3" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11233,6 +11249,7 @@ AAAAAAAAAAAJCvs
         </image>
         <image name="ICON.png" width="128" height="128"/>
         <image name="background.jpg" width="960" height="540"/>
+        <image name="bar.png" width="632" height="31"/>
         <image name="goldebackground.jpg" width="340" height="227"/>
         <image name="icon-favorite.png" width="72" height="72"/>
         <image name="icon-gallery.png" width="72" height="72"/>
@@ -11247,6 +11264,7 @@ AAAAAAAAAAAJCvs
         <image name="navigationicon.png" width="512" height="512"/>
         <image name="tattoo_1.jpg" width="800" height="1057"/>
         <image name="tattoo_3.jpg" width="398" height="398"/>
+        <image name="view.png" width="512" height="512"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -11255,7 +11273,7 @@ AAAAAAAAAAAJCvs
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="QTr-PV-D3h"/>
-        <segue reference="tPv-nD-LkF"/>
+        <segue reference="imN-Ia-XWJ"/>
+        <segue reference="sqL-XN-2Gv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -43,6 +43,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *master_name;
 
 @property (weak, nonatomic) IBOutlet UIImageView *sexy_image;
+@property (weak, nonatomic) IBOutlet UILabel *view_count;
 
 
 @property (strong, nonatomic) Tattoo_Master_Info *selectedTattoo_Master;

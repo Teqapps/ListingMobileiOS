@@ -421,13 +421,17 @@
         tattoomasterCell.website = [object objectForKey:@"Website"];
         tattoomasterCell.personage = [object objectForKey:@"Personage"];
         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
-        
+         tattoomasterCell.view = [object objectForKey:@"view"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
          tattoomasterCell.promotion=[object objectForKey:@"promotion"];
     
         destViewController.tattoomasterCell = tattoomasterCell;
+        NSInteger myInteger = [tattoomasterCell.view integerValue];
+        object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
+        [object saveInBackground];
+        NSLog(@"%@",object[@"view"]);
 
         }
     }

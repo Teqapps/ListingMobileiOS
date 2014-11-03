@@ -55,6 +55,7 @@
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
+    
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
@@ -530,13 +531,15 @@
         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
-        
+        tattoomasterCell.view = [object objectForKey:@"view"];
+
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
-        
-        
-        
+        NSInteger myInteger = [tattoomasterCell.view integerValue];
+        object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
+        [object saveInBackground];
+        NSLog(@"%@",object[@"view"]);
         
     }
     if ([segue.identifier isEqualToString:@"GOGALLERY_button"]) {
@@ -549,7 +552,7 @@
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
         TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
         //tattoomasterCell.clickindexpath =[self.tableView indexPathForRowAtPoint:correctedPoint];
-        tattoomasterCell.clickindexpath =0;
+        tattoomasterCell.clickindexpath =nil;
         tattoomasterCell.object_id = [object objectForKey:@"object"];
         tattoomasterCell.favorites = [object objectForKey:@"favorites"];
         tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
@@ -583,18 +586,5 @@
 
 
 - (IBAction)gogallery:(id)sender {
-    UIButton *button = sender;
-    CGPoint correctedPoint =
-    [button convertPoint:button.bounds.origin toView:self.tableView];
-    NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
-    Gallery * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Gallery"];
-    [self.navigationController pushViewController:mapVC animated:YES];
-    
-    PFObject *object = [self.objects objectAtIndex:indexPath.row];
-    TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
-       tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
-
-    mapVC.tattoomasterCell = tattoomasterCell;
-    
-}
+  }
 @end
