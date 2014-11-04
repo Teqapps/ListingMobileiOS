@@ -55,7 +55,7 @@
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
-    
+   
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
@@ -89,7 +89,8 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [self refreshTable:nil];
-    NSLog(@"%@",[PFInstallation currentInstallation].objectId);
+     [self queryParseMethod];
+      NSLog(@"%@",[PFInstallation currentInstallation].objectId);
     // scroll search bar out of sight
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
@@ -101,19 +102,14 @@
     
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
     //
-    installquery = [PFQuery queryWithClassName:@"Installation"];
     
-    installquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    [installquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            installarray = [[NSArray alloc] initWithArray:objects];
-            
-        }
-    }];
-
     
-    NSLog(@"ssssss%d",installarray.count);
+    
+   
+    //NSLog(@"ssssss%d",installarray.count);
 }
+
+
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
@@ -208,16 +204,42 @@
 
 
 
+- (void)queryParseMethod {
+    NSLog(@"start query");
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    [query whereKey:@"Master_id" equalTo:@"1"];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            imageFilesArray = [[NSArray alloc] initWithArray:objects];
+            if (imageFilesArray.count==0) {
+                gallary_image.image=[UIImage imageNamed:@"icon-gallery_nophoto.png"];
+                
+            }
+            else
+                gallary_image.image=[UIImage imageNamed:@"icon-gallery.png"];
+            [_table_view reloadData];
+      
+            
+            
+            [query orderByAscending:@"createdAt"];
+            
+        }
+        
+    }];
+    
+}
 
 
 - (PFQuery *)queryForTable{
-    
+ 
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"allow_display" equalTo:[NSNumber numberWithBool:YES]];
     
-    
+
     
     
     // If no objects are loaded in memory, we look to the cache first to fill the table
@@ -243,7 +265,7 @@
     if (tableView == self.tableView) {
         
         selectobject = [self.objects  objectAtIndex:indexPath.row];
-        NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
+      //  NSLog(@"%@gagagaga",[selectobject objectForKey:@"Master_id"]);
     } else {
         //NSLog(@"how many in search results");
         //NSLog(@"%@", self.searchResults.count);
@@ -355,7 +377,22 @@
             
             heart_statues.image = [UIImage imageNamed:@"icon-like.png"];
         }
+        gallary_image = (PFImageView*)[cell viewWithTag:161];
+        gallary_button = (UIButton*)[cell viewWithTag:162];
+        
+        
+
+    
+    
+    
         // UICollectionView *cellImageCollection=(UICollectionView *)[cell viewWithTag:9];
+    //    gallary_object =[gallary_array objectAtIndex:indexPath.row];
+     //
+       
+      //  master_array =[master_object objectForKey:@"Master_id"];
+     //   NSLog(@"%@",[gallary_object objectForKey:@"Master_id"]);
+         //NSLog(@"gd%@",master_array);
+     //   NSLog(@"%@",[master_object objectForKey:@"Master_id"]);
         
     }
     cell.backgroundColor = [UIColor clearColor];

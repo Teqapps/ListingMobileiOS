@@ -25,9 +25,13 @@
     NSIndexPath *indexPath;
     NSArray*imageFilesArray_image;
     PFQuery * searchquery;
-    PFObject *installid;
-     PFQuery * installquery;
-         NSArray * installarray;
+    PFObject *gallary_object;
+     PFQuery * gallary_query;
+         NSArray * gallary_array;
+    PFObject *master_object;
+    UIButton *gallary_button;
+    PFImageView *gallary_image;
+     NSArray * master_array;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;
