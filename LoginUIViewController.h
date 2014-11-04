@@ -14,7 +14,7 @@
 @interface LoginUIViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate,UITableViewDataSource, UITableViewDelegate>
 {
  
-NSArray *gallery_array;
+
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
     PFObject *selectobject;
@@ -24,9 +24,6 @@ NSArray *gallery_array;
     NSString *str;
     NSMutableArray *list;
     PFImageView *sex_statues;
-    PFImageView *gallery_statues;
-    UIButton * gallery_button;
-    
 }
 @property (nonatomic, assign) BOOL isclicked;
 @property (weak, nonatomic) IBOutlet UILabel *like;

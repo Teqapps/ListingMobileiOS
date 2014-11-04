@@ -215,7 +215,6 @@
 		42A960261A071AD2002C0508 /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960251A071AD2002C0508 /* view.png */; };
 		42A960331A073C47002C0508 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A960311A073C47002C0508 /* libAdIdAccess.a */; };
 		42A960341A073C47002C0508 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A960321A073C47002C0508 /* libGoogleAnalyticsServices.a */; };
-		42A960361A086EB1002C0508 /* icon-gallery_nophoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960351A086EB1002C0508 /* icon-gallery_nophoto.png */; };
 		42AD1EB019B0718C00277278 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAD19B0718B00277278 /* Bolts.framework */; };
 		42AD1EB219B0718C00277278 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */; };
 		42AD1EB419B071AC00277278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EB319B071AC00277278 /* AudioToolbox.framework */; };
@@ -513,7 +512,6 @@
 		42A960301A073C3F002C0508 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		42A960311A073C47002C0508 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
 		42A960321A073C47002C0508 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
-		42A960351A086EB1002C0508 /* icon-gallery_nophoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gallery_nophoto.png"; sourceTree = "<group>"; };
 		42AD1EAD19B0718B00277278 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		42AD1EB319B071AC00277278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -1036,7 +1034,6 @@
 		42A95FDE1A032F1F002C0508 /* photo_lastest */ = {
 			isa = PBXGroup;
 			children = (
-				42A960351A086EB1002C0508 /* icon-gallery_nophoto.png */,
 				42A960251A071AD2002C0508 /* view.png */,
 				42A960231A07151A002C0508 /* bar.png */,
 				42A960171A0378E9002C0508 /* bg-login拷貝.png */,
@@ -1269,7 +1266,6 @@
 				42A4913F19D506A700E4D65E /* FacebookDown.png in Resources */,
 				4266571C19A6F1AE001D94B5 /* like.png in Resources */,
 				42A4917819D56DE600E4D65E /* loading_image.gif in Resources */,
-				42A960361A086EB1002C0508 /* icon-gallery_nophoto.png in Resources */,
 				428E7C5A1A0087B800CA2C14 /* goldebackground@2x.jpg in Resources */,
 				420E2F6219F9EC3F00667E6C /* whatsapp@2X.png in Resources */,
 				42A960061A032F41002C0508 /* logo.png in Resources */,
