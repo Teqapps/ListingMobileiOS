@@ -357,6 +357,25 @@
     {
         fav.image = [UIImage imageNamed:favstring];
     }
+    
+    
+    gallary_image = (PFImageView*)[cell viewWithTag:161];
+    gallary_button = (UIButton*)[cell viewWithTag:162];
+    
+   
+    if ([[imageObject objectForKey:@"gallary_displayallow"]isEqualToValue:[NSNumber numberWithBool:YES]]) {
+        NSLog(@"%@",self.tattoomasterCell.master_id);
+        gallary_image.image=[UIImage imageNamed:@"icon-gallery.png"];
+        
+    }
+    else
+    {
+        gallary_image.image = [UIImage imageNamed:@"icon-gallery_nophoto.png"];
+        ;
+        gallary_button.enabled=NO;
+        NSLog(@"%@",self.tattoomasterCell.master_id);
+
+    }
     return cell;
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

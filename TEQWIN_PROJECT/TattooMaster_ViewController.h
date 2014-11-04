@@ -32,6 +32,7 @@
     UIButton *gallary_button;
     PFImageView *gallary_image;
      NSArray * master_array;
+    PFQuery *query;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;

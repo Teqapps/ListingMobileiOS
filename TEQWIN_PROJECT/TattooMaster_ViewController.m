@@ -55,8 +55,11 @@
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
-   
-    CGRect newBounds = self.tableView.bounds;
+  
+    
+    
+    
+       CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
         self.tableView.bounds = newBounds;
@@ -100,13 +103,12 @@
     //[query whereKey:@"Name" containsString:searchTerm];
     
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
-    //
+    //// Finds scores from any of Jonathan, Dario, or Shawn
     
     
     
    
-    //NSLog(@"ssssss%d",installarray.count);
-}
+  }
 
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -208,7 +210,7 @@
 
 - (PFQuery *)queryForTable{
  
-    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+query = [PFQuery queryWithClassName:self.parseClassName];
     
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"allow_display" equalTo:[NSNumber numberWithBool:YES]];
@@ -355,6 +357,20 @@
         gallary_button = (UIButton*)[cell viewWithTag:162];
         
         
+        
+        if ([[object objectForKey:@"gallary_displayallow"]isEqualToValue:[NSNumber numberWithBool:YES]]) {
+         //   NSLog(@"%@",self.tattoomasterCell.master_id);
+            gallary_image.image=[UIImage imageNamed:@"icon-gallery.png"];
+            
+        }
+        else
+        {
+            gallary_image.image = [UIImage imageNamed:@"icon-gallery_nophoto.png"];
+            ;
+            gallary_button.enabled=NO;
+         //   NSLog(@"%@",self.tattoomasterCell.master_id);
+            
+        }
 
     
     
@@ -576,7 +592,7 @@
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
         TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
         //tattoomasterCell.clickindexpath =[self.tableView indexPathForRowAtPoint:correctedPoint];
-        tattoomasterCell.clickindexpath =nil;
+        tattoomasterCell.clickindexpath =0;
         tattoomasterCell.object_id = [object objectForKey:@"object"];
         tattoomasterCell.favorites = [object objectForKey:@"favorites"];
         tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];

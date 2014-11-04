@@ -16,7 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    sleep(2);
+    sleep(0);
        // Optional: automatically send uncaught exceptions to Google Analytics.
     [GAI sharedInstance].trackUncaughtExceptions = YES;
     
