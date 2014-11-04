@@ -89,7 +89,6 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [self refreshTable:nil];
-     [self queryParseMethod];
       NSLog(@"%@",[PFInstallation currentInstallation].objectId);
     // scroll search bar out of sight
     CGRect newBounds = self.tableView.bounds;
@@ -204,32 +203,7 @@
 
 
 
-- (void)queryParseMethod {
-    NSLog(@"start query");
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-    [query whereKey:@"Master_id" equalTo:@"1"];
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            if (imageFilesArray.count==0) {
-                gallary_image.image=[UIImage imageNamed:@"icon-gallery_nophoto.png"];
-                
-            }
-            else
-                gallary_image.image=[UIImage imageNamed:@"icon-gallery.png"];
-            [_table_view reloadData];
-      
-            
-            
-            [query orderByAscending:@"createdAt"];
-            
-        }
-        
-    }];
-    
-}
+
 
 
 - (PFQuery *)queryForTable{
