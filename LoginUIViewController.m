@@ -44,10 +44,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%@",self.tattoomasterCell.master_id);
     self.view.backgroundColor=[UIColor grayColor];
 
-  
+    
     
  
     
@@ -93,7 +92,6 @@
     return hight;
     
 }
-
 - (void)viewWillAppear:(BOOL)animated {
     self.view.backgroundColor=[UIColor grayColor];
     [super viewWillAppear:animated];
@@ -128,7 +126,7 @@
                 
             }
         }];
-               }
+    }
     
     
 
@@ -199,7 +197,6 @@
     }
    
 }
-
 // Set received values if they are not nil and reload the table
 - (void)_updateProfileData {
     
@@ -345,11 +342,7 @@
             
             sex_statues.image = [UIImage imageNamed:@"icon-sex-f.png"];
         }
-      gallery_button = (UIButton*) [cell viewWithTag:181];
-    gallery_statues = (PFImageView*)[cell viewWithTag:182];
 
-
-    
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [imageObject objectForKey:@"Name"];
     
