@@ -22,16 +22,18 @@
     PFObject * object_id;
     PFImageView *heart_statues;
     PFImageView *sex_statues;
+     PFImageView *gallary_status;
     NSIndexPath *indexPath;
     NSArray*imageFilesArray_image;
     PFQuery * searchquery;
     PFObject *gallary_object;
-     PFQuery * gallary_query;
-         NSArray * gallary_array;
-    PFObject *master_object;
-    UIButton *gallary_button;
-    PFImageView *gallary_image;
-     NSArray * master_array;
+     PFQuery * installquery;
+         NSArray * installarray;
+     PFQuery * scangallary;
+       NSArray * scangallary_array;
+    UIButton *button;
+    UIButton * gallery_button;
+    PFObject * testgallary;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedcontroller;
@@ -39,6 +41,7 @@
 @property IBOutlet UISearchBar *searchbar;
 - (IBAction)showsearch:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSearch;
+@property (weak, nonatomic) IBOutlet UIButton *a;
 
 - (IBAction)gogallery:(id)sender;
 
