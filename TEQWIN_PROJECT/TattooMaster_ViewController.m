@@ -56,11 +56,15 @@
 {
     [super viewDidLoad];
     
+     [self queryParseMethod_image];
+
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
         newBounds.origin.y = newBounds.origin.y + self.searchbar.bounds.size.height;
         self.tableView.bounds = newBounds;
     }
+
+   
     
     self.title =@"師父";
     //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
@@ -89,7 +93,8 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [self refreshTable:nil];
-    NSLog(@"%@",[PFInstallation currentInstallation].objectId);
+    
+      NSLog(@"%@",[PFInstallation currentInstallation].objectId);
     // scroll search bar out of sight
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
@@ -101,19 +106,37 @@
     
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
     //
-    installquery = [PFQuery queryWithClassName:@"Installation"];
     
-    installquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    [installquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            installarray = [[NSArray alloc] initWithArray:objects];
-            
-        }
-    }];
+   
 
-    
     NSLog(@"ssssss%d",installarray.count);
 }
+- (void)queryParseMethod_image{
+    NSLog(@"start query_image");
+
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    
+    NSLog(@"%@geggegegege",[testgallary objectForKey:@"Master_id"]);
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    //PFObject *testobject ;
+    
+    //testobject =[self.objects objectAtIndex:lastClickedRow];
+    [query whereKey:@"Master_id" containsString:[testgallary objectForKey:@"Master_id"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            
+                imageFilesArray_image = [[NSArray alloc] initWithArray:objects];
+                
+            
+                [query orderByAscending:@"createdAt"];
+          
+        //    NSLog(@"%lu",(unsigned long)imageFilesArray_image.count);
+            
+        }
+    
+    }];
+}
+
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {
@@ -228,7 +251,7 @@
     
     [query orderByAscending:@"createdAt"];
     
-    return query;
+       return query;
    
 
 }
@@ -290,6 +313,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:simpleTableIdentifier];
     }
+    //gallary_object =[self.objects objectAtIndex:indexPath.row];
     
     // Configure the cell
     // Configure the cell
@@ -357,6 +381,26 @@
         }
         // UICollectionView *cellImageCollection=(UICollectionView *)[cell viewWithTag:9];
         
+        lastClickedRow = indexPath.row;
+
+        testgallary =[self.objects objectAtIndex:indexPath.row];
+        NSLog(@"testgallary%@",[testgallary objectForKey:@"Master_id"]);
+        gallary_status = (PFImageView*)[cell viewWithTag:156];
+        gallery_button = (UIButton*)[cell viewWithTag:157];
+        NSLog(@"%@",gallary_object);
+        
+       // master_desc.text = [gallary_object objectForKey:@"Master_id"];
+        if ([[object objectForKey:@"Master_id"]  isEqualToString  :[testgallary objectForKey:@"Master_id"]]) {
+            gallary_status.image =[UIImage imageNamed:@"icon-gallery.png"];
+            
+        }
+        else
+        {
+            gallary_status.image =[UIImage imageNamed:@"icon-gallery_nophoto.png"];
+            gallery_button.enabled=NO;
+            
+        }
+
     }
     cell.backgroundColor = [UIColor clearColor];
     if (tableView == self.searchDisplayController.searchResultsTableView) {
@@ -556,7 +600,7 @@
         [object saveInBackground];
     }
     if ([segue.identifier isEqualToString:@"GOGALLERY_button"]) {
-        UIButton *button = sender;
+        button = sender;
         CGPoint correctedPoint =
         [button convertPoint:button.bounds.origin toView:self.tableView];
         NSIndexPath *indexPath =  [self.tableView indexPathForRowAtPoint:correctedPoint];
