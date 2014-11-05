@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "Tattoo_Detail_ViewController.h"
 #import "TattooMasterCell.h"
+#import "news_detail_ViewController.h"
 @interface MainViewController ()
 
 {
@@ -237,11 +238,11 @@
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
     nameLabel.text = [imageObject objectForKey:@"Name"];
     
-    UITextView *news = (UITextView*) [cell viewWithTag:155];
+    UILabel *news = (UILabel*) [cell viewWithTag:155];
       
     news.text = [imageObject objectForKey:@"news"];
-       news.textColor =[UIColor colorWithRed:247.0/255.0
-                                        green:247.0/255.0 blue:249/255.0 alpha:1.0];
+       news.textColor =[UIColor colorWithRed:234.0/255.0
+                                        green:192.0/255.0 blue:94/255.0 alpha:1.0];
        // news.textColor =[UIColor grayColor];
     }
     
@@ -438,6 +439,47 @@
         [object saveInBackground];
 
         }
+    if ([segue.identifier isEqualToString:@"gonewdetail"]) {
+        NSIndexPath *indexPath = [self.main_tableview indexPathForCell:sender];
+        
+        news_detail_ViewController *destViewController = segue.destinationViewController;
+        
+        PFObject *object = [news_array objectAtIndex:indexPath.row];
+        TattooMasterCell *tattoomasterCell = [[TattooMasterCell alloc] init];
+        
+        tattoomasterCell.object_id = [object objectForKey:@"object"];
+        tattoomasterCell.favorites = [object objectForKey:@"favorites"];
+        tattoomasterCell.bookmark =[object objectForKey:@"bookmark"];
+        tattoomasterCell.name = [object objectForKey:@"Name"];
+        tattoomasterCell.imageFile = [object objectForKey:@"image"];
+        
+        tattoomasterCell.news = [object objectForKey:@"news"];
+        tattoomasterCell.gender = [object objectForKey:@"Gender"];
+        tattoomasterCell.tel = [object objectForKey:@"Tel"];
+        tattoomasterCell.email = [object objectForKey:@"Email"];
+        tattoomasterCell.address = [object objectForKey:@"Address"];
+        tattoomasterCell.latitude = [object objectForKey:@"Latitude"];
+        tattoomasterCell.longitude = [object objectForKey:@"Longitude"];
+        tattoomasterCell.website = [object objectForKey:@"Website"];
+        tattoomasterCell.personage = [object objectForKey:@"Personage"];
+        tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
+        tattoomasterCell.view = [object objectForKey:@"view"];
+         tattoomasterCell.news_view = [object objectForKey:@"news_view"];
+        tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
+        tattoomasterCell.object_id = object.objectId;
+        tattoomasterCell.description=[object objectForKey:@"description"];
+        tattoomasterCell.promotion=[object objectForKey:@"promotion"];
+        
+        destViewController.tattoomasterCell = tattoomasterCell;
+        //  NSInteger myInteger = [tattoomasterCell.view integerValue];
+        //object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
+        //[object saveInBackground];
+        //NSLog(@"%@",object[@"view"]);
+        [object addUniqueObject:[PFInstallation currentInstallation].objectId forKey:@"news_view"];
+        [object saveInBackground];
+        
+    }
+
     }
 
 

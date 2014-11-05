@@ -232,6 +232,7 @@
 		42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */; };
 		42D3D5DA19F7481800B01A97 /* FACEBOOK.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 42D3D5D919F7481800B01A97 /* FACEBOOK.JPG */; };
 		42DB2C391A08AA24002BAF1B /* icon-gallery_nophoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DB2C381A08AA24002BAF1B /* icon-gallery_nophoto.png */; };
+		42DB2C541A0A0A79002BAF1B /* news_detail_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DB2C531A0A0A79002BAF1B /* news_detail_ViewController.m */; };
 		42EA3D6319C8273F0051057C /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6219C8273F0051057C /* GalleryCell.m */; };
 		42EA3D6619C827600051057C /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EA3D6519C827600051057C /* Gallery.m */; };
 		42EA4ECE19CAE1B20051057C /* Facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EA4ECD19CAE1B20051057C /* Facebook-icon.png */; };
@@ -531,6 +532,8 @@
 		42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
 		42D3D5D919F7481800B01A97 /* FACEBOOK.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FACEBOOK.JPG; sourceTree = "<group>"; };
 		42DB2C381A08AA24002BAF1B /* icon-gallery_nophoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gallery_nophoto.png"; sourceTree = "<group>"; };
+		42DB2C521A0A0A79002BAF1B /* news_detail_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = news_detail_ViewController.h; sourceTree = "<group>"; };
+		42DB2C531A0A0A79002BAF1B /* news_detail_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = news_detail_ViewController.m; sourceTree = "<group>"; };
 		42EA3D6119C8273F0051057C /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
 		42EA3D6219C8273F0051057C /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
 		42EA3D6419C827600051057C /* Gallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gallery.h; sourceTree = "<group>"; };
@@ -587,6 +590,8 @@
 		42193F841985FE08007E3C52 = {
 			isa = PBXGroup;
 			children = (
+				42DB2C521A0A0A79002BAF1B /* news_detail_ViewController.h */,
+				42DB2C531A0A0A79002BAF1B /* news_detail_ViewController.m */,
 				426ED3E619C049EE0024E817 /* MBProgressHUB */,
 				42A4917A19E236EE00E4D65E /* notice */,
 				42A4917919E236E700E4D65E /* history */,
@@ -1354,6 +1359,7 @@
 				42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */,
 				4263006819908766007B8C8F /* Fav_mappoint_ViewController.m in Sources */,
 				42A4918019E2370C00E4D65E /* noticeViewController.m in Sources */,
+				42DB2C541A0A0A79002BAF1B /* news_detail_ViewController.m in Sources */,
 				426ED3F819C2C3D00024E817 /* VPImageCropperViewController.m in Sources */,
 				426ED39319B9AF560024E817 /* TattooMasterCell.m in Sources */,
 				42193FCE1985FECF007E3C52 /* MainViewController.m in Sources */,
