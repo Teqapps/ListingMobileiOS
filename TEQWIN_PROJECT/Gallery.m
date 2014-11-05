@@ -109,19 +109,19 @@ CFShareCircleView *shareCircleView;
     
 }
 #pragma mark - Table view data source
-//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-//{
-//    NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
-//    if([button isEqualToString:@"OK"])
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
+    if([button isEqualToString:@"確定"])
         
-//    {
-//        Tattoo_Detail_ViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
-//        [self.navigationController pushViewController:galleryVC animated:YES];
-//        galleryVC.tattoomasterCell=_tattoomasterCell;
-//        ;
+    {
+        Tattoo_Detail_ViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
+        [self.navigationController pushViewController:galleryVC animated:YES];
+        galleryVC.tattoomasterCell=_tattoomasterCell;
+        ;
 
         
-//    }}
+    }}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -138,7 +138,7 @@ CFShareCircleView *shareCircleView;
 NSLog(@"%@", imageFilesArray);
 }
 - (void) noimage {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"對不起" message:@"沒有照片" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"對不起" message:@"沒有照片" delegate:self cancelButtonTitle:@"確定" otherButtonTitles: nil];
     [alert show];
     
 }
