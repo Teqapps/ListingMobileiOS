@@ -35,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+  
     
     
     // scroll search bar out of sight
@@ -128,6 +128,10 @@
             
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
              self.page.numberOfPages = imageFilesArray.count;
+           NSUInteger randomIndex = arc4random() % imageFilesArray.count;
+            NSLog(@"xaxa%lu",(unsigned long)randomIndex);
+            
+            
            [_image_collection reloadData];
        
          //   NSLog(@"%@",imageFilesArray);

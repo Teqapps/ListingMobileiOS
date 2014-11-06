@@ -49,7 +49,7 @@
     self.textview.frame = frame;
     [ self.textview sizeToFit];
     [self.textview setScrollEnabled:YES];
-    _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
