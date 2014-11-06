@@ -263,22 +263,22 @@
 		420E2F7919FE246200667E6C /* aboutus_map_detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutus_map_detail.h; sourceTree = "<group>"; };
 		420E2F7A19FE246200667E6C /* aboutus_map_detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutus_map_detail.m; sourceTree = "<group>"; };
 		420E2F7C19FE282900667E6C /* image001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image001.jpg; sourceTree = "<group>"; };
-		42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEQWIN_PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEQWIN_PROJECT_Tattoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42193F901985FE08007E3C52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42193F921985FE08007E3C52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		42193F941985FE08007E3C52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		42193F981985FE08007E3C52 /* TEQWIN_PROJECT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TEQWIN_PROJECT-Info.plist"; sourceTree = "<group>"; };
+		42193F981985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TEQWIN_PROJECT_Tattoo-Info.plist"; sourceTree = "<group>"; };
 		42193F9A1985FE08007E3C52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42193F9C1985FE08007E3C52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		42193F9E1985FE08007E3C52 /* TEQWIN_PROJECT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEQWIN_PROJECT-Prefix.pch"; sourceTree = "<group>"; };
+		42193F9E1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEQWIN_PROJECT_Tattoo-Prefix.pch"; sourceTree = "<group>"; };
 		42193F9F1985FE08007E3C52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TEQWIN_PROJECT/AppDelegate.h; sourceTree = "<group>"; };
 		42193FA01985FE08007E3C52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TEQWIN_PROJECT/AppDelegate.m; sourceTree = "<group>"; };
 		42193FA51985FE08007E3C52 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = TEQWIN_PROJECT/ViewController.h; sourceTree = "<group>"; };
 		42193FA61985FE08007E3C52 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = TEQWIN_PROJECT/ViewController.m; sourceTree = "<group>"; };
 		42193FA81985FE08007E3C52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		42193FAE1985FE08007E3C52 /* TEQWIN_PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEQWIN_PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42193FAE1985FE08007E3C52 /* TEQWIN_PROJECT_TattooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEQWIN_PROJECT_TattooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42193FAF1985FE08007E3C52 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		42193FB71985FE08007E3C52 /* TEQWIN_PROJECTTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TEQWIN_PROJECTTests-Info.plist"; sourceTree = "<group>"; };
+		42193FB71985FE08007E3C52 /* TEQWIN_PROJECT_TattooTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TEQWIN_PROJECT_TattooTests-Info.plist"; sourceTree = "<group>"; };
 		42193FB91985FE08007E3C52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42193FBB1985FE08007E3C52 /* TEQWIN_PROJECTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEQWIN_PROJECTTests.m; sourceTree = "<group>"; };
 		42193FC51985FE42007E3C52 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
@@ -612,8 +612,8 @@
 		42193F8E1985FE08007E3C52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT.app */,
-				42193FAE1985FE08007E3C52 /* TEQWIN_PROJECTTests.xctest */,
+				42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo.app */,
+				42193FAE1985FE08007E3C52 /* TEQWIN_PROJECT_TattooTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -676,10 +676,10 @@
 				42A9602E1A073C3F002C0508 /* GAILogger.h */,
 				42A9602F1A073C3F002C0508 /* GAITrackedViewController.h */,
 				42A960301A073C3F002C0508 /* GAITracker.h */,
-				42193F981985FE08007E3C52 /* TEQWIN_PROJECT-Info.plist */,
+				42193F981985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo-Info.plist */,
 				42193F991985FE08007E3C52 /* InfoPlist.strings */,
 				42193F9C1985FE08007E3C52 /* main.m */,
-				42193F9E1985FE08007E3C52 /* TEQWIN_PROJECT-Prefix.pch */,
+				42193F9E1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -696,7 +696,7 @@
 		42193FB61985FE08007E3C52 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				42193FB71985FE08007E3C52 /* TEQWIN_PROJECTTests-Info.plist */,
+				42193FB71985FE08007E3C52 /* TEQWIN_PROJECT_TattooTests-Info.plist */,
 				42193FB81985FE08007E3C52 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -1087,9 +1087,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42193F8C1985FE08007E3C52 /* TEQWIN_PROJECT */ = {
+		42193F8C1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42193FBF1985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECT" */;
+			buildConfigurationList = 42193FBF1985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECT_Tattoo" */;
 			buildPhases = (
 				42193F891985FE08007E3C52 /* Sources */,
 				42193F8A1985FE08007E3C52 /* Frameworks */,
@@ -1099,14 +1099,14 @@
 			);
 			dependencies = (
 			);
-			name = TEQWIN_PROJECT;
+			name = TEQWIN_PROJECT_Tattoo;
 			productName = TEQWIN_PROJECT;
-			productReference = 42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT.app */;
+			productReference = 42193F8D1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		42193FAD1985FE08007E3C52 /* TEQWIN_PROJECTTests */ = {
+		42193FAD1985FE08007E3C52 /* TEQWIN_PROJECT_TattooTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42193FC21985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECTTests" */;
+			buildConfigurationList = 42193FC21985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECT_TattooTests" */;
 			buildPhases = (
 				42193FAA1985FE08007E3C52 /* Sources */,
 				42193FAB1985FE08007E3C52 /* Frameworks */,
@@ -1117,9 +1117,9 @@
 			dependencies = (
 				42193FB41985FE08007E3C52 /* PBXTargetDependency */,
 			);
-			name = TEQWIN_PROJECTTests;
+			name = TEQWIN_PROJECT_TattooTests;
 			productName = TEQWIN_PROJECTTests;
-			productReference = 42193FAE1985FE08007E3C52 /* TEQWIN_PROJECTTests.xctest */;
+			productReference = 42193FAE1985FE08007E3C52 /* TEQWIN_PROJECT_TattooTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1136,7 +1136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 42193F881985FE08007E3C52 /* Build configuration list for PBXProject "TEQWIN_PROJECT" */;
+			buildConfigurationList = 42193F881985FE08007E3C52 /* Build configuration list for PBXProject "TEQWIN_PROJECT_Tattoo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1166,8 +1166,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42193F8C1985FE08007E3C52 /* TEQWIN_PROJECT */,
-				42193FAD1985FE08007E3C52 /* TEQWIN_PROJECTTests */,
+				42193F8C1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo */,
+				42193FAD1985FE08007E3C52 /* TEQWIN_PROJECT_TattooTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1410,7 +1410,7 @@
 /* Begin PBXTargetDependency section */
 		42193FB41985FE08007E3C52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 42193F8C1985FE08007E3C52 /* TEQWIN_PROJECT */;
+			target = 42193F8C1985FE08007E3C52 /* TEQWIN_PROJECT_Tattoo */;
 			targetProxy = 42193FB31985FE08007E3C52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1516,8 +1516,8 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TEQWIN_PROJECT/TEQWIN_PROJECT-Prefix.pch";
-				INFOPLIST_FILE = "TEQWIN_PROJECT/TEQWIN_PROJECT-Info.plist";
+				GCC_PREFIX_HEADER = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Prefix.pch";
+				INFOPLIST_FILE = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1526,7 +1526,7 @@
 					"$(PROJECT_DIR)/TEQWIN_PROJECT",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TEQWIN_PROJECT_Tattoo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1544,8 +1544,8 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TEQWIN_PROJECT/TEQWIN_PROJECT-Prefix.pch";
-				INFOPLIST_FILE = "TEQWIN_PROJECT/TEQWIN_PROJECT-Info.plist";
+				GCC_PREFIX_HEADER = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Prefix.pch";
+				INFOPLIST_FILE = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1554,7 +1554,7 @@
 					"$(PROJECT_DIR)/TEQWIN_PROJECT",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TEQWIN_PROJECT_Tattoo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1576,8 +1576,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "TEQWIN_PROJECTTests/TEQWIN_PROJECTTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TEQWIN_PROJECTTests/TEQWIN_PROJECT_TattooTests-Info.plist";
+				PRODUCT_NAME = TEQWIN_PROJECT_TattooTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1594,8 +1594,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TEQWIN_PROJECT/TEQWIN_PROJECT-Prefix.pch";
-				INFOPLIST_FILE = "TEQWIN_PROJECTTests/TEQWIN_PROJECTTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TEQWIN_PROJECTTests/TEQWIN_PROJECT_TattooTests-Info.plist";
+				PRODUCT_NAME = TEQWIN_PROJECT_TattooTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1604,7 +1604,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		42193F881985FE08007E3C52 /* Build configuration list for PBXProject "TEQWIN_PROJECT" */ = {
+		42193F881985FE08007E3C52 /* Build configuration list for PBXProject "TEQWIN_PROJECT_Tattoo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42193FBD1985FE08007E3C52 /* Debug */,
@@ -1613,7 +1613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42193FBF1985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECT" */ = {
+		42193FBF1985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECT_Tattoo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42193FC01985FE08007E3C52 /* Debug */,
@@ -1622,7 +1622,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42193FC21985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECTTests" */ = {
+		42193FC21985FE08007E3C52 /* Build configuration list for PBXNativeTarget "TEQWIN_PROJECT_TattooTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42193FC31985FE08007E3C52 /* Debug */,
