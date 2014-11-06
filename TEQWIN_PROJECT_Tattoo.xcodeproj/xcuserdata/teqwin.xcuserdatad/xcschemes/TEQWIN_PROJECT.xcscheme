@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42193F8C1985FE08007E3C52"
-               BuildableName = "TEQWIN_PROJECT.app"
+               BuildableName = "TEQWIN_PROJECT_Tattoo.app"
                BlueprintName = "TEQWIN_PROJECT_Tattoo"
                ReferencedContainer = "container:TEQWIN_PROJECT_Tattoo.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42193FAD1985FE08007E3C52"
-               BuildableName = "TEQWIN_PROJECTTests.xctest"
+               BuildableName = "TEQWIN_PROJECT_TattooTests.xctest"
                BlueprintName = "TEQWIN_PROJECT_TattooTests"
                ReferencedContainer = "container:TEQWIN_PROJECT_Tattoo.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42193F8C1985FE08007E3C52"
-            BuildableName = "TEQWIN_PROJECT.app"
+            BuildableName = "TEQWIN_PROJECT_Tattoo.app"
             BlueprintName = "TEQWIN_PROJECT_Tattoo"
             ReferencedContainer = "container:TEQWIN_PROJECT_Tattoo.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42193F8C1985FE08007E3C52"
-            BuildableName = "TEQWIN_PROJECT.app"
+            BuildableName = "TEQWIN_PROJECT_Tattoo.app"
             BlueprintName = "TEQWIN_PROJECT_Tattoo"
             ReferencedContainer = "container:TEQWIN_PROJECT_Tattoo.xcodeproj">
          </BuildableReference>
@@ -92,7 +92,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42193F8C1985FE08007E3C52"
-            BuildableName = "TEQWIN_PROJECT.app"
+            BuildableName = "TEQWIN_PROJECT_Tattoo.app"
             BlueprintName = "TEQWIN_PROJECT_Tattoo"
             ReferencedContainer = "container:TEQWIN_PROJECT_Tattoo.xcodeproj">
          </BuildableReference>
