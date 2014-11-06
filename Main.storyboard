@@ -490,7 +490,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="AC553743-8BCE-4452-99B9-0866BB33C5A1" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="45317883-9C48-4298-A4AF-0A33008ABF68" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1420,7 +1420,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AC553743-8BCE-4452-99B9-0866BB33C5A1" width="320" height="460">
+        <image name="45317883-9C48-4298-A4AF-0A33008ABF68" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11333,7 +11333,7 @@ AAAAAAAAAAAJCvs
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="jzI-7Q-TeA"/>
-        <segue reference="tPv-nD-LkF"/>
         <segue reference="QTr-PV-D3h"/>
+        <segue reference="sqL-XN-2Gv"/>
     </inferredMetricsTieBreakers>
 </document>
