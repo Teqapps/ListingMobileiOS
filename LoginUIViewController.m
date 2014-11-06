@@ -95,7 +95,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.view.backgroundColor=[UIColor grayColor];
     [super viewWillAppear:animated];
-    
     if ([PFUser currentUser]) {
         PFQuery *bookmarkquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
         
@@ -106,8 +105,8 @@
         
         [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
-                imageFilesArray = [[NSArray alloc] initWithArray:objects];
-                self.bookmarks_count.text=[NSString stringWithFormat:@"%lu",(unsigned long)imageFilesArray.count];
+                countarray = [[NSArray alloc] initWithArray:objects];
+                self.bookmarks_count.text=[NSString stringWithFormat:@"%lu",(unsigned long)countarray.count];
                 
             }
         }];
@@ -120,13 +119,14 @@
         
         [likequery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
-                imageFilesArray = [[NSArray alloc] initWithArray:objects];
-                self.liked_count.text=[NSString stringWithFormat:@"%lu",(unsigned long)imageFilesArray.count];
+                countarray = [[NSArray alloc] initWithArray:objects];
+                self.liked_count.text=[NSString stringWithFormat:@"%lu",(unsigned long)countarray.count];
                 
                 
             }
         }];
     }
+
     
     
 
@@ -402,8 +402,9 @@
         tattoomasterCell.gallery_m1 = [imageObject objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = [imageObject objectForKey:@"objectId"];
             tattoomasterCell.description = [imageObject objectForKey:@"description"];
+        tattoomasterCell.view = [imageObject objectForKey:@"view"];
         destViewController.tattoomasterCell = tattoomasterCell;
-        
+           NSLog(@"%@444",tattoomasterCell.master_id);
     }
     if ([segue.identifier isEqualToString:@"GOGALLERY_PROFILE"]) {
         UIButton *button = sender;
@@ -434,13 +435,13 @@
         tattoomasterCell.master_id = [object objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [object objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
-        
+  
         tattoomasterCell.object_id = object.objectId;
         tattoomasterCell.description=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
         
         
-        NSLog(@"%@333",tattoomasterCell.clickindexpath);
+        NSLog(@"%@333",tattoomasterCell.master_id);
         
     }
 

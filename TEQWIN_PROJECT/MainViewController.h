@@ -22,11 +22,13 @@
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
       PFQuery * searchquery;
- 
+    NSArray * page_count;
 }
+@property (weak, nonatomic) IBOutlet UIPageControl *page;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;
 @property (weak, nonatomic) IBOutlet PFImageView *main_image;

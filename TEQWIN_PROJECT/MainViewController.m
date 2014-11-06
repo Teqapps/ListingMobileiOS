@@ -35,7 +35,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+   
+    
+    
     // scroll search bar out of sight
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -76,6 +78,8 @@
     //[query whereKey:@"Name" containsString:searchTerm];
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
    // NSLog(@"%@",[PFInstallation currentInstallation].objectId);
+   
+  // self.page.numberOfPages = [imageFilesArray count];
 }
 -(void)itemsDownloaded:(NSArray *)items
 {
@@ -123,7 +127,9 @@
         if (!error) {
             
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
+             self.page.numberOfPages = imageFilesArray.count;
            [_image_collection reloadData];
+       
          //   NSLog(@"%@",imageFilesArray);
             [hud hide:YES];
 
@@ -268,7 +274,11 @@
       return cell;
 }
 
-
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGFloat pageWidth = self.image_collection.frame.size.width;
+    self.page.currentPage = self.image_collection.contentOffset.x / pageWidth;
+}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -276,6 +286,9 @@
 
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+  
+    
     return [imageFilesArray count];
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

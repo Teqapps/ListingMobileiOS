@@ -26,6 +26,7 @@
     PFImageView *sex_statues;
     UIButton *gallary_button;
     PFImageView *gallary_image;
+    NSArray * countarray;
 }
 @property (nonatomic, assign) BOOL isclicked;
 @property (weak, nonatomic) IBOutlet UILabel *like;
