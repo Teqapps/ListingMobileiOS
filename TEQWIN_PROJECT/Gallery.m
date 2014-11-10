@@ -32,7 +32,8 @@ CFShareCircleView *shareCircleView;
 {
     [super viewDidLoad];
     
-    
+    NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
+    [PFAnalytics trackEvent:@"showgallery" dimensions:dimensions];
     NSLog(@"%@",self.tattoomasterCell);
     [self queryParseMethod];
     self.master_image.file=self.tattoomasterCell.imageFile;

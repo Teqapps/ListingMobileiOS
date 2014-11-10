@@ -71,7 +71,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.screenName = @"Main";
+   // self.screenName = @"Main";
     [self queryParseMethod];
     [self queryParseMethod_news];
     searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
@@ -418,6 +418,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"godetail"]) {
+        
+
         NSIndexPath *indexPath = [self.image_collection indexPathForCell:sender];
 
         Tattoo_Detail_ViewController *destViewController = segue.destinationViewController;
@@ -448,14 +450,15 @@
          tattoomasterCell.promotion=[object objectForKey:@"promotion"];
     
         destViewController.tattoomasterCell = tattoomasterCell;
+        NSDictionary *dimensions = @{ @"name":[object objectForKey:@"Name"]};
+        [PFAnalytics trackEvent:@"clickedpromotion" dimensions:dimensions];
       //  NSInteger myInteger = [tattoomasterCell.view integerValue];
         //object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
         //[object saveInBackground];
         //NSLog(@"%@",object[@"view"]);
         [object addUniqueObject:[PFInstallation currentInstallation].objectId forKey:@"view"];
         [object saveInBackground];
-
-        }
+               }
     if ([segue.identifier isEqualToString:@"gonewdetail"]) {
         NSIndexPath *indexPath = [self.main_tableview indexPathForCell:sender];
         

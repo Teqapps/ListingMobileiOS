@@ -5,7 +5,7 @@
 //  Created by Teqwin on 6/10/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 //
-
+#import <Parse/Parse.h>
 #import "historyViewController.h"
 #import "SWRevealViewController.h"
 @interface historyViewController ()
@@ -27,6 +27,8 @@
 {
      self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     [super viewDidLoad];
+    NSDictionary *dimensions = @{ @"Notice":@"Muay_History"};
+    [PFAnalytics trackEvent:@"show_History" dimensions:dimensions];
     _sidebarButton.tintColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
 
     

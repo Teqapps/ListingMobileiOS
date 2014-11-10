@@ -5,7 +5,7 @@
 //  Created by Teqwin on 6/10/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 //
-
+#import <Parse/Parse.h>
 #import "noticeViewController.h"
 #import "SWRevealViewController.h"
 @interface noticeViewController ()
@@ -28,7 +28,8 @@
     
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     [super viewDidLoad];
-    
+    NSDictionary *dimensions = @{ @"Notice":@"Muay_Notice"};
+    [PFAnalytics trackEvent:@"show_Notice" dimensions:dimensions];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.textview_1.text=@"第一、刺青之後的三到五個小時之內，用溫水來清洗身體，把表面多餘的顏料或者是滲出的血液擦去，請記住，這一個步驟十分重要，如果時間過早，則會容易讓皮膚下層的顏料淡化，如果時間過長，滲出的血液不容易擦掉，而且以後每天要注意清洗，保持皮膚的乾淨和清潔，這樣會讓刺青的顏色起到很好的保護。";
     self.textview_1.layer.cornerRadius=8.0f;

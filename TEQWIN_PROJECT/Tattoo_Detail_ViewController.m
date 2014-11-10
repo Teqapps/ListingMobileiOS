@@ -47,7 +47,9 @@
 {
     [super viewDidLoad];
   
-    
+    NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
+    [PFAnalytics trackEvent:@"showmaster" dimensions:dimensions];
+
     if (self.tattoomasterCell.view ==nil) {
         self.view_count.text = @"1";
     }
@@ -147,7 +149,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     // scroll search bar out of sight
-    self.screenName =@"detail page";
+    //self.screenName =@"detail page";
 
 
 }
