@@ -54,7 +54,7 @@
    // PFObject *object = [imageFilesArray objectAtIndex:randomImgNumber];
 
     
-    self.title = @"新消息";
+    self.title = @"主頁";
 //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     self.view.backgroundColor = [UIColor blackColor];
     // Change button color
