@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 
 @property (weak, nonatomic) IBOutlet PFImageView *thumbnail;
+
 //@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 @end

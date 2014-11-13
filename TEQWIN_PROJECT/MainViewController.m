@@ -300,7 +300,7 @@
     
     static NSString *cellIdentifier = @"imageCell";
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
- 
+     PFImageView *thumbnail = (PFImageView*)[cell viewWithTag:167];
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
       PFFile *avstar = [imageObject objectForKey:@"image"];
     
@@ -312,17 +312,17 @@
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
 
-   // CGSize itemSize = CGSizeMake(70, 70);
-   // UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
-    //CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-    //cell.thumbnail.layer.backgroundColor=[[UIColor clearColor] CGColor];
-   // cell.thumbnail.layer.cornerRadius= cell.thumbnail.frame.size.width/2;
-    //cell.thumbnail.layer.borderWidth=2.0;
-   // cell.thumbnail.layer.masksToBounds = YES;
-   // cell.thumbnail.layer.borderColor=[[UIColor whiteColor] CGColor];
-   // [ cell.thumbnail.image drawInRect:imageRect];
-   // cell.thumbnail.image = UIGraphicsGetImageFromCurrentImageContext();
-   // UIGraphicsEndImageContext();
+    CGSize itemSize = CGSizeMake(50, 50);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    cell.thumbnail.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    cell.thumbnail.layer.cornerRadius= cell.thumbnail.frame.size.width/2;
+    cell.thumbnail.layer.borderWidth=0.0;
+   cell.thumbnail.layer.masksToBounds = YES;
+   cell.thumbnail.layer.borderColor=[[UIColor whiteColor] CGColor];
+    [ cell.thumbnail.image drawInRect:imageRect];
+    cell.thumbnail.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
     cell.thumbnail.image = [UIImage imageNamed:@"placeholder.jpg"];
     

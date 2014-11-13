@@ -87,6 +87,8 @@
         
     
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
@@ -97,6 +99,7 @@
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:simpleTableIdentifier];
     }
+    
     if (tableView == self.main_tableview) {
         // Configure the cell
         // Configure the cell
@@ -131,6 +134,7 @@
                                         green:192.0/255.0 blue:94/255.0 alpha:1.0];
         // news.textColor =[UIColor grayColor];
     }
+    
     return cell;
 }
 
