@@ -8,6 +8,7 @@
 #import <Parse/Parse.h>
 #import "historyViewController.h"
 #import "SWRevealViewController.h"
+#import "UIImage+animatedGIF.h"
 @interface historyViewController ()
 
 @end
@@ -30,7 +31,9 @@
     NSDictionary *dimensions = @{ @"Notice":@"Muay_History"};
     [PFAnalytics trackEvent:@"show_History" dimensions:dimensions];
     _sidebarButton.tintColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
-
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"variableDuration" withExtension:@"gif"];
+ _giftest.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
+    
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
