@@ -12,8 +12,8 @@
 #import "SWRevealViewController.h"
 #import "TattooMaster_ViewController.h"
 #import "Master_Map_ViewController.h"
-#import "FavDataManager.h"
-#import "Venue.h"
+
+
 #import "Map_ViewController.h"
 #import "LoginUIViewController.h"
 @import CoreData;
