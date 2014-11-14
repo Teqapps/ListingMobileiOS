@@ -12,6 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UITextView *textview_1;
 
-@property (weak, nonatomic) IBOutlet UIImageView *giftest;
 
 @end
