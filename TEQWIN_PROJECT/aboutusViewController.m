@@ -362,7 +362,7 @@ return 1;
 {
     NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
     if([button isEqualToString:@"是"])
-    {NSURL *url =[NSURL URLWithString:@"852 23893939"];
+    {NSURL *url =[NSURL URLWithString:@"23893939"];
         [[UIApplication sharedApplication] openURL:url];
        
         

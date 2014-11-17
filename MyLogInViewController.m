@@ -48,7 +48,7 @@
     
     // Add login field background
     fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button-facebook-login.png"]];
-   
+    
     
     // Set field text color
     [self.logInView.usernameField setTextColor:[UIColor colorWithRed:135.0f/255.0f green:118.0f/255.0f blue:92.0f/255.0f alpha:1.0]];
@@ -60,7 +60,7 @@
     [super viewDidLayoutSubviews];
     
     // Set frame for elements
-   // [self.logInView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 600.0f)];
+    // [self.logInView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 600.0f)];
     [self.logInView.dismissButton setFrame:CGRectMake(5.0f, 5.0f, 87.5f, 45.5f)];
     [self.logInView.logo setFrame:CGRectMake(66.5f, 130.0f, 187.0f, 58.5f)];
     [self.logInView.facebookButton setFrame:CGRectMake(0.0f, 200.0f, 320.0f, 40.0f)];

@@ -415,9 +415,7 @@ NSLog(@"%@", imageFilesArray);
          
          [self presentViewController:activityVC animated:TRUE completion:nil];
      }
-    if ([sharer.name isEqual:@"Google Drive"]) {
-        NSLog(@"clicked googledrive");
-    }
+
 
     if ([sharer.name isEqual:@"line"]) {
         if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"line://app"]]){
@@ -450,6 +448,7 @@ NSLog(@"%@", imageFilesArray);
        // }
     }
     if ([sharer.name isEqual:@"Whatsapp"]) {
+      
         if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"whatsapp://app"]]){
             
             UIImage     * iconImage = imageToShare;
@@ -467,7 +466,27 @@ NSLog(@"%@", imageFilesArray);
         } else {
             UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"WhatsApp not installed." message:@"Your device has no WhatsApp installed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
-        }
+        }}
+        if ([sharer.name isEqual:@"wechat"]) {
+ 
+            if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"wechat://app"]]){
+                
+                UIImage     * iconImage = imageToShare;
+                NSString    * savePath  = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/wechatTmp.wai"];
+                
+                [UIImageJPEGRepresentation(iconImage, 1.0) writeToFile:savePath atomically:YES];
+                
+                _documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:savePath]];
+                _documentInteractionController.UTI = @"net.wechat.image";
+                _documentInteractionController.delegate = self;
+                
+                [_documentInteractionController presentOpenInMenuFromRect:CGRectMake(0, 0, 0, 0) inView:self.view animated: YES];
+                
+                
+            } else {
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Wecaht not installed." message:@"Your device has no Wechat installed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
        // NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello%2C%20World!"];
        // if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
        //     [[UIApplication sharedApplication] openURL: whatsappURL];

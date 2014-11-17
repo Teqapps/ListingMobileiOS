@@ -30,4 +30,5 @@
 + (CFSharer *)twitter;
 + (CFSharer *)more;
 + (CFSharer *)line;
++ (CFSharer *)wechat;
 @end

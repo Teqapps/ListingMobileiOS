@@ -47,7 +47,7 @@
     // If you would like all objects to be private by default, remove this line.
 
 
-
+ [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"background.jpg"]
                                      //  forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.000]];

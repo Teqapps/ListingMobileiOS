@@ -699,10 +699,17 @@
 {
     NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
     if([button isEqualToString:@"是"])
-    {NSURL *url =[NSURL URLWithString:self.tattoomasterCell.tel];
-        [[UIApplication sharedApplication] openURL:url];
-        NSLog(@"done%@",self.tattoomasterCell.tel);
+    {
+        NSString *phNo =self.tattoomasterCell.tel;
+        NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
         
+        if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+            [[UIApplication sharedApplication] openURL:phoneUrl];
+        } else
+        {
+          UIAlertView*  calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+            [calert show];
+        }
     }
     if([button isEqualToString:@"確定"])
     { LoginUIViewController * loginvc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginUIViewController"];

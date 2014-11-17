@@ -155,6 +155,8 @@
 		42AD1ED819B42C4800277278 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1ED719B42C4800277278 /* libsqlite3.0.dylib */; };
 		42AD1EDC19B42E1200277278 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EDB19B42E1200277278 /* Parse.framework */; };
 		42AF211A19EBC6D000FC3BEC /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */; };
+		42CB3DE01A19D2F700BB10DC /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CB3DDE1A19D2F700BB10DC /* wechat.png */; };
+		42CB3DE11A19D2F700BB10DC /* wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CB3DDF1A19D2F700BB10DC /* wechat@2x.png */; };
 		42D3D5DA19F7481800B01A97 /* FACEBOOK.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 42D3D5D919F7481800B01A97 /* FACEBOOK.JPG */; };
 		42DB2C391A08AA24002BAF1B /* icon-gallery_nophoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DB2C381A08AA24002BAF1B /* icon-gallery_nophoto.png */; };
 		42DB2C541A0A0A79002BAF1B /* news_detail_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DB2C531A0A0A79002BAF1B /* news_detail_ViewController.m */; };
@@ -353,6 +355,8 @@
 		42AD1EDB19B42E1200277278 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		42AF211819EBC6D000FC3BEC /* ImageExampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageExampleCell.h; sourceTree = "<group>"; };
 		42AF211919EBC6D000FC3BEC /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
+		42CB3DDE1A19D2F700BB10DC /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
+		42CB3DDF1A19D2F700BB10DC /* wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@2x.png"; sourceTree = "<group>"; };
 		42D3D5D919F7481800B01A97 /* FACEBOOK.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FACEBOOK.JPG; sourceTree = "<group>"; };
 		42DB2C381A08AA24002BAF1B /* icon-gallery_nophoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gallery_nophoto.png"; sourceTree = "<group>"; };
 		42DB2C521A0A0A79002BAF1B /* news_detail_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = news_detail_ViewController.h; sourceTree = "<group>"; };
@@ -646,6 +650,8 @@
 			isa = PBXGroup;
 			children = (
 				420E2F6319FA3C1A00667E6C /* lineicon.png */,
+				42CB3DDE1A19D2F700BB10DC /* wechat.png */,
+				42CB3DDF1A19D2F700BB10DC /* wechat@2x.png */,
 				420E2F6419FA3C1A00667E6C /* lineicon@2x.png */,
 				427D3489199E076400814463 /* close.png */,
 				427D348A199E076400814463 /* close@2x.png */,
@@ -863,6 +869,7 @@
 				42A4913A19D506A700E4D65E /* Default.png in Resources */,
 				42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */,
 				427D34AB199E076400814463 /* photo_library.png in Resources */,
+				42CB3DE01A19D2F700BB10DC /* wechat.png in Resources */,
 				42A960081A032F41002C0508 /* m-icon-favorite.png in Resources */,
 				42A9600A1A032F41002C0508 /* m-icon-login.png in Resources */,
 				42A95FDC1A02335C002C0508 /* teqapps_logo_ai_G.png in Resources */,
@@ -890,6 +897,7 @@
 				427D34A7199E076400814463 /* mail.png in Resources */,
 				42A960201A038034002C0508 /* icon-favorited.png in Resources */,
 				42193F9B1985FE08007E3C52 /* InfoPlist.strings in Resources */,
+				42CB3DE11A19D2F700BB10DC /* wechat@2x.png in Resources */,
 				42A4914319D506A700E4D65E /* SignUp.png in Resources */,
 				42A4914419D506A700E4D65E /* SignUpDown.png in Resources */,
 				42A960161A036E31002C0508 /* icon-liked.png in Resources */,

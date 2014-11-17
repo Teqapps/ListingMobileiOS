@@ -42,6 +42,9 @@
 + (CFSharer *)line {
     return [[CFSharer alloc] initWithName:@"line" imageName:@"lineicon.png"];
 }
++ (CFSharer *)wechat {
+    return [[CFSharer alloc] initWithName:@"wechat" imageName:@"wechat.png"];
+}
 
 + (CFSharer *)googleDrive {
     return [[CFSharer alloc] initWithName:@"Google Drive" imageName:@"google_drive.png"];

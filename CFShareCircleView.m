@@ -45,7 +45,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _sharers = [[NSMutableArray alloc] initWithObjects:  [CFSharer googleDrive],[CFSharer line], [CFSharer facebook], [CFSharer whatsapp],[CFSharer more],nil];
+        _sharers = [[NSMutableArray alloc] initWithObjects:[CFSharer line], [CFSharer facebook], [CFSharer whatsapp],[CFSharer more],[CFSharer wechat],nil];
 
         [self setUpCircleLayers];
     }
