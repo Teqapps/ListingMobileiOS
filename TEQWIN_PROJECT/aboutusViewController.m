@@ -362,17 +362,9 @@ return 1;
 {
     NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
     if([button isEqualToString:@"是"])
-    {
-        NSString *phNo =@"23893939";
-        NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
-        
-        if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
-            [[UIApplication sharedApplication] openURL:phoneUrl];
-        } else
-        {
-            UIAlertView*  calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-            [calert show];
-        }
+    {NSURL *url =[NSURL URLWithString:@"23893939"];
+        [[UIApplication sharedApplication] openURL:url];
+       
         
     }}
 - (IBAction)segmented:(id)sender {
