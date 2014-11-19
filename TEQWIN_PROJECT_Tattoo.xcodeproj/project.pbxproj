@@ -52,6 +52,16 @@
 		42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42317A6819B709FC00C54F54 /* teqwin_logo.png */; };
 		424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 424FACE3198A2EDC0062D13D /* navigationicon.png */; };
 		42630059199071F3007B8C8F /* Map_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42630058199071F3007B8C8F /* Map_ViewController.m */; };
+		426587131A1B2E23002C0E93 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426587121A1B2E23002C0E93 /* MediaPlayer.framework */; };
+		426587171A1B3C0C002C0E93 /* tatoo_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 426587161A1B3C0C002C0E93 /* tatoo_splash.png */; };
+		4265871B1A1B3E30002C0E93 /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4265871A1A1B3E30002C0E93 /* login_bg.png */; };
+		4265872C1A1C33C1002C0E93 /* Harrowprint.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4265872B1A1C33C1002C0E93 /* Harrowprint.ttf */; };
+		4265872D1A1C3426002C0E93 /* Paint Boy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 426587271A1C2CEF002C0E93 /* Paint Boy.ttf */; };
+		4265872E1A1C3447002C0E93 /* Harrowprint.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 426587281A1C30AB002C0E93 /* Harrowprint.ttf */; };
+		426587301A1C34AB002C0E93 /* testfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4265872F1A1C34A3002C0E93 /* testfont.ttf */; };
+		426587311A1C3638002C0E93 /* 叶根友疾风草书.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 426587241A1B56DB002C0E93 /* 叶根友疾风草书.TTF */; };
+		426587341A1C3795002C0E93 /* HDZB_10.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 426587331A1C3789002C0E93 /* HDZB_10.TTF */; };
+		426587361A1C389F002C0E93 /* 叶根友千秋字体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 426587351A1C387F002C0E93 /* 叶根友千秋字体.ttf */; };
 		426864671A1450BB0043582C /* news_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426864661A1450BB0043582C /* news_ViewController.m */; };
 		426ED39319B9AF560024E817 /* TattooMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39219B9AF560024E817 /* TattooMasterCell.m */; };
 		426ED39B19BD88990024E817 /* Tattoo_Detail_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39A19BD88990024E817 /* Tattoo_Detail_ViewController.m */; };
@@ -240,6 +250,17 @@
 		424FACE3198A2EDC0062D13D /* navigationicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationicon.png; sourceTree = "<group>"; };
 		42630057199071F3007B8C8F /* Map_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map_ViewController.h; path = ../Map_ViewController.h; sourceTree = "<group>"; };
 		42630058199071F3007B8C8F /* Map_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Map_ViewController.m; path = ../Map_ViewController.m; sourceTree = "<group>"; };
+		426587121A1B2E23002C0E93 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		426587161A1B3C0C002C0E93 /* tatoo_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatoo_splash.png; sourceTree = "<group>"; };
+		4265871A1A1B3E30002C0E93 /* login_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg.png; sourceTree = "<group>"; };
+		426587241A1B56DB002C0E93 /* 叶根友疾风草书.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "叶根友疾风草书.TTF"; sourceTree = "<group>"; };
+		426587271A1C2CEF002C0E93 /* Paint Boy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paint Boy.ttf"; sourceTree = "<group>"; };
+		426587281A1C30AB002C0E93 /* Harrowprint.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Harrowprint.ttf; path = TEQWIN_PROJECT/Harrowprint.ttf; sourceTree = "<group>"; };
+		4265872B1A1C33C1002C0E93 /* Harrowprint.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Harrowprint.ttf; sourceTree = "<group>"; };
+		4265872F1A1C34A3002C0E93 /* testfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = testfont.ttf; sourceTree = "<group>"; };
+		426587321A1C370B002C0E93 /* wp010-05.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wp010-05.ttf"; sourceTree = "<group>"; };
+		426587331A1C3789002C0E93 /* HDZB_10.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = HDZB_10.TTF; sourceTree = "<group>"; };
+		426587351A1C387F002C0E93 /* 叶根友千秋字体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "叶根友千秋字体.ttf"; sourceTree = "<group>"; };
 		426864651A1450BB0043582C /* news_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = news_ViewController.h; sourceTree = "<group>"; };
 		426864661A1450BB0043582C /* news_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = news_ViewController.m; sourceTree = "<group>"; };
 		426ED39119B9AF560024E817 /* TattooMasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattooMasterCell.h; sourceTree = "<group>"; };
@@ -373,6 +394,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426587131A1B2E23002C0E93 /* MediaPlayer.framework in Frameworks */,
 				42223ED919B5615400F0D058 /* libz.1.1.3.dylib in Frameworks */,
 				42223ED719B5613300F0D058 /* Accounts.framework in Frameworks */,
 				42223ED519B5612B00F0D058 /* AdSupport.framework in Frameworks */,
@@ -414,6 +436,7 @@
 		42193F841985FE08007E3C52 = {
 			isa = PBXGroup;
 			children = (
+				426587291A1C3397002C0E93 /* Resources */,
 				42193FC81985FE42007E3C52 /* SWRevealViewController.m */,
 				42193FC71985FE42007E3C52 /* SWRevealViewController.h */,
 				426864651A1450BB0043582C /* news_ViewController.h */,
@@ -445,6 +468,7 @@
 		42193F8F1985FE08007E3C52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				426587121A1B2E23002C0E93 /* MediaPlayer.framework */,
 				42223ED819B5615400F0D058 /* libz.1.1.3.dylib */,
 				42223ED619B5613300F0D058 /* Accounts.framework */,
 				42223ED419B5612B00F0D058 /* AdSupport.framework */,
@@ -614,6 +638,29 @@
 			name = photo;
 			sourceTree = "<group>";
 		};
+		426587291A1C3397002C0E93 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4265872A1A1C33AA002C0E93 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4265872A1A1C33AA002C0E93 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				426587351A1C387F002C0E93 /* 叶根友千秋字体.ttf */,
+				426587271A1C2CEF002C0E93 /* Paint Boy.ttf */,
+				426587241A1B56DB002C0E93 /* 叶根友疾风草书.TTF */,
+				426587281A1C30AB002C0E93 /* Harrowprint.ttf */,
+				426587331A1C3789002C0E93 /* HDZB_10.TTF */,
+				426587321A1C370B002C0E93 /* wp010-05.ttf */,
+				4265872F1A1C34A3002C0E93 /* testfont.ttf */,
+				4265872B1A1C33C1002C0E93 /* Harrowprint.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		426ED3E619C049EE0024E817 /* MBProgressHUB */ = {
 			isa = PBXGroup;
 			children = (
@@ -717,6 +764,8 @@
 		42A95FDE1A032F1F002C0508 /* photo_lastest */ = {
 			isa = PBXGroup;
 			children = (
+				4265871A1A1B3E30002C0E93 /* login_bg.png */,
+				426587161A1B3C0C002C0E93 /* tatoo_splash.png */,
 				42193FCF19860221007E3C52 /* menu.png */,
 				42193FD019860221007E3C52 /* menu@2x.png */,
 				42DB2C381A08AA24002BAF1B /* icon-gallery_nophoto.png */,
@@ -844,9 +893,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426587361A1C389F002C0E93 /* 叶根友千秋字体.ttf in Resources */,
+				426587341A1C3795002C0E93 /* HDZB_10.TTF in Resources */,
+				426587311A1C3638002C0E93 /* 叶根友疾风草书.TTF in Resources */,
+				426587301A1C34AB002C0E93 /* testfont.ttf in Resources */,
+				4265872E1A1C3447002C0E93 /* Harrowprint.ttf in Resources */,
+				4265872D1A1C3426002C0E93 /* Paint Boy.ttf in Resources */,
 				42193FD119860221007E3C52 /* menu.png in Resources */,
 				428E7C5E1A008B5900CA2C14 /* loading@2x.png in Resources */,
 				42A960071A032F41002C0508 /* m-icon-about.png in Resources */,
+				4265872C1A1C33C1002C0E93 /* Harrowprint.ttf in Resources */,
 				4219409E198789DB007E3C52 /* ICON.png in Resources */,
 				42A4914D19D5087C00E4D65E /* FACEBOOK.JPG in Resources */,
 				420E2F6519FA3C1A00667E6C /* lineicon.png in Resources */,
@@ -924,6 +980,7 @@
 				42065FC519EE29A80012628C /* goldebackground.jpg in Resources */,
 				428E7C531A00865000CA2C14 /* ICON@2x.png in Resources */,
 				421940A019878A7B007E3C52 /* background.jpg in Resources */,
+				4265871B1A1B3E30002C0E93 /* login_bg.png in Resources */,
 				427D34AA199E076400814463 /* more@2x.png in Resources */,
 				427D34AD199E076400814463 /* pinterest.png in Resources */,
 				42A95FFA1A032F41002C0508 /* button-facebook-login.png in Resources */,
@@ -934,6 +991,7 @@
 				42A95FFF1A032F41002C0508 /* icon-gallery.png in Resources */,
 				42A4914619D506A700E4D65E /* Twitter.png in Resources */,
 				42A4914919D5082800E4D65E /* facebook@2x.png in Resources */,
+				426587171A1B3C0C002C0E93 /* tatoo_splash.png in Resources */,
 				42A960181A0378E9002C0508 /* bg-login拷貝.png in Resources */,
 				42A4914019D506A700E4D65E /* LoginFieldBG.png in Resources */,
 				42A9600E1A032F41002C0508 /* menu-logo.png in Resources */,

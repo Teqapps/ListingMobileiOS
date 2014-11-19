@@ -60,17 +60,16 @@ CFShareCircleView *shareCircleView;
 {
     
     [super viewDidAppear:animated];
-    if (self.tattoomasterCell.clickindexpath==nil) {
-        NSIndexPath *indexPat = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];
-
-    }
-    else{
-    NSIndexPath *indexPat = [NSIndexPath indexPathForRow:self.tattoomasterCell.clickindexpath.row inSection:0];
+    if (self.tattoomasterCell.clickindexpath!=nil) {
+        NSIndexPath *indexPat = [NSIndexPath indexPathForRow:self.tattoomasterCell.clickindexpath.row inSection:0];
         [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];}
+    
+
+    
+    else{
+      }
+
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {

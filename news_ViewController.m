@@ -32,12 +32,12 @@
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
-    
+       [self queryParseMethod_news];
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];}
 - (void)viewWillAppear:(BOOL)animated {
     // self.screenName = @"Main";
-        [self queryParseMethod_news];
+    
   
     
     // self.page.numberOfPages = [imageFilesArray count];
@@ -53,7 +53,7 @@
     [query whereKey:@"news_approve" equalTo:[NSNumber numberWithBool:YES]];
     
     
-    [query orderByDescending:@"news"];
+    [query orderByDescending:@"updatedAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             news_array = [[NSArray alloc] initWithArray:objects];

@@ -28,6 +28,8 @@
     PFImageView *gallary_image;
     NSArray * countarray;
 }
+@property (weak, nonatomic) IBOutlet UIButton *logout;
+
 @property (nonatomic, assign) BOOL isclicked;
 @property (weak, nonatomic) IBOutlet UILabel *like;
 @property (weak, nonatomic) IBOutlet UILabel *bookmark;
@@ -40,7 +42,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *profile_image;
 @property (weak, nonatomic) IBOutlet UITableView *TABLEVIEW;
-@property (weak, nonatomic) IBOutlet UIButton *logout;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIImageView *fbprofile;
 - (IBAction)showlike:(id)sender;

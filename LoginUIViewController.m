@@ -45,8 +45,8 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor grayColor];
-
-    
+UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
+    _logout.titleLabel.font = yourCustomFont;
     
  
     
@@ -60,7 +60,7 @@
     _sidebarButton.action = @selector(revealToggle:);
 
     
- [self.logout setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateNormal];
+
     
     self.title=@"我的檔案";
     // Set the gesture
@@ -189,6 +189,7 @@
             }];
             
         } else {
+           
             // If user is linked to neither, let's use their username for the Welcome label.
             self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"歡迎 %@", nil), [PFUser currentUser].username];
             
@@ -204,7 +205,7 @@
     // Set the name in the header view label
     NSString *name = [PFUser currentUser][@"profile"][@"name"];
     if (name) {
-        self.welcomeLabel.text = name;
+             self.welcomeLabel.text = name;
     }
     
     NSString *userProfilePhotoURLString = [PFUser currentUser][@"profile"][@"pictureURL"];

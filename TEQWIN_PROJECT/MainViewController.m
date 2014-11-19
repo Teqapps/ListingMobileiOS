@@ -37,7 +37,8 @@
     [super viewDidLoad];
   
     
-    
+    [self queryParseMethod];
+    [self queryParseMethod_news];
     // scroll search bar out of sight
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -48,12 +49,22 @@
     [flowLayout setMinimumLineSpacing:0.0f];
 
    // [flowLayout setMinimumLineSpacing:0.0f];
-  
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
    // int randomImgNumber = arc4random_uniform(5);
 
    // PFObject *object = [imageFilesArray objectAtIndex:randomImgNumber];
-
-    
+    UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:15];
+    [self.font setFont:yourCustomFont];
+  
+      self.font.text=@"最新主頁";
     self.title = @"主頁";
 //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     self.view.backgroundColor = [UIColor blackColor];
@@ -72,8 +83,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
    // self.screenName = @"Main";
-    [self queryParseMethod];
-    [self queryParseMethod_news];
+
     searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
     //[query whereKey:@"Name" containsString:searchTerm];
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;

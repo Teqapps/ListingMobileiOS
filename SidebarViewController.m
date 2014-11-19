@@ -104,6 +104,8 @@
     // Set the name in the header view label
     NSString *name = [PFUser currentUser][@"profile"][@"name"];
     if (name) {
+        UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
+        self.welcome.font=font;
         self.welcome.text = name;
     }
     
@@ -184,7 +186,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             case 0:
         {
             cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+          // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
             [cell.textLabel setFont:font];
             
             cell.imageView.image =[UIImage imageNamed:@"m-icon-home.png"];
@@ -197,7 +200,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             break;
         case 1:
         { cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
+           // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             
                    cell.imageView.image=[UIImage imageNamed:@"m-icon-news.png"];
@@ -208,7 +212,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             break;
         case 2:
         {   cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
+           // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
                    cell.imageView.image=[UIImage imageNamed:@"m-icon-favorite.png"];
             cell.textLabel.text=@"紋身歷史";
@@ -219,7 +224,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         case 3:
         {
              cell.textLabel.font=[cell.textLabel.font fontWithSize:32];
-            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
+           // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
           
             cell.textLabel.text=@"紋身注意事項";
@@ -231,7 +237,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
                case 4 :
         {
              cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
+           // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             //cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
             cell.textLabel.text=@"找紋身師傅";
@@ -243,7 +250,8 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
         case 5:
         {
             cell.textLabel.font=[cell.textLabel.font fontWithSize:12];
-            UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
+            UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
+           // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             //cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
             cell.textLabel.text=@"關於我們";

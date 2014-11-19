@@ -7,9 +7,15 @@
 //
 
 #import "news_detail_ViewController.h"
-
+#import <MediaPlayer/MediaPlayer.h>
 @interface news_detail_ViewController ()
-
+{
+    // Inline
+    MPMoviePlayerController *_player;
+    
+    // Player in new view
+    //MPMoviePlayerViewController *_newViewPlayer;
+}
 @end
 
 @implementation news_detail_ViewController
@@ -26,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
     [PFAnalytics trackEvent:@"show_detai_news" dimensions:dimensions];
     _news_detail.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
@@ -53,6 +60,17 @@
     self.profile_image.layer.borderWidth = 0.0f;
     self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
     self.profile_image.clipsToBounds = YES;
+    
+    // Code that executes when user taps Play
+  //  NSURL *videoStreamURL = [NSURL URLWithString:@"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"];
+    
+    // Create movie player object and add it to the view
+    //_player = [[MPMoviePlayerController alloc] initWithContentURL:videoStreamURL];
+    //_player.view.frame = CGRectMake(0, 0, self.view.frame.size.width, 320);
+    //[self.view addSubview:_player.view];
+    
+    // Play the stream
+    //[_player play];
 }
 
 - (void)didReceiveMemoryWarning
