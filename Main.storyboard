@@ -175,21 +175,6 @@
                                     <segue destination="e2j-PC-NFL" kind="push" id="f69-XH-XFd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-cl-QmA">
-                                <rect key="frame" x="54" y="241" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="qwdqdwqwd">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="Harrowprint"/>
-                                            <font key="NSOriginalFont" size="14" name="Harrowprint"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -202,7 +187,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="375" height="568"/>
                     <connections>
-                        <outlet property="font" destination="cJv-cl-QmA" id="cmT-hB-CEt"/>
                         <outlet property="image_collection" destination="1HA-mE-MRo" id="68W-8K-fCe"/>
                         <outlet property="page" destination="FFj-kA-Amg" id="kkt-32-PJJ"/>
                         <outlet property="searchDisplayController" destination="W88-ia-eMl" id="soB-gL-Xme"/>
@@ -410,11 +394,19 @@
                                 <rect key="frame" x="13" y="20" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C71-P1-jXa">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C71-P1-jXa">
                                 <rect key="frame" x="101" y="41" width="158" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="40"/>
-                                <color key="textColor" red="0.0037872779187817507" green="0.0037872779187817507" blue="0.0037872779187817507" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="紋身">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0037872779187817507" green="0.0037872779187817507" blue="0.0037872779187817507" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="64" name="Weibei-TC-Bold"/>
+                                            <font key="NSOriginalFont" size="64" name="Weibei-TC-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R2f-Yq-HfP">
@@ -599,7 +591,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="7C52030D-8E95-4A1D-848F-8A8A8C0F4BBC" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="580CA5C5-0C0E-4732-9252-45034C6029C5" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -714,13 +706,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Master_Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip1-9f-SR7">
-                                <rect key="frame" x="132" y="62" width="107" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9i-UI-7rZ">
                                 <rect key="frame" x="170" y="101" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -771,7 +756,6 @@
                         <outlet property="favButton" destination="62o-N6-bG8" id="trU-ZK-hAd"/>
                         <outlet property="fav_image" destination="Vix-Os-tAF" id="xRJ-Ka-bcX"/>
                         <outlet property="imagesCollection" destination="aZp-a7-g2X" id="CvR-DC-6pk"/>
-                        <outlet property="master_name" destination="Ip1-9f-SR7" id="ioZ-Ie-iyX"/>
                         <outlet property="noimage" destination="xwM-SB-Dhn" id="Jdx-gd-a2y"/>
                         <outlet property="profileimage" destination="xO9-7B-uIw" id="nNY-e0-C5Z"/>
                         <outlet property="searchDisplayController" destination="Fi5-5w-pUQ" id="Pie-Vz-A1a"/>
@@ -1671,7 +1655,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7C52030D-8E95-4A1D-848F-8A8A8C0F4BBC" width="320" height="460">
+        <image name="580CA5C5-0C0E-4732-9252-45034C6029C5" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11583,14 +11567,14 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="MsR-o8-LCf"/>
+        <segue reference="KUS-oG-ETU"/>
         <segue reference="6r5-u1-Oae"/>
-        <segue reference="BAs-ZL-t3l"/>
-        <segue reference="sRd-Tq-qBz"/>
-        <segue reference="njj-2d-hlP"/>
-        <segue reference="abO-QW-oxZ"/>
-        <segue reference="f9y-gk-S9T"/>
-        <segue reference="tPv-nD-LkF"/>
-        <segue reference="imN-Ia-XWJ"/>
+        <segue reference="hpH-pO-O87"/>
+        <segue reference="ISY-LM-lF4"/>
+        <segue reference="f69-XH-XFd"/>
+        <segue reference="4FV-pV-ncB"/>
+        <segue reference="n4F-MS-Usz"/>
+        <segue reference="QTr-PV-D3h"/>
+        <segue reference="sqL-XN-2Gv"/>
     </inferredMetricsTieBreakers>
 </document>

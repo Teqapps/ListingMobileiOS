@@ -27,8 +27,10 @@
 + (CFSharer *)facebook;
 + (CFSharer *)googleDrive;
 + (CFSharer *)pinterest;
-+ (CFSharer *)twitter;
+
 + (CFSharer *)more;
 + (CFSharer *)line;
 + (CFSharer *)wechat;
++ (CFSharer *)twitter;
++ (CFSharer *)sina_weibo;
 @end

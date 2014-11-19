@@ -61,11 +61,7 @@
    // int randomImgNumber = arc4random_uniform(5);
 
    // PFObject *object = [imageFilesArray objectAtIndex:randomImgNumber];
-    UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:15];
-    [self.font setFont:yourCustomFont];
-  
-      self.font.text=@"最新主頁";
-    self.title = @"主頁";
+     self.title = @"主頁";
 //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
     self.view.backgroundColor = [UIColor blackColor];
     // Change button color

@@ -59,5 +59,7 @@
 + (CFSharer *)twitter {
     return [[CFSharer alloc] initWithName:@"twitter" imageName:@"twitter.png"];
 }
-
++ (CFSharer *)sina_weibo {
+    return [[CFSharer alloc] initWithName:@"sina_weibo" imageName:@"sina-weibo.png"];
+}
 @end

@@ -62,7 +62,7 @@
     
     // Set frame for elements
      //[self.logInView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 600.0f)];
-    [self.logInView.dismissButton setFrame:CGRectMake(5.0f, 5.0f, 87.5f, 45.5f)];
+    [self.logInView.dismissButton setFrame:CGRectMake(240.0f, 30.0f, 87.5f, 45.5f)];
     [self.logInView.logo setFrame:CGRectMake(30.0f, 130.0f, 250.0f, 58.5f)];
     [self.logInView.facebookButton setFrame:CGRectMake(0.0f, 200.0f, 320.0f, 40.0f)];
     [self.logInView.twitterButton setFrame:CGRectMake(35.0f+150.0f, 310.0f, 120.0f, 40.0f)];
