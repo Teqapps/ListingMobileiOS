@@ -51,13 +51,16 @@
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
     [query whereKey:@"news_approve" equalTo:[NSNumber numberWithBool:YES]];
-    
-    
+  
+    NSLog(@"%@",count_view);
     [query orderByDescending:@"updatedAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             news_array = [[NSArray alloc] initWithArray:objects];
             [_main_tableview reloadData];
+         
+
+            count_view =[news_array valueForKey:@"news_view"];
             //   NSLog(@"%@",imageFilesArray);
             [hud hide:YES];
         }

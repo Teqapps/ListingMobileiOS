@@ -15,6 +15,7 @@
     NSArray *news_array;
     NSArray *imageFilesArray;
     NSMutableArray *imagesArray;
+    NSArray *count_view;
 }
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (nonatomic, strong) TattooMasterCell *tattoomasterCell;

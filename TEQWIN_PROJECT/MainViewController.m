@@ -38,7 +38,7 @@
   
     
     [self queryParseMethod];
-    [self queryParseMethod_news];
+
     // scroll search bar out of sight
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -96,27 +96,6 @@
     
     
 }
-- (void)queryParseMethod_news {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate   ;
-    hud.labelText = @"Loading";
-    [hud show:YES];
-    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
-    [query whereKey:@"news_approve" equalTo:[NSNumber numberWithBool:YES]];
-
-
-    [query orderByDescending:@"news"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            news_array = [[NSArray alloc] initWithArray:objects];
-            [_main_tableview reloadData];
-            //   NSLog(@"%@",imageFilesArray);
-            [hud hide:YES];
-        }
-    }];
-}
 
 - (void)queryParseMethod {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -127,7 +106,7 @@
     
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"promotion_approve" equalTo:[NSNumber numberWithBool:YES]];
-    [query orderByAscending:@"updatedAt"];
+    [query orderByDescending:@"updatedAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {

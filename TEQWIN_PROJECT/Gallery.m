@@ -563,13 +563,49 @@ NSLog(@"%@", imageFilesArray);
         
     }
     if ([sharer.name isEqual:@"line"]) {
-        if ([self checkIfLineInstalled]) {
-            UIImagePickerController *controller = [[UIImagePickerController alloc] init];
-            controller.delegate = self;
-            self.imageSharingType = LKLineActivityImageSharingDirectType;
-            [self presentViewController:controller animated:YES completion:nil];
+        UIImage *image = imageToShare;
+        
+        UIPasteboard *pasteboard;
+        
+        //iOS7.0以降では共有のクリップボードしか使えない。その際クリップボードが上書きされてしまうので注意。
+        if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
+            pasteboard = [UIPasteboard generalPasteboard];
+        } else {
+            pasteboard = [UIPasteboard pasteboardWithUniqueName];
         }
-    }}
+        
+        [pasteboard setData:UIImagePNGRepresentation(image)
+          forPasteboardType:@"public.png"];
+        
+        NSString *LINEUrlString = [NSString stringWithFormat:@"line://msg/image/%@", pasteboard.name];
+        
+        //LINEがインストールされているか確認。されていなければアラート→AppStoreを開く
+        if ([[UIApplication sharedApplication]
+             canOpenURL:[NSURL URLWithString:LINEUrlString]]) {
+            [[UIApplication sharedApplication]
+             openURL:[NSURL URLWithString:LINEUrlString]];
+        } else {
+            NSLog(@"fail");
+        }
+        
+    }
+    
+        if ([sharer.name isEqual:@"wechat"]) {
+        NSLog(@"33");
+        CGRect rect = CGRectMake(0 ,0 , 0, 0);
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, self.view.opaque, 0.0);
+        [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIGraphicsEndImageContext();
+        NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"http://media.line.me/img/button/ja/36x60.png"];
+        
+        NSURL *igImageHookFile = [[NSURL alloc] initWithString:[[NSString alloc] initWithFormat:@"file://%@", jpgPath]];
+        _documentInteractionController.UTI = @"com.instagram.photo";
+        _documentInteractionController = [self setupControllerWithURL:igImageHookFile usingDelegate:self];
+        _documentInteractionController=[UIDocumentInteractionController interactionControllerWithURL:igImageHookFile];
+        [_documentInteractionController presentOpenInMenuFromRect: rect    inView: self.view animated: YES ];
+    }
+
+}
 - (UIDocumentInteractionController *) setupControllerWithURL: (NSURL*) fileURL
                                                usingDelegate: (id ) interactionDelegate {
 
