@@ -46,7 +46,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  
+   
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+    
+    
+    
     NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
     [PFAnalytics trackEvent:@"showmaster" dimensions:dimensions];
 
@@ -54,7 +59,7 @@
         self.view_count.text = @"1";
     }
     else{
-    self.view_count.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.view.count];
+    self.view_count.text =[NSString stringWithFormat:@"%lu",(unsigned long)self.tattoomasterCell.view.count];
     }
    //self.view_count.text =[NSString stringWithFormat:@"%d",self.tattoomasterCell.view.count    ]   ;
     self.description_textview.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
@@ -136,8 +141,7 @@
     list =[[NSMutableArray alloc]init];
    
     
-    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.name]];
-    [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.gender]];
+
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.address]];
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.website]];
     [list addObject:[NSString stringWithFormat:@"%@",self.tattoomasterCell.email]];
@@ -311,7 +315,7 @@
 
   //   [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
   //  NSLog(@"反反反反%@",[imageFilesArray_image objectAtIndex:indexPath.row]);
-     NSLog(@"反反反反%d",indexPath.row);
+   
 }
 //按圖第一下放大至fullscreen
 ////按圖第二下縮回原型
@@ -360,34 +364,8 @@
     switch (indexPath.row) {
             
             
+            
         case 0:
-            
-        {
-            cell.detailTextLabel.textColor =[UIColor whiteColor];
-            [cell.detailTextLabel setNumberOfLines:5];
-            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica-bold" size:15];
-            [cell.textLabel setNumberOfLines:2];
-            cell.textLabel.text = @"Name：";
-            
-        }
-            
-            break;
-            
-        case 1:
-            
-        {
-            cell.detailTextLabel.textColor =[UIColor whiteColor];
-            [cell.detailTextLabel setNumberOfLines:5];
-            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            [cell.textLabel setNumberOfLines:2];
-            cell.textLabel.text = @"Gender：";
-        }
-            
-            break;
-            
-        case 2:
             
         {
             [cell.detailTextLabel setNumberOfLines:7];
@@ -401,7 +379,7 @@
         }
             
             break;
-        case 3:
+        case 1:
             
         {
             [cell.detailTextLabel setNumberOfLines:5];
@@ -414,7 +392,7 @@
             
             break;
             
-        case 4:
+        case 2:
             
         {
             [cell.detailTextLabel setNumberOfLines:5];
@@ -427,7 +405,7 @@
             
             break;
             
-        case 5:
+        case 3:
             
         {
             
@@ -441,17 +419,7 @@
             
             break;
             
-        case 6:
-            
-        {
-            cell.detailTextLabel.textColor =[UIColor whiteColor];
-            [cell.detailTextLabel setNumberOfLines:6];
-            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-            cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-              [cell.textLabel setNumberOfLines:30];
-            cell.textLabel.text = @"Description：";
-            
-        }
+   
       //  }
             
        //     break;
@@ -559,20 +527,20 @@
      if (tableView == self.tableView) {
     
     switch (indexPath.row) {
-               case 2:{
+               case 0:{
             Map_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Map_ViewController"];
             [self.navigationController pushViewController:mapVC animated:YES];
             mapVC.tattoomasterCell=_tattoomasterCell;
             NSLog(@"%@%@",self.tattoomasterCell.latitude,self.tattoomasterCell.longitude);
         }
             break;
-        case 3:{
+        case 1:{
             
             NSURL *url = [NSURL URLWithString:self.tattoomasterCell.website ];
             [[UIApplication sharedApplication] openURL:url];
         }
             break;
-        case 4:
+        case 2:
             //Create the MailComposeViewController
             
         {
@@ -605,7 +573,7 @@
             break;}
             
             //make alert box and phonecall function
-        case 5:
+        case 3:
         {
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"撥號"
@@ -738,7 +706,7 @@
         if ([segue.destinationViewController isKindOfClass:[Gallery class]]){
             self.tattoomasterCell.clickindexpath = [self.imagesCollection indexPathForCell:sender];
             Gallery *receiver = (Gallery*)segue.destinationViewController;
-            NSLog(@"ha%d",self.tattoomasterCell.clickindexpath.row);
+            NSLog(@"ha%ld",(long)self.tattoomasterCell.clickindexpath.row);
             receiver.tattoomasterCell=_tattoomasterCell;
             
             [self.tableView deselectRowAtIndexPath:self.tattoomasterCell.clickindexpath animated:NO];

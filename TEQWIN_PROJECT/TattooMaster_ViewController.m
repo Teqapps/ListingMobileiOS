@@ -57,7 +57,8 @@
     [super viewDidLoad];
   
     
-    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
     
        CGRect newBounds = self.tableView.bounds;
     if (self.tableView.bounds.origin.y < 44) {

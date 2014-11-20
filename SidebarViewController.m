@@ -104,7 +104,7 @@
     // Set the name in the header view label
     NSString *name = [PFUser currentUser][@"profile"][@"name"];
     if (name) {
-        UIFont *font = [UIFont fontWithName:@"叶根友千秋字体" size:20];
+        UIFont *font = [UIFont fontWithName:@"Weibei TC" size:20];
         self.welcome.font=font;
         self.welcome.text = name;
     }

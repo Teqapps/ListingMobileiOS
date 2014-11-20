@@ -44,6 +44,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
     self.view.backgroundColor=[UIColor grayColor];
 UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
     _logout.titleLabel.font = yourCustomFont;
