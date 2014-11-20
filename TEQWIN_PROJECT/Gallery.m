@@ -219,6 +219,7 @@ NSLog(@"%@", imageFilesArray);
     test.editable=NO;
     [ test sizeToFit];
 
+    
     frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x, cell.frame.origin.y+imageView.frame.origin.y-self.tableView.contentOffset.y, imageView.frame.size.width, imageView.frame.size.height);
     
     fullImageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height)];
@@ -233,6 +234,7 @@ NSLog(@"%@", imageFilesArray);
         
         [self.view.window addSubview:fullImageView];
          [self.view.window addSubview:test];
+        [self.view.window addSubview:backtips];
         
         test.frame=frame_first;
         fullImageView.frame=frame_first;
@@ -241,7 +243,7 @@ NSLog(@"%@", imageFilesArray);
             fullImageView.frame=CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height);
          
             test.frame=CGRectMake(0, self.view.frame.size.height-44, 320,test.contentSize.height);
-            
+         ;
             
         } completion:^(BOOL finished) {
             
@@ -260,8 +262,7 @@ NSLog(@"%@", imageFilesArray);
         fullImageView.frame=frame_first;
         test.frame=frame_first;
     } completion:^(BOOL finished) {
-        
-        [fullImageView removeFromSuperview];
+                [fullImageView removeFromSuperview];
         [test removeFromSuperview];
     }];
     

@@ -18,7 +18,7 @@
     PFFile *imageFile ;
     UILabel *image_desc;
     UITextView * test;
-
+UILabel *backtips;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
