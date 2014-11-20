@@ -301,7 +301,8 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         
         PFFile *thumbnail = [object objectForKey:@"image"];
         PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-        
+        thumbnailImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
         
         thumbnailImageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
         thumbnailImageView.layer.cornerRadius= thumbnailImageView.frame.size.width / 2;

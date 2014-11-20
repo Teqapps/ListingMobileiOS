@@ -307,6 +307,7 @@
     cell.thumbnail.layer.borderWidth=0.0;
    cell.thumbnail.layer.masksToBounds = YES;
    cell.thumbnail.layer.borderColor=[[UIColor whiteColor] CGColor];
+    
     [ cell.thumbnail.image drawInRect:imageRect];
     cell.thumbnail.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -320,7 +321,8 @@
 
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
-            
+             cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
             cell.parseImage.image = [UIImage imageWithData:data];
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;
