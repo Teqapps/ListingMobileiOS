@@ -208,7 +208,7 @@ NSLog(@"%@", imageFilesArray);
     
     UIImageView *imageView=(UIImageView *)[cell.contentView viewWithTag:9999];
     
-  test =[[UITextView alloc] initWithFrame:CGRectMake(0, 450, 320,400)];
+  test =[[UITextView alloc] initWithFrame:CGRectMake(0,  self.view.frame.size.height-44, 320,400)];
    // [test setBackgroundColor:[UIColor clearColor]];
     test.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];;
     test.textColor=[UIColor whiteColor];
@@ -240,7 +240,7 @@ NSLog(@"%@", imageFilesArray);
             
             fullImageView.frame=CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height);
          
-            test.frame=CGRectMake(0,450, 320,test.contentSize.height);
+            test.frame=CGRectMake(0, self.view.frame.size.height-44, 320,test.contentSize.height);
             
             
         } completion:^(BOOL finished) {
