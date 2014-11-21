@@ -92,7 +92,7 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated {
-    [self refreshTable:nil];
+   // [self refreshTable:nil]; 自動refresh
       NSLog(@"%@",[PFInstallation currentInstallation].objectId);
     // scroll search bar out of sight
     CGRect newBounds = self.tableView.bounds;

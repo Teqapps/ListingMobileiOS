@@ -223,7 +223,7 @@ NSLog(@"%@", imageFilesArray);
     [ test sizeToFit];
 
     
-    frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x, cell.frame.origin.y+imageView.frame.origin.y-self.tableView.contentOffset.y, imageView.frame.size.width, imageView.frame.size.height);
+    frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x,self.view.frame.size.height, imageView.frame.size.width, imageView.frame.size.height);
     
     fullImageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height)];
     fullImageView.backgroundColor=[UIColor blackColor];
