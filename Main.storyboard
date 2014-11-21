@@ -45,8 +45,8 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mG9-wW-cGq">
-                                                    <rect key="frame" x="150" y="122.5" width="20" height="20"/>
-                                                    <color key="color" red="0.0012545620439999999" green="0.51853330289999999" blue="0.96196395990000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="150" y="79" width="20" height="20"/>
+                                                    <color key="color" red="0.96196395990000005" green="0.62747232547952569" blue="0.075710985011874385" alpha="1" colorSpace="calibratedRGB"/>
                                                 </activityIndicatorView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qWo-fw-QI6">
                                                     <rect key="frame" x="150" y="100" width="20" height="20"/>
@@ -582,7 +582,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="75B43759-5BB4-4CDB-B3BC-95DB836E651A" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="18919A78-4C33-49CA-9629-669DCF13755E" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -831,7 +831,7 @@
         <scene sceneID="uPb-CU-JX0">
             <objects>
                 <tableViewController storyboardIdentifier="TattooMaster_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="488-73-Amk" customClass="TattooMaster_ViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="177" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXb-hL-ggL">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="177" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXb-hL-ggL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1646,7 +1646,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="75B43759-5BB4-4CDB-B3BC-95DB836E651A" width="320" height="460">
+        <image name="18919A78-4C33-49CA-9629-669DCF13755E" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11558,14 +11558,14 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="f9y-gk-S9T"/>
-        <segue reference="BAs-ZL-t3l"/>
+        <segue reference="f69-XH-XFd"/>
         <segue reference="6r5-u1-Oae"/>
-        <segue reference="abO-QW-oxZ"/>
-        <segue reference="sRd-Tq-qBz"/>
-        <segue reference="MsR-o8-LCf"/>
-        <segue reference="njj-2d-hlP"/>
-        <segue reference="Oz0-Qe-dUn"/>
+        <segue reference="KUS-oG-ETU"/>
+        <segue reference="4FV-pV-ncB"/>
+        <segue reference="QTr-PV-D3h"/>
+        <segue reference="n4F-MS-Usz"/>
+        <segue reference="ISY-LM-lF4"/>
+        <segue reference="hpH-pO-O87"/>
         <segue reference="gqv-Kk-pRo"/>
     </inferredMetricsTieBreakers>
 </document>

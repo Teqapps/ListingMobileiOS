@@ -302,7 +302,7 @@
             CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
              [ cell.parseImage.image drawInRect:imageRect];
              cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
+          //  UIGraphicsEndImageContext();
             cell.parseImage.image = [UIImage imageWithData:data];
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;
