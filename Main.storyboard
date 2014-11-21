@@ -40,7 +40,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BQQ-Tc-ck7">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tatoo_main.png" translatesAutoresizingMaskIntoConstraints="NO" id="BQQ-Tc-ck7">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -55,7 +55,7 @@
                                                     <rect key="frame" x="0.0" y="102" width="320" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" tag="167" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owA-Sc-cyi" customClass="PFImageView">
+                                                        <imageView userInteractionEnabled="NO" tag="167" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ICON.png" translatesAutoresizingMaskIntoConstraints="NO" id="owA-Sc-cyi" customClass="PFImageView">
                                                             <rect key="frame" x="10" y="2" width="60" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
@@ -582,7 +582,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="18919A78-4C33-49CA-9629-669DCF13755E" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="CE16FA2B-11CF-49D5-9566-861D969DA586" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1646,7 +1646,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="18919A78-4C33-49CA-9629-669DCF13755E" width="320" height="460">
+        <image name="CE16FA2B-11CF-49D5-9566-861D969DA586" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11548,6 +11548,7 @@ AAAAAAAAAAAJCvs
         <image name="menu-logo.png" width="400" height="102"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="navigationicon.png" width="512" height="512"/>
+        <image name="tatoo_main.png" width="500" height="340"/>
         <image name="tattoo_1.jpg" width="800" height="1057"/>
         <image name="tattoo_3.jpg" width="398" height="398"/>
         <image name="view.png" width="512" height="512"/>

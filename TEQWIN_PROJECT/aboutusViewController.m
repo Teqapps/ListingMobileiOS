@@ -58,7 +58,7 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     self.title =@"關於我們";
     list =[[NSMutableArray alloc]init];
-    [list addObject:[NSString stringWithFormat:@"TEQWIN SOLUTION LIMITED"]];
+    [list addObject:[NSString stringWithFormat:@"TEQAPPS"]];
     [list addObject:[NSString stringWithFormat:@"Flat E, 9/F, Hing Yip Factory Bldg., 31 Hing Yip Street, Kwun Tong, Kowloon"]];
     [list addObject:[NSString stringWithFormat:@"http://www.teqapps.com/"]];
     [list addObject:[NSString stringWithFormat:@"(852)2389 3939"]];

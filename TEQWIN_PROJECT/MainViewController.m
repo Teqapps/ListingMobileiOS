@@ -49,17 +49,14 @@
     flowLayout.itemSize = CGSizeMake(320, 163);
     
     [flowLayout setMinimumLineSpacing:0.0f];
-
+    // self.screenName = @"Main";
+    
+    searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    //[query whereKey:@"Name" containsString:searchTerm];
+    searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
+    // NSLog(@"%@",[PFInstallation currentInstallation].objectId);
    // [flowLayout setMinimumLineSpacing:0.0f];
-    for (NSString* family in [UIFont familyNames])
-    {
-        NSLog(@"%@", family);
-        
-        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-        {
-            NSLog(@"  %@", name);
-        }
-    }
+
    // int randomImgNumber = arc4random_uniform(5);
 
    // PFObject *object = [imageFilesArray objectAtIndex:randomImgNumber];
@@ -80,12 +77,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-   // self.screenName = @"Main";
 
-    searchquery = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    //[query whereKey:@"Name" containsString:searchTerm];
-    searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
-   // NSLog(@"%@",[PFInstallation currentInstallation].objectId);
    
   // self.page.numberOfPages = [imageFilesArray count];
 }
@@ -108,7 +100,8 @@
     
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"promotion_approve" equalTo:[NSNumber numberWithBool:YES]];
-    [query orderByDescending:@"updatedAt"];
+    
+    //[query orderByDescending:@"updatedAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -311,18 +304,15 @@
     [ cell.thumbnail.image drawInRect:imageRect];
     cell.thumbnail.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    cell.thumbnail.image = [UIImage imageNamed:@"placeholder.jpg"];
-    
-    cell.thumbnail.file = avstar;
-    [ cell.thumbnail loadInBackground];
+    cell.thumbnail.file=avstar;
+     [ cell.thumbnail loadInBackground];
   
   
 
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
              cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();
-           // UIGraphicsEndImageContext();
+            UIGraphicsEndImageContext();
             cell.parseImage.image = [UIImage imageWithData:data];
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;

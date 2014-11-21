@@ -240,7 +240,7 @@ query = [PFQuery queryWithClassName:self.parseClassName];
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.tableView) {
-        
+       
         selectobject = [self.objects  objectAtIndex:indexPath.row];
       //  NSLog(@"%@gagagaga",[selectobject objectForKey:@"Master_id"]);
     } else {

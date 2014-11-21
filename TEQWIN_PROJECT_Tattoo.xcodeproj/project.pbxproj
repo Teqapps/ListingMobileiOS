@@ -49,6 +49,7 @@
 		42223ED919B5615400F0D058 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42223ED819B5615400F0D058 /* libz.1.1.3.dylib */; };
 		42223EDE19B5677F00F0D058 /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223EDB19B5677F00F0D058 /* MyLogInViewController.m */; };
 		42223EDF19B5677F00F0D058 /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223EDD19B5677F00F0D058 /* MySignUpViewController.m */; };
+		422278BE1A1F331F00AA7915 /* tatoo_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278BD1A1F331F00AA7915 /* tatoo_main.png */; };
 		42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42317A6819B709FC00C54F54 /* teqwin_logo.png */; };
 		424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 424FACE3198A2EDC0062D13D /* navigationicon.png */; };
 		42630059199071F3007B8C8F /* Map_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42630058199071F3007B8C8F /* Map_ViewController.m */; };
@@ -244,6 +245,7 @@
 		42223EDB19B5677F00F0D058 /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
 		42223EDC19B5677F00F0D058 /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
 		42223EDD19B5677F00F0D058 /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
+		422278BD1A1F331F00AA7915 /* tatoo_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatoo_main.png; sourceTree = "<group>"; };
 		42317A6819B709FC00C54F54 /* teqwin_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teqwin_logo.png; sourceTree = "<group>"; };
 		424FACE3198A2EDC0062D13D /* navigationicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationicon.png; sourceTree = "<group>"; };
 		42630057199071F3007B8C8F /* Map_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map_ViewController.h; path = ../Map_ViewController.h; sourceTree = "<group>"; };
@@ -768,6 +770,7 @@
 		42A95FDE1A032F1F002C0508 /* photo_lastest */ = {
 			isa = PBXGroup;
 			children = (
+				422278BD1A1F331F00AA7915 /* tatoo_main.png */,
 				4265871A1A1B3E30002C0E93 /* login_bg.png */,
 				426587161A1B3C0C002C0E93 /* tatoo_splash.png */,
 				42193FCF19860221007E3C52 /* menu.png */,
@@ -919,6 +922,7 @@
 				42A95FF81A032F41002C0508 /* bg-login.png in Resources */,
 				427D34A9199E076400814463 /* more.png in Resources */,
 				42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */,
+				422278BE1A1F331F00AA7915 /* tatoo_main.png in Resources */,
 				42193FA91985FE08007E3C52 /* Images.xcassets in Resources */,
 				42A4913A19D506A700E4D65E /* Default.png in Resources */,
 				42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */,

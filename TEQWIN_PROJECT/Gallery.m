@@ -541,7 +541,7 @@ NSLog(@"%@", imageFilesArray);
             mySocialComposeView = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
             
             // 插入文字
-             [mySocialComposeView setInitialText:image_desc];
+            
             
             // 插入網址
             // NSURL *myURL = [[NSURL alloc] initWithString:@"http://cg2010studio.wordpress.com/"];
@@ -579,32 +579,55 @@ NSLog(@"%@", imageFilesArray);
         
     }
     if ([sharer.name isEqual:@"line"]) {
-        UIImage *image = imageToShare;
+        //UIImage *image = imageToShare;
         
-        UIPasteboard *pasteboard;
+      //  UIPasteboard *pasteboard;
         
         //iOS7.0以降では共有のクリップボードしか使えない。その際クリップボードが上書きされてしまうので注意。
-        if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
-            pasteboard = [UIPasteboard generalPasteboard];
-        } else {
-            pasteboard = [UIPasteboard pasteboardWithUniqueName];
-        }
+      //  if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
+      //      pasteboard = [UIPasteboard generalPasteboard];
+      //  } else {
+      //      pasteboard = [UIPasteboard pasteboardWithUniqueName];
+      //  }
         
-        [pasteboard setData:UIImagePNGRepresentation(image)
-          forPasteboardType:@"public.png"];
+       // [pasteboard setData:UIImagePNGRepresentation(image)
+       //   forPasteboardType:@"public.png"];
         
-        NSString *LINEUrlString = [NSString stringWithFormat:@"line://msg/image/%@", pasteboard.name];
+       // NSString *LINEUrlString = [NSString stringWithFormat:@"line://msg/image/%@", pasteboard.name];
         
         //LINEがインストールされているか確認。されていなければアラート→AppStoreを開く
-        if ([[UIApplication sharedApplication]
-             canOpenURL:[NSURL URLWithString:LINEUrlString]]) {
-            [[UIApplication sharedApplication]
-             openURL:[NSURL URLWithString:LINEUrlString]];
-        } else {
-            NSLog(@"fail");
+       // if ([[UIApplication sharedApplication]
+       //      canOpenURL:[NSURL URLWithString:LINEUrlString]]) {
+       //     [[UIApplication sharedApplication]
+       //      openURL:[NSURL URLWithString:LINEUrlString]];
+       // } else {
+       //     NSLog(@"fail");
+       // }
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]]) {
+            // do somethin
+            UIPasteboard *pasteboard = [UIPasteboard pasteboardWithUniqueName];
+            NSString *pasteboardName = pasteboard.name;
+            NSURL *imageURL = [NSURL URLWithString:imageFile.url];
+            [pasteboard setData:UIImagePNGRepresentation([UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]]) forPasteboardType:@"public.png"];
+            
+            NSString *contentType = @"image";
+            NSString *contentKey = (__bridge_transfer NSString*)CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                                                        (CFStringRef)pasteboardName,
+                                                                                                        NULL,
+                                                                                                        CFSTR(":/?=,!$&'()*+;[]@#"),
+                                                                                                        CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+            
+            NSString *urlString = [NSString stringWithFormat:@"line://msg/%@/%@",
+                                   contentType, contentKey];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
         }
-        
+        else{
+            NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id443904275"];
+            [[UIApplication sharedApplication] openURL:itunesURL];
+        }
     }
+
+    
     
         if ([sharer.name isEqual:@"wechat"]) {
         NSLog(@"33");
