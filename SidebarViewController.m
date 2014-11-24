@@ -26,8 +26,8 @@
     [super viewWillAppear:animated];
 
     if ([PFUser currentUser]) {
-        self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+       // self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
+       
         self.profile_image.layer.cornerRadius =self.profile_image.frame.size.width / 2;
         self.profile_image.layer.borderWidth = 3.0f;
         self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -89,8 +89,9 @@
         }
         
     } else {
-        self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        //self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
+    
+        
         self.profile_image.layer.cornerRadius =self.profile_image.frame.size.width / 2;
         self.profile_image.layer.borderWidth = 3.0f;
         self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -125,8 +126,8 @@
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                    if (connectionError == nil && data != nil) {
-                                      self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
-                                       UIGraphicsEndImageContext();
+                                     // self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
+                                      
                                        self.profile_image.image = [UIImage imageWithData:data];
                                        
                                        // Add a nice corner radius to the image
