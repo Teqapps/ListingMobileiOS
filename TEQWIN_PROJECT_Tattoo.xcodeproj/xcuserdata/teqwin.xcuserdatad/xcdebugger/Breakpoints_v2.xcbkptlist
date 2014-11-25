@@ -677,11 +677,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/TattooMaster_ViewController.m"
-            timestampString = "438141916.164186"
+            timestampString = "438575720.685145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "584"
-            endingLineNumber = "584"
+            startingLineNumber = "533"
+            endingLineNumber = "533"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -693,11 +693,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/TattooMaster_ViewController.m"
-            timestampString = "438141916.164186"
+            timestampString = "438575720.685145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "558"
-            endingLineNumber = "558"
+            startingLineNumber = "507"
+            endingLineNumber = "507"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>

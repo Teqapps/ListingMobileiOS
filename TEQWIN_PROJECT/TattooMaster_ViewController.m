@@ -48,7 +48,7 @@
         self.paginationEnabled = YES    ;
         
         // The number of objects to show per page
-        self.objectsPerPage = 2;
+        self.objectsPerPage = 1;
     }
     return self;
 }
@@ -126,19 +126,7 @@
     [searchbar becomeFirstResponder];
     
 }
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    if (tableView == self.tableView) {
-        
-        return self.objects.count;
-        
-    } else {
-        //NSLog(@"how many in search results");
-        //NSLog(@"%@", self.searchResults.count);
-        return self.searchResults.count;
-        
-    }
-}
+
 
 -(void)filterResults:(NSString *)searchTerm scope:(NSString*)scope
 {
@@ -237,45 +225,6 @@ query = [PFQuery queryWithClassName:self.parseClassName];
 
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView == self.tableView) {
-       
-        selectobject = [self.objects  objectAtIndex:indexPath.row];
-      //  NSLog(@"%@gagagaga",[selectobject objectForKey:@"Master_id"]);
-    } else {
-        //NSLog(@"how many in search results");
-        //NSLog(@"%@", self.searchResults.count);
-        
-        selectobject = [_searchResults  objectAtIndex:indexPath.row];
-        NSLog(@"%@",[selectobject objectForKey:@"Master_id"]);
-        Tattoo_Detail_ViewController * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Tattoo_Detail_ViewController"];
-        [self.navigationController pushViewController:mapVC animated:YES];
-        TattooMasterCell * tattoomasterCell = [[TattooMasterCell alloc] init];
-        tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
-        tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
-        tattoomasterCell.name = [selectobject objectForKey:@"Name"];
-        tattoomasterCell.description = [selectobject objectForKey:@"description"];
-        tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
-        tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
-        tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
-        tattoomasterCell.email = [selectobject objectForKey:@"Email"];
-        tattoomasterCell.address = [selectobject objectForKey:@"Address"];
-        tattoomasterCell.latitude = [selectobject objectForKey:@"Latitude"];
-        tattoomasterCell.longitude = [selectobject objectForKey:@"Longitude"];
-        tattoomasterCell.website = [selectobject objectForKey:@"Website"];
-        tattoomasterCell.personage = [selectobject objectForKey:@"Personage"];
-        tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
-        tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
-        tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
-        tattoomasterCell.object_id = selectobject.objectId;
-        
-        mapVC.tattoomasterCell = tattoomasterCell;
-        NSLog(@"%@",tattoomasterCell.master_id);
-    }
-    
-    
-}
 
 // Override to customize the look of a cell representing an object. The default is to display
 // a UITableViewCellStyleDefault style cell with the label being the first key in the object.
