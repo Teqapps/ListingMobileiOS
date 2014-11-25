@@ -239,10 +239,13 @@
     NSLog(@"start query");
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    // query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
             
