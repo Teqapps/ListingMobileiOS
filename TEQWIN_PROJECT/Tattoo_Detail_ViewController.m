@@ -155,6 +155,8 @@
     // scroll search bar out of sight
     //self.screenName =@"detail page";
 
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
 }
 

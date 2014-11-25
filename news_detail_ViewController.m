@@ -5,7 +5,7 @@
 //  Created by Teqwin on 5/11/14.
 //  Copyright (c) 2014年 Teqwin. All rights reserved.
 //
-
+#import "SWRevealViewController.h"
 #import "news_detail_ViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 @interface news_detail_ViewController ()
@@ -72,7 +72,15 @@
     // Play the stream
     //[_player play];
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    // self.screenName = @"Main";
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    
+    // self.page.numberOfPages = [imageFilesArray count];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

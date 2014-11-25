@@ -45,7 +45,7 @@
         self.pullToRefreshEnabled = YES;
         
         // Whether the built-in pagination is enabled
-        self.paginationEnabled = YES    ;
+        self.paginationEnabled = NO    ;
         
         // The number of objects to show per page
         self.objectsPerPage = 2;
@@ -106,7 +106,9 @@
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
     //// Finds scores from any of Jonathan, Dario, or Shawn
     
-    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
     
    
   }
