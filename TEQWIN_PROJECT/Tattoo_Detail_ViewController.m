@@ -54,7 +54,8 @@
     
     NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
     [PFAnalytics trackEvent:@"showmaster" dimensions:dimensions];
-
+    [self queryParseMethod];
+    [self queryParseMethod_image];
     if (self.tattoomasterCell.view ==nil) {
         self.view_count.text = @"1";
     }
@@ -79,8 +80,7 @@
     self.description_textview.frame = frame;
 [ self.description_textview sizeToFit];
     [self.description_textview setScrollEnabled:YES];
-    [self queryParseMethod];
-    [self queryParseMethod_image];
+    
    
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -88,7 +88,7 @@
      [self.imagesCollection setCollectionViewLayout:flowLayout];
     flowLayout.itemSize = CGSizeMake(70, 70);
     self.title =self.tattoomasterCell.name;
-    self.count_like.text =[NSString stringWithFormat:@"%d likes",self.tattoomasterCell.favorites.count    ]   ;
+    self.count_like.text =[NSString stringWithFormat:@"%lu likes",(unsigned long)self.tattoomasterCell.favorites.count    ]   ;
     if ([self.tattoomasterCell.gender isEqualToString:@"男"]) {
         
         
@@ -238,9 +238,26 @@
 - (void)queryParseMethod {
     NSLog(@"start query");
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     // query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    
+    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
+        if (!error) {
+            imageFilesArray = [[NSArray alloc] initWithArray:objects];
+            
+        }
+    }];
+    
+    
+}
+- (void)queryParseMethod_image{
+    NSLog(@"start query_image");
+   
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -259,30 +276,6 @@
                 [_imagesCollection reloadData];
             }}
     }];
-    
-}
-- (void)queryParseMethod_image{
-    NSLog(@"start query_image");
-   
-    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-    [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-   query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-  
-   
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-      
-        if (!error) {
-          
-            imageFilesArray_image = [[NSArray alloc] initWithArray:objects];
-            
-            self.noimage.text=@"";
-           // [query orderByAscending:@"createdAt"];
-            
-
-            [_imagesCollection reloadData];
-            }}
-    ];
     
 }
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
