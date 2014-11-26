@@ -86,7 +86,7 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
      [self.imagesCollection setCollectionViewLayout:flowLayout];
-    flowLayout.itemSize = CGSizeMake(70, 70);
+    flowLayout.itemSize = CGSizeMake(83, 83);
     self.title =self.tattoomasterCell.name;
     self.count_like.text =[NSString stringWithFormat:@"%d likes",self.tattoomasterCell.favorites.count    ]   ;
     if ([self.tattoomasterCell.gender isEqualToString:@"男"]) {
@@ -239,10 +239,13 @@
     NSLog(@"start query");
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    // query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
             
@@ -257,9 +260,14 @@
    
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+   
+  
+   
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+ query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
         if (!error) {
             if (objects.count ==0) {
                 self.noimage.text = @"noimage";
@@ -290,7 +298,7 @@
 
     static NSString *cellIdentifier = @"imageCell";
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    
+    cell.parseImage.image=[UIImage imageNamed:@"loading_img.png"];
    imageObject = [imageFilesArray_image objectAtIndex:indexPath.row];
     PFFile *imageFile = [imageObject objectForKey:@"image"];
     
@@ -303,6 +311,8 @@
             UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
             CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
              [ cell.parseImage.image drawInRect:imageRect];
+              //cell.parseImage.layer.borderWidth=1.0;
+              //cell.parseImage.layer.borderColor=[[UIColor grayColor] CGColor];
              cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext() ;
           //  UIGraphicsEndImageContext();
