@@ -81,6 +81,10 @@ CFShareCircleView *shareCircleView;
 {
     
     [super viewDidAppear:animated];
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
     if (self.tattoomasterCell.clickindexpath!=nil) {
         NSIndexPath *indexPat = [NSIndexPath indexPathForRow:self.tattoomasterCell.clickindexpath.row inSection:0];
         [self.tableView scrollToRowAtIndexPath:indexPat atScrollPosition:UITableViewScrollPositionMiddle animated:YES   ];}
@@ -110,7 +114,10 @@ CFShareCircleView *shareCircleView;
 
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
@@ -118,12 +125,12 @@ CFShareCircleView *shareCircleView;
                 [self noimage];
                 
             }
-                        [tableView reloadData];
+            [tableView reloadData];
             [hud hide:YES];
-        
+            
             
             [query orderByAscending:@"createdAt"];
-
+            
         }
         
     }];

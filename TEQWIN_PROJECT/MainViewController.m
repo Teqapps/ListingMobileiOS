@@ -77,7 +77,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-
+  [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
    
   // self.page.numberOfPages = [imageFilesArray count];
 }
@@ -98,12 +98,15 @@
     [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
     
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    //query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"promotion_approve" equalTo:[NSNumber numberWithBool:YES]];
     
     //[query orderByDescending:@"updatedAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
         if (!error) {
             
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
@@ -280,6 +283,9 @@
     
     static NSString *cellIdentifier = @"imageCell";
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+
+    cell.parseImage.image=[UIImage imageNamed:@"tatoo_main.png"];
+cell.thumbnail.image=[UIImage imageNamed:@"ICON.PNG"];
      PFImageView *thumbnail = (PFImageView*)[cell viewWithTag:167];
     PFObject *imageObject = [imageFilesArray objectAtIndex:indexPath.row];
       PFFile *avstar = [imageObject objectForKey:@"image"];
@@ -307,8 +313,6 @@
     cell.thumbnail.file=avstar;
      [ cell.thumbnail loadInBackground];
   
-  
-
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
              cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();

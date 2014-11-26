@@ -54,7 +54,8 @@
     
     NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
     [PFAnalytics trackEvent:@"showmaster" dimensions:dimensions];
-
+    [self queryParseMethod];
+    [self queryParseMethod_image];
     if (self.tattoomasterCell.view ==nil) {
         self.view_count.text = @"1";
     }
@@ -79,8 +80,7 @@
     self.description_textview.frame = frame;
 [ self.description_textview sizeToFit];
     [self.description_textview setScrollEnabled:YES];
-    [self queryParseMethod];
-    [self queryParseMethod_image];
+    
    
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -88,7 +88,7 @@
      [self.imagesCollection setCollectionViewLayout:flowLayout];
     flowLayout.itemSize = CGSizeMake(70, 70);
     self.title =self.tattoomasterCell.name;
-    self.count_like.text =[NSString stringWithFormat:@"%d likes",self.tattoomasterCell.favorites.count    ]   ;
+    self.count_like.text =[NSString stringWithFormat:@"%lu likes",(unsigned long)self.tattoomasterCell.favorites.count    ]   ;
     if ([self.tattoomasterCell.gender isEqualToString:@"男"]) {
         
         
@@ -155,6 +155,8 @@
     // scroll search bar out of sight
     //self.screenName =@"detail page";
 
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
 }
 
@@ -237,10 +239,13 @@
     NSLog(@"start query");
     
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    // query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
             
@@ -249,17 +254,16 @@
     
     
 }
-
 - (void)queryParseMethod_image{
     NSLog(@"start query_image");
-    
+   
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count ==0) {
+                
                 self.noimage.text = @"noimage";
             }
             else{
@@ -273,7 +277,8 @@
             }}
     }];
     
-}-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+}
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
@@ -282,13 +287,13 @@
     return [imageFilesArray_image count];
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    
+
+  
+
     static NSString *cellIdentifier = @"imageCell";
     ImageExampleCell *cell = (ImageExampleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    imageObject = [imageFilesArray_image objectAtIndex:indexPath.row];
+    cell.parseImage.image=[UIImage imageNamed:@"loading_img.png"];
+   imageObject = [imageFilesArray_image objectAtIndex:indexPath.row];
     PFFile *imageFile = [imageObject objectForKey:@"image"];
     
     cell.loadingSpinner.hidden = NO;
@@ -296,24 +301,21 @@
     
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
-            CGSize itemSize = CGSizeMake(50, 50);
+            CGSize itemSize = CGSizeMake(20, 20);
             UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
             CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
             [ cell.parseImage.image drawInRect:imageRect];
             cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext() ;
-            //  UIGraphicsEndImageContext();
             cell.parseImage.image = [UIImage imageWithData:data];
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;
-            [ cell.parseImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
-            
+
         }
     }];
     
     return cell;
 }
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
   //    Gallery * mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Gallery"];
