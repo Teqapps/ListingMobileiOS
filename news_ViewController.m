@@ -40,9 +40,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     // self.screenName = @"Main";
     
-    // Set the gesture
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
+  
     
     // self.page.numberOfPages = [imageFilesArray count];
 }
@@ -52,16 +50,13 @@
     hud.labelText = @"Loading";
     [hud show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
-    //query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     // [query whereKey:@"news" equalTo:self.tattoomasterCell.master_id];
     [query whereKey:@"news_approve" equalTo:[NSNumber numberWithBool:YES]];
   
     NSLog(@"%@",count_view);
     [query orderByDescending:@"updatedAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if ([objects count] == 0) {
-            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-        }
         if (!error) {
             news_array = [[NSArray alloc] initWithArray:objects];
             [_main_tableview reloadData];

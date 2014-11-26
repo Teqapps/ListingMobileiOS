@@ -45,7 +45,7 @@
         self.pullToRefreshEnabled = YES;
         
         // Whether the built-in pagination is enabled
-        self.paginationEnabled = NO    ;
+        self.paginationEnabled = YES    ;
         
         // The number of objects to show per page
         self.objectsPerPage = 2;
@@ -106,9 +106,7 @@
     searchquery.cachePolicy=kPFCachePolicyNetworkElseCache;
     //// Finds scores from any of Jonathan, Dario, or Shawn
     
-    // Set the gesture
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
+    
     
    
   }
@@ -215,7 +213,7 @@
  
 query = [PFQuery queryWithClassName:self.parseClassName];
     
-
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"allow_display" equalTo:[NSNumber numberWithBool:YES]];
     
 
@@ -223,9 +221,9 @@ query = [PFQuery queryWithClassName:self.parseClassName];
     
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
-       if ([self.objects count] == 0) {
+    /*    if ([self.objects count] == 0) {
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-       }
+     }*/
     
     [query orderByAscending:@"createdAt"];
     
