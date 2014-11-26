@@ -86,7 +86,7 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
      [self.imagesCollection setCollectionViewLayout:flowLayout];
-    flowLayout.itemSize = CGSizeMake(83, 83);
+    flowLayout.itemSize = CGSizeMake(70, 70);
     self.title =self.tattoomasterCell.name;
     self.count_like.text =[NSString stringWithFormat:@"%d likes",self.tattoomasterCell.favorites.count    ]   ;
     if ([self.tattoomasterCell.gender isEqualToString:@"男"]) {
@@ -238,23 +238,29 @@
 - (void)queryParseMethod {
     NSLog(@"start query");
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Tattoo_Master"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     // query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if ([objects count] == 0) {
-            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-        }
         if (!error) {
-            imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            
-        }
+            if (objects.count ==0) {
+                
+                self.noimage.text = @"noimage";
+            }
+            else{
+                imageFilesArray_image = [[NSArray alloc] initWithArray:objects];
+                
+                self.noimage.text=@"";
+                [query orderByAscending:@"createdAt"];
+                
+                
+                [_imagesCollection reloadData];
+            }}
     }];
     
-    
 }
-
 - (void)queryParseMethod_image{
     NSLog(@"start query_image");
    
@@ -307,19 +313,15 @@
     
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
-            CGSize itemSize = CGSizeMake(50, 50);
+            CGSize itemSize = CGSizeMake(20, 20);
             UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
             CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-             [ cell.parseImage.image drawInRect:imageRect];
-              //cell.parseImage.layer.borderWidth=1.0;
-              //cell.parseImage.layer.borderColor=[[UIColor grayColor] CGColor];
-             cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();
+            [ cell.parseImage.image drawInRect:imageRect];
+            cell.parseImage.image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext() ;
-          //  UIGraphicsEndImageContext();
             cell.parseImage.image = [UIImage imageWithData:data];
             [cell.loadingSpinner stopAnimating];
             cell.loadingSpinner.hidden = YES;
-            [ cell.parseImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
 
         }
     }];
