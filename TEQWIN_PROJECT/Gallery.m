@@ -182,7 +182,7 @@ NSLog(@"%@", imageFilesArray);
     
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
-      cell.image.image = [UIImage imageNamed:@"loading.png"];
+      cell.image.image = [UIImage imageNamed:@"loading_img.png"];
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         cell.image.image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
