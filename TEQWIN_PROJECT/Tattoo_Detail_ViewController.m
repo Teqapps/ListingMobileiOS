@@ -262,6 +262,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count ==0) {
+                
                 self.noimage.text = @"noimage";
             }
             else{
