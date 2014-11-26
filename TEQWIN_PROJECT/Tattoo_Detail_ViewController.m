@@ -248,8 +248,15 @@
         }
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-            
-        }
+            for (PFObject *object in objects) {
+
+            _profileimage.file =[object objectForKey:@"image"];
+            [_profileimage.file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                _profileimage.image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                _profileimage.image = [UIImage imageWithData:data];
+             }];
+            }}
     }];
     
     

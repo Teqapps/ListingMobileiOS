@@ -182,7 +182,7 @@ NSLog(@"%@", imageFilesArray);
     
     cell.loadingSpinner.hidden = NO;
     [cell.loadingSpinner startAnimating];
-      cell.image.image = [UIImage imageNamed:@"loading_img.png"];
+      cell.image.image = [UIImage imageNamed:@"load1.png"];
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         cell.image.image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
@@ -459,20 +459,6 @@ NSLog(@"%@", imageFilesArray);
          [self presentViewController:activityVC animated:TRUE completion:nil];
      }
 
-
-    if ([sharer.name isEqual:@"line"]) {
-         NSLog(@"clicked line");
-         NSURL *appURL = [NSURL URLWithString:@"line://msg/image/http://www.molotang.com/wp-content/uploads/2014/11/IMG_1036.jpg)"];
-        
-         if ([[UIApplication sharedApplication] canOpenURL: appURL]) {
-             [[UIApplication sharedApplication] openURL: appURL];
-         }
-         else { //如果使用者沒有安裝，連結到App Store
-            NSURL *itunesURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id443904275"];
-            [[UIApplication sharedApplication] openURL:itunesURL];
-                NSLog(@"no line");
-         }
-          }
     if ([sharer.name isEqual:@"Whatsapp"]) {
       
         if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"whatsapp://app"]]){

@@ -57,6 +57,7 @@
 		422278CC1A247EDC00AA7915 /* load_phot.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278CB1A247EDC00AA7915 /* load_phot.png */; };
 		422278CE1A24847D00AA7915 /* LOADING-PHOTO.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278CD1A24847D00AA7915 /* LOADING-PHOTO.png */; };
 		422278D01A24877A00AA7915 /* loading_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278CF1A24877A00AA7915 /* loading_img.png */; };
+		422278EA1A25BD0000AA7915 /* load1.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278E91A25BD0000AA7915 /* load1.png */; };
 		42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42317A6819B709FC00C54F54 /* teqwin_logo.png */; };
 		424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 424FACE3198A2EDC0062D13D /* navigationicon.png */; };
 		42630059199071F3007B8C8F /* Map_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42630058199071F3007B8C8F /* Map_ViewController.m */; };
@@ -260,6 +261,7 @@
 		422278CB1A247EDC00AA7915 /* load_phot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load_phot.png; sourceTree = "<group>"; };
 		422278CD1A24847D00AA7915 /* LOADING-PHOTO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LOADING-PHOTO.png"; sourceTree = "<group>"; };
 		422278CF1A24877A00AA7915 /* loading_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_img.png; sourceTree = "<group>"; };
+		422278E91A25BD0000AA7915 /* load1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load1.png; sourceTree = "<group>"; };
 		42317A6819B709FC00C54F54 /* teqwin_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teqwin_logo.png; sourceTree = "<group>"; };
 		424FACE3198A2EDC0062D13D /* navigationicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationicon.png; sourceTree = "<group>"; };
 		42630057199071F3007B8C8F /* Map_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map_ViewController.h; path = ../Map_ViewController.h; sourceTree = "<group>"; };
@@ -785,6 +787,7 @@
 			isa = PBXGroup;
 			children = (
 				422278CF1A24877A00AA7915 /* loading_img.png */,
+				422278E91A25BD0000AA7915 /* load1.png */,
 				422278CD1A24847D00AA7915 /* LOADING-PHOTO.png */,
 				422278CB1A247EDC00AA7915 /* load_phot.png */,
 				422278C91A247E4400AA7915 /* loading_photo.png */,
@@ -1024,6 +1027,7 @@
 				42A4914919D5082800E4D65E /* facebook@2x.png in Resources */,
 				426587171A1B3C0C002C0E93 /* tatoo_splash.png in Resources */,
 				42A960181A0378E9002C0508 /* bg-login拷貝.png in Resources */,
+				422278EA1A25BD0000AA7915 /* load1.png in Resources */,
 				42A4914019D506A700E4D65E /* LoginFieldBG.png in Resources */,
 				42A9600E1A032F41002C0508 /* menu-logo.png in Resources */,
 				427D34A6199E076400814463 /* google_drive@2x.png in Resources */,

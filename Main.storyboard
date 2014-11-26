@@ -582,7 +582,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="1092F09E-435B-4826-8291-AAA0A744E019" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="E8A39E2E-8B07-47F1-B9FB-A549F0B15708" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -642,7 +642,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOADING-PHOTO.png" translatesAutoresizingMaskIntoConstraints="NO" id="ciM-Jw-CVq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="load1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ciM-Jw-CVq">
                                                     <rect key="frame" x="2" y="0.0" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -1647,7 +1647,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1092F09E-435B-4826-8291-AAA0A744E019" width="320" height="460">
+        <image name="E8A39E2E-8B07-47F1-B9FB-A549F0B15708" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11535,7 +11535,6 @@ AAAAAAAAAAAJCvs
 </mutableData>
         </image>
         <image name="ICON.png" width="128" height="128"/>
-        <image name="LOADING-PHOTO.png" width="83" height="83"/>
         <image name="background.jpg" width="960" height="540"/>
         <image name="bar.png" width="632" height="31"/>
         <image name="goldebackground.jpg" width="340" height="227"/>
@@ -11546,6 +11545,7 @@ AAAAAAAAAAAJCvs
         <image name="icon-sex-f.png" width="72" height="72"/>
         <image name="icon-sex-m.png" width="72" height="72"/>
         <image name="icon-share.png" width="104" height="104"/>
+        <image name="load1.png" width="200" height="200"/>
         <image name="menu-logo.png" width="400" height="102"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="navigationicon.png" width="512" height="512"/>
@@ -11560,14 +11560,14 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6r5-u1-Oae"/>
-        <segue reference="4FV-pV-ncB"/>
-        <segue reference="f69-XH-XFd"/>
-        <segue reference="KUS-oG-ETU"/>
-        <segue reference="ISY-LM-lF4"/>
-        <segue reference="QTr-PV-D3h"/>
-        <segue reference="hpH-pO-O87"/>
-        <segue reference="n4F-MS-Usz"/>
         <segue reference="sqL-XN-2Gv"/>
+        <segue reference="Oz0-Qe-dUn"/>
+        <segue reference="ISY-LM-lF4"/>
+        <segue reference="6r5-u1-Oae"/>
+        <segue reference="f69-XH-XFd"/>
+        <segue reference="n4F-MS-Usz"/>
+        <segue reference="KUS-oG-ETU"/>
+        <segue reference="4FV-pV-ncB"/>
+        <segue reference="hpH-pO-O87"/>
     </inferredMetricsTieBreakers>
 </document>
