@@ -103,10 +103,14 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
         [bookmarkquery whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
         
         
-        bookmarkquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
+       // bookmarkquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
         
         [bookmarkquery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if ([objects count] == 0) {
+                bookmarkquery.cachePolicy = kPFCachePolicyCacheThenNetwork;
+            }
             if (!error) {
+                
                 countarray = [[NSArray alloc] initWithArray:objects];
                 self.bookmarks_count.text=[NSString stringWithFormat:@"%lu",(unsigned long)countarray.count];
                 
@@ -245,9 +249,12 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
     [query whereKey:@"favorites" equalTo:[PFUser currentUser].objectId];
     
    
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+  //  query.cachePolicy = kPFCachePolicyCacheThenNetwork;
    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
             
@@ -268,9 +275,12 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
     [query whereKey:@"bookmark" equalTo:[PFUser currentUser].objectId];
     
     
-    query.cachePolicy = kPFCachePolicyNetworkOnly;
+    
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        }
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
            
