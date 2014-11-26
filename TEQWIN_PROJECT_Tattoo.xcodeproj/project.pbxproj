@@ -50,13 +50,6 @@
 		42223EDE19B5677F00F0D058 /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223EDB19B5677F00F0D058 /* MyLogInViewController.m */; };
 		42223EDF19B5677F00F0D058 /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42223EDD19B5677F00F0D058 /* MySignUpViewController.m */; };
 		422278BE1A1F331F00AA7915 /* tatoo_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278BD1A1F331F00AA7915 /* tatoo_main.png */; };
-		422278C41A246ABB00AA7915 /* loading_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278C31A246ABB00AA7915 /* loading_image.png */; };
-		422278C61A247C2500AA7915 /* image_loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278C51A247C2500AA7915 /* image_loading.png */; };
-		422278C81A247D3A00AA7915 /* LOAD.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278C71A247D3A00AA7915 /* LOAD.png */; };
-		422278CA1A247E4400AA7915 /* loading_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278C91A247E4400AA7915 /* loading_photo.png */; };
-		422278CC1A247EDC00AA7915 /* load_phot.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278CB1A247EDC00AA7915 /* load_phot.png */; };
-		422278CE1A24847D00AA7915 /* LOADING-PHOTO.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278CD1A24847D00AA7915 /* LOADING-PHOTO.png */; };
-		422278D01A24877A00AA7915 /* loading_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 422278CF1A24877A00AA7915 /* loading_img.png */; };
 		42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42317A6819B709FC00C54F54 /* teqwin_logo.png */; };
 		424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 424FACE3198A2EDC0062D13D /* navigationicon.png */; };
 		42630059199071F3007B8C8F /* Map_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42630058199071F3007B8C8F /* Map_ViewController.m */; };
@@ -253,13 +246,6 @@
 		42223EDC19B5677F00F0D058 /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
 		42223EDD19B5677F00F0D058 /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
 		422278BD1A1F331F00AA7915 /* tatoo_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatoo_main.png; sourceTree = "<group>"; };
-		422278C31A246ABB00AA7915 /* loading_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_image.png; sourceTree = "<group>"; };
-		422278C51A247C2500AA7915 /* image_loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_loading.png; sourceTree = "<group>"; };
-		422278C71A247D3A00AA7915 /* LOAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOAD.png; sourceTree = "<group>"; };
-		422278C91A247E4400AA7915 /* loading_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_photo.png; sourceTree = "<group>"; };
-		422278CB1A247EDC00AA7915 /* load_phot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load_phot.png; sourceTree = "<group>"; };
-		422278CD1A24847D00AA7915 /* LOADING-PHOTO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LOADING-PHOTO.png"; sourceTree = "<group>"; };
-		422278CF1A24877A00AA7915 /* loading_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_img.png; sourceTree = "<group>"; };
 		42317A6819B709FC00C54F54 /* teqwin_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teqwin_logo.png; sourceTree = "<group>"; };
 		424FACE3198A2EDC0062D13D /* navigationicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationicon.png; sourceTree = "<group>"; };
 		42630057199071F3007B8C8F /* Map_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map_ViewController.h; path = ../Map_ViewController.h; sourceTree = "<group>"; };
@@ -784,13 +770,6 @@
 		42A95FDE1A032F1F002C0508 /* photo_lastest */ = {
 			isa = PBXGroup;
 			children = (
-				422278CF1A24877A00AA7915 /* loading_img.png */,
-				422278CD1A24847D00AA7915 /* LOADING-PHOTO.png */,
-				422278CB1A247EDC00AA7915 /* load_phot.png */,
-				422278C91A247E4400AA7915 /* loading_photo.png */,
-				422278C71A247D3A00AA7915 /* LOAD.png */,
-				422278C51A247C2500AA7915 /* image_loading.png */,
-				422278C31A246ABB00AA7915 /* loading_image.png */,
 				422278BD1A1F331F00AA7915 /* tatoo_main.png */,
 				4265871A1A1B3E30002C0E93 /* login_bg.png */,
 				426587161A1B3C0C002C0E93 /* tatoo_splash.png */,
@@ -931,7 +910,6 @@
 				42A960091A032F41002C0508 /* m-icon-home.png in Resources */,
 				42A960001A032F41002C0508 /* icon-like.png in Resources */,
 				428E7C611A00C2BD00CA2C14 /* tattoo_icon.jpg in Resources */,
-				422278CC1A247EDC00AA7915 /* load_phot.png in Resources */,
 				427D349E199E076400814463 /* close@2x.png in Resources */,
 				427D34A0199E076400814463 /* dropbox@2x.png in Resources */,
 				42A9600C1A032F41002C0508 /* m-icon-search.png in Resources */,
@@ -941,14 +919,12 @@
 				427D349F199E076400814463 /* dropbox.png in Resources */,
 				427D34A2199E076400814463 /* evernote@2x.png in Resources */,
 				42A960051A032F41002C0508 /* icon-share.png in Resources */,
-				422278CE1A24847D00AA7915 /* LOADING-PHOTO.png in Resources */,
 				42A95FF81A032F41002C0508 /* bg-login.png in Resources */,
 				427D34A9199E076400814463 /* more.png in Resources */,
 				42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */,
 				422278BE1A1F331F00AA7915 /* tatoo_main.png in Resources */,
 				42193FA91985FE08007E3C52 /* Images.xcassets in Resources */,
 				42A4913A19D506A700E4D65E /* Default.png in Resources */,
-				422278C81A247D3A00AA7915 /* LOAD.png in Resources */,
 				42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */,
 				427D34AB199E076400814463 /* photo_library.png in Resources */,
 				42CB3DE01A19D2F700BB10DC /* wechat.png in Resources */,
@@ -997,11 +973,9 @@
 				427D34AC199E076400814463 /* photo_library@2x.png in Resources */,
 				42A960141A036C22002C0508 /* icon-menu.png in Resources */,
 				427D34AE199E076400814463 /* pinterest@2x.png in Resources */,
-				422278D01A24877A00AA7915 /* loading_img.png in Resources */,
 				42A4913C19D506A700E4D65E /* Exit.png in Resources */,
 				428E7C581A0087A900CA2C14 /* background@2x.jpg in Resources */,
 				42A4914F19D508E900E4D65E /* twitter@2x.png in Resources */,
-				422278C41A246ABB00AA7915 /* loading_image.png in Resources */,
 				427D34A4199E076400814463 /* facebook@2x.png in Resources */,
 				42A4914519D506A700E4D65E /* SignUpFieldBG.png in Resources */,
 				42A4913B19D506A700E4D65E /* Default@2x.png in Resources */,
@@ -1009,7 +983,6 @@
 				428E7C531A00865000CA2C14 /* ICON@2x.png in Resources */,
 				426587441A1C77EB002C0E93 /* sina-weibo@2x.png in Resources */,
 				421940A019878A7B007E3C52 /* background.jpg in Resources */,
-				422278C61A247C2500AA7915 /* image_loading.png in Resources */,
 				4265871B1A1B3E30002C0E93 /* login_bg.png in Resources */,
 				427D34AA199E076400814463 /* more@2x.png in Resources */,
 				427D34AD199E076400814463 /* pinterest.png in Resources */,
@@ -1017,7 +990,6 @@
 				42A960021A032F41002C0508 /* icon-search.png in Resources */,
 				426587401A1C761C002C0E93 /* twitter@2x.png in Resources */,
 				427D34A5199E076400814463 /* google_drive.png in Resources */,
-				422278CA1A247E4400AA7915 /* loading_photo.png in Resources */,
 				42A4913D19D506A700E4D65E /* ExitDown.png in Resources */,
 				42A95FFF1A032F41002C0508 /* icon-gallery.png in Resources */,
 				42A4914619D506A700E4D65E /* Twitter.png in Resources */,

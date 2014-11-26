@@ -44,11 +44,11 @@ CFShareCircleView *shareCircleView;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self queryParseMethod];
+    
     NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
     [PFAnalytics trackEvent:@"showgallery" dimensions:dimensions];
     NSLog(@"%@",self.tattoomasterCell);
-    
+    [self queryParseMethod];
     self.master_image.file=self.tattoomasterCell.imageFile;
     
     self.master_image.layer.cornerRadius =self.master_image.frame.size.width / 2;
@@ -114,13 +114,14 @@ CFShareCircleView *shareCircleView;
 
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query whereKey:@"Master_id" equalTo:self.tattoomasterCell.master_id];
-    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-
+     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-     
         if (!error) {
             imageFilesArray = [[NSArray alloc] initWithArray:objects];
-         
+            if (imageFilesArray.count==0) {
+                [self noimage];
+                
+            }
                         [tableView reloadData];
             [hud hide:YES];
         
@@ -307,6 +308,11 @@ NSLog(@"%@", imageFilesArray);
 
 }
 
+- (IBAction)like:(id)sender {
+    FBLikeControl * like =[[FBLikeControl alloc]init];
+    like.objectID = @"http://shareitexampleapp.parseapp.com/photo1/";
+    
+}
 
 
 - (void)shareCircleView:(CFShareCircleView *)aShareCircleView didSelectSharer:(CFSharer *)sharer{
