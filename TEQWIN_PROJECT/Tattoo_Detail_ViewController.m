@@ -265,14 +265,12 @@
    
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if ([objects count] == 0) {
- query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        if (objects.count ==0) {
+            self.noimage.text = @"noimage";
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+            
         }
-        if (!error) {
-            if (objects.count ==0) {
-                self.noimage.text = @"noimage";
-            }
-            else{
+         if (!error) {
             imageFilesArray_image = [[NSArray alloc] initWithArray:objects];
             
             self.noimage.text=@"";
@@ -281,7 +279,7 @@
 
             [_imagesCollection reloadData];
             }}
-    }];
+    ];
     
 }
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
