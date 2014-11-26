@@ -315,12 +315,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/Gallery.m"
-            timestampString = "438601409.118298"
+            timestampString = "438590357.15966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "-queryParseMethod"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEQWIN_PROJECT/Gallery.m"
+            timestampString = "438590357.15966"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TEQWIN_PROJECT/Gallery.m"
+            timestampString = "438590357.15966"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-queryParseMethod"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -393,7 +425,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/Gallery.m"
-            timestampString = "438601409.118298"
+            timestampString = "438590357.15966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -439,11 +471,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginUIViewController.m"
-            timestampString = "438603816.933421"
+            timestampString = "438142090.072809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -455,11 +487,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/Gallery.m"
-            timestampString = "438601409.118298"
+            timestampString = "438590357.15966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -471,11 +503,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/Tattoo_Detail_ViewController.m"
-            timestampString = "438664328.950184"
+            timestampString = "438590357.15966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "755"
-            endingLineNumber = "755"
+            startingLineNumber = "748"
+            endingLineNumber = "748"
             landmarkName = "-favButton:"
             landmarkType = "5">
          </BreakpointContent>
@@ -487,11 +519,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/Gallery.m"
-            timestampString = "438601409.118298"
+            timestampString = "438590357.15966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "-actionTap:"
             landmarkType = "5">
          </BreakpointContent>
@@ -503,11 +535,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/Tattoo_Detail_ViewController.m"
-            timestampString = "438664328.950184"
+            timestampString = "438590357.15966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
             landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -519,11 +551,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/MainViewController.m"
-            timestampString = "438601409.118298"
+            timestampString = "438584502.035638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -535,11 +567,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/MainViewController.m"
-            timestampString = "438601409.118298"
+            timestampString = "438584502.035638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "377"
-            endingLineNumber = "377"
+            startingLineNumber = "374"
+            endingLineNumber = "374"
             landmarkName = "@implementation MainViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -567,11 +599,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TEQWIN_PROJECT/MainViewController.m"
-            timestampString = "438601409.118298"
+            timestampString = "438584502.035638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "423"
-            endingLineNumber = "423"
+            startingLineNumber = "420"
+            endingLineNumber = "420"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -677,11 +709,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginUIViewController.m"
-            timestampString = "438603816.933421"
+            timestampString = "438142090.072809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -693,11 +725,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "news_ViewController.m"
-            timestampString = "438601409.118298"
+            timestampString = "438590357.15966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
