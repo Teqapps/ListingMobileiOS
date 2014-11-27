@@ -101,7 +101,7 @@
     //query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"promotion_approve" equalTo:[NSNumber numberWithBool:YES]];
     
-    //[query orderByDescending:@"updatedAt"];
+    [query orderByAscending:@"createdAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if ([objects count] == 0) {
