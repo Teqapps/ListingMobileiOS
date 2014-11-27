@@ -582,7 +582,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="E8A39E2E-8B07-47F1-B9FB-A549F0B15708" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="CA4F3F0F-E036-4426-AE6D-F36B9759E6E5" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1056,6 +1056,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="oo9-Ec-Qh1" firstAttribute="top" secondItem="Yxl-S5-RUj" secondAttribute="bottom" constant="46" id="9kY-kE-KrG"/>
                             <constraint firstItem="0eS-oh-ZQq" firstAttribute="top" secondItem="oo9-Ec-Qh1" secondAttribute="bottom" id="qXI-tc-PjA"/>
@@ -1647,7 +1648,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E8A39E2E-8B07-47F1-B9FB-A549F0B15708" width="320" height="460">
+        <image name="CA4F3F0F-E036-4426-AE6D-F36B9759E6E5" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

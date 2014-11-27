@@ -19,6 +19,10 @@
     UILabel *image_desc;
     UITextView * test;
 UILabel *backtips;
+    CGFloat lastDistance;
+	
+	CGFloat imgStartWidth;
+	CGFloat imgStartHeight;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

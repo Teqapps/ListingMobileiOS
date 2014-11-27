@@ -44,7 +44,8 @@ CFShareCircleView *shareCircleView;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    imgStartWidth=fullImageView.frame.size.width;
+	imgStartHeight=fullImageView.frame.size.height;
     NSDictionary *dimensions = @{ @"name":self.tattoomasterCell.name};
     [PFAnalytics trackEvent:@"showgallery" dimensions:dimensions];
     NSLog(@"%@",self.tattoomasterCell);
@@ -199,16 +200,35 @@ NSLog(@"%@", imageFilesArray);
      cell.image.tag=9999;
     cell.image.userInteractionEnabled=YES;
     [ cell.image addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap:)]];
+    
     image_desc = (UILabel*) [cell viewWithTag:199];
     image_desc.text = [imageObject objectForKey:@"image_desc"];
     
         return cell;
 }
 
+-(void)pinch:(UIPinchGestureRecognizer *)sender{
+    static CGPoint center;
+    static CGSize initialSize;
+    
+    if (sender.state == UIGestureRecognizerStateBegan)
+    {
+        center = sender.view.center;
+        initialSize = sender.view.frame.size;
+    }
+    
+    // scale the image
+    sender.view.frame = CGRectMake(0,
+                                   0,
+                                   initialSize.width * sender.scale,
+                                   initialSize.height * sender.scale);
+    // recenter it with the new dimensions
+    sender.view.center = center;}
 
 //按圖第一下放大至fullscreen
 -(void)actionTap:(UITapGestureRecognizer *)sender{
     NSLog(@"按一下返回");
+   
        CGPoint location = [sender locationInView:self.tableView];
     NSIndexPath *indexPath  = [self.tableView indexPathForRowAtPoint:location];
     
@@ -236,6 +256,7 @@ NSLog(@"%@", imageFilesArray);
     fullImageView.backgroundColor=[UIColor blackColor];
     fullImageView.userInteractionEnabled=YES;
     [fullImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTap2:)]];
+     [fullImageView addGestureRecognizer:[[UIPinchGestureRecognizer  alloc] initWithTarget:self action:@selector(pinch:)]];
     fullImageView.contentMode=UIViewContentModeScaleAspectFit;
     
     if (![fullImageView superview]) {
