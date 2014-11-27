@@ -379,7 +379,7 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
     if ([[imageObject objectForKey:@"gallary_displayallow"]isEqualToValue:[NSNumber numberWithBool:YES]]) {
         NSLog(@"%@",self.tattoomasterCell.master_id);
         gallary_image.image=[UIImage imageNamed:@"icon-gallery.png"];
-        
+        gallary_button.enabled=YES;
     }
     else
     {
