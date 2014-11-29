@@ -339,23 +339,23 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         if ([[object objectForKey:@"Gender"]isEqualToString:@"男"]) {
 
             
-            sex_statues.image = [UIImage imageNamed:@"icon-sex-m.png"];
+            sex_statues.image = [UIImage imageNamed:@"male.png"];
         }
         else
          if ([[object objectForKey:@"Gender"]isEqualToString:@"女"]) {
             
-            sex_statues.image = [UIImage imageNamed:@"icon-sex-f.png"];
+            sex_statues.image = [UIImage imageNamed:@"female.png"];
         }
 
         heart_statues = (PFImageView*)[cell viewWithTag:107];
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            heart_statues.image = [UIImage imageNamed:@"icon-liked.png"];
+            heart_statues.image = [UIImage imageNamed:@"like.png"];
         }
         else
         {
             
-            heart_statues.image = [UIImage imageNamed:@"icon-like.png"];
+            heart_statues.image = [UIImage imageNamed:@"unlike.png"];
         }
         gallary_image = (PFImageView*)[cell viewWithTag:161];
         gallary_button = (UIButton*)[cell viewWithTag:162];
@@ -364,12 +364,12 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         
         if ([[object objectForKey:@"gallary_displayallow"]isEqualToValue:[NSNumber numberWithBool:YES]]) {
          //   NSLog(@"%@",self.tattoomasterCell.master_id);
-            gallary_image.image=[UIImage imageNamed:@"icon-gallery.png"];
+            gallary_image.image=[UIImage imageNamed:@"photo_on.png"];
             
         }
         else
         {
-            gallary_image.image = [UIImage imageNamed:@"icon-gallery_nophoto.png"];
+            gallary_image.image = [UIImage imageNamed:@"photo.png"];
             ;
             gallary_button.enabled=NO;
          //   NSLog(@"%@",self.tattoomasterCell.master_id);
@@ -396,12 +396,12 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         
         if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
             
-            cell.imageView.image = [UIImage imageNamed:@"icon-liked.png"];
+            cell.imageView.image = [UIImage imageNamed:@"like.png"];
         }
         else
         {
             
-            cell.imageView.image = [UIImage imageNamed:@"icon-like.png"];
+            cell.imageView.image = [UIImage imageNamed:@"unlike.png"];
         }
         
         cell.textLabel.text = [object objectForKey:@"Name"];

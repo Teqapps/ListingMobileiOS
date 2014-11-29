@@ -348,12 +348,12 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
     if ([[imageObject objectForKey:@"Gender"]isEqualToString:@"男"]) {
         
         
-        sex_statues.image = [UIImage imageNamed:@"icon-sex-m.png"];
+        sex_statues.image = [UIImage imageNamed:@"male.png"];
     }
     else
         if ([[imageObject objectForKey:@"Gender"]isEqualToString:@"女"]) {
             
-            sex_statues.image = [UIImage imageNamed:@"icon-sex-f.png"];
+            sex_statues.image = [UIImage imageNamed:@"female.png"];
         }
 
     UILabel *nameLabel = (UILabel*) [cell viewWithTag:101];
@@ -378,12 +378,12 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
    
     if ([[imageObject objectForKey:@"gallary_displayallow"]isEqualToValue:[NSNumber numberWithBool:YES]]) {
         NSLog(@"%@",self.tattoomasterCell.master_id);
-        gallary_image.image=[UIImage imageNamed:@"icon-gallery.png"];
+        gallary_image.image=[UIImage imageNamed:@"photo_on.png"];
         gallary_button.enabled=YES;
     }
     else
     {
-        gallary_image.image = [UIImage imageNamed:@"icon-gallery_nophoto.png"];
+        gallary_image.image = [UIImage imageNamed:@"photo.png"];
         ;
         gallary_button.enabled=NO;
         NSLog(@"%@",self.tattoomasterCell.master_id);
@@ -544,9 +544,9 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
 - (IBAction)showlike:(id)sender {
      [self queryParseMethod];
     self.like.textColor=[UIColor grayColor];
-    self.like_btn.image=[UIImage imageNamed:@"icon-liked.png"];
+    self.like_btn.image=[UIImage imageNamed:@"like.png"];
     self.bookmark.textColor=[UIColor whiteColor];
-    self.bookmark_btn.image=[UIImage imageNamed:@"icon-favorite.png"];
+    self.bookmark_btn.image=[UIImage imageNamed:@"icon-favorite_2.png"];
 
 }
 
@@ -554,9 +554,9 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
 - (IBAction)showbookmark:(id)sender {
        [self bookmark_query];
     self.like.textColor=[UIColor whiteColor];
-     self.like_btn.image=[UIImage imageNamed:@"icon-like.png"];
+     self.like_btn.image=[UIImage imageNamed:@"unlike.png"];
     self.bookmark.textColor=[UIColor grayColor];
-   self.bookmark_btn.image=[UIImage imageNamed:@"icon-favorited.png"];
+   self.bookmark_btn.image=[UIImage imageNamed:@"icon-favorite_onn.png"];
 
 }
 

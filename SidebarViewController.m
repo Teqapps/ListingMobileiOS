@@ -199,7 +199,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             UIFont *font = [UIFont fontWithName:@"Weibei TC" size:20];
             [cell.textLabel setFont:font];
             
-            cell.imageView.image =[UIImage imageNamed:@"m-icon-home.png"];
+            cell.imageView.image =[UIImage imageNamed:@"menu_home.png"];
             cell.textLabel.text=@"主頁";
             
             [cell.textLabel setTextColor:[UIColor whiteColor]];
@@ -213,7 +213,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
            // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
             
-                   cell.imageView.image=[UIImage imageNamed:@"m-icon-news.png"];
+                   cell.imageView.image=[UIImage imageNamed:@"menu_news.png"];
             cell.textLabel.text=@"新消息";
            
             [cell.textLabel setTextColor:[UIColor whiteColor]];
@@ -224,7 +224,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
               UIFont *font = [UIFont fontWithName:@"Weibei TC" size:20];
            // UIFont *font = [UIFont fontWithName:@"Bradley Hand ITC TT Bold" size:32];
             [cell.textLabel setFont:font];
-                   cell.imageView.image=[UIImage imageNamed:@"m-icon-favorite.png"];
+                   cell.imageView.image=[UIImage imageNamed:@"menu_history.png"];
             cell.textLabel.text=@"紋身歷史";
             
             [cell.textLabel setTextColor:[UIColor whiteColor]];
@@ -238,7 +238,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             [cell.textLabel setFont:font];
           
             cell.textLabel.text=@"紋身注意事項";
-             cell.imageView.image=[UIImage imageNamed:@"m-icon-tnc.png"];
+             cell.imageView.image=[UIImage imageNamed:@"menu_allert.png"];
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
@@ -251,7 +251,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             [cell.textLabel setFont:font];
             //cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
             cell.textLabel.text=@"找紋身師傅";
-             cell.imageView.image=[UIImage imageNamed:@"m-icon-search.png"];
+             cell.imageView.image=[UIImage imageNamed:@"menu_branches.png"];
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;
@@ -264,7 +264,7 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
             [cell.textLabel setFont:font];
             //cell.imageView.image =[UIImage imageNamed:@"master_icon.png"];
             cell.textLabel.text=@"關於我們";
-             cell.imageView.image=[UIImage imageNamed:@"m-icon-about.png"];
+             cell.imageView.image=[UIImage imageNamed:@"menu_about.png"];
             [cell.textLabel setTextColor:[UIColor whiteColor]];
         }
             break;

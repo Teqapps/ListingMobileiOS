@@ -20,13 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"login_bg.png"]]];
+    [self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tattoo_login_2.png"]]];
   // self.logInView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"menu-logo.png"]]];
+    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]]];
     
     // Set buttons appearance
-    //[self.logInView.dismissButton setImage:[UIImage imageNamed:@"Exit.png"] forState:UIControlStateNormal];
-    //[self.logInView.dismissButton setImage:[UIImage imageNamed:@"ExitDown.png"] forState:UIControlStateHighlighted];
+    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"dismiss_on.png"] forState:UIControlStateNormal];
+    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"dismiss_off.png"] forState:UIControlStateHighlighted];
     
     [self.logInView.facebookButton setImage:nil forState:UIControlStateNormal];
     [self.logInView.facebookButton setImage:nil forState:UIControlStateHighlighted];
@@ -62,7 +62,7 @@
     
     // Set frame for elements
      //[self.logInView setFrame:CGRectMake(0.0f, 0.0f, 320.0f, 600.0f)];
-    [self.logInView.dismissButton setFrame:CGRectMake(240.0f, 30.0f, 87.5f, 45.5f)];
+    [self.logInView.dismissButton setFrame:CGRectMake(260.0f, 30.0f, 40.0f, 40.0f)];
     [self.logInView.logo setFrame:CGRectMake(30.0f, 130.0f, 250.0f, 58.5f)];
     [self.logInView.facebookButton setFrame:CGRectMake(0.0f, 200.0f, 320.0f, 40.0f)];
     [self.logInView.twitterButton setFrame:CGRectMake(35.0f+150.0f, 310.0f, 120.0f, 40.0f)];
