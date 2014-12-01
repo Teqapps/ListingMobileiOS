@@ -91,6 +91,9 @@
 		422279871A2843DD00AA7915 /* icon-favorite_offf_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 422279861A2843DD00AA7915 /* icon-favorite_offf_1.png */; };
 		422279891A28445800AA7915 /* icon-favorite_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 422279881A28445800AA7915 /* icon-favorite_2.png */; };
 		422279951A285D9D00AA7915 /* tattoo_login_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 422279941A285D9D00AA7915 /* tattoo_login_2.png */; };
+		422279A11A2B037400AA7915 /* tatoo_app_icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 4222799E1A2B037400AA7915 /* tatoo_app_icon-76.png */; };
+		422279A21A2B037400AA7915 /* tatoo_app_icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 4222799F1A2B037400AA7915 /* tatoo_app_icon-120.png */; };
+		422279A31A2B037400AA7915 /* tatoo_app_icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 422279A01A2B037400AA7915 /* tatoo_app_icon-152.png */; };
 		42317A6919B709FC00C54F54 /* teqwin_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42317A6819B709FC00C54F54 /* teqwin_logo.png */; };
 		424FACE4198A2EDC0062D13D /* navigationicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 424FACE3198A2EDC0062D13D /* navigationicon.png */; };
 		42630059199071F3007B8C8F /* Map_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42630058199071F3007B8C8F /* Map_ViewController.m */; };
@@ -328,6 +331,9 @@
 		422279861A2843DD00AA7915 /* icon-favorite_offf_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-favorite_offf_1.png"; sourceTree = "<group>"; };
 		422279881A28445800AA7915 /* icon-favorite_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-favorite_2.png"; sourceTree = "<group>"; };
 		422279941A285D9D00AA7915 /* tattoo_login_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tattoo_login_2.png; sourceTree = "<group>"; };
+		4222799E1A2B037400AA7915 /* tatoo_app_icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tatoo_app_icon-76.png"; sourceTree = "<group>"; };
+		4222799F1A2B037400AA7915 /* tatoo_app_icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tatoo_app_icon-120.png"; sourceTree = "<group>"; };
+		422279A01A2B037400AA7915 /* tatoo_app_icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tatoo_app_icon-152.png"; sourceTree = "<group>"; };
 		42317A6819B709FC00C54F54 /* teqwin_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teqwin_logo.png; sourceTree = "<group>"; };
 		424FACE3198A2EDC0062D13D /* navigationicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationicon.png; sourceTree = "<group>"; };
 		42630057199071F3007B8C8F /* Map_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map_ViewController.h; path = ../Map_ViewController.h; sourceTree = "<group>"; };
@@ -853,6 +859,9 @@
 			isa = PBXGroup;
 			children = (
 				422279881A28445800AA7915 /* icon-favorite_2.png */,
+				4222799E1A2B037400AA7915 /* tatoo_app_icon-76.png */,
+				4222799F1A2B037400AA7915 /* tatoo_app_icon-120.png */,
+				422279A01A2B037400AA7915 /* tatoo_app_icon-152.png */,
 				422279861A2843DD00AA7915 /* icon-favorite_offf_1.png */,
 				4222797C1A283C5800AA7915 /* dismiss.png */,
 				422279801A283D4300AA7915 /* dismiss_off.png */,
@@ -1065,6 +1074,7 @@
 				422278C81A247D3A00AA7915 /* LOAD.png in Resources */,
 				42A4915119D5090000E4D65E /* Facebook-icon.png in Resources */,
 				427D34AB199E076400814463 /* photo_library.png in Resources */,
+				422279A31A2B037400AA7915 /* tatoo_app_icon-152.png in Resources */,
 				42CB3DE01A19D2F700BB10DC /* wechat.png in Resources */,
 				42A960081A032F41002C0508 /* m-icon-favorite.png in Resources */,
 				42A9600A1A032F41002C0508 /* m-icon-login.png in Resources */,
@@ -1103,6 +1113,7 @@
 				42193F9B1985FE08007E3C52 /* InfoPlist.strings in Resources */,
 				42CB3DE11A19D2F700BB10DC /* wechat@2x.png in Resources */,
 				42A4914319D506A700E4D65E /* SignUp.png in Resources */,
+				422279A11A2B037400AA7915 /* tatoo_app_icon-76.png in Resources */,
 				42A4914419D506A700E4D65E /* SignUpDown.png in Resources */,
 				42A960161A036E31002C0508 /* icon-liked.png in Resources */,
 				4222796B1A282BCF00AA7915 /* menu_news.png in Resources */,
@@ -1110,6 +1121,7 @@
 				422279951A285D9D00AA7915 /* tattoo_login_2.png in Resources */,
 				422279791A283AC400AA7915 /* tattoo_splash_screen.png in Resources */,
 				42A960241A07151A002C0508 /* bar.png in Resources */,
+				422279A21A2B037400AA7915 /* tatoo_app_icon-120.png in Resources */,
 				42A9601A1A037BAE002C0508 /* bg-login@2x.png in Resources */,
 				422279661A282BCF00AA7915 /* menu_about.png in Resources */,
 				426587431A1C77EB002C0E93 /* sina-weibo.png in Resources */,
@@ -1333,9 +1345,9 @@
 		42193FC01985FE08007E3C52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iOS Distribution: Teqwin Solutions Limited";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1352,6 +1364,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = TEQWIN_PROJECT_Tattoo;
+				PROVISIONING_PROFILE = "d1c35f7b-c24e-4a45-9b5b-0509cb1015ca";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1361,9 +1374,9 @@
 		42193FC11985FE08007E3C52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iOS Distribution: Teqwin Solutions Limited";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1380,6 +1393,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = TEQWIN_PROJECT_Tattoo;
+				PROVISIONING_PROFILE = "d1c35f7b-c24e-4a45-9b5b-0509cb1015ca";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
