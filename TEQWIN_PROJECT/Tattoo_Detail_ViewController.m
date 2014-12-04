@@ -68,7 +68,7 @@
         self.description_textview.text = @"沒有簡介";
     }
     else{
-    self.description_textview.text=self.tattoomasterCell.description;
+    self.description_textview.text=self.tattoomasterCell.desc;
     }
      self.description_textview.layer.cornerRadius=8.0f;
      self.description_textview.layer.borderWidth=1.0f;

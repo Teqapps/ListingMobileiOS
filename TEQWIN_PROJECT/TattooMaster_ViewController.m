@@ -257,7 +257,7 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         tattoomasterCell.object_id = [selectobject objectForKey:@"object"];
         tattoomasterCell.favorites = [selectobject objectForKey:@"favorites"];
         tattoomasterCell.name = [selectobject objectForKey:@"Name"];
-        tattoomasterCell.description = [selectobject objectForKey:@"description"];
+        tattoomasterCell.desc = [selectobject objectForKey:@"description"];
         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
         tattoomasterCell.gender = [selectobject objectForKey:@"Gender"];
         tattoomasterCell.tel = [selectobject objectForKey:@"Tel"];
@@ -394,15 +394,7 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         PFObject* object = self.searchResults[indexPath.row];
         
         
-        if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-            
-            cell.imageView.image = [UIImage imageNamed:@"like.png"];
-        }
-        else
-        {
-            
-            cell.imageView.image = [UIImage imageNamed:@"unlike.png"];
-        }
+  
         
         cell.textLabel.text = [object objectForKey:@"Name"];
         cell.detailTextLabel.text =[object objectForKey:@"Gender"];
@@ -575,7 +567,7 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         tattoomasterCell.view = [object objectForKey:@"view"];
 
         tattoomasterCell.object_id = object.objectId;
-        tattoomasterCell.description=[object objectForKey:@"description"];
+        tattoomasterCell.desc=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
       //  NSInteger myInteger = [tattoomasterCell.view integerValue];
       //  object[@"view"] =[NSNumber numberWithFloat:(myInteger+ 1)];
@@ -617,7 +609,7 @@ query = [PFQuery queryWithClassName:self.parseClassName];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         
         tattoomasterCell.object_id = object.objectId;
-        tattoomasterCell.description=[object objectForKey:@"description"];
+        tattoomasterCell.desc=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
         
         

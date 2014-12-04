@@ -241,17 +241,7 @@
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         PFObject* object = self.searchResults[indexPath.row];
-        
-        
-        if ([[object objectForKey:@"favorites"]containsObject:[PFUser currentUser].objectId]) {
-            cell.imageView.image = [UIImage imageNamed:@"icon-liked.png"];
-            
-        }
-        else
-        {
-            
-            cell.imageView.image = [UIImage imageNamed:@"icon-like.png"];
-        }
+
        
         cell.textLabel.text = [object objectForKey:@"Name"];
         cell.detailTextLabel.text =[object objectForKey:@"Gender"];
@@ -356,7 +346,7 @@ cell.thumbnail.image=[UIImage imageNamed:@"ICON.PNG"];
         tattoomasterCell.master_id = [selectobject objectForKey:@"Master_id"];
         tattoomasterCell.imageFile = [selectobject objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [selectobject objectForKey:@"Gallery_M1"];
-          tattoomasterCell.description = [selectobject objectForKey:@"description"];
+          tattoomasterCell.desc = [selectobject objectForKey:@"description"];
         tattoomasterCell.object_id = selectobject.objectId;
         
         mapVC.tattoomasterCell = tattoomasterCell;
@@ -429,7 +419,7 @@ cell.thumbnail.image=[UIImage imageNamed:@"ICON.PNG"];
          tattoomasterCell.view = [object objectForKey:@"view"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
-        tattoomasterCell.description=[object objectForKey:@"description"];
+        tattoomasterCell.desc=[object objectForKey:@"description"];
          tattoomasterCell.promotion=[object objectForKey:@"promotion"];
     
         destViewController.tattoomasterCell = tattoomasterCell;
@@ -470,7 +460,7 @@ cell.thumbnail.image=[UIImage imageNamed:@"ICON.PNG"];
          tattoomasterCell.news_view = [object objectForKey:@"news_view"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
-        tattoomasterCell.description=[object objectForKey:@"description"];
+        tattoomasterCell.desc=[object objectForKey:@"description"];
         tattoomasterCell.promotion=[object objectForKey:@"promotion"];
         
         destViewController.tattoomasterCell = tattoomasterCell;

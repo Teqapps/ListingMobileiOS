@@ -13,6 +13,7 @@
 }
 @property (nonatomic, strong) NSIndexPath *clickindexpath; // name of recipe
 @property (nonatomic, strong) NSString *name; // name of recipe
+@property (nonatomic, strong) NSString *desc; // name of recipe
 @property (nonatomic, strong) NSString *gender; // name of recipe
 @property (nonatomic, strong) NSString *tel; // name of recipe
 @property (nonatomic, strong) NSString *email; // name of recipe
@@ -25,7 +26,7 @@
 @property (nonatomic, strong) NSString *object_id; // preparation time
 @property (nonatomic, strong) NSArray *favorites; // preparation time
 @property (nonatomic, strong) NSArray *bookmark; // preparation time
-@property (nonatomic, strong) NSString *description; // name of recipe
+
 @property (nonatomic, strong) NSArray *view; // name of recipe
 @property (nonatomic, strong) NSArray *news_view; // name of recipe
 @property (nonatomic, strong) PFFile *promotion; // image of recipe

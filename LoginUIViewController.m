@@ -414,7 +414,7 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
         tattoomasterCell.imageFile = [imageObject objectForKey:@"image"];
         tattoomasterCell.gallery_m1 = [imageObject objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = [imageObject objectForKey:@"objectId"];
-            tattoomasterCell.description = [imageObject objectForKey:@"description"];
+            tattoomasterCell.desc = [imageObject objectForKey:@"description"];
         tattoomasterCell.view = [imageObject objectForKey:@"view"];
         destViewController.tattoomasterCell = tattoomasterCell;
            NSLog(@"%@444",tattoomasterCell.master_id);
@@ -450,7 +450,7 @@ UIFont *yourCustomFont = [UIFont fontWithName:@"叶根友千秋字体" size:18];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
   
         tattoomasterCell.object_id = object.objectId;
-        tattoomasterCell.description=[object objectForKey:@"description"];
+        tattoomasterCell.desc=[object objectForKey:@"description"];
         destViewController.tattoomasterCell = tattoomasterCell;
         
         

@@ -178,7 +178,7 @@
         tattoomasterCell.news_view = [object objectForKey:@"news_view"];
         tattoomasterCell.gallery_m1 = [object objectForKey:@"Gallery_M1"];
         tattoomasterCell.object_id = object.objectId;
-        tattoomasterCell.description=[object objectForKey:@"description"];
+        
         tattoomasterCell.promotion=[object objectForKey:@"promotion"];
         
         destViewController.tattoomasterCell = tattoomasterCell;
