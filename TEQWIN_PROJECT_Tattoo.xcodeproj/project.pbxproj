@@ -140,7 +140,6 @@
 		428E7C581A0087A900CA2C14 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C571A0087A900CA2C14 /* background@2x.jpg */; };
 		428E7C5A1A0087B800CA2C14 /* goldebackground@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C591A0087B800CA2C14 /* goldebackground@2x.jpg */; };
 		428E7C5D1A008B5900CA2C14 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C5B1A008B5900CA2C14 /* loading.png */; };
-		428E7C5E1A008B5900CA2C14 /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C5C1A008B5900CA2C14 /* loading@2x.png */; };
 		428E7C611A00C2BD00CA2C14 /* tattoo_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C5F1A00C2BD00CA2C14 /* tattoo_icon.jpg */; };
 		428E7C621A00C2BD00CA2C14 /* tattoo_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428E7C601A00C2BD00CA2C14 /* tattoo_icon@2x.jpg */; };
 		429F00EE19AC7128008F0B31 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429F00ED19AC7128008F0B31 /* FacebookSDK.framework */; };
@@ -195,7 +194,6 @@
 		42A9601C1A037D06002C0508 /* button-facebook-login_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A9601B1A037D06002C0508 /* button-facebook-login_down.png */; };
 		42A960201A038034002C0508 /* icon-favorited.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A9601F1A038034002C0508 /* icon-favorited.png */; };
 		42A960221A038F88002C0508 /* icon-gallery_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960211A038F88002C0508 /* icon-gallery_down.png */; };
-		42A960241A07151A002C0508 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960231A07151A002C0508 /* bar.png */; };
 		42A960261A071AD2002C0508 /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A960251A071AD2002C0508 /* view.png */; };
 		42AD1EB219B0718C00277278 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */; };
 		42AD1EB419B071AC00277278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD1EB319B071AC00277278 /* AudioToolbox.framework */; };
@@ -986,6 +984,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
+					42193F8C1985FE08007E3C52 = {
+						DevelopmentTeam = 98AG6MWAM3;
+					};
 					42193FAD1985FE08007E3C52 = {
 						TestTargetID = 42193F8C1985FE08007E3C52;
 					};
@@ -1034,7 +1035,6 @@
 			files = (
 				426587381A1C53B5002C0E93 /* WeibeiTC-Bold.otf in Resources */,
 				42193FD119860221007E3C52 /* menu.png in Resources */,
-				428E7C5E1A008B5900CA2C14 /* loading@2x.png in Resources */,
 				42A960071A032F41002C0508 /* m-icon-about.png in Resources */,
 				422279821A283D4300AA7915 /* dismiss_off.png in Resources */,
 				422279631A282BCF00AA7915 /* home_profile.png in Resources */,
@@ -1120,7 +1120,6 @@
 				428E7C621A00C2BD00CA2C14 /* tattoo_icon@2x.jpg in Resources */,
 				422279951A285D9D00AA7915 /* tattoo_login_2.png in Resources */,
 				422279791A283AC400AA7915 /* tattoo_splash_screen.png in Resources */,
-				42A960241A07151A002C0508 /* bar.png in Resources */,
 				422279A21A2B037400AA7915 /* tatoo_app_icon-120.png in Resources */,
 				42A9601A1A037BAE002C0508 /* bg-login@2x.png in Resources */,
 				422279661A282BCF00AA7915 /* menu_about.png in Resources */,
@@ -1347,7 +1346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iOS Distribution: Teqwin Solutions Limited";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1364,7 +1363,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = TEQWIN_PROJECT_Tattoo;
-				PROVISIONING_PROFILE = "02c1b5cb-3b96-474f-a18f-74731eb0fee3";
+				PROVISIONING_PROFILE = "d1c35f7b-c24e-4a45-9b5b-0509cb1015ca";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1376,7 +1375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iOS Distribution: Teqwin Solutions Limited";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1393,7 +1392,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = TEQWIN_PROJECT_Tattoo;
-				PROVISIONING_PROFILE = "02c1b5cb-3b96-474f-a18f-74731eb0fee3";
+				PROVISIONING_PROFILE = "d1c35f7b-c24e-4a45-9b5b-0509cb1015ca";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
