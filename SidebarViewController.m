@@ -24,15 +24,14 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
     if ([PFUser currentUser]) {
-       // self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
-       
+        // self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
+        
         self.profile_image.layer.cornerRadius =self.profile_image.frame.size.width / 2;
         self.profile_image.layer.borderWidth = 3.0f;
         self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
         self.profile_image.clipsToBounds = YES;
-
+        
         
         
         if ([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -90,17 +89,17 @@
         
     } else {
         //self.profile_image.image = UIGraphicsGetImageFromCurrentImageContext();
-    
+        
         
         self.profile_image.layer.cornerRadius =self.profile_image.frame.size.width / 2;
         self.profile_image.layer.borderWidth = 3.0f;
         self.profile_image.layer.borderColor = [UIColor whiteColor].CGColor;
         self.profile_image.clipsToBounds = YES;
-
+        
         self.profile_image.image = [UIImage imageNamed:@"FACEBOOK.JPG"];
         self.welcome.text = nil;
     }
-    
+
 }
 
 
@@ -146,6 +145,8 @@
 
 - (void)viewDidLoad
 {
+    
+    
 
          self.tableview.backgroundColor = [UIColor clearColor];
 self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
@@ -181,7 +182,10 @@ self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@
     // Return the number of rows in the section.
     return [list count];
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 45;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
