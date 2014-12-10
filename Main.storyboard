@@ -271,7 +271,6 @@
         <!--Sidebar View Controller-->
         <scene sceneID="PIX-3s-mzZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OFu-rl-uXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SidebarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6ei-0v-7aX" customClass="SidebarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vso-eJ-J8k"/>
@@ -402,6 +401,7 @@
                         <outlet property="welcome" destination="C71-P1-jXa" id="ViA-BV-h5v"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFu-rl-uXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-558" y="779"/>
         </scene>
@@ -471,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVq-KN-ThY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="1412"/>
+            <point key="canvasLocation" x="80" y="1430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wPd-JZ-RwP">
@@ -560,7 +560,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="C8B54092-A27E-4A59-91B1-0203C9D6A3B7" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="4FD022CA-2CE8-4148-8B81-94C4F6D08C43" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1300,7 +1300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bd2-qa-Gjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="1394"/>
+            <point key="canvasLocation" x="868" y="1412"/>
         </scene>
         <!--Aboutus map-->
         <scene sceneID="sYr-5c-5X0">
@@ -1340,7 +1340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pow-jv-hbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="427" y="1402"/>
+            <point key="canvasLocation" x="491" y="1420"/>
         </scene>
         <!--Title-->
         <scene sceneID="LFC-Ic-wQf">
@@ -1554,7 +1554,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="C8B54092-A27E-4A59-91B1-0203C9D6A3B7" width="320" height="460">
+        <image name="4FD022CA-2CE8-4148-8B81-94C4F6D08C43" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11475,14 +11475,14 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sqL-XN-2Gv"/>
         <segue reference="imN-Ia-XWJ"/>
         <segue reference="sRd-Tq-qBz"/>
-        <segue reference="f9y-gk-S9T"/>
         <segue reference="MsR-o8-LCf"/>
-        <segue reference="abO-QW-oxZ"/>
+        <segue reference="6r5-u1-Oae"/>
         <segue reference="BAs-ZL-t3l"/>
         <segue reference="njj-2d-hlP"/>
-        <segue reference="6r5-u1-Oae"/>
+        <segue reference="4FV-pV-ncB"/>
+        <segue reference="f69-XH-XFd"/>
+        <segue reference="sqL-XN-2Gv"/>
     </inferredMetricsTieBreakers>
 </document>
