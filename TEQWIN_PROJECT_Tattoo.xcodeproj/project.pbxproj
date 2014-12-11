@@ -108,6 +108,7 @@
 		4265874A1A1C89D0002C0E93 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 426587471A1C89D0002C0E93 /* Line.m */; };
 		4265874B1A1C89D0002C0E93 /* LKLineActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 426587491A1C89D0002C0E93 /* LKLineActivity.m */; };
 		426864671A1450BB0043582C /* news_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426864661A1450BB0043582C /* news_ViewController.m */; };
+		426E920D1A31856E00361337 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 426E920C1A31856E00361337 /* bar.png */; };
 		426ED39319B9AF560024E817 /* TattooMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39219B9AF560024E817 /* TattooMasterCell.m */; };
 		426ED39B19BD88990024E817 /* Tattoo_Detail_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426ED39A19BD88990024E817 /* Tattoo_Detail_ViewController.m */; };
 		426ED3D219C02C740024E817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426ED3D119C02C740024E817 /* Main.storyboard */; };
@@ -350,6 +351,7 @@
 		426587491A1C89D0002C0E93 /* LKLineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLineActivity.m; sourceTree = "<group>"; };
 		426864651A1450BB0043582C /* news_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = news_ViewController.h; sourceTree = "<group>"; };
 		426864661A1450BB0043582C /* news_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = news_ViewController.m; sourceTree = "<group>"; };
+		426E920C1A31856E00361337 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		426ED39119B9AF560024E817 /* TattooMasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattooMasterCell.h; sourceTree = "<group>"; };
 		426ED39219B9AF560024E817 /* TattooMasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattooMasterCell.m; sourceTree = "<group>"; };
 		426ED39A19BD88990024E817 /* Tattoo_Detail_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tattoo_Detail_ViewController.m; sourceTree = "<group>"; };
@@ -447,7 +449,6 @@
 		42A9601B1A037D06002C0508 /* button-facebook-login_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-facebook-login_down.png"; path = "../button-facebook-login_down.png"; sourceTree = "<group>"; };
 		42A9601F1A038034002C0508 /* icon-favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-favorited.png"; sourceTree = "<group>"; };
 		42A960211A038F88002C0508 /* icon-gallery_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gallery_down.png"; sourceTree = "<group>"; };
-		42A960231A07151A002C0508 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		42A960251A071AD2002C0508 /* view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view.png; sourceTree = "<group>"; };
 		42AD1EAF19B0718B00277278 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		42AD1EB319B071AC00277278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -901,10 +902,10 @@
 				4265871A1A1B3E30002C0E93 /* login_bg.png */,
 				426587161A1B3C0C002C0E93 /* tatoo_splash.png */,
 				42193FCF19860221007E3C52 /* menu.png */,
+				426E920C1A31856E00361337 /* bar.png */,
 				42193FD019860221007E3C52 /* menu@2x.png */,
 				42DB2C381A08AA24002BAF1B /* icon-gallery_nophoto.png */,
 				42A960251A071AD2002C0508 /* view.png */,
-				42A960231A07151A002C0508 /* bar.png */,
 				42A960171A0378E9002C0508 /* bg-login拷貝.png */,
 				42A95FDF1A032F41002C0508 /* bg-login.png */,
 				42A960191A037BAE002C0508 /* bg-login@2x.png */,
@@ -1086,6 +1087,7 @@
 				4222797D1A283C5800AA7915 /* dismiss.png in Resources */,
 				422279671A282BCF00AA7915 /* menu_allert.png in Resources */,
 				42A4918619E2375500E4D65E /* tattoo_3.jpg in Resources */,
+				426E920D1A31856E00361337 /* bar.png in Resources */,
 				42A960261A071AD2002C0508 /* view.png in Resources */,
 				4222795D1A282BCF00AA7915 /* female.png in Resources */,
 				422279871A2843DD00AA7915 /* icon-favorite_offf_1.png in Resources */,
@@ -1344,6 +1346,7 @@
 		42193FC01985FE08007E3C52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1354,7 +1357,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Prefix.pch";
 				INFOPLIST_FILE = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1373,6 +1376,7 @@
 		42193FC11985FE08007E3C52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1383,7 +1387,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Prefix.pch";
 				INFOPLIST_FILE = "TEQWIN_PROJECT/TEQWIN_PROJECT_Tattoo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

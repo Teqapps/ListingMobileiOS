@@ -219,9 +219,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scz-Er-SkT" customClass="PFImageView">
-                                <rect key="frame" x="20" y="20" width="73" height="73"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIS-QG-1Xq">
                                 <rect key="frame" x="108" y="43" width="126" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -246,6 +243,9 @@
                                 <color key="textColor" red="0.62781567258883242" green="0.61772629260195155" blue="0.6252933275921122" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv7-jO-aXP" customClass="PFImageView">
+                                <rect key="frame" x="10" y="20" width="90" height="90"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -260,7 +260,7 @@
                     <connections>
                         <outlet property="name" destination="PIS-QG-1Xq" id="TtM-BL-SH5"/>
                         <outlet property="news_detail" destination="CxP-ym-Chr" id="rOr-RG-m0S"/>
-                        <outlet property="profile_image" destination="scz-Er-SkT" id="Nmf-0W-bHx"/>
+                        <outlet property="profile_image" destination="Sv7-jO-aXP" id="Jnt-Yx-Qiv"/>
                         <outlet property="view_count" destination="aYw-he-tg7" id="1co-WW-J7v"/>
                     </connections>
                 </viewController>
@@ -471,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVq-KN-ThY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="1430"/>
+            <point key="canvasLocation" x="16" y="1412"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wPd-JZ-RwP">
@@ -560,7 +560,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.78666322969543145" green="0.62993444102205431" blue="0.30476649491762386" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0037872779190000001" green="0.0037872779190000001" blue="0.0037872779190000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" patternImage="4FD022CA-2CE8-4148-8B81-94C4F6D08C43" colorSpace="pattern"/>
+                                <color key="sectionIndexTrackingBackgroundColor" patternImage="BBB8CCAD-EE87-40B9-A56C-694BFAA8119E" colorSpace="pattern"/>
                                 <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" id="hmc-bC-egn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1300,7 +1300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bd2-qa-Gjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="1412"/>
+            <point key="canvasLocation" x="804" y="1394"/>
         </scene>
         <!--Aboutus map-->
         <scene sceneID="sYr-5c-5X0">
@@ -1340,7 +1340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pow-jv-hbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="1420"/>
+            <point key="canvasLocation" x="427" y="1402"/>
         </scene>
         <!--Title-->
         <scene sceneID="LFC-Ic-wQf">
@@ -1554,7 +1554,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="4FD022CA-2CE8-4148-8B81-94C4F6D08C43" width="320" height="460">
+        <image name="BBB8CCAD-EE87-40B9-A56C-694BFAA8119E" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -11475,14 +11475,14 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="sqL-XN-2Gv"/>
         <segue reference="imN-Ia-XWJ"/>
         <segue reference="sRd-Tq-qBz"/>
+        <segue reference="f9y-gk-S9T"/>
         <segue reference="MsR-o8-LCf"/>
-        <segue reference="6r5-u1-Oae"/>
+        <segue reference="abO-QW-oxZ"/>
         <segue reference="BAs-ZL-t3l"/>
         <segue reference="njj-2d-hlP"/>
-        <segue reference="4FV-pV-ncB"/>
-        <segue reference="f69-XH-XFd"/>
-        <segue reference="sqL-XN-2Gv"/>
+        <segue reference="6r5-u1-Oae"/>
     </inferredMetricsTieBreakers>
 </document>
