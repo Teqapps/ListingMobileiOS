@@ -8,6 +8,7 @@
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 #import "TattooMasterCell.h"
+#import <ParseUI/ParseUI.h>
 @interface news_detail_ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *news_detail;

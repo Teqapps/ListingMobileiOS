@@ -11,6 +11,8 @@
 #import "LoginUIViewController.h"
 #import "MBProgressHUD.h"
 #import "LoginUIViewController.h"
+#import <ParseUI/ParseUI.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 @interface SidebarViewController ()
 
 @end
